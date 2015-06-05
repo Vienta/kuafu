@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E22377AF-FCA2-4013-8994-AAF7E3666F3E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>kuafu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF4929FEC364AEEF1E45E32FE3051D4AED7DE89A</key>
+		<string>github.com:Vienta/kuafu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>kuafu/kuafu.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF4929FEC364AEEF1E45E32FE3051D4AED7DE89A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Vienta/kuafu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF4929FEC364AEEF1E45E32FE3051D4AED7DE89A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF4929FEC364AEEF1E45E32FE3051D4AED7DE89A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kuafu</string>
+		</dict>
+	</array>
+</dict>
+</plist>
