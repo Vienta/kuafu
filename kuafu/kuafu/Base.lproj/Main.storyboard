@@ -29,11 +29,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efy-ky-TeW">
-                                <rect key="frame" x="130" y="478" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efy-ky-TeW" customClass="KFEventAddButton" customModule="kuafu" customModuleProvider="target">
+                                <rect key="frame" x="135" y="488" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="BYB-sq-xvW"/>
-                                    <constraint firstAttribute="width" constant="60" id="BlD-1K-0oR"/>
+                                    <constraint firstAttribute="height" constant="50" id="BYB-sq-xvW"/>
+                                    <constraint firstAttribute="width" constant="50" id="BlD-1K-0oR"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

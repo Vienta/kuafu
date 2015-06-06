@@ -22,9 +22,8 @@
 		B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */; };
 		B3433BA21B217B120097AD26 /* KFEventDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433BA11B217B120097AD26 /* KFEventDO.swift */; };
 		B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
-		B35DB0A51B229E210006AE48 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A11B229E210006AE48 /* LaunchScreen.strings */; };
-		B35DB0A61B229E210006AE48 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A31B229E210006AE48 /* Main.strings */; };
 		B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
+		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +56,10 @@
 		B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBaseModelDO.swift; sourceTree = "<group>"; };
 		B3433BA11B217B120097AD26 /* KFEventDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventDO.swift; sourceTree = "<group>"; };
 		B35DB0991B228A580006AE48 /* KFConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFConstant.swift; sourceTree = "<group>"; };
-		B35DB0A21B229E210006AE48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = LaunchScreen.strings; sourceTree = "<group>"; };
-		B35DB0A41B229E210006AE48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Main.strings; sourceTree = "<group>"; };
 		B35DB0A81B229F4C0006AE48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B35DB0AA1B229F690006AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B35DB0AB1B229FBE0006AE48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
 		E136FEE5C76217550A54A74A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,11 +108,11 @@
 				B3164A561B2136B50093E6B5 /* Main.storyboard */,
 				B3164A521B21358E0093E6B5 /* kuafu-Bridging-Header.h */,
 				B3164A411B2133490093E6B5 /* KFAppDelegate.swift */,
-				B35DB0A01B229E210006AE48 /* zh-Hans.lproj */,
 				B3164A5C1B21386E0093E6B5 /* Manager */,
 				B3164A531B2136260093E6B5 /* DAO */,
 				B3433B9E1B21711F0097AD26 /* Domain */,
 				B3164A421B2133490093E6B5 /* Controller */,
+				B35DB0AC1B22A16F0006AE48 /* View */,
 				B3164A5F1B213BA90093E6B5 /* Util */,
 				B35DB09B1B2296ED0006AE48 /* Resource */,
 			);
@@ -211,15 +209,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		B35DB0A01B229E210006AE48 /* zh-Hans.lproj */ = {
+		B35DB0AC1B22A16F0006AE48 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B35DB0A11B229E210006AE48 /* LaunchScreen.strings */,
-				B35DB0A31B229E210006AE48 /* Main.strings */,
+				B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */,
 			);
-			name = "zh-Hans.lproj";
-			path = "kuafu/zh-Hans.lproj";
-			sourceTree = SOURCE_ROOT;
+			path = View;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -309,8 +305,6 @@
 				B3164A591B2136B50093E6B5 /* Main.storyboard in Resources */,
 				B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */,
 				B3164A581B2136B50093E6B5 /* LaunchScreen.xib in Resources */,
-				B35DB0A61B229E210006AE48 /* Main.strings in Resources */,
-				B35DB0A51B229E210006AE48 /* LaunchScreen.strings in Resources */,
 				B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +393,7 @@
 				B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */,
 				B3164A5B1B21371D0093E6B5 /* KFBaseDAO.swift in Sources */,
 				B3164A611B213BF70093E6B5 /* KFUtil.swift in Sources */,
+				B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */,
 				B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */,
 				B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */,
 			);
@@ -437,22 +432,6 @@
 				B3164A571B2136B50093E6B5 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B35DB0A11B229E210006AE48 /* LaunchScreen.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B35DB0A21B229E210006AE48 /* zh-Hans */,
-			);
-			name = LaunchScreen.strings;
-			sourceTree = "<group>";
-		};
-		B35DB0A31B229E210006AE48 /* Main.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B35DB0A41B229E210006AE48 /* zh-Hans */,
-			);
-			name = Main.strings;
 			sourceTree = "<group>";
 		};
 		B35DB0A91B229F4C0006AE48 /* Localizable.strings */ = {
