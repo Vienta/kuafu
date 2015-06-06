@@ -43,3 +43,12 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+/*
+    UIView->v
+    UITableView->tbv
+    UIScrollView->scv
+    UITextField->txf
+    UITextView->txv
+    UILabel->lbl
+    UIButton->btn
+*/

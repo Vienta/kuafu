@@ -30,4 +30,22 @@ class KFUtil: NSObject {
         
         return currentDate.timeIntervalSince1970
     }
+    
+    class func drawCircleView(view: UIView) {
+        self.drawCircleView(view, borderColor: UIColor.clearColor(), borderWidth: 0.0)
+    }
+    
+    class func drawCircleView(view: UIView ,borderColor: UIColor ,borderWidth:CGFloat) {
+        view.layer.cornerRadius = CGRectGetMidX(view.bounds)
+        view.layer.masksToBounds = true
+        view.layer.borderWidth = borderWidth
+        view.layer.borderColor = borderColor.CGColor
+    }
+    
+}
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle:NSBundle.mainBundle(), value: "", comment: "")
+    }
 }

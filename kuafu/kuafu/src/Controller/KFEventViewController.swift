@@ -11,9 +11,20 @@ import UIKit
 
 class KFEventViewController: UIViewController {
 
+    @IBOutlet weak var tbvEvents: UITableView!
+    @IBOutlet weak var btnEvents: UIButton!
+    
+    @IBAction func btnTapped(sender: AnyObject) {
+        print("tapped events btn!")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.    
+        // Do any additional setup after loading the view, typically from a nib.
+        self.btnEvents.backgroundColor = KF_THEME_COLOR
+        KFUtil.drawCircleView(self.btnEvents)
+        self.title = "KF_EVENT_CONTROLLER_TITLE".localized
+
         KFEventDAO.sharedManager
     }
 
@@ -21,5 +32,8 @@ class KFEventViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
 }
 

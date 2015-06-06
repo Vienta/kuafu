@@ -21,6 +21,10 @@
 		B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9C1B2153C40097AD26 /* KFEventDAO.swift */; };
 		B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */; };
 		B3433BA21B217B120097AD26 /* KFEventDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433BA11B217B120097AD26 /* KFEventDO.swift */; };
+		B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
+		B35DB0A51B229E210006AE48 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A11B229E210006AE48 /* LaunchScreen.strings */; };
+		B35DB0A61B229E210006AE48 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A31B229E210006AE48 /* Main.strings */; };
+		B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,12 @@
 		B3433B9C1B2153C40097AD26 /* KFEventDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventDAO.swift; sourceTree = "<group>"; };
 		B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBaseModelDO.swift; sourceTree = "<group>"; };
 		B3433BA11B217B120097AD26 /* KFEventDO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventDO.swift; sourceTree = "<group>"; };
+		B35DB0991B228A580006AE48 /* KFConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFConstant.swift; sourceTree = "<group>"; };
+		B35DB0A21B229E210006AE48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = LaunchScreen.strings; sourceTree = "<group>"; };
+		B35DB0A41B229E210006AE48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Main.strings; sourceTree = "<group>"; };
+		B35DB0A81B229F4C0006AE48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B35DB0AA1B229F690006AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B35DB0AB1B229FBE0006AE48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E136FEE5C76217550A54A74A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,11 +110,13 @@
 				B3164A561B2136B50093E6B5 /* Main.storyboard */,
 				B3164A521B21358E0093E6B5 /* kuafu-Bridging-Header.h */,
 				B3164A411B2133490093E6B5 /* KFAppDelegate.swift */,
+				B35DB0A01B229E210006AE48 /* zh-Hans.lproj */,
 				B3164A5C1B21386E0093E6B5 /* Manager */,
 				B3164A531B2136260093E6B5 /* DAO */,
 				B3433B9E1B21711F0097AD26 /* Domain */,
 				B3164A421B2133490093E6B5 /* Controller */,
 				B3164A5F1B213BA90093E6B5 /* Util */,
+				B35DB09B1B2296ED0006AE48 /* Resource */,
 			);
 			name = src;
 			path = kuafu/src;
@@ -139,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				B3164A601B213BF70093E6B5 /* KFUtil.swift */,
+				B35DB0991B228A580006AE48 /* KFConstant.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -188,6 +201,24 @@
 			);
 			name = Domain;
 			path = kuafu/src/Domain;
+			sourceTree = SOURCE_ROOT;
+		};
+		B35DB09B1B2296ED0006AE48 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B35DB0A91B229F4C0006AE48 /* Localizable.strings */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B35DB0A01B229E210006AE48 /* zh-Hans.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B35DB0A11B229E210006AE48 /* LaunchScreen.strings */,
+				B35DB0A31B229E210006AE48 /* Main.strings */,
+			);
+			name = "zh-Hans.lproj";
+			path = "kuafu/zh-Hans.lproj";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -255,8 +286,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
+				en,
 			);
 			mainGroup = B33E66ED1B207E4600F86927;
 			productRefGroup = B33E66F71B207E4600F86927 /* Products */;
@@ -275,7 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3164A591B2136B50093E6B5 /* Main.storyboard in Resources */,
+				B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */,
 				B3164A581B2136B50093E6B5 /* LaunchScreen.xib in Resources */,
+				B35DB0A61B229E210006AE48 /* Main.strings in Resources */,
+				B35DB0A51B229E210006AE48 /* LaunchScreen.strings in Resources */,
 				B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3433BA21B217B120097AD26 /* KFEventDO.swift in Sources */,
+				B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */,
 				B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */,
 				B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */,
 				B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */,
@@ -401,6 +437,32 @@
 				B3164A571B2136B50093E6B5 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B35DB0A11B229E210006AE48 /* LaunchScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B35DB0A21B229E210006AE48 /* zh-Hans */,
+			);
+			name = LaunchScreen.strings;
+			sourceTree = "<group>";
+		};
+		B35DB0A31B229E210006AE48 /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B35DB0A41B229E210006AE48 /* zh-Hans */,
+			);
+			name = Main.strings;
+			sourceTree = "<group>";
+		};
+		B35DB0A91B229F4C0006AE48 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B35DB0A81B229F4C0006AE48 /* zh-Hans */,
+				B35DB0AA1B229F690006AE48 /* Base */,
+				B35DB0AB1B229FBE0006AE48 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
