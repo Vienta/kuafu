@@ -15,7 +15,9 @@ class KFEventViewController: UIViewController {
     @IBOutlet weak var btnEvents: UIButton!
     
     @IBAction func btnTapped(sender: AnyObject) {
-        print("tapped events btn!")
+        var eventWriteViewController: KFEventWriteViewController = KFEventWriteViewController(nibName: "KFEventWriteViewController", bundle: nil)
+        var eventWriteNavigationController: UINavigationController = UINavigationController(rootViewController: eventWriteViewController)
+        self.navigationController?.presentViewController(eventWriteNavigationController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -32,7 +34,6 @@ class KFEventViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
 }

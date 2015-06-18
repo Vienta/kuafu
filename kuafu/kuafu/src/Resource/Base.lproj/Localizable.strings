@@ -6,3 +6,5 @@
   Copyright (c) 2015年 www.vienta.me. All rights reserved.
 */
 "KF_EVENT_CONTROLLER_TITLE" = "TODOist";
+"KF_CANCEL" = "Cancel";
+"KF_SAVE" = "Save";

@@ -6,3 +6,5 @@
   Copyright (c) 2015年 www.vienta.me. All rights reserved.
 */
 "KF_EVENT_CONTROLLER_TITLE" = "TODO列表";
+"KF_CANCEL" = "取消";
+"KF_SAVE" = "保存";
