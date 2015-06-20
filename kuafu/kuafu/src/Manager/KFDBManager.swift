@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FMDB
 
 let SQLDOC = "iDoc"
 let KF_EVENT_SQL = "KFEvent.sqlite"

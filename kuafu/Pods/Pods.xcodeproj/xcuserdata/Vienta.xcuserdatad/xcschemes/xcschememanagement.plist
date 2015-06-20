@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00705D9194F26998D5B85BCC</key>
+		<key>13F77D6B8EEF2D0B6C1EE0CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>128E14E53677A2DC4EBF4D5A</key>
+		<key>18563CCA82E4F96D88F0991A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A41CDE6598CA93A2AD1FFB49</key>
 		<dict>
 			<key>primary</key>
 			<true/>

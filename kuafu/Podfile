@@ -1,7 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 link_with 'kuafu', 'kuafuTests'
 
-pod 'FMDB'
+#pod 'FMDB'
+pod 'FMDB', :git => 'https://github.com/robertmryan/fmdb.git'
+pod 'SnapKit', '~> 0.12.0'
+
+use_frameworks!

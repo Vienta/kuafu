@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D21E443D8044D84DDD8B1CA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1B5BC4097FEE3D691DE9C7 /* libPods.a */; };
-		6FE710741147B8DE7F93DF45 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1B5BC4097FEE3D691DE9C7 /* libPods.a */; };
+		07BACD4C37FD8AA5A651FFA1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233DE055BDFDA5A79E348273 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		14AEE472A962153125051704 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233DE055BDFDA5A79E348273 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1C172372CD71DCDDEFF67C35 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		1FA830A74C5FFDD95C1F063E /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		6FE710741147B8DE7F93DF45 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		74570A0A46D5EC78E8AE4717 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 		B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A411B2133490093E6B5 /* KFAppDelegate.swift */; };
 		B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A471B2133A70093E6B5 /* KFEventViewController.swift */; };
 		B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3164A4E1B2133F50093E6B5 /* Images.xcassets */; };
@@ -26,6 +30,8 @@
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
 		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
+		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
+		EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A1B5BC4097FEE3D691DE9C7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E9605AF28654DB569D731 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		233DE055BDFDA5A79E348273 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3164A411B2133490093E6B5 /* KFAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAppDelegate.swift; sourceTree = "<group>"; };
 		B3164A471B2133A70093E6B5 /* KFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventViewController.swift; sourceTree = "<group>"; };
 		B3164A4E1B2133F50093E6B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = kuafu/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -64,6 +70,7 @@
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
 		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
+		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
 		E136FEE5C76217550A54A74A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D21E443D8044D84DDD8B1CA /* libPods.a in Frameworks */,
+				14AEE472A962153125051704 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FE710741147B8DE7F93DF45 /* libPods.a in Frameworks */,
+				6FE710741147B8DE7F93DF45 /* (null) in Frameworks */,
+				EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */,
+				1FA830A74C5FFDD95C1F063E /* (null) in Frameworks */,
+				74570A0A46D5EC78E8AE4717 /* (null) in Frameworks */,
+				1C172372CD71DCDDEFF67C35 /* (null) in Frameworks */,
+				07BACD4C37FD8AA5A651FFA1 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +111,7 @@
 		B0D9FE94F4D3EF02C4ED86F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A1B5BC4097FEE3D691DE9C7 /* libPods.a */,
+				233DE055BDFDA5A79E348273 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */,
+				B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 				B33E66F31B207E4600F86927 /* Frameworks */,
 				B33E66F41B207E4600F86927 /* Resources */,
 				39CA4FFC295620640ADD6142 /* Copy Pods Resources */,
+				65865DF832BE133D68EF0D5B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +268,7 @@
 				B33E67081B207E4600F86927 /* Frameworks */,
 				B33E67091B207E4600F86927 /* Resources */,
 				119349DD46063B118A1F10BC /* Copy Pods Resources */,
+				F9B1A46ED6EE4DD1DAC0BDC5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,6 +401,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		65865DF832BE133D68EF0D5B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9B1A46ED6EE4DD1DAC0BDC5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -398,6 +443,7 @@
 				B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */,
 				B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */,
 				B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */,
+				B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */,
 				B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */,
 				B3164A5B1B21371D0093E6B5 /* KFBaseDAO.swift in Sources */,
 				B3164A611B213BF70093E6B5 /* KFUtil.swift in Sources */,
@@ -459,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -491,11 +538,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "kuafu/src/kuafu-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -505,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -531,10 +579,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "kuafu/src/kuafu-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -545,6 +593,7 @@
 			baseConfigurationReference = 223E9605AF28654DB569D731 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kuafu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,6 +605,7 @@
 			baseConfigurationReference = E136FEE5C76217550A54A74A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kuafu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

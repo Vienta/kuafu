@@ -23,7 +23,9 @@ class KFEventWriteViewController: UIViewController {
         
         var saveItem = UIBarButtonItem(title: "KF_SAVE".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "save")
         self.navigationItem.rightBarButtonItem = saveItem
+        saveItem.enabled = false
         
+        UIImage(named: "btn_datealert")
     }
     
     override func viewDidAppear(animated: Bool) {

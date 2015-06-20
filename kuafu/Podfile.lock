@@ -4,11 +4,23 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - SnapKit (0.12.0)
 
 DEPENDENCIES:
-  - FMDB
+  - FMDB (from `https://github.com/robertmryan/fmdb.git`)
+  - SnapKit (~> 0.12.0)
+
+EXTERNAL SOURCES:
+  FMDB:
+    :git: https://github.com/robertmryan/fmdb.git
+
+CHECKOUT OPTIONS:
+  FMDB:
+    :commit: b45874924a0b8240abf3f7715af57fc5158616c0
+    :git: https://github.com/robertmryan/fmdb.git
 
 SPEC CHECKSUMS:
-  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  FMDB: 8e59e93d20d76d0b135db26ecc83ae88d016076d
+  SnapKit: 00c388aa3bf1944c1b55472f31e841f75bd83882
 
 COCOAPODS: 0.37.1

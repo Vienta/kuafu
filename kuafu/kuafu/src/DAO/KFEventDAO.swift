@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FMDB
 
 private let sharedInstance = KFEventDAO()
 

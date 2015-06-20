@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "sqlite3.h"
 #import "FMResultSet.h"
 #import "FMDatabasePool.h"
 
@@ -72,8 +71,6 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 
 
 @interface FMDatabase : NSObject  {
-    
-    sqlite3*            _db;
     NSString*           _databasePath;
     BOOL                _logsErrors;
     BOOL                _crashOnErrors;
@@ -212,14 +209,14 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  @return `YES` if successful, `NO` on error.
 
+ @notes In SQLite versions prior to 3.5, this simply calls `open` method.
+ 
  @see [sqlite3_open_v2()](http://sqlite.org/c3ref/open.html)
  @see open
  @see close
  */
 
-#if SQLITE_VERSION_NUMBER >= 3005000
 - (BOOL)openWithFlags:(int)flags;
-#endif
 
 /** Closing a database connection
  
@@ -437,7 +434,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 
  */
 
-- (sqlite_int64)lastInsertRowId;
+- (long long int)lastInsertRowId;
 
 /** The number of rows changed by prior SQL statement.
  
@@ -473,6 +470,8 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see FMResultSet
  @see [`FMResultSet next`](<[FMResultSet next]>)
  @see [`sqlite3_bind`](http://sqlite.org/c3ref/bind_blob.html)
+ 
+ @note If you want to use this from Swift, please note that you must include `FMDatabaseVariadic.swift` in your project. Without that, you cannot use this method directly, and instead have to use methods such as `<executeQuery:withArgumentsInArray:>`.
  */
 
 - (FMResultSet *)executeQuery:(NSString*)sql, ...;
@@ -503,8 +502,6 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  There are two reasons why this distinction is important. First, the printf-style escape sequences can only be used where it is permissible to use a SQLite `?` placeholder. You can use it only for values in SQL statements, but not for table names or column names or any other non-value context. This method also cannot be used in conjunction with `pragma` statements and the like. Second, note the lack of quotation marks in the SQL. The `WHERE` clause was _not_ `WHERE name='%@'` (like you might have to do if you built a SQL statement using `NSString` method `stringWithFormat`), but rather simply `WHERE name=%@`.
  
- @note If you want to use this from Swift, please note that you must include `FMDatabaseVariadic.swift` in your project. Without that, you cannot use this method directly, and instead have to use methods such as `<executeQuery:withArgumentsInArray:>`.
-
  */
 
 - (FMResultSet *)executeQueryWithFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1,2);
@@ -727,7 +724,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  */
 
-- (sqlite3*)sqliteHandle;
+- (void*)sqliteHandle;
 
 
 ///-----------------------------
@@ -791,8 +788,6 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 - (NSTimeInterval)maxBusyRetryTimeInterval;
 
 
-#if SQLITE_VERSION_NUMBER >= 3007000
-
 ///------------------
 /// @name Save points
 ///------------------
@@ -854,7 +849,6 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 
 - (NSError*)inSavePoint:(void (^)(BOOL *rollback))block;
 
-#endif
 
 ///----------------------------
 /// @name SQLite library status
@@ -932,7 +926,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see [sqlite3_create_function()](http://sqlite.org/c3ref/create_function.html)
  */
 
-- (void)makeFunctionNamed:(NSString*)name maximumArguments:(int)count withBlock:(void (^)(sqlite3_context *context, int argc, sqlite3_value **argv))block;
+- (void)makeFunctionNamed:(NSString*)name maximumArguments:(int)count withBlock:(void (^)(void *context, int argc, void **argv))block;
 
 
 ///---------------------
@@ -1036,7 +1030,6 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  */
 
 @interface FMStatement : NSObject {
-    sqlite3_stmt *_statement;
     NSString *_query;
     long _useCount;
     BOOL _inUse;
@@ -1053,13 +1046,6 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 /** SQL statement */
 
 @property (atomic, retain) NSString *query;
-
-/** SQLite sqlite3_stmt
- 
- @see [`sqlite3_stmt`](http://www.sqlite.org/c3ref/stmt.html)
- */
-
-@property (atomic, assign) sqlite3_stmt *statement;
 
 /** Indication of whether the statement is in use */
 

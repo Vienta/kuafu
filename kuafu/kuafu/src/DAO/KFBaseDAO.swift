@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FMDB
 
 class KFBaseDAO: NSObject {
     var dbQueue: FMDatabaseQueue?
@@ -16,7 +17,7 @@ class KFBaseDAO: NSObject {
         self.creatFMDatabase()
         self.creatTable()
     }
-    
+     
     func creatFMDatabase() -> Bool {
         if(((dbQueue)) == nil) {
             dbQueue = KFDBManager.sharedManager.dbQueue
