@@ -50,7 +50,6 @@
 		B3164A411B2133490093E6B5 /* KFAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAppDelegate.swift; sourceTree = "<group>"; };
 		B3164A471B2133A70093E6B5 /* KFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventViewController.swift; sourceTree = "<group>"; };
 		B3164A4E1B2133F50093E6B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = kuafu/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		B3164A521B21358E0093E6B5 /* kuafu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kuafu-Bridging-Header.h"; sourceTree = "<group>"; };
 		B3164A551B2136B50093E6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = kuafu/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		B3164A571B2136B50093E6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = kuafu/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		B3164A5A1B21371D0093E6B5 /* KFBaseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBaseDAO.swift; sourceTree = "<group>"; };
@@ -122,7 +121,6 @@
 				B3164A4E1B2133F50093E6B5 /* Images.xcassets */,
 				B3164A541B2136B50093E6B5 /* LaunchScreen.xib */,
 				B3164A561B2136B50093E6B5 /* Main.storyboard */,
-				B3164A521B21358E0093E6B5 /* kuafu-Bridging-Header.h */,
 				B3164A411B2133490093E6B5 /* KFAppDelegate.swift */,
 				B3164A5C1B21386E0093E6B5 /* Manager */,
 				B3164A531B2136260093E6B5 /* DAO */,

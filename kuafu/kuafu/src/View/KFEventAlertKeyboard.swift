@@ -7,22 +7,51 @@
 //
 
 import UIKit
+import SnapKit
+
 
 class KFEventAlertKeyboard: UIView {
     var btnAlert: UIButton!
     var btnDateto: UIButton!
+    var tapBlock: ((kTapStyle) -> Void)?
     
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.btnAlert = UIButton(frame: CGRectMake(0, 0, 30, 30))
-        self.addSubview(self.btnAlert)
+    class func keyboard()->KFEventAlertKeyboard{
         
+        var keyboard: KFEventAlertKeyboard = KFEventAlertKeyboard(frame: CGRectMake(0, 0, DEVICE_WIDTH, 40))
+        keyboard.btnAlert = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        var alertImg = UIImage(named: "btn_datealert")
+        keyboard.btnAlert.setImage(alertImg, forState: UIControlState.Normal)
+        keyboard.btnAlert.addTarget(keyboard, action: "btnTapped:", forControlEvents: .TouchUpInside)
+        keyboard.addSubview(keyboard.btnAlert)
+        keyboard.btnAlert.snp_makeConstraints { (make) -> Void in
+            make.leading.equalTo(keyboard).offset(15)
+            make.size.equalTo(CGSizeMake(30, 30))
+            make.centerY.equalTo(keyboard)
+        }
+        keyboard.btnDateto = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        keyboard.addSubview(keyboard.btnDateto)
+        
+        var datetoImg = UIImage(named: "btn_dateto")
+        keyboard.btnDateto.setImage(datetoImg, forState: UIControlState.Normal)
+        keyboard.btnDateto.addTarget(keyboard, action: "btnTapped:", forControlEvents: .TouchUpInside)
+        keyboard.btnDateto.snp_makeConstraints { (make) -> Void in
+            make.trailing.equalTo(keyboard).offset(-15)
+            make.size.equalTo(CGSizeMake(30, 30))
+            make.centerY.equalTo(keyboard)
+        }
+        return keyboard
+    }
+    
+    func btnTapped(sender: UIButton!) {
+        
+        if sender.isEqual(self.btnAlert) {
+            if ((self.tapBlock) != nil) {
+                self.tapBlock!(kTapStyle.Alert)
+            }
+        } else {
+            if ((self.tapBlock) != nil) {
+                self.tapBlock!(kTapStyle.DateTo)
+            }
+        }
     }
 }

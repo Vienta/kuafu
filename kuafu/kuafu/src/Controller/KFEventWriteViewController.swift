@@ -25,7 +25,19 @@ class KFEventWriteViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = saveItem
         saveItem.enabled = false
         
-        UIImage(named: "btn_datealert")
+        var eventAlertKeyboard: KFEventAlertKeyboard = KFEventAlertKeyboard.keyboard()
+        eventAlertKeyboard.backgroundColor = UIColor(red: 0.82, green: 0.84, blue: 0.85, alpha: 1)
+        self.txvEventContent.inputAccessoryView = eventAlertKeyboard
+        self.txfEventTitle.inputAccessoryView = eventAlertKeyboard
+        
+        eventAlertKeyboard.tapBlock = ({
+            (tap: kTapStyle) -> Void in
+            if tap == kTapStyle.Alert {
+                println("alert")
+            } else {
+                println("dateto")
+            }
+        })
     }
     
     override func viewDidAppear(animated: Bool) {
