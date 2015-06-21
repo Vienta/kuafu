@@ -41,7 +41,10 @@ class KFUtil: NSObject {
         view.layer.borderWidth = borderWidth
         view.layer.borderColor = borderColor.CGColor
     }
-    
+    class func drawCornerView(view: UIView, radius: CGFloat) {
+        view.layer.cornerRadius = radius
+        view.layer.masksToBounds = true
+    }
 }
 
 extension String {

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import ObjectiveC
+
+var kAssociateKey: UInt8 = 0
 
 class KFEventWriteViewController: UIViewController {
     // MARK: - IBOutlet
@@ -34,6 +37,7 @@ class KFEventWriteViewController: UIViewController {
             (tap: kTapStyle) -> Void in
             if tap == kTapStyle.Alert {
                 println("alert")
+                self.popTimePickerView()
             } else {
                 println("dateto")
             }
@@ -59,6 +63,45 @@ class KFEventWriteViewController: UIViewController {
     func save() {
         
     }
+    
+    func popTimePickerView() {
+        self.view.endEditing(true)
+        
+        var btnTimePickerBg: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        btnTimePickerBg.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
+        btnTimePickerBg.addTarget(self, action: "dismissTimePickerView", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(btnTimePickerBg)
+        btnTimePickerBg.alpha = 0.0
+        btnTimePickerBg.snp_makeConstraints { (make) -> Void in
+            make.edges.equalTo(self.view)
+        }
+        
+        objc_setAssociatedObject(self, &kAssociateKey, btnTimePickerBg, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+        
+        var timePickerView: KFEventTimePickerAlertView = NSBundle.mainBundle().loadNibNamed("KFEventTimePickerAlertView", owner: nil, options: nil)[0] as! KFEventTimePickerAlertView
+        btnTimePickerBg.addSubview(timePickerView)
+        timePickerView.snp_makeConstraints { (make) -> Void in
+            make.center.equalTo(btnTimePickerBg)
+            make.leading.equalTo(btnTimePickerBg).offset(20)
+            make.trailing.equalTo(btnTimePickerBg).offset(-20)
+            make.height.equalTo(250)
+        }
+        KFUtil.drawCornerView(timePickerView, radius: 4)
+        
+        UIView.animateWithDuration(0.25, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            btnTimePickerBg.alpha = 1.0
+        }, completion: nil)
+    }
+    
+    func dismissTimePickerView() {
+        var timePickerView: UIButton = objc_getAssociatedObject(self, &kAssociateKey) as! UIButton
+        UIView.animateWithDuration(0.18, animations: { () -> Void in
+            timePickerView.alpha = 0.0
+        }) { (Bool) -> Void in
+            timePickerView.removeFromSuperview()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
