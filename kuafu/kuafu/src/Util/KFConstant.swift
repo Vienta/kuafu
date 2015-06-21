@@ -17,6 +17,12 @@ enum kTapStyle :Int {
     case DateTo
 }
 
+enum KEventStatus :Int {
+    case kEventStatusNormal
+    case KEventStatusDelete
+    case kEventStatusAchieve
+    case kEventStatusOverdue
+}
 
 class KFConstant: NSObject {
    

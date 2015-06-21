@@ -19,5 +19,5 @@ class KFEventDO: KFBaseModelDO {
     var creattime: NSNumber!
     var longitude: NSNumber! //经度
     var latitude: NSNumber!  //纬度
-    
+    var status: NSNumber!
 }

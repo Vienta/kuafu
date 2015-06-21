@@ -8,3 +8,5 @@
 "KF_EVENT_CONTROLLER_TITLE" = "TODOist";
 "KF_CANCEL" = "Cancel";
 "KF_SAVE" = "Save";
+"KF_TIME_DUETO" = "Due Date";
+"KF_TIME_ALERT" = "Reminder";

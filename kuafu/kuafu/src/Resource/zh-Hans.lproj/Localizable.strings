@@ -8,3 +8,5 @@
 "KF_EVENT_CONTROLLER_TITLE" = "TODO列表";
 "KF_CANCEL" = "取消";
 "KF_SAVE" = "保存";
+"KF_TIME_DUETO" = "逾期时间";
+"KF_TIME_ALERT" = "提醒";

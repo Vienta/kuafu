@@ -65,6 +65,7 @@
                 <outlet property="btnCancel" destination="hM7-Kw-2fW" id="C7A-vl-ozi"/>
                 <outlet property="btnConfirm" destination="8OF-hI-ohc" id="QTc-Y3-PUg"/>
                 <outlet property="datePickerAlert" destination="CcC-jP-TyN" id="bkf-4b-yr1"/>
+                <outlet property="lblTitle" destination="qAW-Ue-1We" id="gcS-1O-lfl"/>
             </connections>
             <point key="canvasLocation" x="211" y="292"/>
         </view>

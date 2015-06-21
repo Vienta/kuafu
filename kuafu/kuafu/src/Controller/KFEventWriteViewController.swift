@@ -11,10 +11,13 @@ import ObjectiveC
 
 var kAssociateKey: UInt8 = 0
 
-class KFEventWriteViewController: UIViewController {
-    // MARK: - IBOutlet
+class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+    // MARK: - Property
     @IBOutlet weak var txfEventTitle: UITextField!
     @IBOutlet weak var txvEventContent: UITextView!
+    var eventDO: KFEventDO!
+    var isWritingRemind: Bool!
+    var settingTimestamp: NSTimeInterval!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -37,22 +40,39 @@ class KFEventWriteViewController: UIViewController {
             (tap: kTapStyle) -> Void in
             if tap == kTapStyle.Alert {
                 println("alert")
-                self.popTimePickerView()
+                self.popTimePickerView("KF_TIME_ALERT".localized)
             } else {
                 println("dateto")
+                self.popTimePickerView("KF_TIME_DUETO".localized)
             }
         })
+        
+        self.eventDO = KFEventDO()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
         self.txvEventContent.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - IB ACTION
+    @IBAction func textFieldTextChanged(sender: UITextField){
+        self.eventDO.title = sender.text
+        println(self.eventDO.title)
+    }
+    // MARK: - UITextView Delegate
+    func textViewDidChange(textView: UITextView) {
+        if (textView.text.isEmpty == true) {
+            self.navigationItem.rightBarButtonItem?.enabled = false
+        } else {
+            self.navigationItem.rightBarButtonItem?.enabled = true
+        }
+        self.eventDO.content = textView.text
     }
     
     // MARK: - Private Methods
@@ -64,7 +84,7 @@ class KFEventWriteViewController: UIViewController {
         
     }
     
-    func popTimePickerView() {
+    func popTimePickerView(title: String) {
         self.view.endEditing(true)
         
         var btnTimePickerBg: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
@@ -91,6 +111,21 @@ class KFEventWriteViewController: UIViewController {
         UIView.animateWithDuration(0.25, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             btnTimePickerBg.alpha = 1.0
         }, completion: nil)
+        
+        timePickerView.btnCancel.addTarget(self, action: "dismissTimePickerView", forControlEvents: UIControlEvents.TouchUpInside)
+        timePickerView.btnConfirm.addTarget(self, action: "saveRemindTime:", forControlEvents: UIControlEvents.TouchUpInside)
+        timePickerView.datePickerAlert.addTarget(self, action: "dataPickerChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        timePickerView.lblTitle.text = title
+        
+        if ("KF_TIME_ALERT".localized == title) == true {
+            isWritingRemind = true
+        }
+    
+        if ("KF_TIME_DUETO".localized == title) == true {
+            isWritingRemind = false
+        }
+        
+        settingTimestamp = NSDate().timeIntervalSince1970
     }
     
     func dismissTimePickerView() {
@@ -99,17 +134,27 @@ class KFEventWriteViewController: UIViewController {
             timePickerView.alpha = 0.0
         }) { (Bool) -> Void in
             timePickerView.removeFromSuperview()
+            self.txvEventContent.becomeFirstResponder()
         }
     }
     
-    /*
-    // MARK: - Navigation
+    func dataPickerChanged(datePicker: UIDatePicker) {
+        var settingDate: NSDate = datePicker.date
+        var timestamp: NSTimeInterval = datePicker.date.timeIntervalSince1970
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        settingTimestamp = timestamp
     }
-    */
+    
+    func saveRemindTime(sender: UIButton) {
+        var timePickerView: KFEventTimePickerAlertView = sender.superview as! KFEventTimePickerAlertView
+        timePickerView.datePickerAlert.removeTarget(self, action: "dataPickerChanged", forControlEvents: UIControlEvents.ValueChanged)
 
+        if isWritingRemind == true {
+            self.eventDO.starttime = NSNumber(double: settingTimestamp)
+        } else {
+            self.eventDO.endtime = NSNumber(double: settingTimestamp)
+        }
+
+    }
+    
 }

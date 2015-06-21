@@ -16,26 +16,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="无标题事件" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLt-Wq-Msx">
-                    <rect key="frame" x="10" y="64" width="300" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="无标题任务" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLt-Wq-Msx">
+                    <rect key="frame" x="10" y="64" width="300" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="F64-JI-JDY"/>
+                        <constraint firstAttribute="height" constant="40" id="F64-JI-JDY"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldTextChanged:" destination="-1" eventType="editingChanged" id="lVt-cc-gJH"/>
+                        <outlet property="delegate" destination="-1" id="rBd-jf-GFN"/>
+                    </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULg-Cg-PJH">
-                    <rect key="frame" x="10" y="94" width="300" height="1"/>
+                    <rect key="frame" x="10" y="104" width="300" height="1"/>
                     <color key="backgroundColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Mpy-g4-hsv"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="花2个小时写swift代码" translatesAutoresizingMaskIntoConstraints="NO" id="xNl-C3-lBe">
-                    <rect key="frame" x="10" y="105" width="300" height="463"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNl-C3-lBe">
+                    <rect key="frame" x="10" y="115" width="300" height="453"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="xEJ-5o-7Rx"/>
+                    </connections>
                 </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -12,7 +12,9 @@ class KFEventTimePickerAlertView: UIView {
 
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnConfirm: UIButton!
-    @IBOutlet weak var datePickerAlert: UIDatePicker!
+    @IBOutlet weak var datePickerAlert: UIDatePicker!  
+    @IBOutlet weak var lblTitle: UILabel!
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

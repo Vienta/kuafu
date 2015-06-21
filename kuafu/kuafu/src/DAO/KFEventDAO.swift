@@ -11,6 +11,8 @@ import FMDB
 
 private let sharedInstance = KFEventDAO()
 
+
+
 class KFEventDAO: KFBaseDAO {
     
     class var sharedManager: KFEventDAO {
@@ -30,6 +32,7 @@ class KFEventDAO: KFBaseDAO {
             + "(eventid INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"
             + "title TEXT,"
             + "content TEXT,"
+            + "status INTEGER,"
             + "starttime INTEGER,"
             + "endtime INTEGER,"
             + "updatetime INTEGER,"
@@ -46,6 +49,7 @@ class KFEventDAO: KFBaseDAO {
         eventDO.eventid = NSNumber(int: result.intForColumn("eventid"))
         eventDO.title = result.stringForColumn("title")
         eventDO.content = result.stringForColumn("content")
+        eventDO.status = NSNumber(int: result.intForColumn("status"))
         eventDO.starttime = NSNumber(double: result.doubleForColumn("starttime"))
         eventDO.endtime = NSNumber(double: result.doubleForColumn("endtime"))
         eventDO.updatetime = NSNumber(double: result.doubleForColumn("updatetime"))
@@ -58,15 +62,15 @@ class KFEventDAO: KFBaseDAO {
     
     func insertEvent(event: KFEventDO,db: FMDatabase) -> Bool {
         var sql: String =   "INSERT INTO " + self.tableName()
-                            + "(eventid,title,content,starttime,endtime,updatetime,creattime,longitude,latitude) "
-                            + "VALUES(?,?,?,?,?,?,?,?,?)"
+                            + "(eventid,title,content,status,starttime,endtime,updatetime,creattime,longitude,latitude) "
+                            + "VALUES(?,?,?,?,?,?,?,?,?,?)"
         
         var creattime: Double = KFUtil.getCurrentTime()
         var updatetime: Double = KFUtil.getCurrentTime()
         
         var result: Bool!
     
-        result = db.executeUpdate(sql, withArgumentsInArray: [event.eventid, event.title, event.content, event.starttime, event.endtime, event.updatetime, event.creattime, event.longitude, event.latitude])
+        result = db.executeUpdate(sql, withArgumentsInArray: [event.eventid, event.title, event.content, event.status, event.starttime, event.endtime, event.updatetime, event.creattime, event.longitude, event.latitude])
         
         if !(result) {
             NSLog("insert event err:%@", db.lastErrorMessage())
@@ -94,6 +98,10 @@ class KFEventDAO: KFBaseDAO {
             if (event.content != nil) {
                 keyValues.appendString(" content=?,")
                 arguments.addObject(event.content)
+            }
+            if (event.status != nil) {
+                keyValues.appendString(" status=?,")
+                arguments.addObject(event.status)
             }
             if (event.starttime != nil) {
                 keyValues.appendString(" starttime=?,")

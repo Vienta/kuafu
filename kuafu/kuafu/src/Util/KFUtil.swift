@@ -31,6 +31,10 @@ class KFUtil: NSObject {
         return currentDate.timeIntervalSince1970
     }
     
+    class func dateFromTimeStamp(timeStamp: NSTimeInterval) -> NSDate {
+        return NSDate(timeIntervalSince1970: timeStamp)
+    }
+    
     class func drawCircleView(view: UIView) {
         self.drawCircleView(view, borderColor: UIColor.clearColor(), borderWidth: 0.0)
     }
