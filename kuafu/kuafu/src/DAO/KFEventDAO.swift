@@ -54,7 +54,7 @@ class KFEventDAO: KFBaseDAO {
         eventDO.endtime = NSNumber(double: result.doubleForColumn("endtime"))
         eventDO.updatetime = NSNumber(double: result.doubleForColumn("updatetime"))
         eventDO.creattime =  NSNumber(double: result.doubleForColumn("creattime"))
-        eventDO.longitude = NSNumber(double: result.doubleForColumn("longitud"))
+        eventDO.longitude = NSNumber(double: result.doubleForColumn("longitude"))
         eventDO.latitude = NSNumber(double: result.doubleForColumn("latitude"))
         
         return eventDO
@@ -182,4 +182,18 @@ class KFEventDAO: KFBaseDAO {
         
         return true
     }
+    
+    func getAllEvents() -> NSArray {
+        var sql: String = "SELECT * FROM " + self.tableName()
+        var result: NSMutableArray = NSMutableArray()
+        dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
+            var resultSet: FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
+            while(resultSet.next()) {
+                var event: KFEventDO = self.eventFromResultSet(resultSet)
+                result.addObject(event)
+            }
+        })
+        return result
+    }
+    
 }

@@ -13,6 +13,7 @@ class KFEventViewController: UIViewController {
 
     @IBOutlet weak var tbvEvents: UITableView!
     @IBOutlet weak var btnEvents: UIButton!
+    var events: NSMutableArray!
     
     @IBAction func btnTapped(sender: AnyObject) {
         var eventWriteViewController: KFEventWriteViewController = KFEventWriteViewController(nibName: "KFEventWriteViewController", bundle: nil)
@@ -27,7 +28,9 @@ class KFEventViewController: UIViewController {
         KFUtil.drawCircleView(self.btnEvents)
         self.title = "KF_EVENT_CONTROLLER_TITLE".localized
 
-        KFEventDAO.sharedManager
+        var allEvents: NSArray = KFEventDAO.sharedManager.getAllEvents()
+        self.events = NSMutableArray(array: allEvents)
+        println(self.events)
     }
 
     override func didReceiveMemoryWarning() {
