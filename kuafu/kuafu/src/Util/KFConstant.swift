@@ -9,8 +9,16 @@
 import UIKit
 
 let KF_THEME_COLOR:UIColor = UIColor(red: 0, green: 0.78, blue: 0, alpha: 1)
+let KF_ICON_BG_COLOR:UIColor = UIColor(red: 0.01, green: 0.01, blue: 0.01, alpha: 1)
 let DEVICE_WIDTH:CGFloat = UIScreen.mainScreen().bounds.width
 let DEVICE_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.height
+
+func SAFE_OBJC(objc: AnyObject!) -> AnyObject {
+    if (objc == nil){
+        return NSNull()
+    }
+    return objc
+}
 
 enum kTapStyle :Int {
     case Alert
@@ -18,10 +26,10 @@ enum kTapStyle :Int {
 }
 
 enum KEventStatus :Int {
-    case kEventStatusNormal
-    case KEventStatusDelete
-    case kEventStatusAchieve
-    case kEventStatusOverdue
+    case Normal
+    case Delete
+    case Achieve
+    case Overdue
 }
 
 class KFConstant: NSObject {

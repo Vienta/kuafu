@@ -10,3 +10,10 @@
 "KF_SAVE" = "Save";
 "KF_TIME_DUETO" = "Due Date";
 "KF_TIME_ALERT" = "Reminder";
+"KF_ALERT_TIPS" = "Warning";
+"KF_ALERT_NULL_CONTENT" = "您还没有录入任何任务，请先录入";
+"KF_ALERT_TIMESTAMP_ERROR" = "逾期时间应该在提醒时间之后";
+"KF_ALERT_TIMMSTAMP_STARTTIME_ERROR" = "当前设定时间应当在未来某个时刻";
+"KF_NEW_TODO_TITLE" = "New ToDo";
+"KF_OK" = "OK";
+"KF_CANCEL" = "Cancel";

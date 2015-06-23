@@ -67,12 +67,19 @@ class KFEventDAO: KFBaseDAO {
         
         var creattime: Double = KFUtil.getCurrentTime()
         var updatetime: Double = KFUtil.getCurrentTime()
+        event.creattime = NSNumber(double: creattime)
+        event.updatetime = NSNumber(double: updatetime)
         
         var result: Bool!
+        var sqlArr: Array = [SAFE_OBJC(event.eventid), SAFE_OBJC(event.title),
+                            SAFE_OBJC(event.content), SAFE_OBJC(event.status),
+                            SAFE_OBJC(event.starttime), SAFE_OBJC(event.endtime),
+                            SAFE_OBJC(event.updatetime), SAFE_OBJC(event.creattime),
+                            SAFE_OBJC(event.longitude), SAFE_OBJC(event.latitude)]
     
-        result = db.executeUpdate(sql, withArgumentsInArray: [event.eventid, event.title, event.content, event.status, event.starttime, event.endtime, event.updatetime, event.creattime, event.longitude, event.latitude])
-        
-        if !(result) {
+        result = db.executeUpdate(sql, withArgumentsInArray: sqlArr)
+
+        if result == false {
             NSLog("insert event err:%@", db.lastErrorMessage())
         }
         return result
@@ -138,12 +145,20 @@ class KFEventDAO: KFBaseDAO {
     }
     
     
-    func getEventById(eventid: NSNumber) -> KFEventDO {
+    func getEventById(eventid: NSNumber?) -> KFEventDO? {
+
+        println(eventid)
+        if (eventid == nil) {
+            return nil
+        }
+        
+        var sqlEventId: NSNumber = eventid!
+        
         var sql: String = "SELECT * FROM " + self.tableName() + " WHERE eventId = ?"
         
         var eventDO: KFEventDO!
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-            var result:FMResultSet = db.executeQuery(sql, withArgumentsInArray: [eventid])
+            var result:FMResultSet = db.executeQuery(sql, withArgumentsInArray: [sqlEventId])
             if result.next() {
                 eventDO = self.eventFromResultSet(result)
             }
@@ -155,9 +170,8 @@ class KFEventDAO: KFBaseDAO {
     
     
     func saveEvent(event: KFEventDO) -> Bool {
-
         var isExistEvent: KFEventDO? = self.getEventById(event.eventid)
-        
+        println(event)
         if ((isExistEvent) == nil) {
             dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
                 self.insertEvent(event, db: db)

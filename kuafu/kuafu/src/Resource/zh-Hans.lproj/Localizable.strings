@@ -5,8 +5,15 @@
   Created by Vienta on 15/6/6.
   Copyright (c) 2015年 www.vienta.me. All rights reserved.
 */
-"KF_EVENT_CONTROLLER_TITLE" = "TODO列表";
+"KF_EVENT_CONTROLLER_TITLE" = "任务清单";
 "KF_CANCEL" = "取消";
 "KF_SAVE" = "保存";
 "KF_TIME_DUETO" = "逾期时间";
 "KF_TIME_ALERT" = "提醒";
+"KF_ALERT_TIPS" = "温馨提示";
+"KF_ALERT_NULL_CONTENT" = "您还没有录入任何任务，请先录入";
+"KF_ALERT_TIMESTAMP_ERROR" = "逾期时间应该在提醒时间之后";
+"KF_ALERT_TIMMSTAMP_STARTTIME_ERROR" = "当前设定时间应当在未来某个时刻";
+"KF_NEW_TODO_TITLE" = "新建任务";
+"KF_OK" = "确定";
+"KF_CANCEL" = "取消";
