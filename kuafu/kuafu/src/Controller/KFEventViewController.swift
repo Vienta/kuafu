@@ -30,10 +30,11 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.btnEvents.backgroundColor = KF_THEME_COLOR
         KFUtil.drawCircleView(self.btnEvents)
         self.title = "KF_EVENT_CONTROLLER_TITLE".localized
+        self.tbvEvents.rowHeight = UITableViewAutomaticDimension
+        self.tbvEvents.estimatedRowHeight = 78.0
 
         var allEvents: NSArray = KFEventDAO.sharedManager.getAllEvents()
         self.events = NSMutableArray(array: allEvents)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +56,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 56.0
+        return UITableViewAutomaticDimension
     }
 }
 

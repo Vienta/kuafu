@@ -28,7 +28,6 @@ class KFEventCell: UITableViewCell {
         } else {
             self.lblTitle.text = ""
         }
-        self.lblTitle.text = "哈哈哈"
         
         //TODO:2015年06月25日23:13:24 脑袋不清楚时候写的 后面需要优化
         if eventDO.starttime == 0 && eventDO.endtime == 0 {

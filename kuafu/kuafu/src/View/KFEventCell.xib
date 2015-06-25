@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -14,13 +14,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEy-mp-Bxm">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEy-mp-Bxm">
                         <rect key="frame" x="15" y="8" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="X0F-Za-jNw"/>
                             <constraint firstAttribute="width" secondItem="KEy-mp-Bxm" secondAttribute="height" multiplier="1:1" id="iYi-HV-6QO"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -29,13 +29,13 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="kkZ-i6-9Mi"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是内容这是内容这是内容这是内容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPX-WB-y2R">
-                        <rect key="frame" x="65" y="32" width="245" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是内容这是内容这是内容这是内容" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPX-WB-y2R">
+                        <rect key="frame" x="65" y="26" width="245" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -44,7 +44,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="YYQ-jK-fD8"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -58,25 +58,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="uNW-da-F74" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2V1-qE-kxU"/>
-                    <constraint firstItem="KEy-mp-Bxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Hy9-e3-pBV"/>
                     <constraint firstItem="uNW-da-F74" firstAttribute="leading" secondItem="KEy-mp-Bxm" secondAttribute="trailing" constant="10" id="M9H-jg-8DU"/>
                     <constraint firstAttribute="trailing" secondItem="sPX-WB-y2R" secondAttribute="trailing" constant="10" id="UEc-cm-zhv"/>
-                    <constraint firstAttribute="bottom" secondItem="sPX-WB-y2R" secondAttribute="bottom" constant="10" id="ZxZ-eQ-IAt"/>
+                    <constraint firstAttribute="centerY" secondItem="KEy-mp-Bxm" secondAttribute="centerY" id="XFQ-2v-c2h"/>
                     <constraint firstItem="924-bJ-Hn1" firstAttribute="leading" secondItem="fM0-kh-A9t" secondAttribute="trailing" constant="2" id="czO-a8-Yem"/>
                     <constraint firstAttribute="trailing" secondItem="924-bJ-Hn1" secondAttribute="trailing" constant="10" id="epX-O6-s7N"/>
+                    <constraint firstItem="sPX-WB-y2R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="exr-0k-JSO"/>
                     <constraint firstItem="sPX-WB-y2R" firstAttribute="leading" secondItem="KEy-mp-Bxm" secondAttribute="trailing" constant="10" id="gQz-b6-Jsr"/>
                     <constraint firstItem="fM0-kh-A9t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uNW-da-F74" secondAttribute="trailing" constant="8" id="jNm-rY-cM2"/>
                     <constraint firstItem="924-bJ-Hn1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jpH-dv-jM9"/>
                     <constraint firstItem="fM0-kh-A9t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pSh-C3-I8T"/>
-                    <constraint firstItem="sPX-WB-y2R" firstAttribute="top" secondItem="924-bJ-Hn1" secondAttribute="bottom" constant="6" id="sCA-lP-GY1"/>
-                    <constraint firstItem="fM0-kh-A9t" firstAttribute="leading" secondItem="uNW-da-F74" secondAttribute="trailing" constant="8" id="tXR-00-aYt"/>
                     <constraint firstItem="KEy-mp-Bxm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="uDK-H9-mYO"/>
+                    <constraint firstAttribute="bottom" secondItem="sPX-WB-y2R" secondAttribute="bottom" constant="20" id="xBS-yf-sUQ"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="tXR-00-aYt"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="igvDue" destination="924-bJ-Hn1" id="6u2-3G-Nh7"/>
@@ -91,4 +85,9 @@
     <resources>
         <image name="btn_dateto" width="25" height="25"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
