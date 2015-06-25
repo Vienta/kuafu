@@ -35,6 +35,12 @@ class KFUtil: NSObject {
         return NSDate(timeIntervalSince1970: timeStamp)
     }
     
+    class func getShortDate(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        return dateFormatter.stringFromDate(date)
+    }
+    
     class func drawCircleView(view: UIView) {
         self.drawCircleView(view, borderColor: UIColor.clearColor(), borderWidth: 0.0)
     }

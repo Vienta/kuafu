@@ -20,6 +20,14 @@ func SAFE_OBJC(objc: AnyObject!) -> AnyObject {
     return objc
 }
 
+func LOAD_NIB(nibName: String) -> AnyObject {
+    return LOAD_NIB(nibName, 0)
+}
+
+func LOAD_NIB(nibName: String, index: Int) -> AnyObject {
+    return NSBundle.mainBundle().loadNibNamed(nibName, owner: nil, options: nil)[index]
+}
+
 enum kTapStyle :Int {
     case Alert
     case DateTo

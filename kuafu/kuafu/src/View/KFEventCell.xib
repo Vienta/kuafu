@@ -21,26 +21,26 @@
                             <constraint firstAttribute="width" secondItem="KEy-mp-Bxm" secondAttribute="height" multiplier="1:1" id="iYi-HV-6QO"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <color key="textColor" red="0.1529411765" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNW-da-F74">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="这是标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNW-da-F74">
                         <rect key="frame" x="65" y="8" width="64" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="kkZ-i6-9Mi"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是内容这是内容这是内容这是内容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPX-WB-y2R">
                         <rect key="frame" x="65" y="32" width="245" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015/6/30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM0-kh-A9t">
-                        <rect key="frame" x="200" y="8" width="66" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2015/6/30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM0-kh-A9t">
+                        <rect key="frame" x="221" y="8" width="68" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="YYQ-jK-fD8"/>
                         </constraints>
@@ -48,14 +48,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMh-au-LjG">
-                        <rect key="frame" x="269" y="8" width="18" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="18" id="7v3-fG-0Za"/>
-                            <constraint firstAttribute="width" secondItem="rMh-au-LjG" secondAttribute="height" multiplier="1:1" id="vBk-L8-xy6"/>
-                        </constraints>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="924-bJ-Hn1">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_dateto" translatesAutoresizingMaskIntoConstraints="NO" id="924-bJ-Hn1">
                         <rect key="frame" x="292" y="8" width="18" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="18" id="GVw-ws-qeY"/>
@@ -69,28 +62,23 @@
                     <constraint firstItem="uNW-da-F74" firstAttribute="leading" secondItem="KEy-mp-Bxm" secondAttribute="trailing" constant="10" id="M9H-jg-8DU"/>
                     <constraint firstAttribute="trailing" secondItem="sPX-WB-y2R" secondAttribute="trailing" constant="10" id="UEc-cm-zhv"/>
                     <constraint firstAttribute="bottom" secondItem="sPX-WB-y2R" secondAttribute="bottom" constant="10" id="ZxZ-eQ-IAt"/>
+                    <constraint firstItem="924-bJ-Hn1" firstAttribute="leading" secondItem="fM0-kh-A9t" secondAttribute="trailing" constant="2" id="czO-a8-Yem"/>
                     <constraint firstAttribute="trailing" secondItem="924-bJ-Hn1" secondAttribute="trailing" constant="10" id="epX-O6-s7N"/>
                     <constraint firstItem="sPX-WB-y2R" firstAttribute="leading" secondItem="KEy-mp-Bxm" secondAttribute="trailing" constant="10" id="gQz-b6-Jsr"/>
                     <constraint firstItem="fM0-kh-A9t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uNW-da-F74" secondAttribute="trailing" constant="8" id="jNm-rY-cM2"/>
                     <constraint firstItem="924-bJ-Hn1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jpH-dv-jM9"/>
-                    <constraint firstItem="924-bJ-Hn1" firstAttribute="leading" secondItem="rMh-au-LjG" secondAttribute="trailing" constant="5" id="nkt-K2-QIx"/>
                     <constraint firstItem="fM0-kh-A9t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pSh-C3-I8T"/>
                     <constraint firstItem="sPX-WB-y2R" firstAttribute="top" secondItem="924-bJ-Hn1" secondAttribute="bottom" constant="6" id="sCA-lP-GY1"/>
                     <constraint firstItem="fM0-kh-A9t" firstAttribute="leading" secondItem="uNW-da-F74" secondAttribute="trailing" constant="8" id="tXR-00-aYt"/>
-                    <constraint firstItem="rMh-au-LjG" firstAttribute="leading" secondItem="fM0-kh-A9t" secondAttribute="trailing" constant="3" id="tr8-VW-YQ6"/>
                     <constraint firstItem="KEy-mp-Bxm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="uDK-H9-mYO"/>
-                    <constraint firstItem="rMh-au-LjG" firstAttribute="leading" secondItem="fM0-kh-A9t" secondAttribute="trailing" constant="3" id="x3u-hY-bKY"/>
-                    <constraint firstItem="rMh-au-LjG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xlE-Vb-CWM"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="tXR-00-aYt"/>
-                        <exclude reference="tr8-VW-YQ6"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="igvAlert" destination="rMh-au-LjG" id="kFt-E5-xZL"/>
                 <outlet property="igvDue" destination="924-bJ-Hn1" id="6u2-3G-Nh7"/>
                 <outlet property="lblContent" destination="sPX-WB-y2R" id="jo9-rb-AnD"/>
                 <outlet property="lblDueTime" destination="fM0-kh-A9t" id="OeJ-AK-4Ez"/>
@@ -100,4 +88,7 @@
             <point key="canvasLocation" x="358" y="359"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="btn_dateto" width="25" height="25"/>
+    </resources>
 </document>
