@@ -50,12 +50,10 @@ code_sign() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'FMDB.framework'
   install_framework 'MGSwipeTableCell.framework'
-  install_framework 'SWTableViewCell.framework'
   install_framework 'SnapKit.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'FMDB.framework'
   install_framework 'MGSwipeTableCell.framework'
-  install_framework 'SWTableViewCell.framework'
   install_framework 'SnapKit.framework'
 fi
