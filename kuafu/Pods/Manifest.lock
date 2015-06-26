@@ -4,11 +4,15 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - MGSwipeTableCell (1.4.3)
   - SnapKit (0.12.0)
+  - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
   - FMDB (from `https://github.com/robertmryan/fmdb.git`)
+  - MGSwipeTableCell (~> 1.4.3)
   - SnapKit (~> 0.12.0)
+  - SWTableViewCell (~> 0.3.7)
 
 EXTERNAL SOURCES:
   FMDB:
@@ -21,6 +25,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   FMDB: 8e59e93d20d76d0b135db26ecc83ae88d016076d
+  MGSwipeTableCell: cb9805df3cc5cad75ad43a5c1eb424be0316f0bf
   SnapKit: 00c388aa3bf1944c1b55472f31e841f75bd83882
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
 COCOAPODS: 0.37.1

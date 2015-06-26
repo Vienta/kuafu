@@ -17,3 +17,6 @@
 "KF_NEW_TODO_TITLE" = "新建任务";
 "KF_OK" = "确定";
 "KF_CANCEL" = "取消";
+"KF_EDIT" = "编辑";
+"KF_ARCHIEVE" = "标记为完成";
+"KF_DELETE" = "删除";

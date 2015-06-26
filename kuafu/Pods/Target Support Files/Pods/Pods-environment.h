@@ -24,6 +24,18 @@
 #define COCOAPODS_VERSION_MINOR_FMDB_standard 5
 #define COCOAPODS_VERSION_PATCH_FMDB_standard 0
 
+// MGSwipeTableCell
+#define COCOAPODS_POD_AVAILABLE_MGSwipeTableCell
+#define COCOAPODS_VERSION_MAJOR_MGSwipeTableCell 1
+#define COCOAPODS_VERSION_MINOR_MGSwipeTableCell 4
+#define COCOAPODS_VERSION_PATCH_MGSwipeTableCell 3
+
+// SWTableViewCell
+#define COCOAPODS_POD_AVAILABLE_SWTableViewCell
+#define COCOAPODS_VERSION_MAJOR_SWTableViewCell 0
+#define COCOAPODS_VERSION_MINOR_SWTableViewCell 3
+#define COCOAPODS_VERSION_PATCH_SWTableViewCell 7
+
 // SnapKit
 #define COCOAPODS_POD_AVAILABLE_SnapKit
 #define COCOAPODS_VERSION_MAJOR_SnapKit 0

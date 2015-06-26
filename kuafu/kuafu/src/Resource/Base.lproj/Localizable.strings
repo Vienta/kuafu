@@ -17,3 +17,6 @@
 "KF_NEW_TODO_TITLE" = "New ToDo";
 "KF_OK" = "OK";
 "KF_CANCEL" = "Cancel";
+"KF_EDIT" = "Edit";
+"KF_ARCHIEVE" = "Archieve";
+"KF_DELETE" = "Delete";

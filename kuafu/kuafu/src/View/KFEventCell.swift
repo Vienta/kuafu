@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
-class KFEventCell: UITableViewCell {
+class KFEventCell: MGSwipeTableCell{
     @IBOutlet weak var lblMark: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblContent: UILabel!
     @IBOutlet weak var lblDueTime: UILabel!
-    @IBOutlet weak var igvAlert: UIImageView!
     @IBOutlet weak var igvDue: UIImageView!
 
     override func awakeFromNib() {

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ObjectiveC
+import MGSwipeTableCell
 
 
 class KFEventViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
@@ -32,6 +34,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.title = "KF_EVENT_CONTROLLER_TITLE".localized
         self.tbvEvents.rowHeight = UITableViewAutomaticDimension
         self.tbvEvents.estimatedRowHeight = 78.0
+        self.tbvEvents.registerNib(UINib(nibName: "KFEventCell", bundle: nil), forCellReuseIdentifier: "KFEventCell")
 
         var allEvents: NSArray = KFEventDAO.sharedManager.getAllEvents()
         self.events = NSMutableArray(array: allEvents)
@@ -41,15 +44,31 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // MARK: -- Private Methods --
+
     // MARK: -- UITableViewDelegate && UITableViewDataSource --
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.events.count
     }
     
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var eventCell: KFEventCell = LOAD_NIB("KFEventCell") as! KFEventCell
+        var eventCell: KFEventCell = tableView.dequeueReusableCellWithIdentifier("KFEventCell") as! KFEventCell
+        eventCell.leftButtons = [MGSwipeButton(title: "KF_ARCHIEVE".localized, backgroundColor: UIColor(red: 0.13, green: 0.41, blue: 1, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
+            return true
+        }]
+        eventCell.rightButtons = [
+            MGSwipeButton(title: "KF_DELETE".localized, backgroundColor: UIColor(red: 1, green: 0, blue: 0.13, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
+                return true
+            },
+            MGSwipeButton(title: "KF_EDIT".localized, backgroundColor: UIColor(red: 0.8, green: 0.76, blue: 0.81, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
+                return true
+            }
+        ]
+        
+        eventCell.leftExpansion.buttonIndex = 0
+        eventCell.rightExpansion.buttonIndex = 0
         var eventDO: KFEventDO = self.events[indexPath.row] as! KFEventDO
         eventCell.configData(eventDO)
         return eventCell
