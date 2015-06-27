@@ -15,7 +15,6 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
 
     // MARK: -- property --
     @IBOutlet weak var tbvEvents: UITableView!
-    @IBOutlet weak var btnEvents: UIButton!
     var events: NSMutableArray!
     
     // MARK: -- IBActions --
@@ -29,12 +28,12 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.btnEvents.backgroundColor = KF_THEME_COLOR
-        KFUtil.drawCircleView(self.btnEvents)
         self.title = "KF_EVENT_CONTROLLER_TITLE".localized
         self.tbvEvents.rowHeight = UITableViewAutomaticDimension
         self.tbvEvents.estimatedRowHeight = 78.0
         self.tbvEvents.registerNib(UINib(nibName: "KFEventCell", bundle: nil), forCellReuseIdentifier: "KFEventCell")
+        var addButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "btnTapped:")
+        self.navigationItem.rightBarButtonItem = addButtonItem
 
         var allEvents: NSArray = KFEventDAO.sharedManager.getAllEvents()
         self.events = NSMutableArray(array: allEvents)
@@ -59,10 +58,10 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             return true
         }]
         eventCell.rightButtons = [
-            MGSwipeButton(title: "KF_DELETE".localized, backgroundColor: UIColor(red: 1, green: 0, blue: 0.13, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
+            MGSwipeButton(title: " " + "KF_DELETE".localized + " ", backgroundColor: UIColor(red: 1, green: 0, blue: 0.13, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
                 return true
             },
-            MGSwipeButton(title: "KF_EDIT".localized, backgroundColor: UIColor(red: 0.8, green: 0.76, blue: 0.81, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
+            MGSwipeButton(title: " " + "KF_EDIT".localized + " ", backgroundColor: UIColor(red: 0.8, green: 0.76, blue: 0.81, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
                 return true
             }
         ]

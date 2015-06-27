@@ -5,7 +5,7 @@
   Created by Vienta on 15/6/6.
   Copyright (c) 2015年 www.vienta.me. All rights reserved.
 */
-"KF_EVENT_CONTROLLER_TITLE" = "任务清单";
+"KF_EVENT_CONTROLLER_TITLE" = "清单";
 "KF_CANCEL" = "取消";
 "KF_SAVE" = "保存";
 "KF_TIME_DUETO" = "逾期时间";

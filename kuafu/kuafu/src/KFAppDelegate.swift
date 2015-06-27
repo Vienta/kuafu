@@ -15,6 +15,9 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UITabBar.appearance().tintColor = KF_THEME_COLOR
+        UINavigationBar.appearance().tintColor = KF_THEME_COLOR
+        
         return true
     }
 
