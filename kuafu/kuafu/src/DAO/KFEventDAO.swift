@@ -195,5 +195,4 @@ class KFEventDAO: KFBaseDAO {
         })
         return result
     }
-    
 }

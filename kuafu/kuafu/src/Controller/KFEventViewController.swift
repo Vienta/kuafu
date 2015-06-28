@@ -37,6 +37,21 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
 
         var allEvents: NSArray = KFEventDAO.sharedManager.getAllEvents()
         self.events = NSMutableArray(array: allEvents)
+        
+        //逾期任务
+        var overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        var normalEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        
+        var currentDateStamp: NSTimeInterval = NSDate().timeIntervalSince1970
+
+        allEvents.enumerateObjectsUsingBlock { (element, index, stop) -> Void in
+            let subEvent = element as! KFEventDO
+            if subEvent.endtime != nil {
+                if currentDateStamp > subEvent.endtime.doubleValue {
+                    overDueEvents.addObject(subEvent)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
