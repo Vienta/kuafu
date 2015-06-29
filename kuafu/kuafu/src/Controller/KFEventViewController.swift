@@ -79,6 +79,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         println("overDueEvents = \(overDueEvents)")
         println("normalEvents = \(normalEvents)")
         println("todayEvents = \(todayEvents)")
+        
     }
 
     override func didReceiveMemoryWarning() {
