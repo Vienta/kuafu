@@ -40,18 +40,45 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         
         //逾期任务
         var overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        
+        //普通任务 既无提醒时间，也无逾期时间
         var normalEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        
+        //今日任务 提醒时间或者逾期时间是今天
+        var todayEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
         var currentDateStamp: NSTimeInterval = NSDate().timeIntervalSince1970
 
         allEvents.enumerateObjectsUsingBlock { (element, index, stop) -> Void in
+            
             let subEvent = element as! KFEventDO
-            if subEvent.endtime != nil {
+            if subEvent.endtime.doubleValue > 0 {
                 if currentDateStamp > subEvent.endtime.doubleValue {
                     overDueEvents.addObject(subEvent)
+                    println("overdue sub Events = \(subEvent.content)")
+                }
+            }
+            
+            if subEvent.starttime.doubleValue == 0 && subEvent.endtime.doubleValue == 0 {
+                normalEvents.addObject(subEvent)
+                println("normal sub Events = \(subEvent.content)")
+            }
+            
+            if subEvent.starttime.doubleValue > 0 || subEvent.endtime.doubleValue > 0 {
+                var isStartTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.starttime.doubleValue))
+                var isEndTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.endtime.doubleValue))
+                
+                var isToday: Bool = (isStartTimeToday || isEndTimeToday)
+                
+                if isToday == true {
+                    todayEvents.addObject(subEvent)
+                    println("sub Events = \(subEvent.content)")
                 }
             }
         }
+        println("overDueEvents = \(overDueEvents)")
+        println("normalEvents = \(normalEvents)")
+        println("todayEvents = \(todayEvents)")
     }
 
     override func didReceiveMemoryWarning() {

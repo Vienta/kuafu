@@ -29,5 +29,5 @@ class KFBaseModelDO: NSObject {
         }
         
     }
-
+    
 }
