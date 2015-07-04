@@ -20,3 +20,6 @@
 "KF_EDIT" = "编辑";
 "KF_ARCHIEVE" = "标记为完成";
 "KF_DELETE" = "删除";
+"KF_OVERDUE_TASK" = "过期任务";
+"KF_TODAY_TASK" = "今日任务";
+"KF_NORMAL_TASK" = "日常任务";

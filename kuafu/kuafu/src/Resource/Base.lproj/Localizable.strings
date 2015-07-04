@@ -20,3 +20,6 @@
 "KF_EDIT" = "Edit";
 "KF_ARCHIEVE" = "Archieve";
 "KF_DELETE" = "Delete";
+"KF_OVERDUE_TASK" = "OverDue Task";
+"KF_TODAY_TASK" = "Today Task";
+"KF_NORMAL_TASK" = "Daily Task";

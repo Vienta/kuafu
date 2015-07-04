@@ -13,7 +13,7 @@ import MGSwipeTableCell
 
 class KFEventViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
 
-    // MARK: -- property --
+    // MARK: -- Property --
     @IBOutlet weak var tbvEvents: UITableView!
     var events: NSMutableArray!
     
@@ -34,10 +34,27 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.tbvEvents.registerNib(UINib(nibName: "KFEventCell", bundle: nil), forCellReuseIdentifier: "KFEventCell")
         var addButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "btnTapped:")
         self.navigationItem.rightBarButtonItem = addButtonItem
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: KF_NOTIFICATION_UPDATE_TASK, object: nil)
+        self.events = NSMutableArray(capacity: 0)
 
-        var allEvents: NSArray = KFEventDAO.sharedManager.getAllEvents()
-        self.events = NSMutableArray(array: allEvents)
+        self.showTaskData()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: -- Private Methods --
+    func showTaskData() -> Void {
+        self.updateTask()
+    }
+    
+    func updateTask() -> Void {
         
+        self.events.removeAllObjects()
+        var allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllEvents())
+
         //逾期任务
         var overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
@@ -48,20 +65,14 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         var todayEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
         var currentDateStamp: NSTimeInterval = NSDate().timeIntervalSince1970
-
+        
         allEvents.enumerateObjectsUsingBlock { (element, index, stop) -> Void in
             
             let subEvent = element as! KFEventDO
             if subEvent.endtime.doubleValue > 0 {
                 if currentDateStamp > subEvent.endtime.doubleValue {
                     overDueEvents.addObject(subEvent)
-                    println("overdue sub Events = \(subEvent.content)")
                 }
-            }
-            
-            if subEvent.starttime.doubleValue == 0 && subEvent.endtime.doubleValue == 0 {
-                normalEvents.addObject(subEvent)
-                println("normal sub Events = \(subEvent.content)")
             }
             
             if subEvent.starttime.doubleValue > 0 || subEvent.endtime.doubleValue > 0 {
@@ -72,28 +83,59 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
                 
                 if isToday == true {
                     todayEvents.addObject(subEvent)
-                    println("sub Events = \(subEvent.content)")
                 }
             }
         }
-        println("overDueEvents = \(overDueEvents)")
-        println("normalEvents = \(normalEvents)")
-        println("todayEvents = \(todayEvents)")
         
+        allEvents.removeObjectsInArray(overDueEvents as [AnyObject])
+        allEvents.removeObjectsInArray(todayEvents as [AnyObject])
+        
+        if overDueEvents.count > 0 {
+            var overDueEventDict: NSDictionary = ["title": "KF_OVERDUE_TASK".localized,"events": overDueEvents]
+            self.events.addObject(overDueEventDict)
+        }
+        
+        if todayEvents.count > 0 {
+            var todayEventDict: NSDictionary = ["title": "KF_TODAY_TASK".localized,"events": todayEvents]
+            self.events.addObject(todayEventDict)
+        }
+        normalEvents = allEvents
+        if normalEvents.count > 0 {
+            var normalEventDict: NSDictionary = ["title": "KF_NORMAL_TASK".localized,"events": normalEvents]
+            self.events.addObject(normalEventDict)
+        }
+        
+        self.tbvEvents.reloadData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    // MARK: -- Private Methods --
-
+    
     // MARK: -- UITableViewDelegate && UITableViewDataSource --
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.events.count
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        var currentEventDict: NSDictionary = self.events.objectAtIndex(section) as! NSDictionary
+        var currentEvents: NSArray = currentEventDict.objectForKey("events") as! NSArray
+        return currentEvents.count
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var currentEventSectionTitle: String = self.events.objectAtIndex(section).objectForKey("title") as! String
+        return currentEventSectionTitle
+    }
+    
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel.textColor = UIColor.grayColor()
+        header.textLabel.font = UIFont.systemFontOfSize(14)
+        header.contentView.backgroundColor = KF_BG_COLOR
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 24.0
+    }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var eventCell: KFEventCell = tableView.dequeueReusableCellWithIdentifier("KFEventCell") as! KFEventCell
@@ -111,7 +153,12 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         
         eventCell.leftExpansion.buttonIndex = 0
         eventCell.rightExpansion.buttonIndex = 0
-        var eventDO: KFEventDO = self.events[indexPath.row] as! KFEventDO
+        
+        
+        var eventDict: NSDictionary = self.events[indexPath.section] as! NSDictionary
+        var eventInSection: NSArray = eventDict.objectForKey("events") as! NSArray
+        var eventDO: KFEventDO = eventInSection[indexPath.row] as! KFEventDO
+        
         eventCell.configData(eventDO)
         return eventCell
     }
