@@ -74,6 +74,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         if eventsMArrInSection.count == 0 {
             self.events.removeObjectAtIndex(indexPath.section)
             self.tbvEvents.reloadData()
+            
         } else {
             var updateEventDict: NSDictionary = ["title": sectionDict.objectForKey("title") as! String,"events": eventsMArrInSection]
             let section: Int = indexPath.section
