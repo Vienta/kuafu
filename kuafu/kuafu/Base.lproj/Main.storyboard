@@ -24,17 +24,26 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zzs-do-azD"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="无任何任务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Q-Pg-c3S">
+                                <rect key="frame" x="0.0" y="262" width="320" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YaA-Wx-geI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G9l-8W-FGE"/>
                             <constraint firstItem="YaA-Wx-geI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YQu-gg-AXh"/>
+                            <constraint firstAttribute="centerX" secondItem="Y4Q-Pg-c3S" secondAttribute="centerX" id="mZU-5X-vWM"/>
                             <constraint firstAttribute="trailing" secondItem="YaA-Wx-geI" secondAttribute="trailing" id="waS-5o-koT"/>
                             <constraint firstAttribute="bottom" secondItem="YaA-Wx-geI" secondAttribute="bottom" id="xfb-UM-wtu"/>
+                            <constraint firstAttribute="centerY" secondItem="Y4Q-Pg-c3S" secondAttribute="centerY" id="zLK-kC-7wi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l1k-xv-xIO"/>
                     <connections>
+                        <outlet property="lblEmpty" destination="Y4Q-Pg-c3S" id="6v9-hd-lwO"/>
                         <outlet property="tbvEvents" destination="YaA-Wx-geI" id="t6s-gF-hh4"/>
                     </connections>
                 </viewController>

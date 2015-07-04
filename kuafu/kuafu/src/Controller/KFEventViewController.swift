@@ -11,18 +11,15 @@ import ObjectiveC
 import MGSwipeTableCell
 
 
-class KFEventViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
+class KFEventViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, MGSwipeTableCellDelegate{
 
     // MARK: -- Property --
     @IBOutlet weak var tbvEvents: UITableView!
+    @IBOutlet weak var lblEmpty: UILabel!
+    
     var events: NSMutableArray!
     
     // MARK: -- IBActions --
-    @IBAction func btnTapped(sender: AnyObject) {
-        var eventWriteViewController: KFEventWriteViewController = KFEventWriteViewController(nibName: "KFEventWriteViewController", bundle: nil)
-        var eventWriteNavigationController: UINavigationController = UINavigationController(rootViewController: eventWriteViewController)
-        self.navigationController?.presentViewController(eventWriteNavigationController, animated: true, completion: nil)
-    }
     
     // MARK: -- Life Cycle --
     override func viewDidLoad() {
@@ -54,6 +51,15 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         
         self.events.removeAllObjects()
         var allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllEvents())
+        
+        if allEvents.count == 0 {
+            self.lblEmpty.hidden = false
+            self.tbvEvents.hidden = true
+            return
+        } else {
+            self.lblEmpty.hidden = true
+            self.tbvEvents.hidden = false
+        }
 
         //逾期任务
         var overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
@@ -107,6 +113,24 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         
         self.tbvEvents.reloadData()
     }
+    // MARK: -- MGSwipeTableCellDelegate --
+    func swipeTableCell(cell: MGSwipeTableCell!, tappedButtonAtIndex index: Int, direction: MGSwipeDirection, fromExpansion: Bool) -> Bool {
+        if direction == MGSwipeDirection.LeftToRight {
+            if index == 0 {
+                println("标记为完成")
+            }
+        }
+        if direction == MGSwipeDirection.RightToLeft {
+            if index == 0 {
+                println("删除")
+            }
+            if index == 1 {
+                println("编辑")
+            }
+        }
+        
+        return true
+    }
     
     // MARK: -- UITableViewDelegate && UITableViewDataSource --
     
@@ -153,18 +177,23 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         
         eventCell.leftExpansion.buttonIndex = 0
         eventCell.rightExpansion.buttonIndex = 0
-        
+        eventCell.delegate = self
         
         var eventDict: NSDictionary = self.events[indexPath.section] as! NSDictionary
         var eventInSection: NSArray = eventDict.objectForKey("events") as! NSArray
         var eventDO: KFEventDO = eventInSection[indexPath.row] as! KFEventDO
         
         eventCell.configData(eventDO)
+        
         return eventCell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
