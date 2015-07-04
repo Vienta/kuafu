@@ -34,6 +34,15 @@ func LOAD_NIB(nibName: String, index: Int) -> AnyObject {
     return NSBundle.mainBundle().loadNibNamed(nibName, owner: nil, options: nil)[index]
 }
 
+func DELAY(delay:Double, closure:()->()) {
+    dispatch_after(
+        dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(delay * Double(NSEC_PER_SEC))
+        ),
+        dispatch_get_main_queue(), closure)
+}
+
 enum kTapStyle :Int {
     case Alert
     case DateTo

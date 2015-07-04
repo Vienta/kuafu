@@ -195,4 +195,17 @@ class KFEventDAO: KFBaseDAO {
         })
         return result
     }
+    
+    func getAllNoArchiveAndNoDeleteEvents() -> NSArray {
+        var sql: String = "SELECT * FROM " + self.tableName() + " WHERE status != \(KEventStatus.Achieve.rawValue) and status != \(KEventStatus.Delete.rawValue)"
+        var result: NSMutableArray = NSMutableArray()
+        dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
+            var resultSet: FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
+            while(resultSet.next()) {
+                var event: KFEventDO = self.eventFromResultSet(resultSet)
+                result.addObject(event)
+            }
+        })
+        return result
+    }
 }

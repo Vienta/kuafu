@@ -10,6 +10,7 @@ import UIKit
 import ObjectiveC
 import MGSwipeTableCell
 
+var kAssociateRowKey: UInt8 = 1
 
 class KFEventViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, MGSwipeTableCellDelegate{
 
@@ -20,6 +21,9 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     var events: NSMutableArray!
     
     // MARK: -- IBActions --
+    @IBAction func btnTapped(sender: AnyObject) {
+        self.popWriteEventViewControllerWithEvent(nil)
+    }
     
     // MARK: -- Life Cycle --
     override func viewDidLoad() {
@@ -43,6 +47,49 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
     // MARK: -- Private Methods --
+    func popWriteEventViewControllerWithEvent(eventDO: KFEventDO!) -> Void {
+        var eventWriteViewController: KFEventWriteViewController = KFEventWriteViewController(nibName: "KFEventWriteViewController", bundle: nil)
+        eventWriteViewController.eventDO = eventDO
+        var eventWriteNavigationController: UINavigationController = UINavigationController(rootViewController: eventWriteViewController)
+        self.navigationController?.presentViewController(eventWriteNavigationController, animated: true, completion: nil)
+    }
+    
+    func deleteEventCellWithAnimation(sectionDict: NSDictionary, eventsInSection: NSArray, indexPath: NSIndexPath, eventDO: KFEventDO) -> Void {
+        
+        var sectionDict: NSDictionary = sectionDict
+        var eventsMArrInSection: NSMutableArray = NSMutableArray(array: eventsInSection) as NSMutableArray
+        
+        var targetEvent: KFEventDO!
+        for (index, event : AnyObject) in enumerate(eventsMArrInSection) {
+            var subEvent: KFEventDO = event as! KFEventDO
+            if subEvent.eventid.integerValue == eventDO.eventid.integerValue {
+                targetEvent = subEvent
+            }
+        }
+
+        if targetEvent != nil {
+            eventsMArrInSection.removeObject(targetEvent)
+        }
+
+        if eventsMArrInSection.count == 0 {
+            self.events.removeObjectAtIndex(indexPath.section)
+            self.tbvEvents.reloadData()
+        } else {
+            var updateEventDict: NSDictionary = ["title": sectionDict.objectForKey("title") as! String,"events": eventsMArrInSection]
+            let section: Int = indexPath.section
+            
+            self.events.replaceObjectAtIndex(section, withObject: updateEventDict)
+            
+            self.tbvEvents.beginUpdates()
+            self.tbvEvents.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Bottom)
+            self.tbvEvents.endUpdates()
+            
+            DELAY(0.4, { () -> () in
+                self.tbvEvents.reloadSections(NSIndexSet(index: section), withRowAnimation: UITableViewRowAnimation.None)
+            })
+        }
+    }
+    
     func showTaskData() -> Void {
         self.updateTask()
     }
@@ -50,7 +97,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     func updateTask() -> Void {
         
         self.events.removeAllObjects()
-        var allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllEvents())
+        var allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllNoArchiveAndNoDeleteEvents())
         
         if allEvents.count == 0 {
             self.lblEmpty.hidden = false
@@ -114,18 +161,30 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.tbvEvents.reloadData()
     }
     // MARK: -- MGSwipeTableCellDelegate --
+    
     func swipeTableCell(cell: MGSwipeTableCell!, tappedButtonAtIndex index: Int, direction: MGSwipeDirection, fromExpansion: Bool) -> Bool {
+        
+        var eventDO = objc_getAssociatedObject(cell, &kAssociateKey) as! KFEventDO
+        var indexPath = objc_getAssociatedObject(cell, &kAssociateRowKey) as! NSIndexPath
+        
         if direction == MGSwipeDirection.LeftToRight {
             if index == 0 {
-                println("标记为完成")
+                eventDO.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
+                KFEventDAO.sharedManager.saveEvent(eventDO)
+                var sectionDict: NSDictionary = self.events.objectAtIndex(indexPath.section) as! NSDictionary
+                self.deleteEventCellWithAnimation(sectionDict as NSDictionary, eventsInSection: sectionDict.objectForKey("events") as! NSArray, indexPath: indexPath, eventDO: eventDO)
+                
             }
         }
         if direction == MGSwipeDirection.RightToLeft {
             if index == 0 {
-                println("删除")
+                eventDO.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
+                KFEventDAO.sharedManager.saveEvent(eventDO)
+                var sectionDict: NSDictionary = self.events.objectAtIndex(indexPath.section) as! NSDictionary
+                self.deleteEventCellWithAnimation(sectionDict as NSDictionary, eventsInSection: sectionDict.objectForKey("events") as! NSArray, indexPath: indexPath, eventDO: eventDO)
             }
             if index == 1 {
-                println("编辑")
+                self.popWriteEventViewControllerWithEvent(eventDO)
             }
         }
         
@@ -135,6 +194,10 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     // MARK: -- UITableViewDelegate && UITableViewDataSource --
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        if self.events.count == 0 {
+            self.lblEmpty.hidden = false
+            self.tbvEvents.hidden = true
+        }
         return self.events.count
     }
     
@@ -166,6 +229,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         eventCell.leftButtons = [MGSwipeButton(title: "KF_ARCHIEVE".localized, backgroundColor: UIColor(red: 0.13, green: 0.41, blue: 1, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
             return true
         }]
+        eventCell.leftExpansion.fillOnTrigger = true
         eventCell.rightButtons = [
             MGSwipeButton(title: " " + "KF_DELETE".localized + " ", backgroundColor: UIColor(red: 1, green: 0, blue: 0.13, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
                 return true
@@ -174,6 +238,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
                 return true
             }
         ]
+        eventCell.rightExpansion.fillOnTrigger = true
         
         eventCell.leftExpansion.buttonIndex = 0
         eventCell.rightExpansion.buttonIndex = 0
@@ -184,6 +249,9 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         var eventDO: KFEventDO = eventInSection[indexPath.row] as! KFEventDO
         
         eventCell.configData(eventDO)
+        
+        objc_setAssociatedObject(eventCell, &kAssociateKey, eventDO, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+        objc_setAssociatedObject(eventCell, &kAssociateRowKey, indexPath, objc_AssociationPolicy(OBJC_ASSOCIATION_COPY_NONATOMIC))
         
         return eventCell
     }

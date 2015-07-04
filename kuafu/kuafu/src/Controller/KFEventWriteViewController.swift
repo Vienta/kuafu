@@ -49,7 +49,11 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
             }
         })
         
-        self.eventDO = KFEventDO()
+        if self.eventDO != nil {
+            self.showData(self.eventDO)
+        } else {
+            self.eventDO = KFEventDO()
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -78,6 +82,29 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
     }
     
     // MARK: - Private Methods
+    func showData(event: KFEventDO) -> Void {
+        self.txfEventTitle.text = event.title
+        self.txvEventContent.text = event.content
+        
+        if event.starttime.doubleValue > 0 {
+            self.eventAlertKeyboard.btnAlert.tintColor = KF_THEME_COLOR
+        } else {
+            self.eventAlertKeyboard.btnAlert.tintColor = KF_ICON_BG_COLOR
+        }
+        
+        if event.endtime.doubleValue > 0 {
+            self.eventAlertKeyboard.btnDateto.tintColor = KF_THEME_COLOR
+        } else {
+            self.eventAlertKeyboard.btnDateto.tintColor = KF_ICON_BG_COLOR
+        }
+        
+        if event.content.isEmpty == true {
+            self.navigationItem.rightBarButtonItem?.enabled = false
+        } else {
+            self.navigationItem.rightBarButtonItem?.enabled = true
+        }
+    }
+    
     func cancel() {
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
         self.view.endEditing(true)
