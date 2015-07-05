@@ -103,4 +103,42 @@ class KFLocalPushManager: NSObject {
         
         return event
     }
+    
+    func localNotificationSettingsCategories() -> NSSet {
+        let completeAction = UIMutableUserNotificationAction()
+        completeAction.identifier = "COMPLETE_TODO";
+        completeAction.title = "KF_LOCALNOTIFICATION_COMPLETE".localized
+        completeAction.activationMode = .Background
+        completeAction.authenticationRequired = false
+        completeAction.destructive = true
+        
+        let getitAction = UIMutableUserNotificationAction()
+        getitAction.identifier = "GET_IT_TODO"
+        getitAction.title = "KF_LOCALNOTIFICATION_GET_IT".localized
+        getitAction.activationMode = .Background
+        getitAction.destructive = false
+        
+        let deleteAction = UIMutableUserNotificationAction()
+        deleteAction.identifier = "DELETE_TODO"
+        deleteAction.title = "KF_DELETE".localized
+        deleteAction.activationMode = .Background
+        deleteAction.destructive = false
+        
+        let delayAction = UIMutableUserNotificationAction()
+        delayAction.identifier = "DELAY_TODO"
+        delayAction.title = "KF_LOCALNOTIFICATION_FIVE_MIN_AFTER".localized
+        delayAction.activationMode = .Background
+        deleteAction.destructive = false
+        
+        let remindCategory = UIMutableUserNotificationCategory()
+        remindCategory.identifier = KF_LOCAL_NOTIFICATION_CATEGORY_REMIND
+        remindCategory.setActions([getitAction, deleteAction], forContext: .Default)
+        
+        let completeCategory = UIMutableUserNotificationCategory()
+        completeCategory.identifier = KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE
+        completeCategory.setActions([delayAction, completeAction, deleteAction], forContext: .Default)
+        
+        var categoriesSet: NSSet = NSSet(array: [remindCategory, completeCategory])
+        return categoriesSet
+    }
 }
