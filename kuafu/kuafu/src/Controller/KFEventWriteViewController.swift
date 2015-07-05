@@ -145,8 +145,18 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
             self.eventDO.status = NSNumber(integerLiteral: KEventStatus.Normal.rawValue)
         }
 
-        KFEventDAO.sharedManager.saveEvent(self.eventDO)
+        let saveEventid = KFEventDAO.sharedManager.saveEvent(self.eventDO) as NSNumber
+        if saveEventid.longLongValue > 0 && self.eventDO.eventid == nil {
+
+            var confirmEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(saveEventid)!
+            if confirmEventDO.content == self.eventDO.content {//防御
+                self.eventDO.eventid = saveEventid
+            }
+        }
         
+        assert(self.eventDO.eventid != nil, "当前的event id 不能为 nil")
+        
+        KFLocalPushManager.sharedManager.deleteLocalPushWithEvent(self.eventDO)
         KFLocalPushManager.sharedManager.registerLocaPushWithEvent(self.eventDO)
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in

@@ -169,18 +169,26 @@ class KFEventDAO: KFBaseDAO {
     }
     
     
-    func saveEvent(event: KFEventDO) -> Bool {
+    func saveEvent(event: KFEventDO) -> NSNumber {
         var isExistEvent: KFEventDO? = self.getEventById(event.eventid)
-        println(event)
+        
+        var successEventid: NSNumber!
+        
         if ((isExistEvent) == nil) {
             dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-                self.insertEvent(event, db: db)
+                var insertResult: Bool = self.insertEvent(event, db: db)
+                if insertResult == true {
+                    successEventid = NSNumber(longLong: db.lastInsertRowId())
+                } else {
+                    successEventid = NSNumber(longLong: 0)
+                }
             })
         } else {
             self.updateEvent(event)
+            successEventid = event.eventid
         }
         
-        return true
+        return successEventid
     }
     
     func getAllEvents() -> NSArray {

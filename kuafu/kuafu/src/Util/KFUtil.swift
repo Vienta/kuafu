@@ -41,6 +41,12 @@ class KFUtil: NSObject {
         return dateFormatter.stringFromDate(date)
     }
     
+    class func getTodayShortDate(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.stringFromDate(date)
+    }
+    
     class func drawCircleView(view: UIView) {
         self.drawCircleView(view, borderColor: UIColor.clearColor(), borderWidth: 0.0)
     }

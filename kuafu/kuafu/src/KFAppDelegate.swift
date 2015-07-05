@@ -18,6 +18,9 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = KF_THEME_COLOR
         UINavigationBar.appearance().tintColor = KF_THEME_COLOR
         
+        let settings = UIUserNotificationSettings(forTypes: .Alert | .Badge | .Sound, categories: nil)
+        application.registerUserNotificationSettings(settings)
+        
         return true
     }
 
@@ -25,6 +28,10 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        print("didReceiveLocalNotification:\(notification) alertBody:\(notification.alertBody)")
     }
 
     func applicationDidEnterBackground(application: UIApplication) {

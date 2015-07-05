@@ -42,8 +42,9 @@ class KFEventCell: MGSwipeTableCell{
                 self.igvDue.tintColor = UIColor.redColor()
             }
             
-            var dateString: String = KFUtil.getShortDate(KFUtil.dateFromTimeStamp(eventDO.starttime.doubleValue))
-            self.lblDueTime.text = dateString
+            var tmpDate: NSDate =  KFUtil.dateFromTimeStamp(eventDO.starttime.doubleValue) as NSDate
+            
+            self.lblDueTime.text = self.todayString(tmpDate)
             
         } else if eventDO.starttime == 0 && eventDO.endtime != 0 {
             if eventDO.endtime.doubleValue > NSDate().timeIntervalSince1970 {
@@ -54,26 +55,28 @@ class KFEventCell: MGSwipeTableCell{
                 self.igvDue.tintColor = UIColor.redColor()
             }
             
-            var dateString: String = KFUtil.getShortDate(KFUtil.dateFromTimeStamp(eventDO.endtime.doubleValue))
-            self.lblDueTime.text = dateString
+            var tmpDate: NSDate =  KFUtil.dateFromTimeStamp(eventDO.endtime.doubleValue) as NSDate
+            
+            self.lblDueTime.text = self.todayString(tmpDate)
             
         } else if eventDO.starttime != 0 && eventDO.endtime != 0 {
             println(eventDO.starttime)
             if NSDate().timeIntervalSince1970  <  eventDO.starttime.doubleValue {
                 self.igvDue.image = UIImage(named: "btn_datealert")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
                 self.igvDue.tintColor = KF_THEME_COLOR
-                var dateString: String = KFUtil.getShortDate(KFUtil.dateFromTimeStamp(eventDO.starttime.doubleValue))
-                self.lblDueTime.text = dateString
+                var tmpDate: NSDate = KFUtil.dateFromTimeStamp(eventDO.starttime.doubleValue) as NSDate
+                self.lblDueTime.text = self.todayString(tmpDate)
             } else if NSDate().timeIntervalSince1970 > eventDO.starttime.doubleValue && NSDate().timeIntervalSince1970 < eventDO.endtime.doubleValue {
                 self.igvDue.image = UIImage(named: "btn_dateto")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
                 self.igvDue.tintColor = KF_THEME_COLOR
-                var dateString: String = KFUtil.getShortDate(KFUtil.dateFromTimeStamp(eventDO.endtime.doubleValue))
-                self.lblDueTime.text = dateString
+                var tmpDate: NSDate = KFUtil.dateFromTimeStamp(eventDO.endtime.doubleValue)
+                self.lblDueTime.text = self.todayString(tmpDate)
+                
             } else {
                 self.igvDue.image = UIImage(named: "btn_dateto")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
                 self.igvDue.tintColor = UIColor.redColor()
-                var dateString: String = KFUtil.getShortDate(KFUtil.dateFromTimeStamp(eventDO.endtime.doubleValue))
-                self.lblDueTime.text = dateString
+                var tmpDate: NSDate = KFUtil.dateFromTimeStamp(eventDO.endtime.doubleValue)
+                self.lblDueTime.text = self.todayString(tmpDate)
             }
         }
         
@@ -89,6 +92,21 @@ class KFEventCell: MGSwipeTableCell{
 
         var subString: String = markString.substringToIndex(advance(markString.startIndex, 1))
         self.lblMark.text = subString
+    }
+    
+    func todayString(date: NSDate) -> String {
+        var tmpDate: NSDate =  date
+        
+        var isToday: Bool = NSCalendar.currentCalendar().isDateInToday(tmpDate)
+        
+        var dateString: String!
+        if isToday == true {
+            dateString = KFUtil.getTodayShortDate(tmpDate)
+        } else {
+            dateString = KFUtil.getShortDate(tmpDate)
+        }
+
+        return dateString
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
