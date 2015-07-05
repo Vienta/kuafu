@@ -41,10 +41,8 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
         eventAlertKeyboard.tapBlock = ({
             (tap: kTapStyle) -> Void in
             if tap == kTapStyle.Alert {
-                println("alert")
                 self.popTimePickerView("KF_TIME_ALERT".localized)
             } else {
-                println("dateto")
                 self.popTimePickerView("KF_TIME_DUETO".localized)
             }
         })

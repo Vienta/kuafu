@@ -25,3 +25,6 @@
 "KF_NORMAL_TASK" = "Daily Task";
 "KF_TASK_DUE_AFTER_FIVE_MIN" = "5 minutes later will expire";
 "KF_ALREADY_DUE" = "Expire";
+"KF_LOCALNOTIFICATION_GET_IT" = "Get it";
+"KF_LOCALNOTIFICATION_COMPLETE" = "Complete";
+"KF_LOCALNOTIFICATION_FIVE_MIN_AFTER" = "Remind after 5 min";

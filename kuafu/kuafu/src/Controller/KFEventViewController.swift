@@ -36,6 +36,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         var addButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "btnTapped:")
         self.navigationItem.rightBarButtonItem = addButtonItem
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: KF_NOTIFICATION_UPDATE_TASK, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: UIApplicationWillEnterForegroundNotification, object: nil)
         self.events = NSMutableArray(capacity: 0)
 
         self.showTaskData()
@@ -68,6 +69,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         }
 
         if targetEvent != nil {
+            KFLocalPushManager.sharedManager.deleteLocalPushWithEvent(targetEvent)
             eventsMArrInSection.removeObject(targetEvent)
         }
 
@@ -135,7 +137,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
                 
                 var isToday: Bool = (isStartTimeToday || isEndTimeToday)
                 
-                if isToday == true {
+                if isToday == true && (currentDateStamp < subEvent.endtime.doubleValue) {
                     todayEvents.addObject(subEvent)
                 }
             }

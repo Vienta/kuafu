@@ -15,6 +15,10 @@ let KF_BG_COLOR:UIColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
 let DEVICE_WIDTH:CGFloat = UIScreen.mainScreen().bounds.width
 let DEVICE_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.height
 
+// MARK: --Constant--
+let KF_LOCAL_NOTIFICATION_CATEGORY_REMIND = "KF_REMIND_CATEGORY"
+let KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE = "KF_COMPLETE_CATEGORY"
+
 // MARK: --Notification--
 let KF_NOTIFICATION_UPDATE_TASK = "KFNotificationUpdateTask"
 

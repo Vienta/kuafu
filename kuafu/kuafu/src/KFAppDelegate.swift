@@ -18,7 +18,40 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = KF_THEME_COLOR
         UINavigationBar.appearance().tintColor = KF_THEME_COLOR
         
-        let settings = UIUserNotificationSettings(forTypes: .Alert | .Badge | .Sound, categories: nil)
+        let completeAction = UIMutableUserNotificationAction()
+        completeAction.identifier = "COMPLETE_TODO";
+        completeAction.title = "KF_LOCALNOTIFICATION_COMPLETE".localized
+        completeAction.activationMode = .Background
+        completeAction.authenticationRequired = false
+        completeAction.destructive = true
+        
+        let getitAction = UIMutableUserNotificationAction()
+        getitAction.identifier = "GET_IT_TODO"
+        getitAction.title = "KF_LOCALNOTIFICATION_GET_IT".localized
+        getitAction.activationMode = .Background
+        getitAction.destructive = false
+        
+        let deleteAction = UIMutableUserNotificationAction()
+        deleteAction.identifier = "DELETE_TODO"
+        deleteAction.title = "KF_DELETE".localized
+        deleteAction.activationMode = .Background
+        deleteAction.destructive = false
+        
+        let delayAction = UIMutableUserNotificationAction()
+        delayAction.identifier = "DELAY_TODO"
+        delayAction.title = "KF_LOCALNOTIFICATION_FIVE_MIN_AFTER".localized
+        delayAction.activationMode = .Background
+        deleteAction.destructive = false
+
+        let remindCategory = UIMutableUserNotificationCategory()
+        remindCategory.identifier = KF_LOCAL_NOTIFICATION_CATEGORY_REMIND
+        remindCategory.setActions([getitAction, deleteAction], forContext: .Default)
+        
+        let completeCategory = UIMutableUserNotificationCategory()
+        completeCategory.identifier = KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE
+        completeCategory.setActions([delayAction, completeAction, deleteAction], forContext: .Default)
+        
+        let settings = UIUserNotificationSettings(forTypes: .Alert | .Badge | .Sound, categories: NSSet(array: [remindCategory, completeCategory]) as Set<NSObject>)
         application.registerUserNotificationSettings(settings)
         
         return true
@@ -32,6 +65,39 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         print("didReceiveLocalNotification:\(notification) alertBody:\(notification.alertBody)")
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        println("~~~identifier:\(identifier)")
+        switch (identifier!) {
+        case "GET_IT_TODO":
+            println("GET_IT_TODO")
+            break
+        case "COMPLETE_TODO":
+            println("COMPLETE_IT")
+            var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+            event.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
+            KFEventDAO.sharedManager.saveEvent(event)
+            break
+        case "DELETE_TODO":
+            println("DELETE_TODO")
+            var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+            event.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
+            KFEventDAO.sharedManager.saveEvent(event)
+            break
+        case "DELAY_TODO":
+            println("DELAY_TODO")
+            var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+            let alertBody: String = "KF_TASK_DUE_AFTER_FIVE_MIN".localized + ": " + event.content
+            event.endtime = NSDate().dateByAddingTimeInterval(5 * 60).timeIntervalSince1970
+            KFEventDAO.sharedManager.saveEvent(event)
+            KFLocalPushManager.sharedManager.registerLocalPushWithFireDate(NSDate().dateByAddingTimeInterval(5 * 60), alertBody: alertBody, and: event.eventid, with: KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE)
+            break
+        default:
+            println("Error: unexpected notification action identifier!")
+        }
+        
+        completionHandler()
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
