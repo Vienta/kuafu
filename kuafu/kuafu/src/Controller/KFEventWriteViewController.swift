@@ -147,6 +147,8 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
 
         KFEventDAO.sharedManager.saveEvent(self.eventDO)
         
+        KFLocalPushManager.sharedManager.registerLocaPushWithEvent(self.eventDO)
+        
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_UPDATE_TASK, object: nil)
         })

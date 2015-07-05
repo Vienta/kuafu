@@ -32,9 +32,9 @@ class KFBaseDAO: NSObject {
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
             var result: Bool = db.executeUpdate(self.createSqlString(), withArgumentsInArray: nil)
             if ((result)) {
-                NSLog("create table %@ success", self.tableName())
+                println("creat or open table \(self.tableName()) success")
             } else {
-                NSLog("create table %@ failure, error:%@", self.tableName(),db.lastErrorMessage())
+                println("create or open table \(self.tableName()) failure, error:\(db.lastErrorMessage())")
             }
             res = result
         })

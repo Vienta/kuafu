@@ -23,3 +23,5 @@
 "KF_OVERDUE_TASK" = "OverDue Task";
 "KF_TODAY_TASK" = "Today Task";
 "KF_NORMAL_TASK" = "Daily Task";
+"KF_TASK_DUE_AFTER_FIVE_MIN" = "5 minutes later will expire";
+"KF_ALREADY_DUE" = "Expire";

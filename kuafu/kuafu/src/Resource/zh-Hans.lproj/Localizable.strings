@@ -23,3 +23,5 @@
 "KF_OVERDUE_TASK" = "过期任务";
 "KF_TODAY_TASK" = "今日任务";
 "KF_NORMAL_TASK" = "日常任务";
+"KF_TASK_DUE_AFTER_FIVE_MIN" = "5分钟后将过期";
+"KF_ALREADY_DUE" = "已到期";

@@ -34,6 +34,7 @@
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
 		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
+		B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */; };
 		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
 		EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
 		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
+		B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLocalPushManager.swift; sourceTree = "<group>"; };
 		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
 		E136FEE5C76217550A54A74A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				B3164A5D1B2138950093E6B5 /* KFDBManager.swift */,
+				B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */,
 				B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */,
 				B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */,
+				B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */,
 				B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */,
 				B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */,
 				B34879B41B39A5C100A3A984 /* KFEventCell.swift in Sources */,
