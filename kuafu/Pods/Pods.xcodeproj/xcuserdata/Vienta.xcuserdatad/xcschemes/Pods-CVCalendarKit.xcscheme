@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07641F4AE5AF8E12A9B6AD15"
-               BuildableName = "FMDB.framework"
-               BlueprintName = "Pods-FMDB"
+               BlueprintIdentifier = "8F14869FB01C14D1B355AE0A"
+               BuildableName = "CVCalendarKit.framework"
+               BlueprintName = "Pods-CVCalendarKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

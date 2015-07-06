@@ -6,6 +6,12 @@
 // project.
 
 
+// CVCalendarKit
+#define COCOAPODS_POD_AVAILABLE_CVCalendarKit
+#define COCOAPODS_VERSION_MAJOR_CVCalendarKit 0
+#define COCOAPODS_VERSION_MINOR_CVCalendarKit 1
+#define COCOAPODS_VERSION_PATCH_CVCalendarKit 1
+
 // FMDB
 #define COCOAPODS_POD_AVAILABLE_FMDB
 #define COCOAPODS_VERSION_MAJOR_FMDB 2

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-CVCalendarKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>48A728AF9EBAEC8D2612FC86</key>
+		<key>07641F4AE5AF8E12A9B6AD15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4FFEF091CFD72BAB16A54C04</key>
+		<key>07B0B7436D4F75C75FA1BC04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C20AE38E97FC846E1A39E9C2</key>
+		<key>2509B0B3D53E6EDB8B6FCE8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CEAE5DFA38B14B538D8B07DF</key>
+		<key>8F14869FB01C14D1B355AE0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4F0A7C5485DBF1A6E4E2F56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
