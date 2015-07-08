@@ -41,7 +41,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
 
         self.showTaskData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -265,6 +265,14 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        println("\(__FUNCTION__)")
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        println("\(__FUNCTION__)")
     }
 }
 
