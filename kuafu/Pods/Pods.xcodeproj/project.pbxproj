@@ -7,493 +7,674 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01D7EBAA54B9215A40898BD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F3D26D53A56DC557E323F /* Foundation.framework */; };
-		04C517B542EEA9DC090028CD /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AF2D3C2F81AE4489359192 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04FE1CB046EE887B48C75503 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E23E677D12D0C38F2CD0CBA /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		087A3252EF29E9412C7A5A6D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0582C433D530B1149E0A6E10 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		093A9A35EE7E16F821674249 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1480EA026D1C5879EAEC0 /* ConstraintAttributes.swift */; };
-		157F041F72D720D63B404E1F /* FMDatabasePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EE84E6F48AB61CF48BCC645 /* FMDatabasePrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		1AF9489A002A7713601C0724 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37917871ACE9B5C0D955C0E1 /* LayoutConstraint.swift */; };
-		202FD76D3EAEAE9338434A47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F3D26D53A56DC557E323F /* Foundation.framework */; };
-		294C84073779946A4E3DAAEF /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CBF0201A3050D2F558012 /* ConstraintMaker.swift */; };
-		2BCE065E00FA01793727EA83 /* CVCalendarKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C374D474D9EA1C3C630CB2 /* CVCalendarKitExtensions.swift */; };
-		2EE494DC8ACAB32A7C75A713 /* Pods-CVCalendarKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FE67507495F21202830C1 /* Pods-CVCalendarKit-dummy.m */; };
-		329E18747868E40CE3E138F1 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC705245A7BEB1DB3ACD7E92 /* Pods-dummy.m */; };
-		371E4DFDB9080DACC82D5289 /* CVCalendarKitOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E03F72990092C45B94810E /* CVCalendarKitOperators.swift */; };
-		4A3F8C78C06956251ACFA60C /* Pods-CVCalendarKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D6F8EF652272ABD2C6FF49 /* Pods-CVCalendarKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C9C323D32DAA6DA4CD0FEE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F3D26D53A56DC557E323F /* Foundation.framework */; };
-		4CE35BE6B0C5CE874931DF31 /* Pods-MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0558C149EB828BCF3B4DE8C3 /* Pods-MGSwipeTableCell-dummy.m */; };
-		52882CD4C4F831C8AFCB494B /* Pods-MGSwipeTableCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DEFA6C6EDDC538D445B48A /* Pods-MGSwipeTableCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60590F170782AB342F1CB8CD /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6129EF4C6C5B0625CDD3F91 /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		62DA32B251C3C8E7846D1DC8 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D57BB6DF2A36A378F09C21 /* ConstraintRelation.swift */; };
-		69199CA6868001E03804EB85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F3D26D53A56DC557E323F /* Foundation.framework */; };
-		6C61793FFD7B285B1214E9C3 /* Pods-FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE8017F34EE16D743652115E /* Pods-FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79A6194B30CA3CE4C8BF84C7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 695FFA9EFC4C673626A42E37 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7AD4C1A49CB8171AA5E816F1 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C414077990BAA3214A300AA9 /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B598E6EF3FCBDD584FBAD26 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 241112FD4CE221302ECFD02C /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7CCCE85605EFEF7E217D518C /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D5ABA1FA87D830387D7EA /* EdgeInsets.swift */; };
-		7D353E437AB78ABF1CF8E8C9 /* Pods-FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 972307D611BC40A086EB9DAC /* Pods-FMDB-dummy.m */; };
-		83AA0FC5399CA80D978ACB72 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8ED107098D27BB2467E16E /* ConstraintItem.swift */; };
-		87ADB09048DC8B597EBF7177 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 50224A4EA49448EB93C54F8A /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B35482BD9476BD7B489B1CA /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 714934712FEFBADC2ADE85D8 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		969CF597B0B0C083ED2CEF72 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491E742050B9C69C8229B75 /* Debugging.swift */; };
-		9851ED5AA31DD83E82E36916 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F6356FB06E451B9284BB8608 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9C40B84DFE7279E18FA7BC0E /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B957F9B3626127EF59A1587 /* ViewController+SnapKit.swift */; };
-		9EA50A1FC62CDFB1FA208CD4 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 8213E6AC8194E8DCB1100655 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B8D1028AE42155280221B1ED /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F97330C690CD2F0BC5C83C3C /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF2D1C1A9150F459377B9BC0 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA84EED4723E10667FF651D /* SnapKit.swift */; };
-		CFBD6C8E9F251EC91C7CD4AD /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F673E390CA7AC25E3319761C /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D38253877F7F2F5F8A6B928B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F3D26D53A56DC557E323F /* Foundation.framework */; };
-		DDBFE0BC29256CBD3B936C84 /* Pods-SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9AE9ABC3C1BCEA0136536DA /* Pods-SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDECF29A5DA0FFCF168C47B0 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A54CA9DB0692A275FE7D7209 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1C0F82D4929370D55DD5710 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479C42DECF9D76E927EB879 /* Constraint.swift */; };
-		E7C145293007C3F666462A2B /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = A8193FDF339FF649FA096889 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EED6739726957357F6679D80 /* Pods-SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC8A44D621D0166287F268 /* Pods-SnapKit-dummy.m */; };
-		F088A5217E8944C58B381362 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0531728DCAFAF5B6989BDE17 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDDC7AB76001823801255A1C /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2906E3B2274605805E16DBAA /* ConstraintDescription.swift */; };
-		FEC2E2695452C01E0BD300E0 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924DDA1E89E34BCC1BE23A4 /* View+SnapKit.swift */; };
+		05B3372F04A0D6C8621BF9A5 /* Pods-SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F42834A3257CE7BF668F89 /* Pods-SnapKit-dummy.m */; };
+		05BE136AA9376B98DA09A910 /* CVDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544DADA4118D45BFB550909 /* CVDate.swift */; };
+		099F0D72F7B25E8A51EE2180 /* Pods-ZoomTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5406829E4CC49E06670E506 /* Pods-ZoomTransition-dummy.m */; };
+		0BD39F709173587D773FBBF9 /* CVCalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79481D89576566AB1B4229 /* CVCalendarDayView.swift */; };
+		105271965F2D944BEB412DC7 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B26EE40C9D430FB02008 /* Constraint.swift */; };
+		15DDCD7623AA837F1AC099FE /* Pods-CVCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F031EE4E3F1B3DE9E765052B /* Pods-CVCalendar-dummy.m */; };
+		16F28D905D4FBC01C42E07B8 /* CVCalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D01A4CBC1E0C37AF5DDD81 /* CVCalendarMonthView.swift */; };
+		1D942BF9B33E14619F0AB518 /* CVCalendarViewAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B80BB15D63E2E1BB7D300C7 /* CVCalendarViewAnimatorDelegate.swift */; };
+		2302AB4F0E2AB4A0B555F8FF /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D62D0148E37633EFA75719 /* CVCalendarContentViewController.swift */; };
+		25D50368D6FFF3646FD1AC78 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FBF787086C107956AF7095 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2634B2D4A5338CB28D83878E /* Pods-CVCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 337342F13F64ABFAA1ABF378 /* Pods-CVCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29BFD3143C58332F7CF62FE5 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C00D16F28D24DEFB28AFE /* SnapKit.swift */; };
+		2BDDB4E397EEC05B3C271D4E /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0C949989C4A3F34B8F380B /* LayoutConstraint.swift */; };
+		2F277A7069ED13A7444B09A6 /* CVCalendarContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC2A341FBC6EC1458F1E10 /* CVCalendarContentDelegate.swift */; };
+		32381694973E5BD9CAB6CD92 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B329462A209BA4851890DF1 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		33FEB0677A0DF28B9EE4DA9D /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC82BF4A868A4F47B91DAA /* ConstraintAttributes.swift */; };
+		3A4C53AEFE1100D72E996026 /* Pods-MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB49E1A9CC427B0F33C5730 /* Pods-MGSwipeTableCell-dummy.m */; };
+		3B6B3F4B5299103863953B79 /* ZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0ABDAA13493FB8C01D5C3 /* ZoomTransition.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BED5E9C5B92F26DAC7090AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BA983E00A5B58416E2A527 /* Foundation.framework */; };
+		43580663E717FD6B8284A676 /* CVCalendarKitOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A4EAEAADA7ADE64E5723E /* CVCalendarKitOperators.swift */; };
+		43A8FFC1B5022DF99998115F /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6A9E5D1D20BCE8D74F48F3 /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4687FD7F333A5C53F04B1A72 /* CVCalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F641383F2C1E5897DBD6A535 /* CVCalendarMenuView.swift */; };
+		4C04D9A44D2FB654F8491837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BA983E00A5B58416E2A527 /* Foundation.framework */; };
+		5362D91F1F27B5EB37AD8DEE /* CVCalendarWeekContentRecovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D21BF948A6C3FE5EF549E /* CVCalendarWeekContentRecovery.swift */; };
+		53AB7FABCB90EFD37CBE4EFE /* Pods-FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A0707BB4409EB744160CD /* Pods-FMDB-dummy.m */; };
+		583977BBA94C0149371D0AAD /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732BD2258E40DD892BF74D9C /* ConstraintMaker.swift */; };
+		59D09D1B20EFA320802542E9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE0683016764AE12F6272 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5A97176F2C2857DF8CB385E9 /* CVCalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C604555F2E093E17ED5172 /* CVCalendarViewDelegate.swift */; };
+		5E8AFF7C70DC2287B5BF6D2B /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FED87C7EDB202CFCB29D56 /* Debugging.swift */; };
+		605E18E406018072BD50EEE6 /* CVCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC981EEB6FAC6EAB84987C /* CVCalendarWeekView.swift */; };
+		6663F7EE5DBEE03D0AA9CAE6 /* Pods-ZoomTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAFE96353999B97C9C61986B /* Pods-ZoomTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		699BA251319D0D514FB2DA56 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65297C00C51CBEFE914B9F35 /* ConstraintDescription.swift */; };
+		6BF339FE61979EE9ECFD0885 /* FMDatabasePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B5220AEF2CDA09DAE83B45 /* FMDatabasePrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7536449D29051EAC3E19AD07 /* CVCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A70C28954065CEC4CE2C7 /* CVCircleView.swift */; };
+		77E5993A40B3FF8A0203AD79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BA983E00A5B58416E2A527 /* Foundation.framework */; };
+		796531433ED223F18E328CB3 /* CVCalendarKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973A9A55DE813BE8B149FFFD /* CVCalendarKitExtensions.swift */; };
+		7FFE4ADF7D77217366EF2FE5 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581F91D242D379E50A206F2 /* ConstraintItem.swift */; };
+		8150BB1E6C17A70C37D20496 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D02ABDBD0C2DD45228F49EF8 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		85AD1FDF3DA5C76D55C52169 /* Pods-CVCalendarKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF323544502E90FCFE19868C /* Pods-CVCalendarKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86D8B277FAF581DFBF19C7A2 /* Pods-MGSwipeTableCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCBEF7F6A2EBF4377FEAF92 /* Pods-MGSwipeTableCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88E158D8B10941DA3BBFA7AE /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 752E93F2B9A12CD635E4D448 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DD0BBA14AC22130892BD767 /* CVCalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD88E495CF75AA12B15E839 /* CVCalendarViewAppearance.swift */; };
+		995409958930D1787C375B62 /* Pods-FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB920E9DCB9EC46F7E944C9 /* Pods-FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		997B3608C459C5D59D30B857 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B13708C2473D1E541317D16 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CE404820CCB02D02805E909 /* CVCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0EFA5BCBA433960CD0805 /* CVCalendarManager.swift */; };
+		A03FE43E9A682E6137FE7A5E /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 506E63599F95CAD50696C94E /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2F8152458215E82B5E3552B /* Pods-CVCalendarKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1665135BC5B4B54BFDE903B /* Pods-CVCalendarKit-dummy.m */; };
+		A56373FACBE37528F7F92F1C /* CVCalendarViewAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0966A9EC55C993B7E9DB068E /* CVCalendarViewAppearanceDelegate.swift */; };
+		AFAD80DC316C727A422CA54B /* CVCalendarMonthContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D25D4E9BAA30DEA264BE07 /* CVCalendarMonthContentView.swift */; };
+		B83750C4A029FD1C5FCCE39D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BA983E00A5B58416E2A527 /* Foundation.framework */; };
+		BC6B9A6316CF388A5E0475CE /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 8207E98AE77B8C3CD715E52A /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEB0510FE4E24BCC98CCE1D5 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A765C95844927CDBBDA49E6 /* ConstraintRelation.swift */; };
+		C613F7138B6B08020DFDDC10 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D13753C5D9FB94D3DAB9AF /* ViewController+SnapKit.swift */; };
+		C85B56484356FF82DC7B5027 /* CVCalendarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC2FCDDE1DF420C2EEA1BC6 /* CVCalendarRenderer.swift */; };
+		CD5603A4FDA994C2FD2F249F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BA983E00A5B58416E2A527 /* Foundation.framework */; };
+		CE264615454A4C4AC87745F9 /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BAE6E357A0A1D987FC88E23 /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D05088EBAAF3E577F23F0621 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E921531D192470E5B2A72D1D /* View+SnapKit.swift */; };
+		D67291F81E6E3E863FAAADF1 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D5C1F131DB1A01711B88DF /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6B8BCFC60A30185931F9017 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9993F781307A923AD61E3 /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D8F6777658B9E1C3FBE21567 /* CVCalendarDayViewControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423AC6091391B665D938601F /* CVCalendarDayViewControlCoordinator.swift */; };
+		DE25B389AE4E0F28641743ED /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9E3B475399DD50272511E5 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E4C98427497810C460D25163 /* CVCalendarViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78886037797D89B86AF3132 /* CVCalendarViewAnimator.swift */; };
+		E76C633016A82EF35D382278 /* CVCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC26BF3A6CDAA901BE2102 /* CVCalendarView.swift */; };
+		E794AAA1BBCC308ECD95D687 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D86B8972A16C6BA145FFC18 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E9B4D0748DD610C8E7F71213 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BA983E00A5B58416E2A527 /* Foundation.framework */; };
+		EA61BD675A3C6748ACFA1AA1 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 83139FA0D2B998A5251384EB /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED428CB06211D836F75EA065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BA983E00A5B58416E2A527 /* Foundation.framework */; };
+		EE4FCF8591ABFB08BF3D1677 /* CVCalendarWeekContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE911EB3A7A382AEBCB5FA /* CVCalendarWeekContentView.swift */; };
+		F2C7B82A24143101F9B569CD /* Pods-SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 265146805F5EC3D52D717AD0 /* Pods-SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7B15B7831BE0466F412F5D8 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B638E8744CE8120322543 /* EdgeInsets.swift */; };
+		FA72844FAB2986282A8008F2 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 849FDB78801BE2BC59ECE185 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC92E078200786BAED18AB3 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B7300373FC3E5220D90FF /* Pods-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AD3FFA4EBAAC89EED027C3E4 /* PBXContainerItemProxy */ = {
+		076B5CE1B49DF91802B10ED3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2357A7AEFB7D0A61118A14C5 /* Project object */;
+			containerPortal = 62F73584FF3F8D53182768CF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A7F922B5BA91051DEA370206;
-			remoteInfo = "Pods-FMDB";
-		};
-		B2C7247DD858CC5A4D38C684 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2357A7AEFB7D0A61118A14C5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B8D3CC7434C64AACDD2C9C89;
+			remoteGlobalIDString = 5012CCDA3EB388D306EEF4DC;
 			remoteInfo = "Pods-SnapKit";
 		};
-		EB8570C48E53EBA206D62836 /* PBXContainerItemProxy */ = {
+		85A7ABBD050CC4438697BC3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2357A7AEFB7D0A61118A14C5 /* Project object */;
+			containerPortal = 62F73584FF3F8D53182768CF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 39703A2339304DA93C6E2203;
+			remoteGlobalIDString = 6D52C357EEB4B5F89589E61C;
+			remoteInfo = "Pods-CVCalendar";
+		};
+		ABB9A8B974E1F4C6DA9AA2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F73584FF3F8D53182768CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 102588FB80B7DBEACDC5B103;
+			remoteInfo = "Pods-CVCalendarKit";
+		};
+		BBDD049A087CA08498E23733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F73584FF3F8D53182768CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB7C0A95C3C477D6780A4CB;
 			remoteInfo = "Pods-MGSwipeTableCell";
 		};
-		FA389A7C9B0F67282396FA07 /* PBXContainerItemProxy */ = {
+		BE4E713B164F7159AF854A16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2357A7AEFB7D0A61118A14C5 /* Project object */;
+			containerPortal = 62F73584FF3F8D53182768CF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8972BD5B415FDA2D1B343031;
-			remoteInfo = "Pods-CVCalendarKit";
+			remoteGlobalIDString = 0852EFBEECDBA685969B16BA;
+			remoteInfo = "Pods-ZoomTransition";
+		};
+		BFC5DD2625FB0D8D0F0331E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F73584FF3F8D53182768CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2708C85A1789278EB4703535;
+			remoteInfo = "Pods-FMDB";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03B7FBB60B602F5F4CBD156A /* Pods-CVCalendarKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CVCalendarKit.modulemap"; sourceTree = "<group>"; };
-		0479C42DECF9D76E927EB879 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		0531728DCAFAF5B6989BDE17 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		0558C149EB828BCF3B4DE8C3 /* Pods-MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
-		0582C433D530B1149E0A6E10 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		09D57BB6DF2A36A378F09C21 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
-		0B8ED107098D27BB2467E16E /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		0E23E677D12D0C38F2CD0CBA /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
-		1922F7C262DDC2C2959003AE /* Pods-MGSwipeTableCell-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGSwipeTableCell-Private.xcconfig"; sourceTree = "<group>"; };
-		1FAAA9CC02F5309FA60A8FC0 /* Pods-CVCalendarKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CVCalendarKit-Private.xcconfig"; sourceTree = "<group>"; };
-		21DC8A44D621D0166287F268 /* Pods-SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapKit-dummy.m"; sourceTree = "<group>"; };
-		241112FD4CE221302ECFD02C /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
-		2488DCE920B26A4C471D24B6 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		25ABE4AEEC92047EDC034450 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26C6DDAA056404634D329584 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2906E3B2274605805E16DBAA /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		2B957F9B3626127EF59A1587 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ViewController+SnapKit.swift"; path = "Source/ViewController+SnapKit.swift"; sourceTree = "<group>"; };
-		2DB02992AFB394AE806DDCA5 /* Pods-SnapKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit-Private.xcconfig"; sourceTree = "<group>"; };
-		37917871ACE9B5C0D955C0E1 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
-		38DEFA6C6EDDC538D445B48A /* Pods-MGSwipeTableCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGSwipeTableCell-umbrella.h"; sourceTree = "<group>"; };
-		4F7CBF0201A3050D2F558012 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
-		50224A4EA49448EB93C54F8A /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
-		54E14C6AF73F9DA58167D481 /* Pods-MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGSwipeTableCell.xcconfig"; sourceTree = "<group>"; };
-		5AA84EED4723E10667FF651D /* SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapKit.swift; path = Source/SnapKit.swift; sourceTree = "<group>"; };
-		5AE0CF32689DE28455353889 /* Pods-FMDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FMDB.modulemap"; sourceTree = "<group>"; };
-		637B3F337A6D71BDD0C5242B /* Pods-CVCalendarKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CVCalendarKit-prefix.pch"; sourceTree = "<group>"; };
-		67AF2D3C2F81AE4489359192 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
-		695FFA9EFC4C673626A42E37 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
-		69E8206919074561DE031F2B /* CVCalendarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVCalendarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		713D5ABA1FA87D830387D7EA /* EdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeInsets.swift; path = Source/EdgeInsets.swift; sourceTree = "<group>"; };
-		714934712FEFBADC2ADE85D8 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		737FE67507495F21202830C1 /* Pods-CVCalendarKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CVCalendarKit-dummy.m"; sourceTree = "<group>"; };
-		7A051F4EA8177154FE507359 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8107287C23E8E176315BFD57 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		8153AE95B49A9926BD09ECC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8213E6AC8194E8DCB1100655 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
-		870F3D26D53A56DC557E323F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8D7DA8ED0EA2060B80BAB52F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		8EE84E6F48AB61CF48BCC645 /* FMDatabasePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePrivate.h; path = src/fmdb/FMDatabasePrivate.h; sourceTree = "<group>"; };
-		91C374D474D9EA1C3C630CB2 /* CVCalendarKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarKitExtensions.swift; path = CVCalendarKit/CVCalendarKitExtensions.swift; sourceTree = "<group>"; };
-		91D6F8EF652272ABD2C6FF49 /* Pods-CVCalendarKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CVCalendarKit-umbrella.h"; sourceTree = "<group>"; };
-		972307D611BC40A086EB9DAC /* Pods-FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMDB-dummy.m"; sourceTree = "<group>"; };
-		9DE4554AC68F91F0DF9352A6 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		9E0ED672DDB0561FF5CDFC20 /* Pods-SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit.xcconfig"; sourceTree = "<group>"; };
-		A491E742050B9C69C8229B75 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
-		A54CA9DB0692A275FE7D7209 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		A7B5AE0DEA5505861628285B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8193FDF339FF649FA096889 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
-		A924DDA1E89E34BCC1BE23A4 /* View+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+SnapKit.swift"; path = "Source/View+SnapKit.swift"; sourceTree = "<group>"; };
-		ACB1480EA026D1C5879EAEC0 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		AE8017F34EE16D743652115E /* Pods-FMDB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMDB-umbrella.h"; sourceTree = "<group>"; };
-		B2AD6E9B832AEADB82201468 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B41C91920EED306851EE5AD3 /* Pods-CVCalendarKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CVCalendarKit.xcconfig"; sourceTree = "<group>"; };
-		B63EBECFC0F0C26D49327393 /* Pods-MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
-		B81E4451C425144D0BA1D109 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		BDEE03DE38F4F7E2B89C1A14 /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGSwipeTableCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF9C38A84E325F40B50B7358 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C414077990BAA3214A300AA9 /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
-		C628568396E9260449C6576B /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		C706DC272942A7FF82D1A31E /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		C7E03F72990092C45B94810E /* CVCalendarKitOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarKitOperators.swift; path = CVCalendarKit/CVCalendarKitOperators.swift; sourceTree = "<group>"; };
-		D3589AFE78E48CE2AAEA4BC2 /* Pods-FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMDB-prefix.pch"; sourceTree = "<group>"; };
-		D37E961C77BB7106FC679B80 /* Pods-SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		D9AE9ABC3C1BCEA0136536DA /* Pods-SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		DBA78CC1142BE59C4F62AF07 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC705245A7BEB1DB3ACD7E92 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		E427076999C0B667B4E3772B /* Pods-FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB-Private.xcconfig"; sourceTree = "<group>"; };
-		E6129EF4C6C5B0625CDD3F91 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
-		ECAE2572F14B9F725754281F /* Pods-MGSwipeTableCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MGSwipeTableCell.modulemap"; sourceTree = "<group>"; };
-		EF785B853E3770839D858A27 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF9D9E768AE769CB2865D495 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F0217F0DEC0BF71668EF84B3 /* Pods-SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapKit.modulemap"; sourceTree = "<group>"; };
-		F6356FB06E451B9284BB8608 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
-		F673E390CA7AC25E3319761C /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
-		F97330C690CD2F0BC5C83C3C /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
-		FA454C08D295528B04B344AA /* Pods-FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB.xcconfig"; sourceTree = "<group>"; };
+		014A2E4BBD607A0CE9D575D7 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CC2A341FBC6EC1458F1E10 /* CVCalendarContentDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarContentDelegate.swift; path = CVCalendar/CVCalendarContentDelegate.swift; sourceTree = "<group>"; };
+		03BA983E00A5B58416E2A527 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		04DE643165020F1FDD46118F /* Pods-FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMDB-prefix.pch"; sourceTree = "<group>"; };
+		0757E93144636A5EA427AC9E /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		0966A9EC55C993B7E9DB068E /* CVCalendarViewAppearanceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAppearanceDelegate.swift; path = CVCalendar/CVCalendarViewAppearanceDelegate.swift; sourceTree = "<group>"; };
+		0B329462A209BA4851890DF1 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		0B3493B5CE73104E3F4DB67C /* Pods-FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB-Private.xcconfig"; sourceTree = "<group>"; };
+		14B7887598150608400DF9A4 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1544DADA4118D45BFB550909 /* CVDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVDate.swift; path = CVCalendar/CVDate.swift; sourceTree = "<group>"; };
+		1B0C949989C4A3F34B8F380B /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		1D00030BDD4AB47E1CBFC981 /* Pods-MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
+		247A730C66D68CE1094718A3 /* Pods-FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB.xcconfig"; sourceTree = "<group>"; };
+		253D21BF948A6C3FE5EF549E /* CVCalendarWeekContentRecovery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekContentRecovery.swift; path = CVCalendar/CVCalendarWeekContentRecovery.swift; sourceTree = "<group>"; };
+		2581F91D242D379E50A206F2 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
+		265146805F5EC3D52D717AD0 /* Pods-SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-umbrella.h"; sourceTree = "<group>"; };
+		2B13708C2473D1E541317D16 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		337342F13F64ABFAA1ABF378 /* Pods-CVCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CVCalendar-umbrella.h"; sourceTree = "<group>"; };
+		33F42834A3257CE7BF668F89 /* Pods-SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapKit-dummy.m"; sourceTree = "<group>"; };
+		35D5C1F131DB1A01711B88DF /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
+		38F0EFA5BCBA433960CD0805 /* CVCalendarManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarManager.swift; path = CVCalendar/CVCalendarManager.swift; sourceTree = "<group>"; };
+		3D86B8972A16C6BA145FFC18 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		3E0B7300373FC3E5220D90FF /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		3EFC506615E10F4F48A6A3BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		3FC2FCDDE1DF420C2EEA1BC6 /* CVCalendarRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarRenderer.swift; path = CVCalendar/CVCalendarRenderer.swift; sourceTree = "<group>"; };
+		40D320C0BE9F71BDAA56B1FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423AC6091391B665D938601F /* CVCalendarDayViewControlCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarDayViewControlCoordinator.swift; path = CVCalendar/CVCalendarDayViewControlCoordinator.swift; sourceTree = "<group>"; };
+		4D0595517597EE56B0DCDC00 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		505AA29964011AD88ABF3254 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		506E63599F95CAD50696C94E /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		52597261B86C86EA5BD6FF83 /* CVCalendarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVCalendarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B5220AEF2CDA09DAE83B45 /* FMDatabasePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePrivate.h; path = src/fmdb/FMDatabasePrivate.h; sourceTree = "<group>"; };
+		550E5993CF3ADAA8FAEA1E23 /* Pods-MGSwipeTableCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MGSwipeTableCell.modulemap"; sourceTree = "<group>"; };
+		56DF4CB61B79B830A08211BC /* Pods-CVCalendarKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CVCalendarKit.xcconfig"; sourceTree = "<group>"; };
+		5A2CA816985D631E699E5DD6 /* Pods-SnapKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit-Private.xcconfig"; sourceTree = "<group>"; };
+		5A765C95844927CDBBDA49E6 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
+		5B6A9E5D1D20BCE8D74F48F3 /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
+		65297C00C51CBEFE914B9F35 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		69413D2E4629D81185C89901 /* Pods-FMDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FMDB.modulemap"; sourceTree = "<group>"; };
+		699C00D16F28D24DEFB28AFE /* SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapKit.swift; path = Source/SnapKit.swift; sourceTree = "<group>"; };
+		6A7A0707BB4409EB744160CD /* Pods-FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMDB-dummy.m"; sourceTree = "<group>"; };
+		6B113B7005B4A3D18721038D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		6B80BB15D63E2E1BB7D300C7 /* CVCalendarViewAnimatorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAnimatorDelegate.swift; path = CVCalendar/CVCalendarViewAnimatorDelegate.swift; sourceTree = "<group>"; };
+		6BAE6E357A0A1D987FC88E23 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
+		6ED0ABDAA13493FB8C01D5C3 /* ZoomTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomTransition.swift; path = ZoomTransition/ZoomTransition.swift; sourceTree = "<group>"; };
+		707A14A998B56BB6AF8A890B /* Pods-CVCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CVCalendar-prefix.pch"; sourceTree = "<group>"; };
+		71FBF787086C107956AF7095 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		732BD2258E40DD892BF74D9C /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		74C95154C1856F8B3828A826 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		7507B2C659E7802E77EDD62C /* Pods-CVCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CVCalendar.xcconfig"; sourceTree = "<group>"; };
+		752E93F2B9A12CD635E4D448 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		7981763D81C5707EC5CAD5F8 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5A9DB5CD5E20105F651307 /* Pods-ZoomTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ZoomTransition.modulemap"; sourceTree = "<group>"; };
+		7F25A2405E6CE65A6373E7BE /* Pods-ZoomTransition-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZoomTransition-Private.xcconfig"; sourceTree = "<group>"; };
+		8207E98AE77B8C3CD715E52A /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		83139FA0D2B998A5251384EB /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		849FDB78801BE2BC59ECE185 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		85EC981EEB6FAC6EAB84987C /* CVCalendarWeekView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekView.swift; path = CVCalendar/CVCalendarWeekView.swift; sourceTree = "<group>"; };
+		8624DFBE16403BDE9B95D8BE /* Pods-MGSwipeTableCell-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGSwipeTableCell-Private.xcconfig"; sourceTree = "<group>"; };
+		86FED87C7EDB202CFCB29D56 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		8A79481D89576566AB1B4229 /* CVCalendarDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarDayView.swift; path = CVCalendar/CVCalendarDayView.swift; sourceTree = "<group>"; };
+		8BCC6BD5EC790129A16AC59F /* Pods-CVCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CVCalendar.modulemap"; sourceTree = "<group>"; };
+		8DE1211F37F5754CE148637D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8B638E8744CE8120322543 /* EdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeInsets.swift; path = Source/EdgeInsets.swift; sourceTree = "<group>"; };
+		934D78621C14A687D66182D5 /* Pods-CVCalendarKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CVCalendarKit-prefix.pch"; sourceTree = "<group>"; };
+		95659A08BFD229F5FA6771CE /* Pods-CVCalendar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CVCalendar-Private.xcconfig"; sourceTree = "<group>"; };
+		973A9A55DE813BE8B149FFFD /* CVCalendarKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarKitExtensions.swift; path = CVCalendarKit/CVCalendarKitExtensions.swift; sourceTree = "<group>"; };
+		974D207B0CEFF2674473C37B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EC3213F8258CC19E5E0A188 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F435FFBD2D317C13C331538 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A18C0BA825E2849D52E6C957 /* CVCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A248878B5298279BACEB51E0 /* Pods-SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		A351B26EE40C9D430FB02008 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		A5FDE0683016764AE12F6272 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		A6C604555F2E093E17ED5172 /* CVCalendarViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewDelegate.swift; path = CVCalendar/CVCalendarViewDelegate.swift; sourceTree = "<group>"; };
+		ABB49E1A9CC427B0F33C5730 /* Pods-MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
+		B0D01A4CBC1E0C37AF5DDD81 /* CVCalendarMonthView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMonthView.swift; path = CVCalendar/CVCalendarMonthView.swift; sourceTree = "<group>"; };
+		B1C0AF22B3236EEEE24EA52C /* Pods-ZoomTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZoomTransition.xcconfig"; sourceTree = "<group>"; };
+		B2BBEBBA2AA7479E0C35B641 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D887A2F664CA1EA84EC97F /* Pods-SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SnapKit.modulemap"; sourceTree = "<group>"; };
+		BAFE96353999B97C9C61986B /* Pods-ZoomTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZoomTransition-umbrella.h"; sourceTree = "<group>"; };
+		BB9E3B475399DD50272511E5 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		BCD88E495CF75AA12B15E839 /* CVCalendarViewAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAppearance.swift; path = CVCalendar/CVCalendarViewAppearance.swift; sourceTree = "<group>"; };
+		BF323544502E90FCFE19868C /* Pods-CVCalendarKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CVCalendarKit-umbrella.h"; sourceTree = "<group>"; };
+		C21A4EAEAADA7ADE64E5723E /* CVCalendarKitOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarKitOperators.swift; path = CVCalendarKit/CVCalendarKitOperators.swift; sourceTree = "<group>"; };
+		C59EE11CEE4E25C4717B672D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C752699F7F4E69A51B4FA257 /* Pods-ZoomTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZoomTransition-prefix.pch"; sourceTree = "<group>"; };
+		C79031DBF2C5465B16C18809 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA9993F781307A923AD61E3 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
+		CD6D453DEBEDBA207C8F89CE /* Pods-CVCalendarKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CVCalendarKit.modulemap"; sourceTree = "<group>"; };
+		CEB920E9DCB9EC46F7E944C9 /* Pods-FMDB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMDB-umbrella.h"; sourceTree = "<group>"; };
+		CFD8E3A7AC4E80CED4F5F577 /* Pods-SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapKit.xcconfig"; sourceTree = "<group>"; };
+		D02ABDBD0C2DD45228F49EF8 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		D2C8FD7E985D33A5B329EF4C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		D3D62D0148E37633EFA75719 /* CVCalendarContentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarContentViewController.swift; path = CVCalendar/CVCalendarContentViewController.swift; sourceTree = "<group>"; };
+		D6CE911EB3A7A382AEBCB5FA /* CVCalendarWeekContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekContentView.swift; path = CVCalendar/CVCalendarWeekContentView.swift; sourceTree = "<group>"; };
+		D80D91B1008467783867392B /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGSwipeTableCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FC82BF4A868A4F47B91DAA /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		D9C67F2D1E25ECD37FFC877E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DBCBEF7F6A2EBF4377FEAF92 /* Pods-MGSwipeTableCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGSwipeTableCell-umbrella.h"; sourceTree = "<group>"; };
+		E04136F36ADC12D5AE21D547 /* Pods-MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGSwipeTableCell.xcconfig"; sourceTree = "<group>"; };
+		E1665135BC5B4B54BFDE903B /* Pods-CVCalendarKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CVCalendarKit-dummy.m"; sourceTree = "<group>"; };
+		E21A70C28954065CEC4CE2C7 /* CVCircleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCircleView.swift; path = CVCalendar/CVCircleView.swift; sourceTree = "<group>"; };
+		E5406829E4CC49E06670E506 /* Pods-ZoomTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZoomTransition-dummy.m"; sourceTree = "<group>"; };
+		E6D25D4E9BAA30DEA264BE07 /* CVCalendarMonthContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMonthContentView.swift; path = CVCalendar/CVCalendarMonthContentView.swift; sourceTree = "<group>"; };
+		E78886037797D89B86AF3132 /* CVCalendarViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAnimator.swift; path = CVCalendar/CVCalendarViewAnimator.swift; sourceTree = "<group>"; };
+		E8D13753C5D9FB94D3DAB9AF /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ViewController+SnapKit.swift"; path = "Source/ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		E921531D192470E5B2A72D1D /* View+SnapKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+SnapKit.swift"; path = "Source/View+SnapKit.swift"; sourceTree = "<group>"; };
+		EA430B764A96254A2487E9B5 /* Pods-CVCalendarKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CVCalendarKit-Private.xcconfig"; sourceTree = "<group>"; };
+		F031EE4E3F1B3DE9E765052B /* Pods-CVCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CVCalendar-dummy.m"; sourceTree = "<group>"; };
+		F641383F2C1E5897DBD6A535 /* CVCalendarMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMenuView.swift; path = CVCalendar/CVCalendarMenuView.swift; sourceTree = "<group>"; };
+		F6AAB8E6680C1B4E088B5D33 /* ZoomTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZoomTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFC26BF3A6CDAA901BE2102 /* CVCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarView.swift; path = CVCalendar/CVCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14CA4F8F8FACF4D2F894979D /* Frameworks */ = {
+		0353288879E954C03E1155EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C9C323D32DAA6DA4CD0FEE0 /* Foundation.framework in Frameworks */,
+				77E5993A40B3FF8A0203AD79 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		32701733244597FCB5367345 /* Frameworks */ = {
+		43AB563B2133D69EA21C3F01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69199CA6868001E03804EB85 /* Foundation.framework in Frameworks */,
+				B83750C4A029FD1C5FCCE39D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4452DE13FCC21C7AFB3BF51B /* Frameworks */ = {
+		572B2D0042A6A4A87BEB7782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D7EBAA54B9215A40898BD1 /* Foundation.framework in Frameworks */,
+				4C04D9A44D2FB654F8491837 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55CCF62E22FB59EBF804E757 /* Frameworks */ = {
+		8F6718980EAC2892E6BE3C62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38253877F7F2F5F8A6B928B /* Foundation.framework in Frameworks */,
+				CD5603A4FDA994C2FD2F249F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8F90375E5F11FAD46F887AF /* Frameworks */ = {
+		9AE54ABB2CD4A5792F9C1161 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202FD76D3EAEAE9338434A47 /* Foundation.framework in Frameworks */,
+				ED428CB06211D836F75EA065 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF441D1AF09EFBD5B6993F7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B4D0748DD610C8E7F71213 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB21FA6F65D1AD659FD25D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BED5E9C5B92F26DAC7090AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04C5FEBF162ACB506C421F34 /* Support Files */ = {
+		00DC3A061789743AAE59C9B8 /* MGSwipeTableCell */ = {
 			isa = PBXGroup;
 			children = (
-				7A051F4EA8177154FE507359 /* Info.plist */,
-				ECAE2572F14B9F725754281F /* Pods-MGSwipeTableCell.modulemap */,
-				54E14C6AF73F9DA58167D481 /* Pods-MGSwipeTableCell.xcconfig */,
-				1922F7C262DDC2C2959003AE /* Pods-MGSwipeTableCell-Private.xcconfig */,
-				0558C149EB828BCF3B4DE8C3 /* Pods-MGSwipeTableCell-dummy.m */,
-				B63EBECFC0F0C26D49327393 /* Pods-MGSwipeTableCell-prefix.pch */,
-				38DEFA6C6EDDC538D445B48A /* Pods-MGSwipeTableCell-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-MGSwipeTableCell";
-			sourceTree = "<group>";
-		};
-		05298AB001B1907B6827C072 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				25ABE4AEEC92047EDC034450 /* Info.plist */,
-				5AE0CF32689DE28455353889 /* Pods-FMDB.modulemap */,
-				FA454C08D295528B04B344AA /* Pods-FMDB.xcconfig */,
-				E427076999C0B667B4E3772B /* Pods-FMDB-Private.xcconfig */,
-				972307D611BC40A086EB9DAC /* Pods-FMDB-dummy.m */,
-				D3589AFE78E48CE2AAEA4BC2 /* Pods-FMDB-prefix.pch */,
-				AE8017F34EE16D743652115E /* Pods-FMDB-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-FMDB";
-			sourceTree = "<group>";
-		};
-		248F5562B03733DACCCAD430 /* CVCalendarKit */ = {
-			isa = PBXGroup;
-			children = (
-				91C374D474D9EA1C3C630CB2 /* CVCalendarKitExtensions.swift */,
-				C7E03F72990092C45B94810E /* CVCalendarKitOperators.swift */,
-				451C4E5FB5EB5F82261D444A /* Support Files */,
-			);
-			path = CVCalendarKit;
-			sourceTree = "<group>";
-		};
-		2CA7CA39092DA0250C698F27 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FE2B0DE4B2A7E45095D225A7 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		38C3C918C4B945204CDB7FC2 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				50224A4EA49448EB93C54F8A /* FMDB.h */,
-				A8193FDF339FF649FA096889 /* FMDatabase.h */,
-				695FFA9EFC4C673626A42E37 /* FMDatabase.m */,
-				A54CA9DB0692A275FE7D7209 /* FMDatabaseAdditions.h */,
-				0582C433D530B1149E0A6E10 /* FMDatabaseAdditions.m */,
-				67AF2D3C2F81AE4489359192 /* FMDatabasePool.h */,
-				F673E390CA7AC25E3319761C /* FMDatabasePool.m */,
-				8EE84E6F48AB61CF48BCC645 /* FMDatabasePrivate.h */,
-				0531728DCAFAF5B6989BDE17 /* FMDatabaseQueue.h */,
-				F6356FB06E451B9284BB8608 /* FMDatabaseQueue.m */,
-				8213E6AC8194E8DCB1100655 /* FMResultSet.h */,
-				0E23E677D12D0C38F2CD0CBA /* FMResultSet.m */,
-			);
-			name = common;
-			sourceTree = "<group>";
-		};
-		451C4E5FB5EB5F82261D444A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A7B5AE0DEA5505861628285B /* Info.plist */,
-				03B7FBB60B602F5F4CBD156A /* Pods-CVCalendarKit.modulemap */,
-				B41C91920EED306851EE5AD3 /* Pods-CVCalendarKit.xcconfig */,
-				1FAAA9CC02F5309FA60A8FC0 /* Pods-CVCalendarKit-Private.xcconfig */,
-				737FE67507495F21202830C1 /* Pods-CVCalendarKit-dummy.m */,
-				637B3F337A6D71BDD0C5242B /* Pods-CVCalendarKit-prefix.pch */,
-				91D6F8EF652272ABD2C6FF49 /* Pods-CVCalendarKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-CVCalendarKit";
-			sourceTree = "<group>";
-		};
-		6DDA91366B558A7B84F82D4C /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				870F3D26D53A56DC557E323F /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		749DC75102E2382E32A5E2F5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B2AD6E9B832AEADB82201468 /* Info.plist */,
-				F0217F0DEC0BF71668EF84B3 /* Pods-SnapKit.modulemap */,
-				9E0ED672DDB0561FF5CDFC20 /* Pods-SnapKit.xcconfig */,
-				2DB02992AFB394AE806DDCA5 /* Pods-SnapKit-Private.xcconfig */,
-				21DC8A44D621D0166287F268 /* Pods-SnapKit-dummy.m */,
-				D37E961C77BB7106FC679B80 /* Pods-SnapKit-prefix.pch */,
-				D9AE9ABC3C1BCEA0136536DA /* Pods-SnapKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-SnapKit";
-			sourceTree = "<group>";
-		};
-		9D510B26EE1579A1027894D0 = {
-			isa = PBXGroup;
-			children = (
-				26C6DDAA056404634D329584 /* Podfile */,
-				A4CA01425687D5743EC4B5CB /* Frameworks */,
-				BFDD972A9514B7DC0FC2708C /* Pods */,
-				CB6812F69577B60E6C9CD469 /* Products */,
-				2CA7CA39092DA0250C698F27 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		9D6ECAF5417F53AC8280E9D2 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				05298AB001B1907B6827C072 /* Support Files */,
-				38C3C918C4B945204CDB7FC2 /* common */,
-			);
-			path = FMDB;
-			sourceTree = "<group>";
-		};
-		A4CA01425687D5743EC4B5CB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6DDA91366B558A7B84F82D4C /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A6297750E453F09316E83143 /* MGSwipeTableCell */ = {
-			isa = PBXGroup;
-			children = (
-				C414077990BAA3214A300AA9 /* MGSwipeButton.h */,
-				241112FD4CE221302ECFD02C /* MGSwipeButton.m */,
-				F97330C690CD2F0BC5C83C3C /* MGSwipeTableCell.h */,
-				E6129EF4C6C5B0625CDD3F91 /* MGSwipeTableCell.m */,
-				04C5FEBF162ACB506C421F34 /* Support Files */,
+				35D5C1F131DB1A01711B88DF /* MGSwipeButton.h */,
+				5B6A9E5D1D20BCE8D74F48F3 /* MGSwipeButton.m */,
+				6BAE6E357A0A1D987FC88E23 /* MGSwipeTableCell.h */,
+				CCA9993F781307A923AD61E3 /* MGSwipeTableCell.m */,
+				20F6A3E7EE9A3BF85FC5EB7F /* Support Files */,
 			);
 			path = MGSwipeTableCell;
 			sourceTree = "<group>";
 		};
-		BFDD972A9514B7DC0FC2708C /* Pods */ = {
+		078272F05E3172C82AB339BE /* common */ = {
 			isa = PBXGroup;
 			children = (
-				248F5562B03733DACCCAD430 /* CVCalendarKit */,
-				9D6ECAF5417F53AC8280E9D2 /* FMDB */,
-				A6297750E453F09316E83143 /* MGSwipeTableCell */,
-				F4C56FD0DBFC274B93FAAAB4 /* SnapKit */,
+				8207E98AE77B8C3CD715E52A /* FMDB.h */,
+				849FDB78801BE2BC59ECE185 /* FMDatabase.h */,
+				0B329462A209BA4851890DF1 /* FMDatabase.m */,
+				83139FA0D2B998A5251384EB /* FMDatabaseAdditions.h */,
+				3D86B8972A16C6BA145FFC18 /* FMDatabaseAdditions.m */,
+				506E63599F95CAD50696C94E /* FMDatabasePool.h */,
+				A5FDE0683016764AE12F6272 /* FMDatabasePool.m */,
+				52B5220AEF2CDA09DAE83B45 /* FMDatabasePrivate.h */,
+				2B13708C2473D1E541317D16 /* FMDatabaseQueue.h */,
+				D02ABDBD0C2DD45228F49EF8 /* FMDatabaseQueue.m */,
+				752E93F2B9A12CD635E4D448 /* FMResultSet.h */,
+				BB9E3B475399DD50272511E5 /* FMResultSet.m */,
 			);
-			name = Pods;
+			name = common;
 			sourceTree = "<group>";
 		};
-		CB6812F69577B60E6C9CD469 /* Products */ = {
+		080734F5FED3B2172A3E9684 = {
 			isa = PBXGroup;
 			children = (
-				69E8206919074561DE031F2B /* CVCalendarKit.framework */,
-				EF785B853E3770839D858A27 /* FMDB.framework */,
-				BDEE03DE38F4F7E2B89C1A14 /* MGSwipeTableCell.framework */,
-				DBA78CC1142BE59C4F62AF07 /* Pods.framework */,
-				BF9C38A84E325F40B50B7358 /* SnapKit.framework */,
+				14B7887598150608400DF9A4 /* Podfile */,
+				7C76BE83A22A01B08F763FAB /* Frameworks */,
+				AE23B6144ACE4C3AF45CD1FA /* Pods */,
+				5B1599F75F309BBE527C30CE /* Products */,
+				CAB5430E1BCA28D459B31E2E /* Targets Support Files */,
 			);
-			name = Products;
 			sourceTree = "<group>";
 		};
-		F4C56FD0DBFC274B93FAAAB4 /* SnapKit */ = {
+		0DBB5C31899BA8E519C00B48 /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
-				0479C42DECF9D76E927EB879 /* Constraint.swift */,
-				ACB1480EA026D1C5879EAEC0 /* ConstraintAttributes.swift */,
-				2906E3B2274605805E16DBAA /* ConstraintDescription.swift */,
-				0B8ED107098D27BB2467E16E /* ConstraintItem.swift */,
-				4F7CBF0201A3050D2F558012 /* ConstraintMaker.swift */,
-				09D57BB6DF2A36A378F09C21 /* ConstraintRelation.swift */,
-				A491E742050B9C69C8229B75 /* Debugging.swift */,
-				713D5ABA1FA87D830387D7EA /* EdgeInsets.swift */,
-				37917871ACE9B5C0D955C0E1 /* LayoutConstraint.swift */,
-				5AA84EED4723E10667FF651D /* SnapKit.swift */,
-				A924DDA1E89E34BCC1BE23A4 /* View+SnapKit.swift */,
-				2B957F9B3626127EF59A1587 /* ViewController+SnapKit.swift */,
-				749DC75102E2382E32A5E2F5 /* Support Files */,
+				A351B26EE40C9D430FB02008 /* Constraint.swift */,
+				D8FC82BF4A868A4F47B91DAA /* ConstraintAttributes.swift */,
+				65297C00C51CBEFE914B9F35 /* ConstraintDescription.swift */,
+				2581F91D242D379E50A206F2 /* ConstraintItem.swift */,
+				732BD2258E40DD892BF74D9C /* ConstraintMaker.swift */,
+				5A765C95844927CDBBDA49E6 /* ConstraintRelation.swift */,
+				86FED87C7EDB202CFCB29D56 /* Debugging.swift */,
+				8F8B638E8744CE8120322543 /* EdgeInsets.swift */,
+				1B0C949989C4A3F34B8F380B /* LayoutConstraint.swift */,
+				699C00D16F28D24DEFB28AFE /* SnapKit.swift */,
+				E921531D192470E5B2A72D1D /* View+SnapKit.swift */,
+				E8D13753C5D9FB94D3DAB9AF /* ViewController+SnapKit.swift */,
+				4AE416B6BA115AC279AA00B8 /* Support Files */,
 			);
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
-		FE2B0DE4B2A7E45095D225A7 /* Pods */ = {
+		16E34B8AEBBC14A081312064 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8153AE95B49A9926BD09ECC0 /* Info.plist */,
-				9DE4554AC68F91F0DF9352A6 /* Pods.modulemap */,
-				EF9D9E768AE769CB2865D495 /* Pods-acknowledgements.markdown */,
-				2488DCE920B26A4C471D24B6 /* Pods-acknowledgements.plist */,
-				DC705245A7BEB1DB3ACD7E92 /* Pods-dummy.m */,
-				C706DC272942A7FF82D1A31E /* Pods-environment.h */,
-				C628568396E9260449C6576B /* Pods-frameworks.sh */,
-				8107287C23E8E176315BFD57 /* Pods-resources.sh */,
-				714934712FEFBADC2ADE85D8 /* Pods-umbrella.h */,
-				B81E4451C425144D0BA1D109 /* Pods.debug.xcconfig */,
-				8D7DA8ED0EA2060B80BAB52F /* Pods.release.xcconfig */,
+				8DE1211F37F5754CE148637D /* Info.plist */,
+				7A5A9DB5CD5E20105F651307 /* Pods-ZoomTransition.modulemap */,
+				B1C0AF22B3236EEEE24EA52C /* Pods-ZoomTransition.xcconfig */,
+				7F25A2405E6CE65A6373E7BE /* Pods-ZoomTransition-Private.xcconfig */,
+				E5406829E4CC49E06670E506 /* Pods-ZoomTransition-dummy.m */,
+				C752699F7F4E69A51B4FA257 /* Pods-ZoomTransition-prefix.pch */,
+				BAFE96353999B97C9C61986B /* Pods-ZoomTransition-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ZoomTransition";
+			sourceTree = "<group>";
+		};
+		200037C2E57727F79A982CEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F435FFBD2D317C13C331538 /* Info.plist */,
+				4D0595517597EE56B0DCDC00 /* Pods.modulemap */,
+				D9C67F2D1E25ECD37FFC877E /* Pods-acknowledgements.markdown */,
+				6B113B7005B4A3D18721038D /* Pods-acknowledgements.plist */,
+				3E0B7300373FC3E5220D90FF /* Pods-dummy.m */,
+				505AA29964011AD88ABF3254 /* Pods-environment.h */,
+				0757E93144636A5EA427AC9E /* Pods-frameworks.sh */,
+				74C95154C1856F8B3828A826 /* Pods-resources.sh */,
+				71FBF787086C107956AF7095 /* Pods-umbrella.h */,
+				3EFC506615E10F4F48A6A3BE /* Pods.debug.xcconfig */,
+				D2C8FD7E985D33A5B329EF4C /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
+		20F6A3E7EE9A3BF85FC5EB7F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				40D320C0BE9F71BDAA56B1FE /* Info.plist */,
+				550E5993CF3ADAA8FAEA1E23 /* Pods-MGSwipeTableCell.modulemap */,
+				E04136F36ADC12D5AE21D547 /* Pods-MGSwipeTableCell.xcconfig */,
+				8624DFBE16403BDE9B95D8BE /* Pods-MGSwipeTableCell-Private.xcconfig */,
+				ABB49E1A9CC427B0F33C5730 /* Pods-MGSwipeTableCell-dummy.m */,
+				1D00030BDD4AB47E1CBFC981 /* Pods-MGSwipeTableCell-prefix.pch */,
+				DBCBEF7F6A2EBF4377FEAF92 /* Pods-MGSwipeTableCell-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MGSwipeTableCell";
+			sourceTree = "<group>";
+		};
+		3252D93535B17D775FB76495 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				97E53A5962961EDFBEEB919D /* Support Files */,
+				078272F05E3172C82AB339BE /* common */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		4AE416B6BA115AC279AA00B8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				974D207B0CEFF2674473C37B /* Info.plist */,
+				B4D887A2F664CA1EA84EC97F /* Pods-SnapKit.modulemap */,
+				CFD8E3A7AC4E80CED4F5F577 /* Pods-SnapKit.xcconfig */,
+				5A2CA816985D631E699E5DD6 /* Pods-SnapKit-Private.xcconfig */,
+				33F42834A3257CE7BF668F89 /* Pods-SnapKit-dummy.m */,
+				A248878B5298279BACEB51E0 /* Pods-SnapKit-prefix.pch */,
+				265146805F5EC3D52D717AD0 /* Pods-SnapKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SnapKit";
+			sourceTree = "<group>";
+		};
+		563782842DAEF06A12C0068A /* ZoomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				6ED0ABDAA13493FB8C01D5C3 /* ZoomTransition.swift */,
+				16E34B8AEBBC14A081312064 /* Support Files */,
+			);
+			path = ZoomTransition;
+			sourceTree = "<group>";
+		};
+		5A223F4D2FCABE9E7A1A0088 /* CVCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				01CC2A341FBC6EC1458F1E10 /* CVCalendarContentDelegate.swift */,
+				D3D62D0148E37633EFA75719 /* CVCalendarContentViewController.swift */,
+				8A79481D89576566AB1B4229 /* CVCalendarDayView.swift */,
+				423AC6091391B665D938601F /* CVCalendarDayViewControlCoordinator.swift */,
+				38F0EFA5BCBA433960CD0805 /* CVCalendarManager.swift */,
+				F641383F2C1E5897DBD6A535 /* CVCalendarMenuView.swift */,
+				E6D25D4E9BAA30DEA264BE07 /* CVCalendarMonthContentView.swift */,
+				B0D01A4CBC1E0C37AF5DDD81 /* CVCalendarMonthView.swift */,
+				3FC2FCDDE1DF420C2EEA1BC6 /* CVCalendarRenderer.swift */,
+				FCFC26BF3A6CDAA901BE2102 /* CVCalendarView.swift */,
+				E78886037797D89B86AF3132 /* CVCalendarViewAnimator.swift */,
+				6B80BB15D63E2E1BB7D300C7 /* CVCalendarViewAnimatorDelegate.swift */,
+				BCD88E495CF75AA12B15E839 /* CVCalendarViewAppearance.swift */,
+				0966A9EC55C993B7E9DB068E /* CVCalendarViewAppearanceDelegate.swift */,
+				A6C604555F2E093E17ED5172 /* CVCalendarViewDelegate.swift */,
+				253D21BF948A6C3FE5EF549E /* CVCalendarWeekContentRecovery.swift */,
+				D6CE911EB3A7A382AEBCB5FA /* CVCalendarWeekContentView.swift */,
+				85EC981EEB6FAC6EAB84987C /* CVCalendarWeekView.swift */,
+				E21A70C28954065CEC4CE2C7 /* CVCircleView.swift */,
+				1544DADA4118D45BFB550909 /* CVDate.swift */,
+				866680EB486F0E417A6CF171 /* Support Files */,
+			);
+			path = CVCalendar;
+			sourceTree = "<group>";
+		};
+		5B1599F75F309BBE527C30CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A18C0BA825E2849D52E6C957 /* CVCalendar.framework */,
+				52597261B86C86EA5BD6FF83 /* CVCalendarKit.framework */,
+				7981763D81C5707EC5CAD5F8 /* FMDB.framework */,
+				D80D91B1008467783867392B /* MGSwipeTableCell.framework */,
+				B2BBEBBA2AA7479E0C35B641 /* Pods.framework */,
+				014A2E4BBD607A0CE9D575D7 /* SnapKit.framework */,
+				F6AAB8E6680C1B4E088B5D33 /* ZoomTransition.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		685A58D0D10CF1347BDB588E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				03BA983E00A5B58416E2A527 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6FBAD295A88842599F6093FC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C59EE11CEE4E25C4717B672D /* Info.plist */,
+				CD6D453DEBEDBA207C8F89CE /* Pods-CVCalendarKit.modulemap */,
+				56DF4CB61B79B830A08211BC /* Pods-CVCalendarKit.xcconfig */,
+				EA430B764A96254A2487E9B5 /* Pods-CVCalendarKit-Private.xcconfig */,
+				E1665135BC5B4B54BFDE903B /* Pods-CVCalendarKit-dummy.m */,
+				934D78621C14A687D66182D5 /* Pods-CVCalendarKit-prefix.pch */,
+				BF323544502E90FCFE19868C /* Pods-CVCalendarKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-CVCalendarKit";
+			sourceTree = "<group>";
+		};
+		7C76BE83A22A01B08F763FAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				685A58D0D10CF1347BDB588E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		866680EB486F0E417A6CF171 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C79031DBF2C5465B16C18809 /* Info.plist */,
+				8BCC6BD5EC790129A16AC59F /* Pods-CVCalendar.modulemap */,
+				7507B2C659E7802E77EDD62C /* Pods-CVCalendar.xcconfig */,
+				95659A08BFD229F5FA6771CE /* Pods-CVCalendar-Private.xcconfig */,
+				F031EE4E3F1B3DE9E765052B /* Pods-CVCalendar-dummy.m */,
+				707A14A998B56BB6AF8A890B /* Pods-CVCalendar-prefix.pch */,
+				337342F13F64ABFAA1ABF378 /* Pods-CVCalendar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-CVCalendar";
+			sourceTree = "<group>";
+		};
+		90067A194E501377E9ED4448 /* CVCalendarKit */ = {
+			isa = PBXGroup;
+			children = (
+				973A9A55DE813BE8B149FFFD /* CVCalendarKitExtensions.swift */,
+				C21A4EAEAADA7ADE64E5723E /* CVCalendarKitOperators.swift */,
+				6FBAD295A88842599F6093FC /* Support Files */,
+			);
+			path = CVCalendarKit;
+			sourceTree = "<group>";
+		};
+		97E53A5962961EDFBEEB919D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EC3213F8258CC19E5E0A188 /* Info.plist */,
+				69413D2E4629D81185C89901 /* Pods-FMDB.modulemap */,
+				247A730C66D68CE1094718A3 /* Pods-FMDB.xcconfig */,
+				0B3493B5CE73104E3F4DB67C /* Pods-FMDB-Private.xcconfig */,
+				6A7A0707BB4409EB744160CD /* Pods-FMDB-dummy.m */,
+				04DE643165020F1FDD46118F /* Pods-FMDB-prefix.pch */,
+				CEB920E9DCB9EC46F7E944C9 /* Pods-FMDB-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-FMDB";
+			sourceTree = "<group>";
+		};
+		AE23B6144ACE4C3AF45CD1FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A223F4D2FCABE9E7A1A0088 /* CVCalendar */,
+				90067A194E501377E9ED4448 /* CVCalendarKit */,
+				3252D93535B17D775FB76495 /* FMDB */,
+				00DC3A061789743AAE59C9B8 /* MGSwipeTableCell */,
+				0DBB5C31899BA8E519C00B48 /* SnapKit */,
+				563782842DAEF06A12C0068A /* ZoomTransition */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAB5430E1BCA28D459B31E2E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				200037C2E57727F79A982CEA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		180030F2CE50FFB472894B4D /* Headers */ = {
+		305DF81E3BDB30CCABCDE7F3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AD4C1A49CB8171AA5E816F1 /* MGSwipeButton.h in Headers */,
-				B8D1028AE42155280221B1ED /* MGSwipeTableCell.h in Headers */,
-				52882CD4C4F831C8AFCB494B /* Pods-MGSwipeTableCell-umbrella.h in Headers */,
+				BC6B9A6316CF388A5E0475CE /* FMDB.h in Headers */,
+				FA72844FAB2986282A8008F2 /* FMDatabase.h in Headers */,
+				EA61BD675A3C6748ACFA1AA1 /* FMDatabaseAdditions.h in Headers */,
+				A03FE43E9A682E6137FE7A5E /* FMDatabasePool.h in Headers */,
+				6BF339FE61979EE9ECFD0885 /* FMDatabasePrivate.h in Headers */,
+				997B3608C459C5D59D30B857 /* FMDatabaseQueue.h in Headers */,
+				88E158D8B10941DA3BBFA7AE /* FMResultSet.h in Headers */,
+				995409958930D1787C375B62 /* Pods-FMDB-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29CF671EDBB48A93902DF9BC /* Headers */ = {
+		32E7E860FB0A132B9BD11A05 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87ADB09048DC8B597EBF7177 /* FMDB.h in Headers */,
-				E7C145293007C3F666462A2B /* FMDatabase.h in Headers */,
-				DDECF29A5DA0FFCF168C47B0 /* FMDatabaseAdditions.h in Headers */,
-				04C517B542EEA9DC090028CD /* FMDatabasePool.h in Headers */,
-				157F041F72D720D63B404E1F /* FMDatabasePrivate.h in Headers */,
-				F088A5217E8944C58B381362 /* FMDatabaseQueue.h in Headers */,
-				9EA50A1FC62CDFB1FA208CD4 /* FMResultSet.h in Headers */,
-				6C61793FFD7B285B1214E9C3 /* Pods-FMDB-umbrella.h in Headers */,
+				25D50368D6FFF3646FD1AC78 /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		532D809DEFB5DAD2B08AC4BA /* Headers */ = {
+		68B1DC3A2E73B1C4A51CC5D1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDBFE0BC29256CBD3B936C84 /* Pods-SnapKit-umbrella.h in Headers */,
+				2634B2D4A5338CB28D83878E /* Pods-CVCalendar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4F2C728E6DD925F8701330C /* Headers */ = {
+		7B524350DD45775433F60303 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B35482BD9476BD7B489B1CA /* Pods-umbrella.h in Headers */,
+				D67291F81E6E3E863FAAADF1 /* MGSwipeButton.h in Headers */,
+				CE264615454A4C4AC87745F9 /* MGSwipeTableCell.h in Headers */,
+				86D8B277FAF581DFBF19C7A2 /* Pods-MGSwipeTableCell-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F93A6BECF8DE5D46F375FC03 /* Headers */ = {
+		91ECE590D0E7B0458C377717 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3F8C78C06956251ACFA60C /* Pods-CVCalendarKit-umbrella.h in Headers */,
+				F2C7B82A24143101F9B569CD /* Pods-SnapKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97AFFC83AD1F422857AF88A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85AD1FDF3DA5C76D55C52169 /* Pods-CVCalendarKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0795B8D6FFB33D88EDB3C5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6663F7EE5DBEE03D0AA9CAE6 /* Pods-ZoomTransition-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		39703A2339304DA93C6E2203 /* Pods-MGSwipeTableCell */ = {
+		0852EFBEECDBA685969B16BA /* Pods-ZoomTransition */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 602801DD5547B07C771DC1E5 /* Build configuration list for PBXNativeTarget "Pods-MGSwipeTableCell" */;
+			buildConfigurationList = D0624061784FD08E2381F555 /* Build configuration list for PBXNativeTarget "Pods-ZoomTransition" */;
 			buildPhases = (
-				B27934293F1980C99E8BFD91 /* Sources */,
-				C8F90375E5F11FAD46F887AF /* Frameworks */,
-				180030F2CE50FFB472894B4D /* Headers */,
+				68F31441B30EBA969B015EAA /* Sources */,
+				8F6718980EAC2892E6BE3C62 /* Frameworks */,
+				CF0795B8D6FFB33D88EDB3C5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-MGSwipeTableCell";
-			productName = "Pods-MGSwipeTableCell";
-			productReference = BDEE03DE38F4F7E2B89C1A14 /* MGSwipeTableCell.framework */;
+			name = "Pods-ZoomTransition";
+			productName = "Pods-ZoomTransition";
+			productReference = F6AAB8E6680C1B4E088B5D33 /* ZoomTransition.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8972BD5B415FDA2D1B343031 /* Pods-CVCalendarKit */ = {
+		102588FB80B7DBEACDC5B103 /* Pods-CVCalendarKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 805CE6B1572D92582CC1F345 /* Build configuration list for PBXNativeTarget "Pods-CVCalendarKit" */;
+			buildConfigurationList = 7FFAF5545A3C579A28992F69 /* Build configuration list for PBXNativeTarget "Pods-CVCalendarKit" */;
 			buildPhases = (
-				9D0991CF1710F83F83294902 /* Sources */,
-				55CCF62E22FB59EBF804E757 /* Frameworks */,
-				F93A6BECF8DE5D46F375FC03 /* Headers */,
+				5BAD2923CBFE75F2818E3F6E /* Sources */,
+				FB21FA6F65D1AD659FD25D4D /* Frameworks */,
+				97AFFC83AD1F422857AF88A2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -501,16 +682,16 @@
 			);
 			name = "Pods-CVCalendarKit";
 			productName = "Pods-CVCalendarKit";
-			productReference = 69E8206919074561DE031F2B /* CVCalendarKit.framework */;
+			productReference = 52597261B86C86EA5BD6FF83 /* CVCalendarKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A7F922B5BA91051DEA370206 /* Pods-FMDB */ = {
+		2708C85A1789278EB4703535 /* Pods-FMDB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 518BE547501FC6CFD5EA92DF /* Build configuration list for PBXNativeTarget "Pods-FMDB" */;
+			buildConfigurationList = E5D91468F9F80AB9A2816EA4 /* Build configuration list for PBXNativeTarget "Pods-FMDB" */;
 			buildPhases = (
-				BA330CD30C73A328261B3DF3 /* Sources */,
-				4452DE13FCC21C7AFB3BF51B /* Frameworks */,
-				29CF671EDBB48A93902DF9BC /* Headers */,
+				9B62EFD6B4631055AFC5C259 /* Sources */,
+				9AE54ABB2CD4A5792F9C1161 /* Frameworks */,
+				305DF81E3BDB30CCABCDE7F3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -518,16 +699,33 @@
 			);
 			name = "Pods-FMDB";
 			productName = "Pods-FMDB";
-			productReference = EF785B853E3770839D858A27 /* FMDB.framework */;
+			productReference = 7981763D81C5707EC5CAD5F8 /* FMDB.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B8D3CC7434C64AACDD2C9C89 /* Pods-SnapKit */ = {
+		3AB7C0A95C3C477D6780A4CB /* Pods-MGSwipeTableCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A73AF92F7A46E2BF04C02F72 /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */;
+			buildConfigurationList = 8BFACD1CC1E115CBF9DA0AFB /* Build configuration list for PBXNativeTarget "Pods-MGSwipeTableCell" */;
 			buildPhases = (
-				1DDEC7A516F84695C20FAD0C /* Sources */,
-				32701733244597FCB5367345 /* Frameworks */,
-				532D809DEFB5DAD2B08AC4BA /* Headers */,
+				9ABCD534FB947FD0674089B6 /* Sources */,
+				43AB563B2133D69EA21C3F01 /* Frameworks */,
+				7B524350DD45775433F60303 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MGSwipeTableCell";
+			productName = "Pods-MGSwipeTableCell";
+			productReference = D80D91B1008467783867392B /* MGSwipeTableCell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5012CCDA3EB388D306EEF4DC /* Pods-SnapKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C6B72F72FFC109EA98CE66E /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */;
+			buildPhases = (
+				20194C3DD29B3CE3840DA7BE /* Sources */,
+				0353288879E954C03E1155EC /* Frameworks */,
+				91ECE590D0E7B0458C377717 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -535,154 +733,306 @@
 			);
 			name = "Pods-SnapKit";
 			productName = "Pods-SnapKit";
-			productReference = BF9C38A84E325F40B50B7358 /* SnapKit.framework */;
+			productReference = 014A2E4BBD607A0CE9D575D7 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EEB7ED7CDACE1518C244AA6C /* Pods */ = {
+		5E3FB9E1F3D6EEFAF762C44A /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47D23E676CD411A9A85EB7BD /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = C84B1FD0732D352C52222F94 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				3A387F96A6294C06CB298046 /* Sources */,
-				14CA4F8F8FACF4D2F894979D /* Frameworks */,
-				B4F2C728E6DD925F8701330C /* Headers */,
+				B3189FA5DC6FE7AAE2E3DE89 /* Sources */,
+				572B2D0042A6A4A87BEB7782 /* Frameworks */,
+				32E7E860FB0A132B9BD11A05 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0720D2CF6ED1E5A72E87631A /* PBXTargetDependency */,
-				B18F55F972492ADD75739650 /* PBXTargetDependency */,
-				6BCDB091DD4105D7ACDEAFB7 /* PBXTargetDependency */,
-				0B16ADF799DC9731917CBBA5 /* PBXTargetDependency */,
+				9C68E27D44CA106CF902B854 /* PBXTargetDependency */,
+				3B726F766ABABA570ECFBEEF /* PBXTargetDependency */,
+				69F97D10709C3AF652E6E5EF /* PBXTargetDependency */,
+				31782B8C2078E7D32E45B367 /* PBXTargetDependency */,
+				E3617490194718AC5E9ABD44 /* PBXTargetDependency */,
+				A05E1F38C62275CAE0F2CEE8 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = DBA78CC1142BE59C4F62AF07 /* Pods.framework */;
+			productReference = B2BBEBBA2AA7479E0C35B641 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6D52C357EEB4B5F89589E61C /* Pods-CVCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7137B0E09CAF64B34FB4BE59 /* Build configuration list for PBXNativeTarget "Pods-CVCalendar" */;
+			buildPhases = (
+				F27E88D9DDC7EF938CE6E523 /* Sources */,
+				DF441D1AF09EFBD5B6993F7E /* Frameworks */,
+				68B1DC3A2E73B1C4A51CC5D1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CVCalendar";
+			productName = "Pods-CVCalendar";
+			productReference = A18C0BA825E2849D52E6C957 /* CVCalendar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2357A7AEFB7D0A61118A14C5 /* Project object */ = {
+		62F73584FF3F8D53182768CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 69F4B37F6D1FBCEF91A7CCA1 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = A986F1112005E64FCD47B414 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 9D510B26EE1579A1027894D0;
-			productRefGroup = CB6812F69577B60E6C9CD469 /* Products */;
+			mainGroup = 080734F5FED3B2172A3E9684;
+			productRefGroup = 5B1599F75F309BBE527C30CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EEB7ED7CDACE1518C244AA6C /* Pods */,
-				8972BD5B415FDA2D1B343031 /* Pods-CVCalendarKit */,
-				A7F922B5BA91051DEA370206 /* Pods-FMDB */,
-				39703A2339304DA93C6E2203 /* Pods-MGSwipeTableCell */,
-				B8D3CC7434C64AACDD2C9C89 /* Pods-SnapKit */,
+				5E3FB9E1F3D6EEFAF762C44A /* Pods */,
+				6D52C357EEB4B5F89589E61C /* Pods-CVCalendar */,
+				102588FB80B7DBEACDC5B103 /* Pods-CVCalendarKit */,
+				2708C85A1789278EB4703535 /* Pods-FMDB */,
+				3AB7C0A95C3C477D6780A4CB /* Pods-MGSwipeTableCell */,
+				5012CCDA3EB388D306EEF4DC /* Pods-SnapKit */,
+				0852EFBEECDBA685969B16BA /* Pods-ZoomTransition */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1DDEC7A516F84695C20FAD0C /* Sources */ = {
+		20194C3DD29B3CE3840DA7BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C0F82D4929370D55DD5710 /* Constraint.swift in Sources */,
-				093A9A35EE7E16F821674249 /* ConstraintAttributes.swift in Sources */,
-				FDDC7AB76001823801255A1C /* ConstraintDescription.swift in Sources */,
-				83AA0FC5399CA80D978ACB72 /* ConstraintItem.swift in Sources */,
-				294C84073779946A4E3DAAEF /* ConstraintMaker.swift in Sources */,
-				62DA32B251C3C8E7846D1DC8 /* ConstraintRelation.swift in Sources */,
-				969CF597B0B0C083ED2CEF72 /* Debugging.swift in Sources */,
-				7CCCE85605EFEF7E217D518C /* EdgeInsets.swift in Sources */,
-				1AF9489A002A7713601C0724 /* LayoutConstraint.swift in Sources */,
-				EED6739726957357F6679D80 /* Pods-SnapKit-dummy.m in Sources */,
-				CF2D1C1A9150F459377B9BC0 /* SnapKit.swift in Sources */,
-				FEC2E2695452C01E0BD300E0 /* View+SnapKit.swift in Sources */,
-				9C40B84DFE7279E18FA7BC0E /* ViewController+SnapKit.swift in Sources */,
+				105271965F2D944BEB412DC7 /* Constraint.swift in Sources */,
+				33FEB0677A0DF28B9EE4DA9D /* ConstraintAttributes.swift in Sources */,
+				699BA251319D0D514FB2DA56 /* ConstraintDescription.swift in Sources */,
+				7FFE4ADF7D77217366EF2FE5 /* ConstraintItem.swift in Sources */,
+				583977BBA94C0149371D0AAD /* ConstraintMaker.swift in Sources */,
+				BEB0510FE4E24BCC98CCE1D5 /* ConstraintRelation.swift in Sources */,
+				5E8AFF7C70DC2287B5BF6D2B /* Debugging.swift in Sources */,
+				F7B15B7831BE0466F412F5D8 /* EdgeInsets.swift in Sources */,
+				2BDDB4E397EEC05B3C271D4E /* LayoutConstraint.swift in Sources */,
+				05B3372F04A0D6C8621BF9A5 /* Pods-SnapKit-dummy.m in Sources */,
+				29BFD3143C58332F7CF62FE5 /* SnapKit.swift in Sources */,
+				D05088EBAAF3E577F23F0621 /* View+SnapKit.swift in Sources */,
+				C613F7138B6B08020DFDDC10 /* ViewController+SnapKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A387F96A6294C06CB298046 /* Sources */ = {
+		5BAD2923CBFE75F2818E3F6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329E18747868E40CE3E138F1 /* Pods-dummy.m in Sources */,
+				796531433ED223F18E328CB3 /* CVCalendarKitExtensions.swift in Sources */,
+				43580663E717FD6B8284A676 /* CVCalendarKitOperators.swift in Sources */,
+				A2F8152458215E82B5E3552B /* Pods-CVCalendarKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D0991CF1710F83F83294902 /* Sources */ = {
+		68F31441B30EBA969B015EAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BCE065E00FA01793727EA83 /* CVCalendarKitExtensions.swift in Sources */,
-				371E4DFDB9080DACC82D5289 /* CVCalendarKitOperators.swift in Sources */,
-				2EE494DC8ACAB32A7C75A713 /* Pods-CVCalendarKit-dummy.m in Sources */,
+				099F0D72F7B25E8A51EE2180 /* Pods-ZoomTransition-dummy.m in Sources */,
+				3B6B3F4B5299103863953B79 /* ZoomTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B27934293F1980C99E8BFD91 /* Sources */ = {
+		9ABCD534FB947FD0674089B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B598E6EF3FCBDD584FBAD26 /* MGSwipeButton.m in Sources */,
-				60590F170782AB342F1CB8CD /* MGSwipeTableCell.m in Sources */,
-				4CE35BE6B0C5CE874931DF31 /* Pods-MGSwipeTableCell-dummy.m in Sources */,
+				43A8FFC1B5022DF99998115F /* MGSwipeButton.m in Sources */,
+				D6B8BCFC60A30185931F9017 /* MGSwipeTableCell.m in Sources */,
+				3A4C53AEFE1100D72E996026 /* Pods-MGSwipeTableCell-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA330CD30C73A328261B3DF3 /* Sources */ = {
+		9B62EFD6B4631055AFC5C259 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A6194B30CA3CE4C8BF84C7 /* FMDatabase.m in Sources */,
-				087A3252EF29E9412C7A5A6D /* FMDatabaseAdditions.m in Sources */,
-				CFBD6C8E9F251EC91C7CD4AD /* FMDatabasePool.m in Sources */,
-				9851ED5AA31DD83E82E36916 /* FMDatabaseQueue.m in Sources */,
-				04FE1CB046EE887B48C75503 /* FMResultSet.m in Sources */,
-				7D353E437AB78ABF1CF8E8C9 /* Pods-FMDB-dummy.m in Sources */,
+				32381694973E5BD9CAB6CD92 /* FMDatabase.m in Sources */,
+				E794AAA1BBCC308ECD95D687 /* FMDatabaseAdditions.m in Sources */,
+				59D09D1B20EFA320802542E9 /* FMDatabasePool.m in Sources */,
+				8150BB1E6C17A70C37D20496 /* FMDatabaseQueue.m in Sources */,
+				DE25B389AE4E0F28641743ED /* FMResultSet.m in Sources */,
+				53AB7FABCB90EFD37CBE4EFE /* Pods-FMDB-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3189FA5DC6FE7AAE2E3DE89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC92E078200786BAED18AB3 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27E88D9DDC7EF938CE6E523 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F277A7069ED13A7444B09A6 /* CVCalendarContentDelegate.swift in Sources */,
+				2302AB4F0E2AB4A0B555F8FF /* CVCalendarContentViewController.swift in Sources */,
+				0BD39F709173587D773FBBF9 /* CVCalendarDayView.swift in Sources */,
+				D8F6777658B9E1C3FBE21567 /* CVCalendarDayViewControlCoordinator.swift in Sources */,
+				9CE404820CCB02D02805E909 /* CVCalendarManager.swift in Sources */,
+				4687FD7F333A5C53F04B1A72 /* CVCalendarMenuView.swift in Sources */,
+				AFAD80DC316C727A422CA54B /* CVCalendarMonthContentView.swift in Sources */,
+				16F28D905D4FBC01C42E07B8 /* CVCalendarMonthView.swift in Sources */,
+				C85B56484356FF82DC7B5027 /* CVCalendarRenderer.swift in Sources */,
+				E76C633016A82EF35D382278 /* CVCalendarView.swift in Sources */,
+				E4C98427497810C460D25163 /* CVCalendarViewAnimator.swift in Sources */,
+				1D942BF9B33E14619F0AB518 /* CVCalendarViewAnimatorDelegate.swift in Sources */,
+				8DD0BBA14AC22130892BD767 /* CVCalendarViewAppearance.swift in Sources */,
+				A56373FACBE37528F7F92F1C /* CVCalendarViewAppearanceDelegate.swift in Sources */,
+				5A97176F2C2857DF8CB385E9 /* CVCalendarViewDelegate.swift in Sources */,
+				5362D91F1F27B5EB37AD8DEE /* CVCalendarWeekContentRecovery.swift in Sources */,
+				EE4FCF8591ABFB08BF3D1677 /* CVCalendarWeekContentView.swift in Sources */,
+				605E18E406018072BD50EEE6 /* CVCalendarWeekView.swift in Sources */,
+				7536449D29051EAC3E19AD07 /* CVCircleView.swift in Sources */,
+				05BE136AA9376B98DA09A910 /* CVDate.swift in Sources */,
+				15DDCD7623AA837F1AC099FE /* Pods-CVCalendar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0720D2CF6ED1E5A72E87631A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-CVCalendarKit";
-			target = 8972BD5B415FDA2D1B343031 /* Pods-CVCalendarKit */;
-			targetProxy = FA389A7C9B0F67282396FA07 /* PBXContainerItemProxy */;
-		};
-		0B16ADF799DC9731917CBBA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-SnapKit";
-			target = B8D3CC7434C64AACDD2C9C89 /* Pods-SnapKit */;
-			targetProxy = B2C7247DD858CC5A4D38C684 /* PBXContainerItemProxy */;
-		};
-		6BCDB091DD4105D7ACDEAFB7 /* PBXTargetDependency */ = {
+		31782B8C2078E7D32E45B367 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MGSwipeTableCell";
-			target = 39703A2339304DA93C6E2203 /* Pods-MGSwipeTableCell */;
-			targetProxy = EB8570C48E53EBA206D62836 /* PBXContainerItemProxy */;
+			target = 3AB7C0A95C3C477D6780A4CB /* Pods-MGSwipeTableCell */;
+			targetProxy = BBDD049A087CA08498E23733 /* PBXContainerItemProxy */;
 		};
-		B18F55F972492ADD75739650 /* PBXTargetDependency */ = {
+		3B726F766ABABA570ECFBEEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CVCalendarKit";
+			target = 102588FB80B7DBEACDC5B103 /* Pods-CVCalendarKit */;
+			targetProxy = ABB9A8B974E1F4C6DA9AA2FC /* PBXContainerItemProxy */;
+		};
+		69F97D10709C3AF652E6E5EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-FMDB";
-			target = A7F922B5BA91051DEA370206 /* Pods-FMDB */;
-			targetProxy = AD3FFA4EBAAC89EED027C3E4 /* PBXContainerItemProxy */;
+			target = 2708C85A1789278EB4703535 /* Pods-FMDB */;
+			targetProxy = BFC5DD2625FB0D8D0F0331E5 /* PBXContainerItemProxy */;
+		};
+		9C68E27D44CA106CF902B854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CVCalendar";
+			target = 6D52C357EEB4B5F89589E61C /* Pods-CVCalendar */;
+			targetProxy = 85A7ABBD050CC4438697BC3E /* PBXContainerItemProxy */;
+		};
+		A05E1F38C62275CAE0F2CEE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ZoomTransition";
+			target = 0852EFBEECDBA685969B16BA /* Pods-ZoomTransition */;
+			targetProxy = BE4E713B164F7159AF854A16 /* PBXContainerItemProxy */;
+		};
+		E3617490194718AC5E9ABD44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SnapKit";
+			target = 5012CCDA3EB388D306EEF4DC /* Pods-SnapKit */;
+			targetProxy = 076B5CE1B49DF91802B10ED3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		10B98D96648C8CC5E34626AA /* Release */ = {
+		27AAF4FB1575B5E7152CF129 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DB02992AFB394AE806DDCA5 /* Pods-SnapKit-Private.xcconfig */;
+			baseConfigurationReference = EA430B764A96254A2487E9B5 /* Pods-CVCalendarKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-CVCalendarKit/Pods-CVCalendarKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-CVCalendarKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CVCalendarKit/Pods-CVCalendarKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CVCalendarKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2885ECEDE0A7A98EAE87AF71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A2CA816985D631E699E5DD6 /* Pods-SnapKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SnapKit/Pods-SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapKit/Pods-SnapKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SnapKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3931D6A8F06F694C6DF8D28C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95659A08BFD229F5FA6771CE /* Pods-CVCalendar-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-CVCalendar/Pods-CVCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-CVCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CVCalendar/Pods-CVCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CVCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41FCE3D8D78CE11FE00FCB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A2CA816985D631E699E5DD6 /* Pods-SnapKit-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -707,7 +1057,65 @@
 			};
 			name = Release;
 		};
-		222A5562C96AB6AD829294F6 /* Release */ = {
+		539DFD37193400C6395B784A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EFC506615E10F4F48A6A3BE /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5ADB0AC3B45992050F504FEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F25A2405E6CE65A6373E7BE /* Pods-ZoomTransition-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ZoomTransition/Pods-ZoomTransition-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZoomTransition/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ZoomTransition/Pods-ZoomTransition.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ZoomTransition;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98C77D9EE1119E58D8DCF82C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -741,9 +1149,9 @@
 			};
 			name = Release;
 		};
-		2B0F651FA0CC77C94EFEE8C0 /* Release */ = {
+		9F6646B5F0F6FDA15111B43B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FAAA9CC02F5309FA60A8FC0 /* Pods-CVCalendarKit-Private.xcconfig */;
+			baseConfigurationReference = 7F25A2405E6CE65A6373E7BE /* Pods-ZoomTransition-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -752,14 +1160,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-CVCalendarKit/Pods-CVCalendarKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-CVCalendarKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ZoomTransition/Pods-ZoomTransition-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZoomTransition/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-CVCalendarKit/Pods-CVCalendarKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-ZoomTransition/Pods-ZoomTransition.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CVCalendarKit;
+				PRODUCT_NAME = ZoomTransition;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -768,36 +1176,9 @@
 			};
 			name = Release;
 		};
-		2D302D52F68EE58F081F93C9 /* Release */ = {
+		B7C1184C4F78DAE0FBF15D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E427076999C0B667B4E3772B /* Pods-FMDB-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-FMDB/Pods-FMDB-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-FMDB/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-FMDB/Pods-FMDB.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FMDB;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		585C148FA5F2B50F08C8E8BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FAAA9CC02F5309FA60A8FC0 /* Pods-CVCalendarKit-Private.xcconfig */;
+			baseConfigurationReference = EA430B764A96254A2487E9B5 /* Pods-CVCalendarKit-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -823,37 +1204,9 @@
 			};
 			name = Debug;
 		};
-		68B83ED0315E7AD1B52F952B /* Debug */ = {
+		B89E52C86703A0F57859F958 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DB02992AFB394AE806DDCA5 /* Pods-SnapKit-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SnapKit/Pods-SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-SnapKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-SnapKit/Pods-SnapKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7170299D485B3BD394149666 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B81E4451C425144D0BA1D109 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = D2C8FD7E985D33A5B329EF4C /* Pods.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -867,11 +1220,38 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D86080B636ED23DBC7C47433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95659A08BFD229F5FA6771CE /* Pods-CVCalendar-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-CVCalendar/Pods-CVCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-CVCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-CVCalendar/Pods-CVCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CVCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -881,9 +1261,9 @@
 			};
 			name = Debug;
 		};
-		92507509125A21D447EF8446 /* Debug */ = {
+		EE6C2453E7D282884BA36B94 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E427076999C0B667B4E3772B /* Pods-FMDB-Private.xcconfig */;
+			baseConfigurationReference = 0B3493B5CE73104E3F4DB67C /* Pods-FMDB-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -908,7 +1288,61 @@
 			};
 			name = Debug;
 		};
-		97309F5D605A79EB45446142 /* Debug */ = {
+		F3EDE5A0959A7D037B75F1B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8624DFBE16403BDE9B95D8BE /* Pods-MGSwipeTableCell-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-MGSwipeTableCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MGSwipeTableCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F5B4E4BA0003429B2D303499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8624DFBE16403BDE9B95D8BE /* Pods-MGSwipeTableCell-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-MGSwipeTableCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MGSwipeTableCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA62AA015BD7E0B59FA4F3E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -947,9 +1381,9 @@
 			};
 			name = Debug;
 		};
-		B004549579330C917C83F651 /* Release */ = {
+		FD91E6129D31A54C10523C43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1922F7C262DDC2C2959003AE /* Pods-MGSwipeTableCell-Private.xcconfig */;
+			baseConfigurationReference = 0B3493B5CE73104E3F4DB67C /* Pods-FMDB-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -958,70 +1392,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-MGSwipeTableCell/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-FMDB/Pods-FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-FMDB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-FMDB/Pods-FMDB.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MGSwipeTableCell;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EED302F090CAE99843371AD9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1922F7C262DDC2C2959003AE /* Pods-MGSwipeTableCell-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-MGSwipeTableCell/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-MGSwipeTableCell/Pods-MGSwipeTableCell.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MGSwipeTableCell;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F08B9FBFC57256120C5E64DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D7DA8ED0EA2060B80BAB52F /* Pods.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
+				PRODUCT_NAME = FMDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1033,61 +1411,79 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47D23E676CD411A9A85EB7BD /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		2C6B72F72FFC109EA98CE66E /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7170299D485B3BD394149666 /* Debug */,
-				F08B9FBFC57256120C5E64DD /* Release */,
+				2885ECEDE0A7A98EAE87AF71 /* Debug */,
+				41FCE3D8D78CE11FE00FCB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		518BE547501FC6CFD5EA92DF /* Build configuration list for PBXNativeTarget "Pods-FMDB" */ = {
+		7137B0E09CAF64B34FB4BE59 /* Build configuration list for PBXNativeTarget "Pods-CVCalendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92507509125A21D447EF8446 /* Debug */,
-				2D302D52F68EE58F081F93C9 /* Release */,
+				D86080B636ED23DBC7C47433 /* Debug */,
+				3931D6A8F06F694C6DF8D28C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		602801DD5547B07C771DC1E5 /* Build configuration list for PBXNativeTarget "Pods-MGSwipeTableCell" */ = {
+		7FFAF5545A3C579A28992F69 /* Build configuration list for PBXNativeTarget "Pods-CVCalendarKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EED302F090CAE99843371AD9 /* Debug */,
-				B004549579330C917C83F651 /* Release */,
+				B7C1184C4F78DAE0FBF15D41 /* Debug */,
+				27AAF4FB1575B5E7152CF129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69F4B37F6D1FBCEF91A7CCA1 /* Build configuration list for PBXProject "Pods" */ = {
+		8BFACD1CC1E115CBF9DA0AFB /* Build configuration list for PBXNativeTarget "Pods-MGSwipeTableCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97309F5D605A79EB45446142 /* Debug */,
-				222A5562C96AB6AD829294F6 /* Release */,
+				F5B4E4BA0003429B2D303499 /* Debug */,
+				F3EDE5A0959A7D037B75F1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		805CE6B1572D92582CC1F345 /* Build configuration list for PBXNativeTarget "Pods-CVCalendarKit" */ = {
+		A986F1112005E64FCD47B414 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				585C148FA5F2B50F08C8E8BA /* Debug */,
-				2B0F651FA0CC77C94EFEE8C0 /* Release */,
+				FA62AA015BD7E0B59FA4F3E4 /* Debug */,
+				98C77D9EE1119E58D8DCF82C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A73AF92F7A46E2BF04C02F72 /* Build configuration list for PBXNativeTarget "Pods-SnapKit" */ = {
+		C84B1FD0732D352C52222F94 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68B83ED0315E7AD1B52F952B /* Debug */,
-				10B98D96648C8CC5E34626AA /* Release */,
+				539DFD37193400C6395B784A /* Debug */,
+				B89E52C86703A0F57859F958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0624061784FD08E2381F555 /* Build configuration list for PBXNativeTarget "Pods-ZoomTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADB0AC3B45992050F504FEE /* Debug */,
+				9F6646B5F0F6FDA15111B43B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D91468F9F80AB9A2816EA4 /* Build configuration list for PBXNativeTarget "Pods-FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6C2453E7D282884BA36B94 /* Debug */,
+				FD91E6129D31A54C10523C43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2357A7AEFB7D0A61118A14C5 /* Project object */;
+	rootObject = 62F73584FF3F8D53182768CF /* Project object */;
 }

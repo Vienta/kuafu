@@ -6,6 +6,12 @@
 // project.
 
 
+// CVCalendar
+#define COCOAPODS_POD_AVAILABLE_CVCalendar
+#define COCOAPODS_VERSION_MAJOR_CVCalendar 1
+#define COCOAPODS_VERSION_MINOR_CVCalendar 0
+#define COCOAPODS_VERSION_PATCH_CVCalendar 8
+
 // CVCalendarKit
 #define COCOAPODS_POD_AVAILABLE_CVCalendarKit
 #define COCOAPODS_VERSION_MAJOR_CVCalendarKit 0
@@ -41,4 +47,10 @@
 #define COCOAPODS_VERSION_MAJOR_SnapKit 0
 #define COCOAPODS_VERSION_MINOR_SnapKit 12
 #define COCOAPODS_VERSION_PATCH_SnapKit 0
+
+// ZoomTransition
+#define COCOAPODS_POD_AVAILABLE_ZoomTransition
+#define COCOAPODS_VERSION_MAJOR_ZoomTransition 0
+#define COCOAPODS_VERSION_MINOR_ZoomTransition 1
+#define COCOAPODS_VERSION_PATCH_ZoomTransition 0
 

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5012CCDA3EB388D306EEF4DC"
-               BuildableName = "SnapKit.framework"
-               BlueprintName = "Pods-SnapKit"
+               BlueprintIdentifier = "6D52C357EEB4B5F89589E61C"
+               BuildableName = "CVCalendar.framework"
+               BlueprintName = "Pods-CVCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

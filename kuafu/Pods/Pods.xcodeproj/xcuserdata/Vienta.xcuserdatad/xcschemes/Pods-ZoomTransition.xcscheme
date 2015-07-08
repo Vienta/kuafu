@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5012CCDA3EB388D306EEF4DC"
-               BuildableName = "SnapKit.framework"
-               BlueprintName = "Pods-SnapKit"
+               BlueprintIdentifier = "0852EFBEECDBA685969B16BA"
+               BuildableName = "ZoomTransition.framework"
+               BlueprintName = "Pods-ZoomTransition"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
