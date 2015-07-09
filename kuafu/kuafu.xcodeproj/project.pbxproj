@@ -34,6 +34,8 @@
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
 		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
+		B3DFE2201B4E5B4A00C520E0 /* KFPullCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */; };
+		B3DFE2221B4E5B5600C520E0 /* KFPullCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */; };
 		B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */; };
 		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
 		EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -78,6 +80,8 @@
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
 		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
+		B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPullCalendarView.swift; sourceTree = "<group>"; };
+		B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFPullCalendarView.xib; sourceTree = "<group>"; };
 		B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLocalPushManager.swift; sourceTree = "<group>"; };
 		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
 		E136FEE5C76217550A54A74A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +249,8 @@
 				B3490FEC1B36BED400DCF26C /* KFEventTimePickerAlertView.xib */,
 				B34879B21B39A5C100A3A984 /* KFEventCell.swift */,
 				B34879B31B39A5C100A3A984 /* KFEventCell.xib */,
+				B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */,
+				B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 			files = (
 				B3164A591B2136B50093E6B5 /* Main.storyboard in Resources */,
 				B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */,
+				B3DFE2221B4E5B5600C520E0 /* KFPullCalendarView.xib in Resources */,
 				B3490FED1B36BED400DCF26C /* KFEventTimePickerAlertView.xib in Resources */,
 				B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */,
 				B3164A581B2136B50093E6B5 /* LaunchScreen.xib in Resources */,
@@ -459,6 +466,7 @@
 				B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */,
 				B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */,
 				B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */,
+				B3DFE2201B4E5B4A00C520E0 /* KFPullCalendarView.swift in Sources */,
 				B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */,
 				B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */,
 				B34879B41B39A5C100A3A984 /* KFEventCell.swift in Sources */,

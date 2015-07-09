@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KFPullCalendarView" customModule="kuafu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pull_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="mbZ-vj-rLu">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bup-MT-erI">
+                    <rect key="frame" x="0.0" y="13" width="40" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="CHb-oF-j2F"/>
+                        <constraint firstAttribute="width" constant="40" id="gSe-cM-YCi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mbZ-vj-rLu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BfZ-hO-WP9"/>
+                <constraint firstAttribute="trailing" secondItem="mbZ-vj-rLu" secondAttribute="trailing" id="K5a-1U-ijH"/>
+                <constraint firstItem="mbZ-vj-rLu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QS0-KD-jSo"/>
+                <constraint firstAttribute="centerX" secondItem="bup-MT-erI" secondAttribute="centerX" id="jze-qR-4ac"/>
+                <constraint firstAttribute="bottom" secondItem="mbZ-vj-rLu" secondAttribute="bottom" id="tb0-2b-3UC"/>
+                <constraint firstAttribute="bottom" secondItem="bup-MT-erI" secondAttribute="bottom" constant="4" id="tyK-jG-3gd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="111" y="230"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pull_calendar" width="64" height="64"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

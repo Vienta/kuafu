@@ -17,6 +17,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     // MARK: -- Property --
     @IBOutlet weak var tbvEvents: UITableView!
     @IBOutlet weak var lblEmpty: UILabel!
+    var pullCalendar: KFPullCalendarView!
     
     var events: NSMutableArray!
     
@@ -35,6 +36,12 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.tbvEvents.registerNib(UINib(nibName: "KFEventCell", bundle: nil), forCellReuseIdentifier: "KFEventCell")
         var addButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "btnTapped:")
         self.navigationItem.rightBarButtonItem = addButtonItem
+        
+        self.pullCalendar = LOAD_NIB("KFPullCalendarView") as! KFPullCalendarView
+        self.pullCalendar.alpha = 0
+        self.pullCalendar.center = CGPointMake(DEVICE_WIDTH/2, 64)
+        self.view.addSubview(self.pullCalendar)
+    
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: KF_NOTIFICATION_UPDATE_TASK, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: UIApplicationWillEnterForegroundNotification, object: nil)
         self.events = NSMutableArray(capacity: 0)
@@ -273,6 +280,19 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         println("\(__FUNCTION__)")
+    }
+    // MARK: -- UIScrollViewDelegate --
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+
+        var offsetY: CGFloat = scrollView.contentOffset.y
+        
+        if offsetY < -130 {
+            self.pullCalendar.center = CGPointMake(DEVICE_WIDTH/2, (fabs(offsetY) - 64)/2 + 64)
+            self.pullCalendar.alpha = (fabs(offsetY) - 130) * 1.0 / 40
+        } else {
+            self.pullCalendar.alpha = 0
+        }
+        
     }
 }
 
