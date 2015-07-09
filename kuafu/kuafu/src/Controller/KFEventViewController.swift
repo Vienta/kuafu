@@ -9,24 +9,27 @@
 import UIKit
 import ObjectiveC
 import MGSwipeTableCell
+import ZoomTransition
 
 var kAssociateRowKey: UInt8 = 1
 
-class KFEventViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, MGSwipeTableCellDelegate{
+class KFEventViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, MGSwipeTableCellDelegate, ZoomTransitionProtocol{
 
-    // MARK: -- Property --
+    // MARK: - Property
     @IBOutlet weak var tbvEvents: UITableView!
     @IBOutlet weak var lblEmpty: UILabel!
     var pullCalendar: KFPullCalendarView!
+    var pullCalendarFlag: Bool!
+    var animationController: ZoomTransition?;
     
     var events: NSMutableArray!
     
-    // MARK: -- IBActions --
+    // MARK: - IBActions
     @IBAction func btnTapped(sender: AnyObject) {
         self.popWriteEventViewControllerWithEvent(nil)
     }
     
-    // MARK: -- Life Cycle --
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,6 +44,15 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.pullCalendar.alpha = 0
         self.pullCalendar.center = CGPointMake(DEVICE_WIDTH/2, 64)
         self.view.addSubview(self.pullCalendar)
+        
+        self.pullCalendarFlag = false
+
+        if let navigationController = self.navigationController {
+            self.animationController = ZoomTransition(navigationController: navigationController)
+        }
+        self.navigationController?.delegate = animationController
+        self.navigationController?.interactivePopGestureRecognizer.enabled = true
+        self.navigationController?.interactivePopGestureRecognizer.delegate = nil
     
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: KF_NOTIFICATION_UPDATE_TASK, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: UIApplicationWillEnterForegroundNotification, object: nil)
@@ -54,7 +66,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: -- Private Methods --
+    // MARK: - Private Methods
     func popWriteEventViewControllerWithEvent(eventDO: KFEventDO!) -> Void {
         var eventWriteViewController: KFEventWriteViewController = KFEventWriteViewController(nibName: "KFEventWriteViewController", bundle: nil)
         eventWriteViewController.eventDO = eventDO
@@ -170,7 +182,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         
         self.tbvEvents.reloadData()
     }
-    // MARK: -- MGSwipeTableCellDelegate --
+    // MARK: - MGSwipeTableCellDelegate
     
     func swipeTableCell(cell: MGSwipeTableCell!, tappedButtonAtIndex index: Int, direction: MGSwipeDirection, fromExpansion: Bool) -> Bool {
         
@@ -201,7 +213,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         return true
     }
     
-    // MARK: -- UITableViewDelegate && UITableViewDataSource --
+    // MARK: - UITableViewDelegate && UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if self.events.count == 0 {
@@ -275,13 +287,19 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        println("\(__FUNCTION__)")
+        if (scrollView.contentOffset.y <= -160.0) {
+            if pullCalendarFlag == false {
+                pullCalendarFlag = true
+                let calendarViewController: KFCalendarViewController = KFCalendarViewController(nibName: "KFCalendarViewController", bundle: nil)
+                self.navigationController?.pushViewController(calendarViewController, animated: true)
+                DELAY(0.3, { () -> () in
+                    self.pullCalendarFlag = false
+                })
+            }
+        }
     }
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        println("\(__FUNCTION__)")
-    }
-    // MARK: -- UIScrollViewDelegate --
+    // MARK: - UIScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
 
         var offsetY: CGFloat = scrollView.contentOffset.y
@@ -293,6 +311,11 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             self.pullCalendar.alpha = 0
         }
         
+    }
+    
+    // MARK: - ZoomTransitionProtocol
+    func viewForTransition() -> UIView {
+        return self.pullCalendar
     }
 }
 

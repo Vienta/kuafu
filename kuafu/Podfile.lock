@@ -5,16 +5,16 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - JTCalendar (1.2.3)
   - MGSwipeTableCell (1.4.3)
   - SnapKit (0.12.0)
-  - ZoomTransition (0.1)
 
 DEPENDENCIES:
   - CVCalendarKit (~> 0.1.1)
   - FMDB (from `https://github.com/robertmryan/fmdb.git`)
+  - JTCalendar (~> 1.2.3)
   - MGSwipeTableCell (~> 1.4.3)
   - SnapKit (~> 0.12.0)
-  - ZoomTransition (~> 0.1)
 
 EXTERNAL SOURCES:
   FMDB:
@@ -28,8 +28,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   CVCalendarKit: 5ae1b2def4fd558029a71ec86179fa7cacff8769
   FMDB: 8e59e93d20d76d0b135db26ecc83ae88d016076d
+  JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
   MGSwipeTableCell: cb9805df3cc5cad75ad43a5c1eb424be0316f0bf
   SnapKit: 00c388aa3bf1944c1b55472f31e841f75bd83882
-  ZoomTransition: 3e25b8dfc70c683c3d6d5aa8c3838e456362d039
 
 COCOAPODS: 0.37.1

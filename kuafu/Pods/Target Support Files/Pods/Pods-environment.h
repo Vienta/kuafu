@@ -30,6 +30,12 @@
 #define COCOAPODS_VERSION_MINOR_FMDB_standard 5
 #define COCOAPODS_VERSION_PATCH_FMDB_standard 0
 
+// JTCalendar
+#define COCOAPODS_POD_AVAILABLE_JTCalendar
+#define COCOAPODS_VERSION_MAJOR_JTCalendar 1
+#define COCOAPODS_VERSION_MINOR_JTCalendar 2
+#define COCOAPODS_VERSION_PATCH_JTCalendar 3
+
 // MGSwipeTableCell
 #define COCOAPODS_POD_AVAILABLE_MGSwipeTableCell
 #define COCOAPODS_VERSION_MAJOR_MGSwipeTableCell 1
@@ -41,10 +47,4 @@
 #define COCOAPODS_VERSION_MAJOR_SnapKit 0
 #define COCOAPODS_VERSION_MINOR_SnapKit 12
 #define COCOAPODS_VERSION_PATCH_SnapKit 0
-
-// ZoomTransition
-#define COCOAPODS_POD_AVAILABLE_ZoomTransition
-#define COCOAPODS_VERSION_MAJOR_ZoomTransition 0
-#define COCOAPODS_VERSION_MINOR_ZoomTransition 1
-#define COCOAPODS_VERSION_PATCH_ZoomTransition 0
 

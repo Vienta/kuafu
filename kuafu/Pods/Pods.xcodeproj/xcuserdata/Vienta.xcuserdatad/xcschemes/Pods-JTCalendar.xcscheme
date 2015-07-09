@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B48908E3515F369B015D390A"
-               BuildableName = "ZoomTransition.framework"
-               BlueprintName = "Pods-ZoomTransition"
+               BlueprintIdentifier = "B62256DCC7944782C79F2122"
+               BuildableName = "JTCalendar.framework"
+               BlueprintName = "Pods-JTCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

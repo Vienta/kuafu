@@ -14,17 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-JTCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MGSwipeTableCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-SnapKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ZoomTransition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2415665F56858ABCFDBAAA7D</key>
+		<key>15E86D37C4D25F0E51A1B5B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>393484CAEA8479DB61412C76</key>
+		<key>2EB679E7B37E9F57A64AA2DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A657892092CD9C965D9C88FE</key>
+		<key>B62256DCC7944782C79F2122</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B48908E3515F369B015D390A</key>
+		<key>BA41286FF94985F05A9932B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C393631D3202F5781F41BA57</key>
+		<key>C9A66CF27A35332DE446F064</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBF7DD4A9DEC0138EF86229C</key>
+		<key>DC7E7183D333FA9D483152BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
