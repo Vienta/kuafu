@@ -1,2 +1,2 @@
-*.h linguist=Swift
-*.m linguist=Swift
+*.h linguist-language=Swift
+*.m linguist-language=Swift
