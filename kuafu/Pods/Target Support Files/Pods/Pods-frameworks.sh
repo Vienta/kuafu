@@ -52,6 +52,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'FMDB.framework'
   install_framework 'JTCalendar.framework'
   install_framework 'MGSwipeTableCell.framework'
+  install_framework 'MKEventKit.framework'
+  install_framework 'MKFoundationKit.framework'
   install_framework 'SnapKit.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -59,5 +61,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'FMDB.framework'
   install_framework 'JTCalendar.framework'
   install_framework 'MGSwipeTableCell.framework'
+  install_framework 'MKEventKit.framework'
+  install_framework 'MKFoundationKit.framework'
   install_framework 'SnapKit.framework'
 fi

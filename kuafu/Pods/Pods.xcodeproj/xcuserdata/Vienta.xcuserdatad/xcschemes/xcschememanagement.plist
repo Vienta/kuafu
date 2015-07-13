@@ -24,6 +24,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MKEventKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MKFoundationKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15E86D37C4D25F0E51A1B5B0</key>
+		<key>0095C62E967B9C6FF955C0A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2EB679E7B37E9F57A64AA2DD</key>
+		<key>04AD7617FF964C88EAA4E406</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B62256DCC7944782C79F2122</key>
+		<key>874CFBB8588607EE7BBA2C09</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA41286FF94985F05A9932B2</key>
+		<key>AF5933A4D83931D286CCDEEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9A66CF27A35332DE446F064</key>
+		<key>B3C20094B89AFF0FD52AACA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC7E7183D333FA9D483152BB</key>
+		<key>C2E35D643DF5AE672DE05967</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1D89B19AFEBDFAC5367BD20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC650871EC161DF40CBB4A03</key>
 		<dict>
 			<key>primary</key>
 			<true/>

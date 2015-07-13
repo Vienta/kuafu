@@ -1,0 +1,6 @@
+framework module MKFoundationKit {
+  umbrella header "Pods-MKFoundationKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

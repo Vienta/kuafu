@@ -8,6 +8,7 @@
 
 import UIKit
 import JTCalendar
+import MKEventKit
 
 class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCalendarDataSource {
     // MARK: - Property
@@ -28,6 +29,7 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         self.tbvCalendar.tableHeaderView = self.calendarContentVIew
         self.tbvCalendar.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
         self.setupCalendar()
+        self.calendarEvents()
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,8 +58,61 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         self.calendar.reloadData()
         self.calendarCurrentDate()
     }
+    
+    func calendarEvents() -> Void {
+        let eventStore = EKEventStore()
+//        switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) {
+//        case .Authorized:
+//            println("Authorized")
+//            self.eventsFromLastYearAndFutureYear()
+//        case .Denied:
+//            println("Access Denied")
+//        case .NotDetermined:
+//            eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: { (granted: Bool, error: NSError!) -> Void in
+//                if granted {
+//                
+//                } else {
+//                    println("Access Denied")
+//                }
+//            })
+//        default:
+//            println("Case Default")
+//        }
+
+        if EKEventStore.mk_isAccessAuthorized() == false {
+            println("Access Denied")
+        } else {
+            EKEventStore.mk_registerEventStore(eventStore)
+            self.eventsFromLastYearAndFutureYear()
+        }
+    }
+    
+    
+    func eventsFromLastYearAndFutureYear() -> NSArray! {
+        var yearSeconds: NSTimeInterval = 365 * (60 * 60 * 24)
+        var startDate: NSDate = NSDate(timeIntervalSinceNow: -yearSeconds)
+        var endDate: NSDate = NSDate(timeIntervalSinceNow: yearSeconds)
+        
+        var eventsInThoseTwoYears = EKEvent.mk_eventsFrom(startDate, to: endDate)
+        println("eventsInThoseTwoYears:\(eventsInThoseTwoYears)")
+    
+//        var event: EKEvent = EKEvent()
+//        event.eventIdentifier
+        
+        if eventsInThoseTwoYears != nil {
+            let events = eventsInThoseTwoYears as NSArray
+            var firstEvents: EKEvent = events.firstObject as! EKEvent
+            println("firstEvents:\(firstEvents) eventIdentifier:\(firstEvents.eventIdentifier)")
+        }
+        
+        
+        return eventsInThoseTwoYears
+    }
+    
     // MARK: - Public Methods
-  
+    
+    
+    
     // MARK: - ZoomTransitionProtocol
     func viewForTransition() -> UIView {
         println("\(__FUNCTION__)")
