@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KFCalendarViewController" customModule="kuafu" customModuleProvider="target">
             <connections>
+                <outlet property="calendarContentVIew" destination="egi-63-WgK" id="wlI-n0-Jeb"/>
                 <outlet property="igvCalendar" destination="Q3m-bV-NX5" id="qyN-bf-VFV"/>
+                <outlet property="tbvCalendar" destination="69i-pD-tfB" id="Cgw-wO-1N3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,12 +17,34 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3m-bV-NX5">
-                    <rect key="frame" x="135" y="69" width="50" height="50"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q3m-bV-NX5">
+                    <rect key="frame" x="135" y="14" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fuz-cS-uxA"/>
+                        <constraint firstAttribute="width" constant="50" id="xbQ-3z-sff"/>
+                    </constraints>
                 </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="69i-pD-tfB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="69i-pD-tfB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gv7-7b-4Y8"/>
+                <constraint firstAttribute="trailing" secondItem="69i-pD-tfB" secondAttribute="trailing" id="I5b-PO-R1p"/>
+                <constraint firstAttribute="centerX" secondItem="Q3m-bV-NX5" secondAttribute="centerX" id="UXA-Mn-o3J"/>
+                <constraint firstAttribute="bottom" secondItem="69i-pD-tfB" secondAttribute="bottom" id="dCB-RJ-kCM"/>
+                <constraint firstItem="69i-pD-tfB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dFA-Pr-XZe"/>
+                <constraint firstItem="Q3m-bV-NX5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="14" id="lZt-gE-s6O"/>
+            </constraints>
             <point key="canvasLocation" x="208" y="335"/>
+        </view>
+        <view contentMode="scaleToFill" id="egi-63-WgK" customClass="JTCalendarContentView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -30,6 +30,8 @@
 		B3490FEB1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3490FEA1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift */; };
 		B3490FED1B36BED400DCF26C /* KFEventTimePickerAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3490FEC1B36BED400DCF26C /* KFEventTimePickerAlertView.xib */; };
 		B358D2C71B4EBB8200D70CB0 /* ZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B358D2C61B4EBB8200D70CB0 /* ZoomTransition.swift */; };
+		B35B9E181B514CA200BA4E89 /* KFEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B9E171B514CA200BA4E89 /* KFEventManager.swift */; };
+		B35B9E1A1B514D0600BA4E89 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35B9E191B514D0600BA4E89 /* EventKit.framework */; };
 		B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
 		B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
@@ -77,6 +79,8 @@
 		B3490FEA1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventTimePickerAlertView.swift; sourceTree = "<group>"; };
 		B3490FEC1B36BED400DCF26C /* KFEventTimePickerAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventTimePickerAlertView.xib; sourceTree = "<group>"; };
 		B358D2C61B4EBB8200D70CB0 /* ZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransition.swift; sourceTree = "<group>"; };
+		B35B9E171B514CA200BA4E89 /* KFEventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventManager.swift; sourceTree = "<group>"; };
+		B35B9E191B514D0600BA4E89 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		B35DB0991B228A580006AE48 /* KFConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFConstant.swift; sourceTree = "<group>"; };
 		B35DB0A81B229F4C0006AE48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B35DB0AA1B229F690006AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35B9E1A1B514D0600BA4E89 /* EventKit.framework in Frameworks */,
 				14AEE472A962153125051704 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +135,7 @@
 		B0D9FE94F4D3EF02C4ED86F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B35B9E191B514D0600BA4E89 /* EventKit.framework */,
 				233DE055BDFDA5A79E348273 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -181,6 +187,7 @@
 			children = (
 				B3164A5D1B2138950093E6B5 /* KFDBManager.swift */,
 				B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */,
+				B35B9E171B514CA200BA4E89 /* KFEventManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -496,6 +503,7 @@
 				B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */,
 				B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */,
 				B3490FEB1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift in Sources */,
+				B35B9E181B514CA200BA4E89 /* KFEventManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

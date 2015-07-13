@@ -9,7 +9,7 @@
 import UIKit
 import ObjectiveC
 import MGSwipeTableCell
-import ZoomTransition
+//import ZoomTransition
 
 var kAssociateRowKey: UInt8 = 1
 
@@ -59,6 +59,9 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.events = NSMutableArray(capacity: 0)
 
         self.showTaskData()
+        
+//        KFEventManager.sharedManager.requestAccessToEvents()
+//        KFEventManager.sharedManager.loadEvents()
     }
     
     override func didReceiveMemoryWarning() {

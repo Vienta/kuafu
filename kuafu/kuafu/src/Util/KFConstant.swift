@@ -22,6 +22,10 @@ let KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE = "KF_COMPLETE_CATEGORY"
 // MARK: --Notification--
 let KF_NOTIFICATION_UPDATE_TASK = "KFNotificationUpdateTask"
 
+// MARK: --SettingsKey--
+let KF_EVENTKIT_ACCEES_GRANTED = "KFEventKitAccessGrandted"
+let KF_EVENTKIT_SELECTED_CALENDAR = "KFEventKitSelectedCalendar"
+let KF_EVENTKIT_CAL_IDENTIFIERS = "KFEventKitCalIdentifiers"
 
 func SAFE_OBJC(objc: AnyObject!) -> AnyObject {
     if (objc == nil){
