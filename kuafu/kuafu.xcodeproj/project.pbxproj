@@ -43,6 +43,7 @@
 		B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */; };
 		B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */; };
 		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
+		B3FE73181B541238008FB3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3FE731A1B541238008FB3BB /* InfoPlist.strings */; };
 		EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,9 @@
 		B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarViewController.xib; sourceTree = "<group>"; };
 		B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLocalPushManager.swift; sourceTree = "<group>"; };
 		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
+		B3FE73191B541238008FB3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B3FE731B1B54123D008FB3BB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B3FE731C1B54123F008FB3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E136FEE5C76217550A54A74A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				B35DB0A91B229F4C0006AE48 /* Localizable.strings */,
+				B3FE731A1B541238008FB3BB /* InfoPlist.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */,
 				B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */,
 				B34879B51B39A5C100A3A984 /* KFEventCell.xib in Resources */,
+				B3FE73181B541238008FB3BB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +556,16 @@
 				B35DB0AB1B229FBE0006AE48 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B3FE731A1B541238008FB3BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3FE73191B541238008FB3BB /* Base */,
+				B3FE731B1B54123D008FB3BB /* zh-Hans */,
+				B3FE731C1B54123F008FB3BB /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
