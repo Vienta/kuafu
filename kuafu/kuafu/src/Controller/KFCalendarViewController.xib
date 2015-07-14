@@ -18,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q3m-bV-NX5">
-                    <rect key="frame" x="135" y="14" width="50" height="50"/>
+                    <rect key="frame" x="140" y="14" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="fuz-cS-uxA"/>
-                        <constraint firstAttribute="width" constant="50" id="xbQ-3z-sff"/>
+                        <constraint firstAttribute="height" constant="40" id="fuz-cS-uxA"/>
+                        <constraint firstAttribute="width" constant="40" id="xbQ-3z-sff"/>
                     </constraints>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="69i-pD-tfB">
