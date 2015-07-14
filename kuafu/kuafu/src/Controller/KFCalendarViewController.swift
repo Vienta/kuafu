@@ -10,12 +10,16 @@ import UIKit
 import JTCalendar
 import MKEventKit
 
-class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCalendarDataSource {
+class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Property
     @IBOutlet weak var igvCalendar: UIImageView!
     @IBOutlet weak var calendarContentVIew: JTCalendarContentView!
     @IBOutlet weak var tbvCalendar: UITableView!
+
     var calendar: JTCalendar!
+    var eventsByDate: NSMutableDictionary!
+    var currentDayEvents: NSMutableArray!
+    var selectDate: NSDate!
 
     // MARK: - IBActions
     // MARK: - Life Cycle
@@ -24,12 +28,18 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         super.viewDidLoad()
         
         self.calendar = JTCalendar()
-        
+        self.eventsByDate = NSMutableDictionary()
+        self.currentDayEvents = NSMutableArray()
+        self.selectDate = NSDate()
         // Do any additional setup after loading the view.
         self.tbvCalendar.tableHeaderView = self.calendarContentVIew
-        self.tbvCalendar.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
+        self.tbvCalendar.contentInset = UIEdgeInsetsMake(64, 0, 49, 0)
+        self.tbvCalendar.registerNib(UINib(nibName: "KFCalendarCell", bundle: nil), forCellReuseIdentifier: "KFCalendarCell")
+        
         self.setupCalendar()
         self.calendarEvents()
+        
+        self.calendarDidDateSelected(self.calendar, date: NSDate())
     }
     
     override func viewDidLayoutSubviews() {
@@ -50,7 +60,7 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         self.calendar.calendarAppearance.calendar().firstWeekday = 2
         self.calendar.calendarAppearance.focusSelectedDayChangeMode = true
         self.calendar.calendarAppearance.dayCircleColorToday = KF_THEME_COLOR
-        self.calendar.calendarAppearance.dayTextFont = UIFont.systemFontOfSize(14)
+        self.calendar.calendarAppearance.dayTextFont = UIFont(name: "Helvetica-Regular", size: 16)
         self.calendar.calendarAppearance.weekDayTextFont = UIFont.systemFontOfSize(14)
         self.calendar.calendarAppearance.weekDayTextColor = KF_ICON_BG_COLOR
         self.calendar.contentView = self.calendarContentVIew
@@ -61,29 +71,13 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     
     func calendarEvents() -> Void {
         let eventStore = EKEventStore()
-//        switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) {
-//        case .Authorized:
-//            println("Authorized")
-//            self.eventsFromLastYearAndFutureYear()
-//        case .Denied:
-//            println("Access Denied")
-//        case .NotDetermined:
-//            eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: { (granted: Bool, error: NSError!) -> Void in
-//                if granted {
-//                
-//                } else {
-//                    println("Access Denied")
-//                }
-//            })
-//        default:
-//            println("Case Default")
-//        }
 
         if EKEventStore.mk_isAccessAuthorized() == false {
             println("Access Denied")
         } else {
             EKEventStore.mk_registerEventStore(eventStore)
             self.eventsFromLastYearAndFutureYear()
+            self.calendar.reloadData()
         }
     }
     
@@ -94,20 +88,26 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         var endDate: NSDate = NSDate(timeIntervalSinceNow: yearSeconds)
         
         var eventsInThoseTwoYears = EKEvent.mk_eventsFrom(startDate, to: endDate)
-        println("eventsInThoseTwoYears:\(eventsInThoseTwoYears)")
-    
-//        var event: EKEvent = EKEvent()
-//        event.eventIdentifier
         
         if eventsInThoseTwoYears != nil {
             let events = eventsInThoseTwoYears as NSArray
-            var firstEvents: EKEvent = events.firstObject as! EKEvent
-            println("firstEvents:\(firstEvents) eventIdentifier:\(firstEvents.eventIdentifier)")
+            
+            for (idx, evt) in enumerate(events) {
+                println("evt:\(evt)")
+                let subEvent = evt as! EKEvent
+                var key: String = KFUtil.getShortDate(subEvent.startDate) as String
+                
+                if (self.eventsByDate[key] == nil) {
+                    self.eventsByDate[key] = NSMutableArray()
+                }
+                
+                (self.eventsByDate[key] as! NSMutableArray).addObject(subEvent)
+            }
         }
-        
         
         return eventsInThoseTwoYears
     }
+    
     
     // MARK: - Public Methods
     
@@ -121,11 +121,26 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     
     // MARK: - JTCalendarDataSource
     func calendarHaveEvent(calendar: JTCalendar!, date: NSDate!) -> Bool {
+        
+        var key: String = KFUtil.getShortDate(date) as String
+        var events: NSArray! = self.eventsByDate[key] as? NSArray
+        if (events != nil && events.count > 0) {
+            return true
+        }
+        
         return false
     }
     
     func calendarDidDateSelected(calendar: JTCalendar!, date: NSDate!) {
-
+        var key: String = KFUtil.getShortDate(date)
+        var selectDateEvents: NSArray! = self.eventsByDate[key] as? NSArray
+        println("selectDateEvents:\(selectDateEvents)")
+        self.selectDate = date
+        self.currentDayEvents.removeAllObjects()
+        if (selectDateEvents != nil && selectDateEvents.count > 0) {
+            self.currentDayEvents.addObjectsFromArray(selectDateEvents as [AnyObject])
+        }
+        self.tbvCalendar.reloadData()
     }
     
     func calendarDidLoadNextPage() {
@@ -156,5 +171,20 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         var monthText: String = monthSymbols.objectAtIndex(currentMonthIdx - 1).capitalizedString
 
         self.title = "\(comps.year)\(monthText)"
+    }
+    
+    // MARK: - UITableViewDelegate && UITableViewDataSource 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.currentDayEvents.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var calendarCell: KFCalendarCell = tableView.dequeueReusableCellWithIdentifier("KFCalendarCell") as! KFCalendarCell
+        let calendarEvent: EKEvent = self.currentDayEvents.objectAtIndex(indexPath.row) as! EKEvent
+        calendarCell.configureWithEvent(calendarEvent, targetDate: self.selectDate)
+        return calendarCell
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 52;
     }
 }

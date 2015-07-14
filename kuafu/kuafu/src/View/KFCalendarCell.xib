@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KFCalendarCell" id="KGk-i7-Jjw" customClass="KFCalendarCell" customModule="kuafu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上午10:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dC-kV-IQC">
+                        <rect key="frame" x="13" y="8" width="65" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="4D4-Ty-Aar"/>
+                            <constraint firstAttribute="width" constant="65" id="CHa-bz-nf1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下午10:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfd-b8-VqW">
+                        <rect key="frame" x="13" y="26" width="65" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="5aH-Kt-tec"/>
+                            <constraint firstAttribute="height" constant="12" id="8pS-Va-03Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全天" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHK-RX-j6u">
+                        <rect key="frame" x="13" y="16" width="65" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="Gwd-KL-FtH"/>
+                            <constraint firstAttribute="height" constant="12" id="zDz-tX-66s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cx-4Y-fum">
+                        <rect key="frame" x="86" y="4" width="2" height="35"/>
+                        <color key="backgroundColor" red="1" green="0.36230495350000003" blue="0.1019306066" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="fcs-MK-s5X"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好生活" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7co-VI-5Ps">
+                        <rect key="frame" x="96" y="11" width="216" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7co-VI-5Ps" secondAttribute="bottom" constant="11" id="5K4-FJ-6aT"/>
+                    <constraint firstItem="pHK-RX-j6u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="Ch8-C6-HDV"/>
+                    <constraint firstItem="9dC-kV-IQC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="FLl-DE-fA7"/>
+                    <constraint firstItem="9dC-kV-IQC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="JTC-P6-Xv2"/>
+                    <constraint firstItem="1Cx-4Y-fum" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="MEF-Ga-suz"/>
+                    <constraint firstItem="1Cx-4Y-fum" firstAttribute="leading" secondItem="pHK-RX-j6u" secondAttribute="trailing" constant="8" id="UkD-lo-uAw"/>
+                    <constraint firstAttribute="bottom" secondItem="kfd-b8-VqW" secondAttribute="bottom" constant="5" id="ZA8-Zq-RMI"/>
+                    <constraint firstAttribute="trailing" secondItem="7co-VI-5Ps" secondAttribute="trailing" constant="8" id="ahH-H2-lxd"/>
+                    <constraint firstItem="7co-VI-5Ps" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="gTo-C8-yTX"/>
+                    <constraint firstItem="kfd-b8-VqW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="h2K-1Z-um2"/>
+                    <constraint firstAttribute="centerY" secondItem="1Cx-4Y-fum" secondAttribute="centerY" id="nmQ-Jm-c7R"/>
+                    <constraint firstAttribute="centerY" secondItem="pHK-RX-j6u" secondAttribute="centerY" id="ofs-i8-GTE"/>
+                    <constraint firstItem="7co-VI-5Ps" firstAttribute="leading" secondItem="1Cx-4Y-fum" secondAttribute="trailing" constant="8" id="z9r-TB-seo"/>
+                    <constraint firstAttribute="bottom" secondItem="1Cx-4Y-fum" secondAttribute="bottom" constant="4" id="zsF-YY-eGC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblAfternoon" destination="kfd-b8-VqW" id="hbB-Y8-bxK"/>
+                <outlet property="lblAllDay" destination="pHK-RX-j6u" id="UuB-yn-q8g"/>
+                <outlet property="lblEventContent" destination="7co-VI-5Ps" id="jqq-fZ-qBF"/>
+                <outlet property="lblMorning" destination="9dC-kV-IQC" id="wR9-tn-Pcj"/>
+                <outlet property="sepLine" destination="1Cx-4Y-fum" id="gCl-nJ-dbL"/>
+            </connections>
+            <point key="canvasLocation" x="626" y="246"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -37,6 +37,8 @@
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
 		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
+		B3D39B5B1B555F5600BE899D /* KFCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D39B591B555F5600BE899D /* KFCalendarCell.swift */; };
+		B3D39B5C1B555F5600BE899D /* KFCalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */; };
 		B3DFE2201B4E5B4A00C520E0 /* KFPullCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */; };
 		B3DFE2221B4E5B5600C520E0 /* KFPullCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */; };
 		B3DFE2251B4E755000C520E0 /* KFCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */; };
@@ -89,6 +91,8 @@
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
 		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
+		B3D39B591B555F5600BE899D /* KFCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFCalendarCell.swift; sourceTree = "<group>"; };
+		B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarCell.xib; sourceTree = "<group>"; };
 		B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPullCalendarView.swift; sourceTree = "<group>"; };
 		B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFPullCalendarView.xib; sourceTree = "<group>"; };
 		B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFCalendarViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +284,8 @@
 				B34879B31B39A5C100A3A984 /* KFEventCell.xib */,
 				B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */,
 				B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */,
+				B3D39B591B555F5600BE899D /* KFCalendarCell.swift */,
+				B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				B3164A581B2136B50093E6B5 /* LaunchScreen.xib in Resources */,
 				B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */,
 				B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */,
+				B3D39B5C1B555F5600BE899D /* KFCalendarCell.xib in Resources */,
 				B34879B51B39A5C100A3A984 /* KFEventCell.xib in Resources */,
 				B3FE73181B541238008FB3BB /* InfoPlist.strings in Resources */,
 			);
@@ -505,6 +512,7 @@
 				B3164A5B1B21371D0093E6B5 /* KFBaseDAO.swift in Sources */,
 				B3DFE2251B4E755000C520E0 /* KFCalendarViewController.swift in Sources */,
 				B3164A611B213BF70093E6B5 /* KFUtil.swift in Sources */,
+				B3D39B5B1B555F5600BE899D /* KFCalendarCell.swift in Sources */,
 				B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */,
 				B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */,
 				B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */,
