@@ -14,32 +14,32 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上午10:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dC-kV-IQC">
-                        <rect key="frame" x="13" y="8" width="65" height="12"/>
+                        <rect key="frame" x="13" y="8" width="65" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="12" id="4D4-Ty-Aar"/>
+                            <constraint firstAttribute="height" constant="14" id="4D4-Ty-Aar"/>
                             <constraint firstAttribute="width" constant="65" id="CHa-bz-nf1"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下午10:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfd-b8-VqW">
-                        <rect key="frame" x="13" y="26" width="65" height="12"/>
+                        <rect key="frame" x="13" y="24" width="65" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="65" id="5aH-Kt-tec"/>
-                            <constraint firstAttribute="height" constant="12" id="8pS-Va-03Y"/>
+                            <constraint firstAttribute="height" constant="14" id="8pS-Va-03Y"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全天" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHK-RX-j6u">
-                        <rect key="frame" x="13" y="16" width="65" height="12"/>
+                        <rect key="frame" x="13" y="15" width="65" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="65" id="Gwd-KL-FtH"/>
-                            <constraint firstAttribute="height" constant="12" id="zDz-tX-66s"/>
+                            <constraint firstAttribute="height" constant="14" id="zDz-tX-66s"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -52,7 +52,7 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好生活" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7co-VI-5Ps">
                         <rect key="frame" x="96" y="11" width="216" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>

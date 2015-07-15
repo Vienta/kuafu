@@ -35,6 +35,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblToday" destination="bup-MT-erI" id="PPz-dI-Vc0"/>
+            </connections>
             <point key="canvasLocation" x="111" y="230"/>
         </view>
     </objects>

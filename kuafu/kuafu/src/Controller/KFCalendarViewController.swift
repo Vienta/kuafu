@@ -60,9 +60,10 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         self.calendar.calendarAppearance.calendar().firstWeekday = 2
         self.calendar.calendarAppearance.focusSelectedDayChangeMode = true
         self.calendar.calendarAppearance.dayCircleColorToday = KF_THEME_COLOR
-        self.calendar.calendarAppearance.dayTextFont = UIFont(name: "Helvetica-Regular", size: 16)
+        self.calendar.calendarAppearance.dayTextFont = UIFont(name: "Helvetica Neue", size: 16)
         self.calendar.calendarAppearance.weekDayTextFont = UIFont.systemFontOfSize(14)
         self.calendar.calendarAppearance.weekDayTextColor = KF_ICON_BG_COLOR
+        self.calendar.calendarAppearance.dayDotColor = KF_THEME_COLOR
         self.calendar.contentView = self.calendarContentVIew
         self.calendar.dataSource = self as JTCalendarDataSource
         self.calendar.reloadData()
@@ -93,7 +94,6 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
             let events = eventsInThoseTwoYears as NSArray
             
             for (idx, evt) in enumerate(events) {
-                println("evt:\(evt)")
                 let subEvent = evt as! EKEvent
                 var key: String = KFUtil.getShortDate(subEvent.startDate) as String
                 
@@ -185,6 +185,16 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         return calendarCell
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 52;
+        return 52
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var headerView: UIView = UIView(frame: CGRectMake(0, 0, tableView.bounds.size.width, 1))
+        headerView.backgroundColor = KF_LINE_COLOR
+        return headerView
     }
 }
