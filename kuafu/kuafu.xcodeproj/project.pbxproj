@@ -44,6 +44,7 @@
 		B3DFE2251B4E755000C520E0 /* KFCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */; };
 		B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */; };
 		B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */; };
+		B3F2C53A1B57272100E3DBB6 /* KFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */; };
 		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
 		B3FE73181B541238008FB3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3FE731A1B541238008FB3BB /* InfoPlist.strings */; };
 		EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -98,6 +99,7 @@
 		B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFCalendarViewController.swift; sourceTree = "<group>"; };
 		B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarViewController.xib; sourceTree = "<group>"; };
 		B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLocalPushManager.swift; sourceTree = "<group>"; };
+		B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSettingsViewController.swift; sourceTree = "<group>"; };
 		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
 		B3FE73191B541238008FB3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3FE731B1B54123D008FB3BB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				B3164A471B2133A70093E6B5 /* KFEventViewController.swift */,
+				B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */,
 				B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */,
 				B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */,
 				B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */,
@@ -501,6 +504,7 @@
 				B3433BA21B217B120097AD26 /* KFEventDO.swift in Sources */,
 				B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */,
 				B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */,
+				B3F2C53A1B57272100E3DBB6 /* KFSettingsViewController.swift in Sources */,
 				B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */,
 				B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */,
 				B358D2C71B4EBB8200D70CB0 /* ZoomTransition.swift in Sources */,

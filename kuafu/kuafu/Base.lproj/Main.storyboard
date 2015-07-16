@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="833" y="451"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="irt-f0-uhc">
             <objects>
-                <viewController id="hLl-O7-tpB" sceneMemberID="viewController">
+                <viewController id="hLl-O7-tpB" customClass="KFSettingsViewController" customModule="kuafu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h9o-7R-YAw"/>
                         <viewControllerLayoutGuide type="bottom" id="Df4-8w-Fji"/>
@@ -84,9 +84,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pull_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="1l3-BI-1Tr">
-                                <rect key="frame" x="128" y="147" width="64" height="64"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ifp-U4-IAY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="t2F-gy-CqG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t2F-gy-CqG" id="AAF-LL-cGs">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -94,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VoE-Qt-0X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="1333"/>
+            <point key="canvasLocation" x="1756" y="1304"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1KO-c3-72a">
@@ -141,7 +151,6 @@
     <resources>
         <image name="item_event" width="25" height="25"/>
         <image name="item_settings" width="25" height="25"/>
-        <image name="pull_calendar" width="64" height="64"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -11,8 +11,9 @@ import UIKit
 // MARK: --Macro--
 let KF_THEME_COLOR:UIColor = UIColor(red: 0, green: 0.78, blue: 0, alpha: 1)
 let KF_ICON_BG_COLOR:UIColor = UIColor(red: 0.01, green: 0.01, blue: 0.01, alpha: 1)
-let KF_BG_COLOR:UIColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
+let KF_BG_COLOR:UIColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1)
 let KF_LINE_COLOR:UIColor = UIColor(red:0.85, green:0.85, blue:0.86, alpha:1)
+
 let DEVICE_WIDTH:CGFloat = UIScreen.mainScreen().bounds.width
 let DEVICE_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.height
 

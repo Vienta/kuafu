@@ -6,6 +6,7 @@
   Copyright (c) 2015年 www.vienta.me. All rights reserved.
 */
 "KF_EVENT_CONTROLLER_TITLE" = "TODOist";
+"KF_SETTINGS_CONTROLLER_TITLE" = "ABOUT";
 "KF_CANCEL" = "Cancel";
 "KF_SAVE" = "Save";
 "KF_TIME_DUETO" = "Due Date";

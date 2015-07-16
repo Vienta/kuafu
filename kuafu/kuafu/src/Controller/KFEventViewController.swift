@@ -39,6 +39,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.tbvEvents.registerNib(UINib(nibName: "KFEventCell", bundle: nil), forCellReuseIdentifier: "KFEventCell")
         var addButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "btnTapped:")
         self.navigationItem.rightBarButtonItem = addButtonItem
+        self.view.backgroundColor = KF_BG_COLOR
         
         self.pullCalendar = LOAD_NIB("KFPullCalendarView") as! KFPullCalendarView
         self.pullCalendar.alpha = 0
@@ -59,10 +60,6 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.events = NSMutableArray(capacity: 0)
 
         self.showTaskData()
-        
-//        KFEventManager.sharedManager.requestAccessToEvents()
-//        KFEventManager.sharedManager.loadEvents()
-        
     }
     
     override func didReceiveMemoryWarning() {
