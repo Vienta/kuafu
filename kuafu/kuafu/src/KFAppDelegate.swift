@@ -26,6 +26,8 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         if (NSUserDefaults.standardUserDefaults().objectForKey(KF_SHAKE_CREATE_TASK) == nil) {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: KF_SHAKE_CREATE_TASK)
         }
+
+        KFMotionManager.sharedManager.startAccerometer()
         
         return true
     }
@@ -74,10 +76,12 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        KFMotionManager.sharedManager.stopAccerometer()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        KFMotionManager.sharedManager.startAccerometer()
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -88,6 +92,15 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        if (motion == UIEventSubtype.MotionShake) {
+                        println("Shake")
+        }
+    }
 
 }
 

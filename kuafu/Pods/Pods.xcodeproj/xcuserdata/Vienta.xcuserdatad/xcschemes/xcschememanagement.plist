@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DAAlertController-DAAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-DAAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0095C62E967B9C6FF955C0A5</key>
+		<key>18F95F29FDA907074B7B35D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>04AD7617FF964C88EAA4E406</key>
+		<key>208B2EDF653649BDDEC09990</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>874CFBB8588607EE7BBA2C09</key>
+		<key>5BB751333F3406A3D9895FB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF5933A4D83931D286CCDEEB</key>
+		<key>911961C7D608847C793E338E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3C20094B89AFF0FD52AACA8</key>
+		<key>92B472B2AFED332141655E02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2E35D643DF5AE672DE05967</key>
+		<key>AB0905A91930251AB371FE1C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1D89B19AFEBDFAC5367BD20</key>
+		<key>AB961FD981785A340D7EFE13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC650871EC161DF40CBB4A03</key>
+		<key>BFE2A14CBB4FF6B6B34467C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD0B5A352E3FD164F43FBC8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E462EA4A78B3B768E9DABF1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

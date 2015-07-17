@@ -1,5 +1,6 @@
 PODS:
   - CVCalendarKit (0.1.1)
+  - DAAlertController (0.1.4)
   - FMDB (2.5):
     - FMDB/standard (= 2.5)
   - FMDB/common (2.5)
@@ -42,6 +43,7 @@ PODS:
 
 DEPENDENCIES:
   - CVCalendarKit (~> 0.1.1)
+  - DAAlertController (~> 0.1.4)
   - FMDB (from `https://github.com/robertmryan/fmdb.git`)
   - JTCalendar (~> 1.2.3)
   - MGSwipeTableCell (~> 1.4.3)
@@ -59,6 +61,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CVCalendarKit: 5ae1b2def4fd558029a71ec86179fa7cacff8769
+  DAAlertController: 4735313ec65d3d69f81fdd34d01308809680350f
   FMDB: 8e59e93d20d76d0b135db26ecc83ae88d016076d
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
   MGSwipeTableCell: cb9805df3cc5cad75ad43a5c1eb424be0316f0bf

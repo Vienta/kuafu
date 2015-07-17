@@ -8,8 +8,9 @@
 
 import UIKit
 import StoreKit
+import MessageUI
 
-class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,SKStoreProductViewControllerDelegate {
+class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,SKStoreProductViewControllerDelegate, MFMailComposeViewControllerDelegate {
    
     @IBOutlet weak var tbvSettings: UITableView!
     var settingsList: NSMutableArray!
@@ -25,7 +26,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         
         self.settingsList = NSMutableArray(array: settings)
         self.tbvSettings.reloadData()
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTableView", name: KF_NOTIFICATION_SHAKE_VALUE_CHANGED, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,14 +41,33 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         NSUserDefaults.standardUserDefaults().setBool(sw.on, forKey: KF_SHAKE_CREATE_TASK)
     }
     
+    func openEmailFeedback() -> Void {
+        var canSendEmail: Bool = MFMailComposeViewController.canSendMail()
+        if (canSendEmail) {
+            var mailComposeViewController: MFMailComposeViewController = MFMailComposeViewController()
+            mailComposeViewController.mailComposeDelegate = self
+        
+            var toRecipients: Array = [KF_MY_EMAIL]
+            mailComposeViewController.setToRecipients(toRecipients)
+                
+            
+            var emailBody: String = "\(DeviceGuru.hardwareString())|\(APP_DISPLAY_NAME)|Version:\(APP_VERSION)"
+            mailComposeViewController.setMessageBody(emailBody, isHTML: true)
+            
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+        }
+    }
+    
     func openAppStore() -> Void {
         var storeProductViewController: SKStoreProductViewController = SKStoreProductViewController()
         storeProductViewController.delegate = self
         storeProductViewController.loadProductWithParameters([SKStoreProductParameterITunesItemIdentifier: "594467299"], completionBlock: { (result, error) -> Void in
+            println("product error:\(error)")
             if (error == nil) {
-                self.presentViewController(storeProductViewController, animated: true, completion: nil)
             }
         })
+        self.presentViewController(storeProductViewController, animated: true, completion: nil)
+
     }
     
     func targetAction(actionKey: String) ->Void {
@@ -55,6 +75,8 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
 
         case (KF_EVALUATION):
             self.openAppStore()
+        case (KF_FEEDBACK):
+            self.openEmailFeedback()
         case (KF_ABOUT_KUAFU):
             println("afd")
         case (KF_HISTORY_VERSION):
@@ -64,6 +86,10 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         default:
             println("afd")
         }
+    }
+    
+    func updateTableView() -> Void {
+        self.tbvSettings.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
     }
     
     // MARK: - Public Methods
@@ -125,5 +151,10 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     // MARK: - SKStoreProductViewControllerDelegate
     func productViewControllerDidFinish(viewController: SKStoreProductViewController!) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: - MFMailComposeViewControllerDelegate
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController.handShaked
 //  kuafu
 //
 //  Created by Vienta on 15/6/4.
@@ -10,6 +10,8 @@ import UIKit
 import ObjectiveC
 import MGSwipeTableCell
 import MKEventKit
+import DAAlertController
+
 
 var kAssociateRowKey: UInt8 = 1
 
@@ -57,6 +59,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: KF_NOTIFICATION_UPDATE_TASK, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handShaked", name: KF_NOTIFICATION_SHAKE, object: nil)
         self.events = NSMutableArray(capacity: 0)
 
         self.showTaskData()
@@ -115,6 +118,19 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     
     func showTaskData() -> Void {
         self.updateTask()
+    }
+    
+    func handShaked() -> Void {
+            var createTaskAction: DAAlertAction = DAAlertAction(title: "KF_NEW_TODO_TITLE".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
+                self.popWriteEventViewControllerWithEvent(nil)
+            })
+            var fobiddenShakeAction: DAAlertAction = DAAlertAction(title: "KF_ALERT_CLOSE_SHAKE".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
+                NSUserDefaults.standardUserDefaults().setBool(false, forKey: KF_SHAKE_CREATE_TASK)
+                NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_SHAKE_VALUE_CHANGED, object: nil)
+            })
+            var cancelAction: DAAlertAction = DAAlertAction(title: "KF_CANCEL".localized, style: DAAlertActionStyle.Destructive, handler: nil)
+
+            DAAlertController.showAlertViewInViewController(self, withTitle: "KF_NEW_TODO_TITLE".localized + "?", message: nil, actions: [createTaskAction,fobiddenShakeAction,cancelAction])
     }
     
     func updateTask() -> Void {

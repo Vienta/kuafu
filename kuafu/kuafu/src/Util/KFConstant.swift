@@ -17,12 +17,19 @@ let KF_LINE_COLOR:UIColor = UIColor(red:0.85, green:0.85, blue:0.86, alpha:1)
 let DEVICE_WIDTH:CGFloat = UIScreen.mainScreen().bounds.width
 let DEVICE_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.height
 
+let APP_VERSION:String! = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as? String
+let APP_DISPLAY_NAME:String! = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as? String
+let APP_BUNDLE_ID:String! = NSBundle.mainBundle().bundleIdentifier
+let APP_BUILD_VERSION:String! = NSBundle.mainBundle().objectForInfoDictionaryKey(kCFBundleVersionKey as String) as! String
+
 // MARK: - Constant
 let KF_LOCAL_NOTIFICATION_CATEGORY_REMIND = "KF_REMIND_CATEGORY"
 let KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE = "KF_COMPLETE_CATEGORY"
 
 // MARK: - Notification
 let KF_NOTIFICATION_UPDATE_TASK = "KFNotificationUpdateTask"
+let KF_NOTIFICATION_SHAKE = "KFNotificationShake"
+let KF_NOTIFICATION_SHAKE_VALUE_CHANGED = "KFNotificationShakeValueChanged"
 
 // MARK: - SettingsKey
 let KF_EVENTKIT_ACCEES_GRANTED = "KFEventKitAccessGrandted"
@@ -34,6 +41,9 @@ let KF_EVALUATION = "KFEvaluation"              //我要点评
 let KF_ABOUT_KUAFU = "KFAboutKuaFu"             //关于夸父
 let KF_HISTORY_VERSION = "KFHistoryVersion"     //历史版本
 let KF_LISENCE = "KFLisence"                    //开源许可
+
+// MARK: - AppConfig
+let KF_MY_EMAIL = "yongxingshu@foxmail.com"
 
 
 // MARK: - Global Methods

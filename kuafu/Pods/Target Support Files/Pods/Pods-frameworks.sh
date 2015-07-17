@@ -49,6 +49,7 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'CVCalendarKit.framework'
+  install_framework 'DAAlertController.framework'
   install_framework 'FMDB.framework'
   install_framework 'JTCalendar.framework'
   install_framework 'MGSwipeTableCell.framework'
@@ -58,6 +59,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'CVCalendarKit.framework'
+  install_framework 'DAAlertController.framework'
   install_framework 'FMDB.framework'
   install_framework 'JTCalendar.framework'
   install_framework 'MGSwipeTableCell.framework'

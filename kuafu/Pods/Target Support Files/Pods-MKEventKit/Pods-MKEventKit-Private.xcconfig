@@ -2,7 +2,7 @@
 CONFIGURATION_BUILD_DIR = $PODS_FRAMEWORK_BUILD_PATH
 FRAMEWORK_SEARCH_PATHS = "$PODS_FRAMEWORK_BUILD_PATH"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/MKEventKit" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CVCalendarKit" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/JTCalendar" "${PODS_ROOT}/Headers/Public/MGSwipeTableCell" "${PODS_ROOT}/Headers/Public/MKEventKit" "${PODS_ROOT}/Headers/Public/MKFoundationKit" "${PODS_ROOT}/Headers/Public/SnapKit"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/MKEventKit" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CVCalendarKit" "${PODS_ROOT}/Headers/Public/DAAlertController" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/JTCalendar" "${PODS_ROOT}/Headers/Public/MGSwipeTableCell" "${PODS_ROOT}/Headers/Public/MKEventKit" "${PODS_ROOT}/Headers/Public/MKFoundationKit" "${PODS_ROOT}/Headers/Public/SnapKit"
 OTHER_LDFLAGS = ${PODS_MKEVENTKIT_OTHER_LDFLAGS} -ObjC
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods
 PODS_ROOT = ${SRCROOT}

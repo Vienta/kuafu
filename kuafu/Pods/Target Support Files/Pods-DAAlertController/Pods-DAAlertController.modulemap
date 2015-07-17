@@ -1,0 +1,6 @@
+framework module DAAlertController {
+  umbrella header "Pods-DAAlertController-umbrella.h"
+
+  export *
+  module * { export * }
+}
