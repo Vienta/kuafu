@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import StoreKit
 
-class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,SKStoreProductViewControllerDelegate {
    
     @IBOutlet weak var tbvSettings: UITableView!
     var settingsList: NSMutableArray!
@@ -24,6 +25,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         
         self.settingsList = NSMutableArray(array: settings)
         self.tbvSettings.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +35,36 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     
     // MARK: - IBActions
     // MARK: - Private Methods
+    func switchValueChanged(sender:AnyObject) -> Void {
+        let sw = sender as! UISwitch
+        NSUserDefaults.standardUserDefaults().setBool(sw.on, forKey: KF_SHAKE_CREATE_TASK)
+    }
+    
+    func openAppStore() -> Void {
+        var storeProductViewController: SKStoreProductViewController = SKStoreProductViewController()
+        storeProductViewController.delegate = self
+        storeProductViewController.loadProductWithParameters([SKStoreProductParameterITunesItemIdentifier: "594467299"], completionBlock: { (result, error) -> Void in
+            if (error == nil) {
+                self.presentViewController(storeProductViewController, animated: true, completion: nil)
+            }
+        })
+    }
+    
+    func targetAction(actionKey: String) ->Void {
+        switch (actionKey) {
+
+        case (KF_EVALUATION):
+            self.openAppStore()
+        case (KF_ABOUT_KUAFU):
+            println("afd")
+        case (KF_HISTORY_VERSION):
+            println("afd")
+        case (KF_LISENCE):
+            println("afd")
+        default:
+            println("afd")
+        }
+    }
     
     // MARK: - Public Methods
 
@@ -66,7 +98,11 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         settingsCell.textLabel?.text = KF_SETTINGS[elementValueKey]
         
         if (elementValueKey == KF_SHAKE_CREATE_TASK) {
-            settingsCell.accessoryView = UISwitch()
+            var on:Bool = NSUserDefaults.standardUserDefaults().boolForKey(KF_SHAKE_CREATE_TASK)
+            var shakeSwith: UISwitch = UISwitch()
+            shakeSwith.on = on
+            shakeSwith.addTarget(self, action: "switchValueChanged:", forControlEvents: UIControlEvents.TouchUpInside)
+            settingsCell.accessoryView = shakeSwith
         }
         
         return settingsCell
@@ -74,11 +110,20 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let elementInSectionDict: NSDictionary = self.settingsList.objectAtIndex(indexPath.section) as! NSDictionary
+        let elementsInSection: NSArray = elementInSectionDict.objectForKey("values") as! NSArray
+        
+        let elementValueKey: String = elementsInSection.objectAtIndex(indexPath.row) as! String
+        self.targetAction(elementValueKey)
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let elementInSectionDict: NSDictionary = self.settingsList.objectAtIndex(section) as! NSDictionary
         return elementInSectionDict.objectForKey("section") as? String
     }
-
+    
+    // MARK: - SKStoreProductViewControllerDelegate
+    func productViewControllerDidFinish(viewController: SKStoreProductViewController!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

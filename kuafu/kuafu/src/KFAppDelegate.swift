@@ -22,6 +22,11 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         let settings = UIUserNotificationSettings(forTypes: .Alert | .Badge | .Sound, categories: notificationCategories as Set<NSObject>)
         application.registerUserNotificationSettings(settings)
         
+        //init userdefault values
+        if (NSUserDefaults.standardUserDefaults().objectForKey(KF_SHAKE_CREATE_TASK) == nil) {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: KF_SHAKE_CREATE_TASK)
+        }
+        
         return true
     }
 
