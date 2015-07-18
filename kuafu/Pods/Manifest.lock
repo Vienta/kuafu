@@ -6,6 +6,7 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - JKRichTextView (0.0.1)
   - JTCalendar (1.2.3)
   - MGSwipeTableCell (1.4.3)
   - MKEventKit (0.2.0):
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - CVCalendarKit (~> 0.1.1)
   - DAAlertController (~> 0.1.4)
   - FMDB (from `https://github.com/robertmryan/fmdb.git`)
+  - JKRichTextView
   - JTCalendar (~> 1.2.3)
   - MGSwipeTableCell (~> 1.4.3)
   - MKEventKit (~> 0.2.0)
@@ -63,6 +65,7 @@ SPEC CHECKSUMS:
   CVCalendarKit: 5ae1b2def4fd558029a71ec86179fa7cacff8769
   DAAlertController: 4735313ec65d3d69f81fdd34d01308809680350f
   FMDB: 8e59e93d20d76d0b135db26ecc83ae88d016076d
+  JKRichTextView: 20b33567bfe7f740f284a468824fed39e162e934
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
   MGSwipeTableCell: cb9805df3cc5cad75ad43a5c1eb424be0316f0bf
   MKEventKit: f6d1425f908d329eb4adbd5517931f6331a02e53

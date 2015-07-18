@@ -75,6 +75,11 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         self.navigationController?.pushViewController(lisenceViewController, animated: true)
     }
     
+    func pushToAbout() -> Void {
+        var aboutViewController: KFAboutViewController = KFAboutViewController(nibName:"KFAboutViewController", bundle: nil)
+        self.navigationController?.pushViewController(aboutViewController, animated: true)
+    }
+    
     func targetAction(actionKey: String) ->Void {
         switch (actionKey) {
 
@@ -83,7 +88,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         case (KF_FEEDBACK):
             self.openEmailFeedback()
         case (KF_ABOUT_KUAFU):
-            println("afd")
+            self.pushToAbout()
         case (KF_HISTORY_VERSION):
             println("afd")
         case (KF_LISENCE):

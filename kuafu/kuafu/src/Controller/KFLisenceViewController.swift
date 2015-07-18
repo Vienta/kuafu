@@ -16,14 +16,13 @@ class KFLisenceViewController: UIViewController,UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "KF_SETTINGS_LISENCE".localized
-        self.lisences = ["FMDB","SnapKit","MGSwipeTableViewCell","CVCalendarKit","JTCalender","MKEventKit","DAAlertController","DeviceGuru","ZoomTransition"]
+        self.lisences = ["FMDB","SnapKit","MGSwipeTableViewCell","CVCalendarKit","JTCalendar","MKEventKit","DAAlertController","DeviceGuru","ZoomTransition"]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     // MARK: - UITableViewDelegate && UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -1,0 +1,1 @@
+../../../JKRichTextView/JKRichTextView/JKRichTextViewEmojiDataHandler.h

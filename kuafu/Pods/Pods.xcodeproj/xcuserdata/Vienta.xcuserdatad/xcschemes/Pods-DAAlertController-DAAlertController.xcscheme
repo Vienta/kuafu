@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFE2A14CBB4FF6B6B34467C7"
+               BlueprintIdentifier = "38D8A250E3EBB7EFF47838FB"
                BuildableName = "DAAlertController.bundle"
                BlueprintName = "Pods-DAAlertController-DAAlertController"
                ReferencedContainer = "container:Pods.xcodeproj">

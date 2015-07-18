@@ -10,6 +10,7 @@ pod 'MGSwipeTableCell', '~> 1.4.3'
 pod 'CVCalendarKit', '~> 0.1.1'
 pod 'JTCalendar', '~> 1.2.3'
 pod 'MKEventKit', '~> 0.2.0'
+pod 'JKRichTextView'
 pod 'DAAlertController', '~> 0.1.4'
 
 use_frameworks!
