@@ -28,7 +28,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         self.tbvSettings.reloadData()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTableView", name: KF_NOTIFICATION_SHAKE_VALUE_CHANGED, object: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,7 +67,12 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
             }
         })
         self.presentViewController(storeProductViewController, animated: true, completion: nil)
+    }
+    
+    func pushToLisence() -> Void {
+        var lisenceViewController: KFLisenceViewController = KFLisenceViewController(nibName: "KFLisenceViewController", bundle: nil)
 
+        self.navigationController?.pushViewController(lisenceViewController, animated: true)
     }
     
     func targetAction(actionKey: String) ->Void {
@@ -82,7 +87,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         case (KF_HISTORY_VERSION):
             println("afd")
         case (KF_LISENCE):
-            println("afd")
+            self.pushToLisence()
         default:
             println("afd")
         }

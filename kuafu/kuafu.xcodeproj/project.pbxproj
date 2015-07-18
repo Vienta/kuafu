@@ -21,6 +21,19 @@
 		B3164A5B1B21371D0093E6B5 /* KFBaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A5A1B21371D0093E6B5 /* KFBaseDAO.swift */; };
 		B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A5D1B2138950093E6B5 /* KFDBManager.swift */; };
 		B3164A611B213BF70093E6B5 /* KFUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A601B213BF70093E6B5 /* KFUtil.swift */; };
+		B318FE851B59BEC3007609B5 /* KFLisenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318FE831B59BEC3007609B5 /* KFLisenceViewController.swift */; };
+		B318FE861B59BEC3007609B5 /* KFLisenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B318FE841B59BEC3007609B5 /* KFLisenceViewController.xib */; };
+		B318FE8A1B59C6AC007609B5 /* FMDB_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE891B59C6AC007609B5 /* FMDB_LICENSE.txt */; };
+		B318FE8C1B59C70E007609B5 /* SnapKit_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE8B1B59C70E007609B5 /* SnapKit_LICENSE.txt */; };
+		B318FE8E1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE8D1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt */; };
+		B318FE901B59C7BE007609B5 /* CVCalendarKit_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE8F1B59C7BE007609B5 /* CVCalendarKit_LICENSE.txt */; };
+		B318FE921B59C80B007609B5 /* JTCalendar_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE911B59C80B007609B5 /* JTCalendar_LICENSE.txt */; };
+		B318FE941B59C84F007609B5 /* MKEventKit_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE931B59C84F007609B5 /* MKEventKit_LICENSE.txt */; };
+		B318FE961B59C89B007609B5 /* DAAlertController_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE951B59C89B007609B5 /* DAAlertController_LICENSE.txt */; };
+		B318FE981B59C8F0007609B5 /* DeviceGuru_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE971B59C8F0007609B5 /* DeviceGuru_LICENSE.txt */; };
+		B318FE9A1B59C91D007609B5 /* ZoomTransition_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE991B59C91D007609B5 /* ZoomTransition_LICENSE.txt */; };
+		B318FE9D1B59D145007609B5 /* KFLisenceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318FE9B1B59D145007609B5 /* KFLisenceDetailViewController.swift */; };
+		B318FE9E1B59D145007609B5 /* KFLisenceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B318FE9C1B59D145007609B5 /* KFLisenceDetailViewController.xib */; };
 		B33E67121B207E4600F86927 /* kuafuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33E67111B207E4600F86927 /* kuafuTests.swift */; };
 		B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9C1B2153C40097AD26 /* KFEventDAO.swift */; };
 		B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */; };
@@ -73,6 +86,19 @@
 		B3164A5A1B21371D0093E6B5 /* KFBaseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBaseDAO.swift; sourceTree = "<group>"; };
 		B3164A5D1B2138950093E6B5 /* KFDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFDBManager.swift; sourceTree = "<group>"; };
 		B3164A601B213BF70093E6B5 /* KFUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFUtil.swift; sourceTree = "<group>"; };
+		B318FE831B59BEC3007609B5 /* KFLisenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLisenceViewController.swift; sourceTree = "<group>"; };
+		B318FE841B59BEC3007609B5 /* KFLisenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFLisenceViewController.xib; sourceTree = "<group>"; };
+		B318FE891B59C6AC007609B5 /* FMDB_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FMDB_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE8B1B59C70E007609B5 /* SnapKit_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SnapKit_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE8D1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MGSwipeTableViewCell_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE8F1B59C7BE007609B5 /* CVCalendarKit_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CVCalendarKit_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE911B59C80B007609B5 /* JTCalendar_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JTCalendar_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE931B59C84F007609B5 /* MKEventKit_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MKEventKit_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE951B59C89B007609B5 /* DAAlertController_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DAAlertController_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE971B59C8F0007609B5 /* DeviceGuru_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DeviceGuru_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE991B59C91D007609B5 /* ZoomTransition_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZoomTransition_LICENSE.txt; sourceTree = "<group>"; };
+		B318FE9B1B59D145007609B5 /* KFLisenceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLisenceDetailViewController.swift; sourceTree = "<group>"; };
+		B318FE9C1B59D145007609B5 /* KFLisenceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFLisenceDetailViewController.xib; sourceTree = "<group>"; };
 		B33E66F61B207E4600F86927 /* kuafu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kuafu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33E670B1B207E4600F86927 /* kuafuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kuafuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33E67101B207E4600F86927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +210,10 @@
 				B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */,
 				B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */,
 				B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */,
+				B318FE831B59BEC3007609B5 /* KFLisenceViewController.swift */,
+				B318FE841B59BEC3007609B5 /* KFLisenceViewController.xib */,
+				B318FE9B1B59D145007609B5 /* KFLisenceDetailViewController.swift */,
+				B318FE9C1B59D145007609B5 /* KFLisenceDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +306,15 @@
 		B35DB09B1B2296ED0006AE48 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B318FE991B59C91D007609B5 /* ZoomTransition_LICENSE.txt */,
+				B318FE971B59C8F0007609B5 /* DeviceGuru_LICENSE.txt */,
+				B318FE951B59C89B007609B5 /* DAAlertController_LICENSE.txt */,
+				B318FE931B59C84F007609B5 /* MKEventKit_LICENSE.txt */,
+				B318FE911B59C80B007609B5 /* JTCalendar_LICENSE.txt */,
+				B318FE8F1B59C7BE007609B5 /* CVCalendarKit_LICENSE.txt */,
+				B318FE8D1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt */,
+				B318FE891B59C6AC007609B5 /* FMDB_LICENSE.txt */,
+				B318FE8B1B59C70E007609B5 /* SnapKit_LICENSE.txt */,
 				B35DB0A91B229F4C0006AE48 /* Localizable.strings */,
 				B3FE731A1B541238008FB3BB /* InfoPlist.strings */,
 			);
@@ -388,11 +427,22 @@
 			files = (
 				B3164A591B2136B50093E6B5 /* Main.storyboard in Resources */,
 				B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */,
+				B318FE901B59C7BE007609B5 /* CVCalendarKit_LICENSE.txt in Resources */,
 				B3DFE2221B4E5B5600C520E0 /* KFPullCalendarView.xib in Resources */,
+				B318FE921B59C80B007609B5 /* JTCalendar_LICENSE.txt in Resources */,
 				B3490FED1B36BED400DCF26C /* KFEventTimePickerAlertView.xib in Resources */,
 				B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */,
+				B318FE961B59C89B007609B5 /* DAAlertController_LICENSE.txt in Resources */,
+				B318FE8E1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt in Resources */,
+				B318FE981B59C8F0007609B5 /* DeviceGuru_LICENSE.txt in Resources */,
+				B318FE941B59C84F007609B5 /* MKEventKit_LICENSE.txt in Resources */,
 				B3164A581B2136B50093E6B5 /* LaunchScreen.xib in Resources */,
+				B318FE9E1B59D145007609B5 /* KFLisenceDetailViewController.xib in Resources */,
 				B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */,
+				B318FE8C1B59C70E007609B5 /* SnapKit_LICENSE.txt in Resources */,
+				B318FE9A1B59C91D007609B5 /* ZoomTransition_LICENSE.txt in Resources */,
+				B318FE861B59BEC3007609B5 /* KFLisenceViewController.xib in Resources */,
+				B318FE8A1B59C6AC007609B5 /* FMDB_LICENSE.txt in Resources */,
 				B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */,
 				B3D39B5C1B555F5600BE899D /* KFCalendarCell.xib in Resources */,
 				B34879B51B39A5C100A3A984 /* KFEventCell.xib in Resources */,
@@ -521,11 +571,13 @@
 				B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */,
 				B34879B41B39A5C100A3A984 /* KFEventCell.swift in Sources */,
 				B3164A5B1B21371D0093E6B5 /* KFBaseDAO.swift in Sources */,
+				B318FE9D1B59D145007609B5 /* KFLisenceDetailViewController.swift in Sources */,
 				B3DFE2251B4E755000C520E0 /* KFCalendarViewController.swift in Sources */,
 				B3164A611B213BF70093E6B5 /* KFUtil.swift in Sources */,
 				B3CA431B1B58FF89000DA6FD /* KFMotionManager.swift in Sources */,
 				B3D39B5B1B555F5600BE899D /* KFCalendarCell.swift in Sources */,
 				B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */,
+				B318FE851B59BEC3007609B5 /* KFLisenceViewController.swift in Sources */,
 				B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */,
 				B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */,
 				B3490FEB1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift in Sources */,

@@ -38,7 +38,7 @@ class KFMotionManager: NSObject {
     
     func outputAccelertionData(acceleration: CMAcceleration) ->Void {
         var accelerameter: Double = sqrt( pow(acceleration.x, 2) + pow(acceleration.y, 2) + pow(acceleration.z, 2))
-        if (accelerameter > 2.3) {
+        if (accelerameter > 2.1) {
             if (NSUserDefaults.standardUserDefaults().boolForKey(KF_SHAKE_CREATE_TASK) == true) {
                 NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_SHAKE, object: nil)
             }
