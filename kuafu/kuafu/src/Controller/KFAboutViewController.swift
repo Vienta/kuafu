@@ -31,7 +31,7 @@ class KFAboutViewController: UIViewController {
         var copyrightRange: NSRange! = copyright.rangeOfString("Vienta")
         
         self.lblCopyright.setCustomLinkWithLinkDidTappedCallback({ url -> Bool in
-            self.pushToWebView(KF_MY_BLOG)
+            UIApplication.sharedApplication().openURL(NSURL(string: KF_MY_BLOG)!)
             return true
         }, forTextAtRange: copyrightRange)
         

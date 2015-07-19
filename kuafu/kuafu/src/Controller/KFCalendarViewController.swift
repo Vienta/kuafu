@@ -134,7 +134,6 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     func calendarDidDateSelected(calendar: JTCalendar!, date: NSDate!) {
         var key: String = KFUtil.getShortDate(date)
         var selectDateEvents: NSArray! = self.eventsByDate[key] as? NSArray
-        println("selectDateEvents:\(selectDateEvents)")
         self.selectDate = date
         self.currentDayEvents.removeAllObjects()
         if (selectDateEvents != nil && selectDateEvents.count > 0) {

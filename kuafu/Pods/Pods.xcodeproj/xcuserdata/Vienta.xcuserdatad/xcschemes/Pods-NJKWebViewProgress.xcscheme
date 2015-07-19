@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7CFDD712B164A12D92272041"
-               BuildableName = "MGSwipeTableCell.framework"
-               BlueprintName = "Pods-MGSwipeTableCell"
+               BlueprintIdentifier = "A7B3EA996B0D5E5F66E35251"
+               BuildableName = "NJKWebViewProgress.framework"
+               BlueprintName = "Pods-NJKWebViewProgress"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

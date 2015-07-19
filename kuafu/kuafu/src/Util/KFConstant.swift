@@ -44,7 +44,7 @@ let KF_LISENCE = "KFLisence"                    //开源许可
 
 // MARK: - AppConfig
 let KF_MY_EMAIL = "yongxingshu@foxmail.com"
-let KF_MY_BLOG = "http://www.vienta.me"
+let KF_MY_BLOG = "http://www.vienta.me/"
 let KF_PROJECT_URL = "https://github.com/Vienta/kuafu"
 
 
