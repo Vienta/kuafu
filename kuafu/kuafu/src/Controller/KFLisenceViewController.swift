@@ -16,7 +16,7 @@ class KFLisenceViewController: UIViewController,UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "KF_SETTINGS_LISENCE".localized
-        self.lisences = ["FMDB","SnapKit","MGSwipeTableViewCell","CVCalendarKit","JTCalendar","MKEventKit","DAAlertController","DeviceGuru","ZoomTransition"]
+        self.lisences = ["FMDB","SnapKit","MGSwipeTableViewCell","CVCalendarKit","JTCalendar","MKEventKit","DAAlertController","DeviceGuru","ZoomTransition","NJKWebViewProgress"]
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import DAAlertController
+import AudioToolbox
 
 private let sharedInstance = KFLocalPushManager()
 
@@ -56,8 +58,6 @@ class KFLocalPushManager: NSObject {
         } else {
             userDict = ["content": "\(fireDate)\(alertBody)","eventid": eventid]
         }
-        
-        println("userDict\(userDict)")
         
         localNoti.userInfo = userDict as? [NSObject : AnyObject]
         localNoti.category = type
@@ -140,5 +140,57 @@ class KFLocalPushManager: NSObject {
         
         var categoriesSet: NSSet = NSSet(array: [remindCategory, completeCategory])
         return categoriesSet
+    }
+    
+    func handleNotification(notification: UILocalNotification) -> Void {
+        
+        AudioServicesPlaySystemSound(SystemSoundID(UInt32(kSystemSoundID_Vibrate)))
+        
+        var rootViewController: UITabBarController = UIApplication.sharedApplication().delegate?.window?!.rootViewController as! UITabBarController
+        var eventViewController: UIViewController! = rootViewController.selectedViewController
+        
+        if (notification.category == KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE) {
+            
+            var remindAfterAction: DAAlertAction = DAAlertAction(title: "KF_LOCALNOTIFICATION_FIVE_MIN_AFTER".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
+                var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+                let alertBody: String = "KF_ALREADY_DUE".localized + ": " + event.content
+                event.endtime = NSDate().dateByAddingTimeInterval(5 * 60).timeIntervalSince1970
+                KFEventDAO.sharedManager.saveEvent(event)
+                KFLocalPushManager.sharedManager.registerLocalPushWithFireDate(NSDate().dateByAddingTimeInterval(5 * 60), alertBody: alertBody, and: event.eventid, with: KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE)
+                self.postNotificationEventsChanged()
+            })
+            var markAsReadAction: DAAlertAction = DAAlertAction(title: "KF_LOCALNOTIFICATION_COMPLETE".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
+                var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+                event.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
+                KFEventDAO.sharedManager.saveEvent(event)
+                self.postNotificationEventsChanged()
+            })
+            var deleteAction: DAAlertAction = DAAlertAction(title: "KF_DELETE".localized, style: DAAlertActionStyle.Destructive, handler: { () -> Void in
+                var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+                event.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
+                KFEventDAO.sharedManager.saveEvent(event)
+                self.postNotificationEventsChanged()
+            })
+       
+            DAAlertController.showAlertViewInViewController(eventViewController, withTitle: notification.alertBody, message: nil, actions: [remindAfterAction,markAsReadAction,deleteAction])
+        } else {
+            var kownitAction: DAAlertAction = DAAlertAction(title: "KF_LOCALNOTIFICATION_GET_IT".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
+                self.postNotificationEventsChanged()
+            })
+            var deleteAction: DAAlertAction = DAAlertAction(title: "KF_DELETE".localized, style: DAAlertActionStyle.Destructive, handler: { () -> Void in
+                var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+                event.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
+                KFEventDAO.sharedManager.saveEvent(event)
+                self.postNotificationEventsChanged()
+            })
+            
+            DAAlertController.showAlertViewInViewController(eventViewController, withTitle: notification.alertBody, message: nil, actions: [kownitAction,deleteAction])
+        }
+    }
+    
+    func postNotificationEventsChanged() -> Void {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_UPDATE_TASK, object: nil)
+        })
     }
 }

@@ -226,7 +226,11 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
     
     func dataPickerChanged(datePicker: UIDatePicker) {
         var settingDate: NSDate = datePicker.date
-        var timestamp: NSTimeInterval = datePicker.date.timeIntervalSince1970
+        let dateFormatter = NSDateFormatter() as NSDateFormatter
+        dateFormatter.dateFormat = "ss"
+        var second: String = dateFormatter.stringFromDate(settingDate) as String
+        
+        var timestamp: NSTimeInterval = datePicker.date.timeIntervalSince1970 - NSString(string: second).doubleValue
 
         settingTimestamp = timestamp
     }

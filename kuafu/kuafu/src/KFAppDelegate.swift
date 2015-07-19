@@ -40,6 +40,7 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         print("didReceiveLocalNotification:\(notification) alertBody:\(notification.alertBody)")
+        KFLocalPushManager.sharedManager.handleNotification(notification)
     }
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
@@ -61,7 +62,7 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         case "DELAY_TODO":
             println("DELAY_TODO")
             var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
-            let alertBody: String = "KF_TASK_DUE_AFTER_FIVE_MIN".localized + ": " + event.content
+            let alertBody: String = "KF_ALREADY_DUE".localized + ": " + event.content
             event.endtime = NSDate().dateByAddingTimeInterval(5 * 60).timeIntervalSince1970
             KFEventDAO.sharedManager.saveEvent(event)
             KFLocalPushManager.sharedManager.registerLocalPushWithFireDate(NSDate().dateByAddingTimeInterval(5 * 60), alertBody: alertBody, and: event.eventid, with: KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE)
@@ -92,16 +93,12 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    override func canBecomeFirstResponder() -> Bool {
-        return true
-    }
-    
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
-        if (motion == UIEventSubtype.MotionShake) {
-                        println("Shake")
-        }
+    func applicationRootViewController() -> UIViewController {
+        let nav = self.window?.rootViewController as! UINavigationController
+        return nav.viewControllers[0] as! UIViewController
     }
 
+    
 }
 
 /*

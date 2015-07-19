@@ -56,6 +56,7 @@
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
 		B3CA43181B58EB63000DA6FD /* DeviceGuru.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA43151B58EADC000DA6FD /* DeviceGuru.swift */; };
 		B3CA431B1B58FF89000DA6FD /* KFMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA431A1B58FF89000DA6FD /* KFMotionManager.swift */; };
+		B3CCC0B71B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3CCC0B61B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt */; };
 		B3D39B5B1B555F5600BE899D /* KFCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D39B591B555F5600BE899D /* KFCalendarCell.swift */; };
 		B3D39B5C1B555F5600BE899D /* KFCalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */; };
 		B3DFE2201B4E5B4A00C520E0 /* KFPullCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */; };
@@ -130,6 +131,7 @@
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
 		B3CA43151B58EADC000DA6FD /* DeviceGuru.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGuru.swift; sourceTree = "<group>"; };
 		B3CA431A1B58FF89000DA6FD /* KFMotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFMotionManager.swift; sourceTree = "<group>"; };
+		B3CCC0B61B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NJKWebViewProgress_LICENSE.txt; sourceTree = "<group>"; };
 		B3D39B591B555F5600BE899D /* KFCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFCalendarCell.swift; sourceTree = "<group>"; };
 		B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarCell.xib; sourceTree = "<group>"; };
 		B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPullCalendarView.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		B35DB09B1B2296ED0006AE48 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B3CCC0B61B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt */,
 				B318FE991B59C91D007609B5 /* ZoomTransition_LICENSE.txt */,
 				B318FE971B59C8F0007609B5 /* DeviceGuru_LICENSE.txt */,
 				B318FE951B59C89B007609B5 /* DAAlertController_LICENSE.txt */,
@@ -453,6 +456,7 @@
 				B318FE9E1B59D145007609B5 /* KFLisenceDetailViewController.xib in Resources */,
 				B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */,
 				B318FE8C1B59C70E007609B5 /* SnapKit_LICENSE.txt in Resources */,
+				B3CCC0B71B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt in Resources */,
 				B318FE9A1B59C91D007609B5 /* ZoomTransition_LICENSE.txt in Resources */,
 				B318FE861B59BEC3007609B5 /* KFLisenceViewController.xib in Resources */,
 				B318FE8A1B59C6AC007609B5 /* FMDB_LICENSE.txt in Resources */,

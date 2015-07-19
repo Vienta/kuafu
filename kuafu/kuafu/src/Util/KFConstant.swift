@@ -23,8 +23,8 @@ let APP_BUNDLE_ID:String! = NSBundle.mainBundle().bundleIdentifier
 let APP_BUILD_VERSION:String! = NSBundle.mainBundle().objectForInfoDictionaryKey(kCFBundleVersionKey as String) as! String
 
 // MARK: - Constant
-let KF_LOCAL_NOTIFICATION_CATEGORY_REMIND = "KF_REMIND_CATEGORY"
-let KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE = "KF_COMPLETE_CATEGORY"
+let KF_LOCAL_NOTIFICATION_CATEGORY_REMIND = "KF_REMIND_CATEGORY"    //提醒
+let KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE = "KF_COMPLETE_CATEGORY"//完成
 
 // MARK: - Notification
 let KF_NOTIFICATION_UPDATE_TASK = "KFNotificationUpdateTask"
