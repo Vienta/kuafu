@@ -80,6 +80,11 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         self.navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
+    func pushToHistoryVersion() -> Void {
+        var versionsViewController: KFVersionsViewController = KFVersionsViewController(nibName:"KFVersionsViewController", bundle: nil)
+        self.navigationController?.pushViewController(versionsViewController, animated: true)
+    }
+    
     func targetAction(actionKey: String) ->Void {
         switch (actionKey) {
 
@@ -90,7 +95,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         case (KF_ABOUT_KUAFU):
             self.pushToAbout()
         case (KF_HISTORY_VERSION):
-            println("afd")
+            self.pushToHistoryVersion()
         case (KF_LISENCE):
             self.pushToLisence()
         default:

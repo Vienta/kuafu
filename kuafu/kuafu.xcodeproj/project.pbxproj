@@ -52,6 +52,8 @@
 		B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
 		B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
+		B36BBA0A1B5D00E60021B374 /* KFVersionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */; };
+		B36BBA0B1B5D00E60021B374 /* KFVersionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */; };
 		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
 		B3CA43181B58EB63000DA6FD /* DeviceGuru.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA43151B58EADC000DA6FD /* DeviceGuru.swift */; };
@@ -65,6 +67,7 @@
 		B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */; };
 		B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */; };
 		B3F2C53A1B57272100E3DBB6 /* KFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */; };
+		B3F59A9D1B5C95AA00E491E6 /* KFAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F59A9C1B5C95AA00E491E6 /* KFAvailability.swift */; };
 		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
 		B3FE73181B541238008FB3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3FE731A1B541238008FB3BB /* InfoPlist.strings */; };
 		EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -127,6 +130,8 @@
 		B35DB0AA1B229F690006AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B35DB0AB1B229FBE0006AE48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
+		B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFVersionsViewController.swift; sourceTree = "<group>"; };
+		B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFVersionsViewController.xib; sourceTree = "<group>"; };
 		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
 		B3CA43151B58EADC000DA6FD /* DeviceGuru.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGuru.swift; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 		B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarViewController.xib; sourceTree = "<group>"; };
 		B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLocalPushManager.swift; sourceTree = "<group>"; };
 		B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSettingsViewController.swift; sourceTree = "<group>"; };
+		B3F59A9C1B5C95AA00E491E6 /* KFAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAvailability.swift; sourceTree = "<group>"; };
 		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
 		B3FE73191B541238008FB3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3FE731B1B54123D008FB3BB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 				B318FEA01B59D9AC007609B5 /* KFAboutViewController.xib */,
 				B335B07C1B5A5A40005C4CD2 /* KFWebViewController.swift */,
 				B335B07D1B5A5A40005C4CD2 /* KFWebViewController.xib */,
+				B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */,
+				B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 			children = (
 				B3164A601B213BF70093E6B5 /* KFUtil.swift */,
 				B35DB0991B228A580006AE48 /* KFConstant.swift */,
+				B3F59A9C1B5C95AA00E491E6 /* KFAvailability.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -458,6 +467,7 @@
 				B318FE8C1B59C70E007609B5 /* SnapKit_LICENSE.txt in Resources */,
 				B3CCC0B71B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt in Resources */,
 				B318FE9A1B59C91D007609B5 /* ZoomTransition_LICENSE.txt in Resources */,
+				B36BBA0B1B5D00E60021B374 /* KFVersionsViewController.xib in Resources */,
 				B318FE861B59BEC3007609B5 /* KFLisenceViewController.xib in Resources */,
 				B318FE8A1B59C6AC007609B5 /* FMDB_LICENSE.txt in Resources */,
 				B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */,
@@ -583,6 +593,7 @@
 				B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */,
 				B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */,
 				B358D2C71B4EBB8200D70CB0 /* ZoomTransition.swift in Sources */,
+				B36BBA0A1B5D00E60021B374 /* KFVersionsViewController.swift in Sources */,
 				B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */,
 				B3DFE2201B4E5B4A00C520E0 /* KFPullCalendarView.swift in Sources */,
 				B335B07E1B5A5A40005C4CD2 /* KFWebViewController.swift in Sources */,
@@ -598,6 +609,7 @@
 				B318FEA11B59D9AC007609B5 /* KFAboutViewController.swift in Sources */,
 				B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */,
 				B318FE851B59BEC3007609B5 /* KFLisenceViewController.swift in Sources */,
+				B3F59A9D1B5C95AA00E491E6 /* KFAvailability.swift in Sources */,
 				B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */,
 				B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */,
 				B3490FEB1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift in Sources */,

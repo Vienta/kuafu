@@ -40,7 +40,6 @@ class KFWebViewController: UIViewController, UIWebViewDelegate, NJKWebViewProgre
             let urlRequest: NSURLRequest = NSURLRequest(URL: url!)
             self.webview.loadRequest(urlRequest)
         }
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -62,6 +61,7 @@ class KFWebViewController: UIViewController, UIWebViewDelegate, NJKWebViewProgre
     // MARK: - Private Methods
     // MARK: - Public Methods
  
+    // MARK: - UIWebViewDelegate
     class func loadWebViewWithURL(urlString: String) -> KFWebViewController {
         let webviewViewController: KFWebViewController = KFWebViewController(nibName: "KFWebViewController", bundle: nil)
         webviewViewController.loadUrl = urlString
