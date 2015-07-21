@@ -19,14 +19,13 @@ class KFVersionsViewController: UIViewController,UITableViewDelegate,UITableView
 
         // Do any additional setup after loading the view.
         self.title = "KF_SETTINGS_HISTORY_VERSION".localized
-        self.versions = [["versionTitle":APP_DISPLAY_NAME + APP_VERSION + "主要更新","publishtime":"2015年8月8日"]]
+        self.versions = [["versionTitle":APP_DISPLAY_NAME + APP_VERSION + "KF_UPDATE_DESC".localized,"publishtime":"2015年8月8日"]]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
 
     // MARK: - IBActions
