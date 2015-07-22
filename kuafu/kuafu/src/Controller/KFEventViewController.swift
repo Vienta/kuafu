@@ -63,6 +63,13 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.events = NSMutableArray(capacity: 0)
 
         self.showTaskData()
+        
+        DELAY(3, { () -> () in
+            let eventStore = EKEventStore()
+            eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: { (granted, error) -> Void in
+                println("granted:\(granted)")
+            })
+        })
     }
     
     override func didReceiveMemoryWarning() {

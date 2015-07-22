@@ -9,6 +9,7 @@
 import UIKit
 import JTCalendar
 import MKEventKit
+import DAAlertController
 
 class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Property
@@ -75,13 +76,13 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
 
         if EKEventStore.mk_isAccessAuthorized() == false {
             println("Access Denied")
+            self.alertEventAccessibility()
         } else {
             EKEventStore.mk_registerEventStore(eventStore)
             self.eventsFromLastYearAndFutureYear()
             self.calendar.reloadData()
         }
     }
-    
     
     func eventsFromLastYearAndFutureYear() -> NSArray! {
         var yearSeconds: NSTimeInterval = 365 * (60 * 60 * 24)
@@ -108,9 +109,15 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         return eventsInThoseTwoYears
     }
     
+    func alertEventAccessibility() -> Void {
+        let randomNum = Int(arc4random_uniform(3));
+        if (randomNum % 3 == 0) {//减少弹出频率
+            var cancelAction: DAAlertAction = DAAlertAction(title: "KF_LOCALNOTIFICATION_GET_IT".localized, style: DAAlertActionStyle.Destructive, handler: nil)
+            DAAlertController.showAlertViewInViewController(self, withTitle: "KF_ALERT_TIPS".localized, message: "KF_EVENT_ACCESSIBILITY_TIPS".localized, actions: [cancelAction])
+        }
+    }
     
     // MARK: - Public Methods
-    
     
     
     // MARK: - ZoomTransitionProtocol

@@ -38,3 +38,4 @@
 "KF_ALERT_CLOSE_SHAKE" = "Off Shake";
 "KF_SLOGAN" = "Doing a effective tool";
 "KF_UPDATE_DESC" = "update";
+"KF_EVENT_ACCESSIBILITY_TIPS" = "检测到您还没有开启日历访问权限，您可以在【设置】-【夸父】中点击开启";
