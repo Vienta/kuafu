@@ -20,9 +20,9 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         self.view.backgroundColor = KF_BG_COLOR
         self.title = "KF_SETTINGS_CONTROLLER_TITLE".localized
         
-        var settings =  [["section":"通用","values":[KF_SHAKE_CREATE_TASK]],
-                        ["section":"反馈","values":[KF_FEEDBACK,KF_EVALUATION]],
-                        ["section":"关于","values":[KF_ABOUT_KUAFU,KF_HISTORY_VERSION,KF_LISENCE]]]
+        var settings =  [["section":"KF_GENERAL".localized,"values":[KF_SHAKE_CREATE_TASK]],
+                        ["section":"KF_FEEDBACK".localized,"values":[KF_FEEDBACK,KF_EVALUATION]],
+                        ["section":"KF_ABOUT".localized,"values":[KF_ABOUT_KUAFU,KF_HISTORY_VERSION,KF_LISENCE]]]
         
         self.settingsList = NSMutableArray(array: settings)
         self.tbvSettings.reloadData()

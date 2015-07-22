@@ -26,6 +26,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
 
         // Do any additional setup after loading the view.
         self.title = "KF_NEW_TODO_TITLE".localized
+        self.txfEventTitle.placeholder = "KF_UNKOWN_TITLE".localized
         var cancelItem = UIBarButtonItem(title: "KF_CANCEL".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "cancel")
         self.navigationItem.leftBarButtonItem = cancelItem
         

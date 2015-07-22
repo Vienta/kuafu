@@ -15,6 +15,7 @@ class KFAboutViewController: UIViewController {
     @IBOutlet weak var lblOpenSource: JKRichTextView!
     @IBOutlet weak var lblVersion: UILabel!
     @IBOutlet weak var igvIcon: UIImageView!
+    @IBOutlet weak var lblSlogan: UILabel!
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class KFAboutViewController: UIViewController {
         self.lblCopyright.font = UIFont.systemFontOfSize(14)
         self.lblCopyright.textAlignment = .Center
         self.lblCopyright.backgroundColor = UIColor.clearColor()
+        
+        self.lblSlogan.text = "KF_SLOGAN".localized
         
         var copyrightRange: NSRange! = copyright.rangeOfString("Vienta")
         

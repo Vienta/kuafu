@@ -9,6 +9,7 @@
                 <outlet property="igvIcon" destination="1eN-4h-iWt" id="BeX-cF-D0J"/>
                 <outlet property="lblCopyright" destination="Wiw-NK-OQB" id="4Oi-xu-S2A"/>
                 <outlet property="lblOpenSource" destination="NeR-yf-E6i" id="TJ4-U0-ccc"/>
+                <outlet property="lblSlogan" destination="GLJ-OZ-Sql" id="kSD-PJ-wHU"/>
                 <outlet property="lblVersion" destination="zfO-cc-oUY" id="e1h-pW-zJE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

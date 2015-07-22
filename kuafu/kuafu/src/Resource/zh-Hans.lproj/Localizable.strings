@@ -38,4 +38,8 @@
 "KF_ALERT_CLOSE_SHAKE" = "关闭摇一摇功能";
 "KF_SLOGAN" = "做一个好用的工具";
 "KF_UPDATE_DESC" = "主要更新";
-"KF_EVENT_ACCESSIBILITY_TIPS" = "检测到您还没有开启日历访问权限，您可以在【设置】-【夸父】中点击开启";
+"KF_EVENT_ACCESSIBILITY_TIPS" = "检测到您还没有开启日历访问权限，您可以在【设置】-【隐私】-【夸父】中点击开启";
+"KF_GENERAL" = "通用";
+"KF_FEEDBACK" = "反馈";
+"KF_ABOUT" = "关于";
+"KF_UNKOWN_TITLE" = "无标题任务";

@@ -6,15 +6,15 @@
   Copyright (c) 2015年 www.vienta.me. All rights reserved.
 */
 "KF_EVENT_CONTROLLER_TITLE" = "TODOist";
-"KF_SETTINGS_CONTROLLER_TITLE" = "ABOUT";
+"KF_SETTINGS_CONTROLLER_TITLE" = "About";
 "KF_CANCEL" = "Cancel";
 "KF_SAVE" = "Save";
 "KF_TIME_DUETO" = "Due Date";
 "KF_TIME_ALERT" = "Reminder";
 "KF_ALERT_TIPS" = "Warning";
-"KF_ALERT_NULL_CONTENT" = "您还没有录入任何任务，请先录入";
-"KF_ALERT_TIMESTAMP_ERROR" = "逾期时间应该在提醒时间之后";
-"KF_ALERT_TIMMSTAMP_STARTTIME_ERROR" = "当前设定时间应当在未来某个时刻";
+"KF_ALERT_NULL_CONTENT" = "Have not entered yet";
+"KF_ALERT_TIMESTAMP_ERROR" = "Overdue time should after remind time";
+"KF_ALERT_TIMMSTAMP_STARTTIME_ERROR" = "Check your current time please";
 "KF_NEW_TODO_TITLE" = "New ToDo";
 "KF_OK" = "OK";
 "KF_CANCEL" = "Cancel";
@@ -31,11 +31,15 @@
 "KF_LOCALNOTIFICATION_FIVE_MIN_AFTER" = "Remind after 5 min";
 "KF_SETTINGS_SHAKE_NEW_TASK" = "Shake new task";
 "KF_SETTINGS_FEEDBACK" = "Feedback";
-"KF_SETTINGS_EVALUATION" = "Rate KuaFU";
-"KF_SETTINGS_ABOUT_KUAFU" = "About KuaFU";
+"KF_SETTINGS_EVALUATION" = "Rate KuaFu";
+"KF_SETTINGS_ABOUT_KUAFU" = "About KuaFu";
 "KF_SETTINGS_HISTORY_VERSION" = "Features";
-"KF_SETTINGS_LISENCE" = "Liense";
+"KF_SETTINGS_LISENCE" = "License";
 "KF_ALERT_CLOSE_SHAKE" = "Off Shake";
-"KF_SLOGAN" = "Doing a effective tool";
+"KF_SLOGAN" = "Being An Effective Tool";
 "KF_UPDATE_DESC" = "update";
-"KF_EVENT_ACCESSIBILITY_TIPS" = "检测到您还没有开启日历访问权限，您可以在【设置】-【夸父】中点击开启";
+"KF_EVENT_ACCESSIBILITY_TIPS" ="Kuafu doesn't currently have access to your local calendars.Please change your phone settings to allow KuaFu calendar access in 'Settings' -> 'Privacy' ->'Calendars'";
+"KF_GENERAL" = "General";
+"KF_FEEDBACK" = "Feedback";
+"KF_ABOUT" = "About";
+"KF_UNKOWN_TITLE" = "Unkown title";
