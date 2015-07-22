@@ -19,7 +19,7 @@ class KFVersionsViewController: UIViewController,UITableViewDelegate,UITableView
 
         // Do any additional setup after loading the view.
         self.title = "KF_SETTINGS_HISTORY_VERSION".localized
-        self.versions = [["versionTitle":APP_DISPLAY_NAME + APP_VERSION + "KF_UPDATE_DESC".localized,"publishtime":"2015年8月8日"]]
+        self.versions = [["versionTitle":APP_DISPLAY_NAME + __KUAFU_1_0 + "KF_UPDATE_DESC".localized,"publishtime":"2015年8月8日","version":__KUAFU_1_0]]
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +53,15 @@ class KFVersionsViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        var rowVersionInfo: Dictionary = self.versions[indexPath.row]
+        var version: String? = rowVersionInfo["version"]
+        var versionTitle: String? = rowVersionInfo["versionTitle"]
+        
+        let versionDetailViewController: KFVersionDetailViewController = KFVersionDetailViewController(nibName: "KFVersionDetailViewController", bundle: nil)
+        versionDetailViewController.version = version
+        versionDetailViewController.title = versionTitle
+        
+        self.navigationController?.pushViewController(versionDetailViewController, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
