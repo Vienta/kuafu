@@ -178,6 +178,8 @@
 		B36FCA241B613CF30018C6DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B36FCA261B613CF30018C6DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEventsTableRowController.swift; sourceTree = "<group>"; };
+		B37731511B62F18D0059F4F6 /* kuafu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = kuafu.entitlements; path = kuafu/kuafu.entitlements; sourceTree = "<group>"; };
+		B37731521B62F1A20059F4F6 /* kuafu WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "kuafu WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
 		B3A8F5701B5FD423005ADFD9 /* Version_1.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version_1.0.txt; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		B33E66ED1B207E4600F86927 = {
 			isa = PBXGroup;
 			children = (
+				B37731511B62F18D0059F4F6 /* kuafu.entitlements */,
 				B3164A401B2133490093E6B5 /* src */,
 				B33E670E1B207E4600F86927 /* kuafuTests */,
 				B36FCA131B613CF30018C6DA /* kuafu WatchKit Extension */,
@@ -437,6 +440,7 @@
 		B36FCA131B613CF30018C6DA /* kuafu WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B37731521B62F1A20059F4F6 /* kuafu WatchKit Extension.entitlements */,
 				B36FCA161B613CF30018C6DA /* InterfaceController.swift */,
 				B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */,
 				B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */,
@@ -564,6 +568,12 @@
 				TargetAttributes = {
 					B33E66F51B207E4600F86927 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 6DK2MK9EJ8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B33E670A1B207E4600F86927 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -571,6 +581,12 @@
 					};
 					B36FCA111B613CF30018C6DA = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 6DK2MK9EJ8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B36FCA1B1B613CF30018C6DA = {
 						CreatedOnToolsVersion = 6.4;
@@ -1009,7 +1025,9 @@
 			baseConfigurationReference = 223E9605AF28654DB569D731 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kuafu/kuafu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
 				INFOPLIST_FILE = kuafu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1022,7 +1040,9 @@
 			baseConfigurationReference = E136FEE5C76217550A54A74A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kuafu/kuafu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kuafu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1074,7 +1094,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 223E9605AF28654DB569D731 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "kuafu WatchKit Extension/kuafu WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1083,6 +1105,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1091,11 +1114,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E136FEE5C76217550A54A74A /* Pods.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "kuafu WatchKit Extension/kuafu WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "kuafu WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1112,6 +1138,7 @@
 				INFOPLIST_FILE = "kuafu WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1126,6 +1153,7 @@
 				INFOPLIST_FILE = "kuafu WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
