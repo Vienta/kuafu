@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="kuafu_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="Dv5-Lp-yRG">
+                            <items>
+                                <tableRow identifier="KFWatchEventsTableRowController" id="ftg-kZ-Pro" customClass="KFWatchEventsTableRowController" customModule="kuafu_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="9AK-aB-HfZ">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="wAH-qC-6KF"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblEventContent" destination="wAH-qC-6KF" id="8BE-hP-Tjl"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="KFWatchEvensTableHeaderController" id="qPD-Sg-1kw" customClass="KFWatchEvensTableHeaderController" customModule="kuafu_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="b83-pL-W4c">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="ats-3x-hOU"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblHeader" destination="ats-3x-hOU" id="2pb-gy-FLh"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tbvEvent" destination="Dv5-Lp-yRG" id="NbS-WQ-wnk"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0640"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B36FCA1B1B613CF30018C6DA"
+               BuildableName = "kuafu WatchKit App.app"
+               BlueprintName = "kuafu WatchKit App"
+               ReferencedContainer = "container:kuafu.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B33E66F51B207E4600F86927"
+               BuildableName = "kuafu.app"
+               BlueprintName = "kuafu"
+               ReferencedContainer = "container:kuafu.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B36FCA111B613CF30018C6DA"
+               BuildableName = "kuafu WatchKit Extension.appex"
+               BlueprintName = "kuafu WatchKit Extension"
+               ReferencedContainer = "container:kuafu.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B36FCA1B1B613CF30018C6DA"
+            BuildableName = "kuafu WatchKit App.app"
+            BlueprintName = "kuafu WatchKit App"
+            ReferencedContainer = "container:kuafu.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/kuafu">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B36FCA1B1B613CF30018C6DA"
+            BuildableName = "kuafu WatchKit App.app"
+            BlueprintName = "kuafu WatchKit App"
+            ReferencedContainer = "container:kuafu.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B36FCA1B1B613CF30018C6DA"
+            BuildableName = "kuafu WatchKit App.app"
+            BlueprintName = "kuafu WatchKit App"
+            ReferencedContainer = "container:kuafu.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = ""
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/kuafu">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B36FCA1B1B613CF30018C6DA"
+            BuildableName = "kuafu WatchKit App.app"
+            BlueprintName = "kuafu WatchKit App"
+            ReferencedContainer = "container:kuafu.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B36FCA1B1B613CF30018C6DA"
+            BuildableName = "kuafu WatchKit App.app"
+            BlueprintName = "kuafu WatchKit App"
+            ReferencedContainer = "container:kuafu.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

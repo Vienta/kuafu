@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>kuafu WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>kuafu.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>B33E670A1B207E4600F86927</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B36FCA1B1B613CF30018C6DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

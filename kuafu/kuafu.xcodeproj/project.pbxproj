@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		07BACD4C37FD8AA5A651FFA1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233DE055BDFDA5A79E348273 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		14AEE472A962153125051704 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233DE055BDFDA5A79E348273 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		19D8752EA670CBFDA1A26EFE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233DE055BDFDA5A79E348273 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1C172372CD71DCDDEFF67C35 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		1FA830A74C5FFDD95C1F063E /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		6FE710741147B8DE7F93DF45 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		74570A0A46D5EC78E8AE4717 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
+		B30BAF521B62831700EC8400 /* KFWatchEvensTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */; };
 		B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A411B2133490093E6B5 /* KFAppDelegate.swift */; };
 		B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A471B2133A70093E6B5 /* KFEventViewController.swift */; };
 		B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3164A4E1B2133F50093E6B5 /* Images.xcassets */; };
@@ -52,6 +54,13 @@
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
 		B36BBA0A1B5D00E60021B374 /* KFVersionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */; };
 		B36BBA0B1B5D00E60021B374 /* KFVersionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */; };
+		B36FCA171B613CF30018C6DA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FCA161B613CF30018C6DA /* InterfaceController.swift */; };
+		B36FCA191B613CF30018C6DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA181B613CF30018C6DA /* Images.xcassets */; };
+		B36FCA1D1B613CF30018C6DA /* kuafu WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA1C1B613CF30018C6DA /* kuafu WatchKit App.app */; };
+		B36FCA251B613CF30018C6DA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA231B613CF30018C6DA /* Interface.storyboard */; };
+		B36FCA271B613CF30018C6DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA261B613CF30018C6DA /* Images.xcassets */; };
+		B36FCA2A1B613CF30018C6DA /* kuafu WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B36FCA121B613CF30018C6DA /* kuafu WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B36FCA351B61E46F0018C6DA /* KFWatchEventsTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */; };
 		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
 		B3A8F5711B5FD423005ADFD9 /* Version_1.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3A8F5701B5FD423005ADFD9 /* Version_1.0.txt */; };
@@ -84,11 +93,40 @@
 			remoteGlobalIDString = B33E66F51B207E4600F86927;
 			remoteInfo = kuafu;
 		};
+		B36FCA1E1B613CF30018C6DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33E66EE1B207E4600F86927 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B36FCA1B1B613CF30018C6DA;
+			remoteInfo = "kuafu WatchKit App";
+		};
+		B36FCA281B613CF30018C6DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33E66EE1B207E4600F86927 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B36FCA111B613CF30018C6DA;
+			remoteInfo = "kuafu WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B36FCA311B613CF30018C6DA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B36FCA2A1B613CF30018C6DA /* kuafu WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		223E9605AF28654DB569D731 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		233DE055BDFDA5A79E348273 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEvensTableHeaderController.swift; sourceTree = "<group>"; };
 		B3164A411B2133490093E6B5 /* KFAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAppDelegate.swift; sourceTree = "<group>"; };
 		B3164A471B2133A70093E6B5 /* KFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventViewController.swift; sourceTree = "<group>"; };
 		B3164A4E1B2133F50093E6B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = kuafu/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -131,6 +169,15 @@
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
 		B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFVersionsViewController.swift; sourceTree = "<group>"; };
 		B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFVersionsViewController.xib; sourceTree = "<group>"; };
+		B36FCA121B613CF30018C6DA /* kuafu WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "kuafu WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36FCA151B613CF30018C6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36FCA161B613CF30018C6DA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B36FCA181B613CF30018C6DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B36FCA1C1B613CF30018C6DA /* kuafu WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kuafu WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36FCA221B613CF30018C6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36FCA241B613CF30018C6DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B36FCA261B613CF30018C6DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEventsTableRowController.swift; sourceTree = "<group>"; };
 		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
 		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
 		B3A8F5701B5FD423005ADFD9 /* Version_1.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version_1.0.txt; sourceTree = "<group>"; };
@@ -183,6 +230,14 @@
 				74570A0A46D5EC78E8AE4717 /* (null) in Frameworks */,
 				1C172372CD71DCDDEFF67C35 /* (null) in Frameworks */,
 				07BACD4C37FD8AA5A651FFA1 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36FCA0F1B613CF30018C6DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D8752EA670CBFDA1A26EFE /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +342,8 @@
 			children = (
 				B3164A401B2133490093E6B5 /* src */,
 				B33E670E1B207E4600F86927 /* kuafuTests */,
+				B36FCA131B613CF30018C6DA /* kuafu WatchKit Extension */,
+				B36FCA201B613CF30018C6DA /* kuafu WatchKit App */,
 				B33E66F71B207E4600F86927 /* Products */,
 				517227491838C9BA70BEA1FA /* Pods */,
 				B0D9FE94F4D3EF02C4ED86F7 /* Frameworks */,
@@ -298,6 +355,8 @@
 			children = (
 				B33E66F61B207E4600F86927 /* kuafu.app */,
 				B33E670B1B207E4600F86927 /* kuafuTests.xctest */,
+				B36FCA121B613CF30018C6DA /* kuafu WatchKit Extension.appex */,
+				B36FCA1C1B613CF30018C6DA /* kuafu WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +434,44 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B36FCA131B613CF30018C6DA /* kuafu WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B36FCA161B613CF30018C6DA /* InterfaceController.swift */,
+				B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */,
+				B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */,
+				B36FCA181B613CF30018C6DA /* Images.xcassets */,
+				B36FCA141B613CF30018C6DA /* Supporting Files */,
+			);
+			path = "kuafu WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B36FCA141B613CF30018C6DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B36FCA151B613CF30018C6DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B36FCA201B613CF30018C6DA /* kuafu WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B36FCA231B613CF30018C6DA /* Interface.storyboard */,
+				B36FCA261B613CF30018C6DA /* Images.xcassets */,
+				B36FCA211B613CF30018C6DA /* Supporting Files */,
+			);
+			path = "kuafu WatchKit App";
+			sourceTree = "<group>";
+		};
+		B36FCA211B613CF30018C6DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B36FCA221B613CF30018C6DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,10 +485,12 @@
 				B33E66F41B207E4600F86927 /* Resources */,
 				39CA4FFC295620640ADD6142 /* Copy Pods Resources */,
 				65865DF832BE133D68EF0D5B /* Embed Pods Frameworks */,
+				B36FCA311B613CF30018C6DA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B36FCA291B613CF30018C6DA /* PBXTargetDependency */,
 			);
 			name = kuafu;
 			productName = kuafu;
@@ -419,6 +518,41 @@
 			productReference = B33E670B1B207E4600F86927 /* kuafuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B36FCA111B613CF30018C6DA /* kuafu WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B36FCA301B613CF30018C6DA /* Build configuration list for PBXNativeTarget "kuafu WatchKit Extension" */;
+			buildPhases = (
+				FCA083C35CBA5F0AE8BB6EA4 /* Check Pods Manifest.lock */,
+				B36FCA0E1B613CF30018C6DA /* Sources */,
+				B36FCA0F1B613CF30018C6DA /* Frameworks */,
+				B36FCA101B613CF30018C6DA /* Resources */,
+				BABC41DC31DE80DB8CF9E757 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B36FCA1F1B613CF30018C6DA /* PBXTargetDependency */,
+			);
+			name = "kuafu WatchKit Extension";
+			productName = "kuafu WatchKit Extension";
+			productReference = B36FCA121B613CF30018C6DA /* kuafu WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		B36FCA1B1B613CF30018C6DA /* kuafu WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B36FCA2F1B613CF30018C6DA /* Build configuration list for PBXNativeTarget "kuafu WatchKit App" */;
+			buildPhases = (
+				B36FCA1A1B613CF30018C6DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kuafu WatchKit App";
+			productName = "kuafu WatchKit App";
+			productReference = B36FCA1C1B613CF30018C6DA /* kuafu WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -434,6 +568,12 @@
 					B33E670A1B207E4600F86927 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = B33E66F51B207E4600F86927;
+					};
+					B36FCA111B613CF30018C6DA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B36FCA1B1B613CF30018C6DA = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -453,6 +593,8 @@
 			targets = (
 				B33E66F51B207E4600F86927 /* kuafu */,
 				B33E670A1B207E4600F86927 /* kuafuTests */,
+				B36FCA111B613CF30018C6DA /* kuafu WatchKit Extension */,
+				B36FCA1B1B613CF30018C6DA /* kuafu WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -497,6 +639,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36FCA101B613CF30018C6DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36FCA191B613CF30018C6DA /* Images.xcassets in Resources */,
+				B36FCA1D1B613CF30018C6DA /* kuafu WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36FCA1A1B613CF30018C6DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36FCA251B613CF30018C6DA /* Interface.storyboard in Resources */,
+				B36FCA271B613CF30018C6DA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +738,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BABC41DC31DE80DB8CF9E757 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F9B1A46ED6EE4DD1DAC0BDC5 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -591,6 +766,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCA083C35CBA5F0AE8BB6EA4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -641,6 +831,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B36FCA0E1B613CF30018C6DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36FCA171B613CF30018C6DA /* InterfaceController.swift in Sources */,
+				B30BAF521B62831700EC8400 /* KFWatchEvensTableHeaderController.swift in Sources */,
+				B36FCA351B61E46F0018C6DA /* KFWatchEventsTableRowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -648,6 +848,16 @@
 			isa = PBXTargetDependency;
 			target = B33E66F51B207E4600F86927 /* kuafu */;
 			targetProxy = B33E670C1B207E4600F86927 /* PBXContainerItemProxy */;
+		};
+		B36FCA1F1B613CF30018C6DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B36FCA1B1B613CF30018C6DA /* kuafu WatchKit App */;
+			targetProxy = B36FCA1E1B613CF30018C6DA /* PBXContainerItemProxy */;
+		};
+		B36FCA291B613CF30018C6DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B36FCA111B613CF30018C6DA /* kuafu WatchKit Extension */;
+			targetProxy = B36FCA281B613CF30018C6DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -660,6 +870,14 @@
 				B3F034CB1B5FE7350086C2BA /* zh-Hans */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B36FCA231B613CF30018C6DA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B36FCA241B613CF30018C6DA /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		B3F034BF1B5FE64C0086C2BA /* LaunchScreen.xib */ = {
@@ -733,7 +951,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
@@ -776,7 +994,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
 				SDKROOT = iphoneos;
@@ -852,6 +1070,68 @@
 			};
 			name = Release;
 		};
+		B36FCA2B1B613CF30018C6DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 223E9605AF28654DB569D731 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "kuafu WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B36FCA2C1B613CF30018C6DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E136FEE5C76217550A54A74A /* Pods.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				INFOPLIST_FILE = "kuafu WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B36FCA2D1B613CF30018C6DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = kuafu_WatchKit_Extension;
+				INFOPLIST_FILE = "kuafu WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		B36FCA2E1B613CF30018C6DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = kuafu_WatchKit_Extension;
+				INFOPLIST_FILE = "kuafu WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -878,6 +1158,24 @@
 			buildConfigurations = (
 				B33E67191B207E4600F86927 /* Debug */,
 				B33E671A1B207E4600F86927 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B36FCA2F1B613CF30018C6DA /* Build configuration list for PBXNativeTarget "kuafu WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B36FCA2D1B613CF30018C6DA /* Debug */,
+				B36FCA2E1B613CF30018C6DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B36FCA301B613CF30018C6DA /* Build configuration list for PBXNativeTarget "kuafu WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B36FCA2B1B613CF30018C6DA /* Debug */,
+				B36FCA2C1B613CF30018C6DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
