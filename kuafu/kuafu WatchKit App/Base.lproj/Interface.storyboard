@@ -15,8 +15,11 @@
                                 <tableRow identifier="KFWatchEventsTableRowController" id="ftg-kZ-Pro" customClass="KFWatchEventsTableRowController" customModule="kuafu_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" radius="1" id="9AK-aB-HfZ">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="wAH-qC-6KF"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="2" id="wAH-qC-6KF"/>
                                         </items>
+                                        <connections>
+                                            <segue destination="2yO-WG-yqe" kind="push" id="4wQ-h7-pVj"/>
+                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="lblEventContent" destination="wAH-qC-6KF" id="8BE-hP-Tjl"/>
@@ -44,6 +47,48 @@
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--任务列表-->
+        <scene sceneID="gmT-nv-XoQ">
+            <objects>
+                <controller identifier="watchEventDetail" title="任务列表" id="2yO-WG-yqe" customClass="KFWatchEventDetailInterfaceController" customModule="kuafu_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="B14-ke-wa4">
+                            <items>
+                                <label alignment="center" text="2015年9月23" textAlignment="center" numberOfLines="0" id="XdE-uY-MEs">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group height="56" alignment="center" id="Uo5-LK-Lr2">
+                            <items>
+                                <label height="1" alignment="center" text="这里是任务清单列表真的" textAlignment="center" numberOfLines="0" id="auE-Sg-C5T">
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" title="标记为完成" id="4ux-4H-ypv">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnCompleteTask" destination="2yO-WG-yqe" id="I1J-pb-CGQ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" title="删 除" id="Z66-GI-3ld">
+                            <color key="titleColor" red="0.95290683178191493" green="0.041740841507711381" blue="0.017670815484499079" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnDeleteTask" destination="2yO-WG-yqe" id="lnk-hP-FdC"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnComplete" destination="4ux-4H-ypv" id="OLH-X8-K4a"/>
+                        <outlet property="btnDelete" destination="Z66-GI-3ld" id="ZLy-by-Roi"/>
+                        <outlet property="lblDate" destination="XdE-uY-MEs" id="lbW-pB-2Ev"/>
+                        <outlet property="lblTask" destination="auE-Sg-C5T" id="kKh-Pp-Hso"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="674" y="333"/>
         </scene>
     </scenes>
 </document>

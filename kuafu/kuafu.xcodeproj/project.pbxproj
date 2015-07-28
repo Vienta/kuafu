@@ -16,6 +16,8 @@
 		74570A0A46D5EC78E8AE4717 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 		B30BAF521B62831700EC8400 /* KFWatchEvensTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */; };
 		B31018451B67366B0011B242 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
+		B31018461B67BC9B0011B242 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3164A4E1B2133F50093E6B5 /* Images.xcassets */; };
+		B31018481B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31018471B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift */; };
 		B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A411B2133490093E6B5 /* KFAppDelegate.swift */; };
 		B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A471B2133A70093E6B5 /* KFEventViewController.swift */; };
 		B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3164A4E1B2133F50093E6B5 /* Images.xcassets */; };
@@ -135,6 +137,7 @@
 		223E9605AF28654DB569D731 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		233DE055BDFDA5A79E348273 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEvensTableHeaderController.swift; sourceTree = "<group>"; };
+		B31018471B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEventDetailInterfaceController.swift; sourceTree = "<group>"; };
 		B3164A411B2133490093E6B5 /* KFAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAppDelegate.swift; sourceTree = "<group>"; };
 		B3164A471B2133A70093E6B5 /* KFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventViewController.swift; sourceTree = "<group>"; };
 		B3164A4E1B2133F50093E6B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = kuafu/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -452,6 +455,7 @@
 				B36FCA161B613CF30018C6DA /* InterfaceController.swift */,
 				B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */,
 				B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */,
+				B31018471B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift */,
 				B36FCA181B613CF30018C6DA /* Images.xcassets */,
 				B36FCA141B613CF30018C6DA /* Supporting Files */,
 			);
@@ -671,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36FCA191B613CF30018C6DA /* Images.xcassets in Resources */,
+				B31018461B67BC9B0011B242 /* Images.xcassets in Resources */,
 				B31018451B67366B0011B242 /* Localizable.strings in Resources */,
 				B36FCA1D1B613CF30018C6DA /* kuafu WatchKit App.app in Resources */,
 			);
@@ -864,6 +869,7 @@
 				B37731591B6302870059F4F6 /* KFConstant.swift in Sources */,
 				B37731561B6302660059F4F6 /* KFDBManager.swift in Sources */,
 				B37731541B63020D0059F4F6 /* KFEventDAO.swift in Sources */,
+				B31018481B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift in Sources */,
 				B36FCA171B613CF30018C6DA /* InterfaceController.swift in Sources */,
 				B30BAF521B62831700EC8400 /* KFWatchEvensTableHeaderController.swift in Sources */,
 				B37731551B63025A0059F4F6 /* KFBaseDAO.swift in Sources */,

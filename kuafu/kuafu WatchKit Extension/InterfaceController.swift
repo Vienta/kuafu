@@ -14,7 +14,6 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var tbvEvent: WKInterfaceTable!
     
-    let minions = ["KFWatchEvensTableHeaderController", "KFWatchEventsTableRowController", "KFWatchEvensTableHeaderController", "KFWatchEventsTableRowController", "KFWatchEventsTableRowController"]
     var watchEvents: NSMutableArray!
     var watchData: NSMutableArray!
     
@@ -22,17 +21,15 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         // Configure interface objects here.
     }
-
+    // MARK: - Life Cycle
     override func willActivate() {
 
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        println("willActivate");
-        
         self.watchEvents = NSMutableArray(capacity: 0)
         self.watchData = NSMutableArray(capacity: 0)
-        //逾期任务
+        //逾期任务  以下为冗余代码
         var overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
         //普通任务 既无提醒时间，也无逾期时间
@@ -102,9 +99,6 @@ class InterfaceController: WKInterfaceController {
             }
         }
         
-        println("watchevents:\(self.watchEvents)")
-        println("watchdata:\(self.watchData)")
-        
         self.tbvEvent.setRowTypes(self.watchData as Array)
         
         for (idx, name) in enumerate(self.watchData) {
@@ -125,4 +119,8 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
+        let segueEvent = self.watchEvents.objectAtIndex(rowIndex) as! KFEventDO
+        return segueEvent
+    }
 }

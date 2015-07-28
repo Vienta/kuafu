@@ -41,6 +41,12 @@ class KFUtil: NSObject {
         return dateFormatter.stringFromDate(date)
     }
     
+    class func getDate(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        return dateFormatter.stringFromDate(date)
+    }
+    
     class func getTodayShortDate(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm"
