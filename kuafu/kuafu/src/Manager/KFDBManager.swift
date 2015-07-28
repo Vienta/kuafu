@@ -40,12 +40,15 @@ class KFDBManager: NSObject {
         return docPath
     }
     
-    func databasePath() -> String {
+    func databasePath() -> String? {
         self.sqlPath()
-        let filePathString = SQLDOC + "/" + KF_EVENT_SQL
-        var dbPath: String = KFUtil.documentFilePath(filePathString)
+//        let filePathString = SQLDOC + "/" + KF_EVENT_SQL
+//        var dbPath: String = KFUtil.documentFilePath(filePathString)
+        var dbGroupPath =  NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(KF_GROUP_ID)
+      
+        dbGroupPath = dbGroupPath!.URLByAppendingPathComponent(KF_EVENT_SQL)
         
-        return dbPath
+        return dbGroupPath?.path
     }
 }
 

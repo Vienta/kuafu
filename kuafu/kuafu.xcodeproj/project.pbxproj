@@ -15,6 +15,7 @@
 		6FE710741147B8DE7F93DF45 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		74570A0A46D5EC78E8AE4717 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 		B30BAF521B62831700EC8400 /* KFWatchEvensTableHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */; };
+		B31018451B67366B0011B242 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
 		B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A411B2133490093E6B5 /* KFAppDelegate.swift */; };
 		B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A471B2133A70093E6B5 /* KFEventViewController.swift */; };
 		B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3164A4E1B2133F50093E6B5 /* Images.xcassets */; };
@@ -61,6 +62,13 @@
 		B36FCA271B613CF30018C6DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA261B613CF30018C6DA /* Images.xcassets */; };
 		B36FCA2A1B613CF30018C6DA /* kuafu WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B36FCA121B613CF30018C6DA /* kuafu WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B36FCA351B61E46F0018C6DA /* KFWatchEventsTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */; };
+		B37731541B63020D0059F4F6 /* KFEventDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9C1B2153C40097AD26 /* KFEventDAO.swift */; };
+		B37731551B63025A0059F4F6 /* KFBaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A5A1B21371D0093E6B5 /* KFBaseDAO.swift */; };
+		B37731561B6302660059F4F6 /* KFDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A5D1B2138950093E6B5 /* KFDBManager.swift */; };
+		B37731571B63026F0059F4F6 /* KFUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A601B213BF70093E6B5 /* KFUtil.swift */; };
+		B37731581B63027C0059F4F6 /* KFEventDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433BA11B217B120097AD26 /* KFEventDO.swift */; };
+		B37731591B6302870059F4F6 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
+		B377315A1B63028F0059F4F6 /* KFBaseModelDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */; };
 		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
 		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
 		B3A8F5711B5FD423005ADFD9 /* Version_1.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3A8F5701B5FD423005ADFD9 /* Version_1.0.txt */; };
@@ -663,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36FCA191B613CF30018C6DA /* Images.xcassets in Resources */,
+				B31018451B67366B0011B242 /* Localizable.strings in Resources */,
 				B36FCA1D1B613CF30018C6DA /* kuafu WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -851,9 +860,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37731581B63027C0059F4F6 /* KFEventDO.swift in Sources */,
+				B37731591B6302870059F4F6 /* KFConstant.swift in Sources */,
+				B37731561B6302660059F4F6 /* KFDBManager.swift in Sources */,
+				B37731541B63020D0059F4F6 /* KFEventDAO.swift in Sources */,
 				B36FCA171B613CF30018C6DA /* InterfaceController.swift in Sources */,
 				B30BAF521B62831700EC8400 /* KFWatchEvensTableHeaderController.swift in Sources */,
+				B37731551B63025A0059F4F6 /* KFBaseDAO.swift in Sources */,
 				B36FCA351B61E46F0018C6DA /* KFWatchEventsTableRowController.swift in Sources */,
+				B377315A1B63028F0059F4F6 /* KFBaseModelDO.swift in Sources */,
+				B37731571B63026F0059F4F6 /* KFUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

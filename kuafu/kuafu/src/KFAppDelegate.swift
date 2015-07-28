@@ -73,6 +73,10 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         
         completionHandler()
     }
+    
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        println("~~~~application watchextension userInfo:\(userInfo)")
+    }
 
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.

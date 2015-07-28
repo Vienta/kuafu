@@ -13,7 +13,7 @@
                         <table alignment="left" id="Dv5-Lp-yRG">
                             <items>
                                 <tableRow identifier="KFWatchEventsTableRowController" id="ftg-kZ-Pro" customClass="KFWatchEventsTableRowController" customModule="kuafu_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="9AK-aB-HfZ">
+                                    <group key="rootItem" width="1" alignment="left" radius="1" id="9AK-aB-HfZ">
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="wAH-qC-6KF"/>
                                         </items>
@@ -25,8 +25,12 @@
                                 <tableRow identifier="KFWatchEvensTableHeaderController" id="qPD-Sg-1kw" customClass="KFWatchEvensTableHeaderController" customModule="kuafu_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="b83-pL-W4c">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="ats-3x-hOU"/>
+                                            <label alignment="left" verticalAlignment="center" text="日常任务" textAlignment="left" numberOfLines="0" id="ats-3x-hOU">
+                                                <color key="textColor" red="0.0" green="0.77647058820000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
                                         </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </group>
                                     <connections>
                                         <outlet property="lblHeader" destination="ats-3x-hOU" id="2pb-gy-FLh"/>
