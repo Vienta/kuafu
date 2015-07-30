@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController,NSFilePresenter {
 
     @IBOutlet weak var tbvEvent: WKInterfaceTable!
     
@@ -20,13 +20,27 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         // Configure interface objects here.
+        NSFileCoordinator.addFilePresenter(self)
     }
-    // MARK: - Life Cycle
-    override func willActivate() {
-
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    
+    // MARK: - NSFilePresenter
+    var presentedItemURL: NSURL? {
+        var dbGroupPath =  NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(KF_GROUP_ID)
+        dbGroupPath = dbGroupPath!.URLByAppendingPathComponent(KF_EVENT_SQL)
+        return dbGroupPath
+    }
+    
+    var presentedItemOperationQueue: NSOperationQueue {
         
+        return NSOperationQueue.mainQueue()
+    }
+    
+    func presentedItemDidChange() {
+        self.updateTasks()
+    }
+    
+    // MARK: - Private Methods
+    func updateTasks() {
         self.watchEvents = NSMutableArray(capacity: 0)
         self.watchData = NSMutableArray(capacity: 0)
         //逾期任务  以下为冗余代码
@@ -112,6 +126,14 @@ class InterfaceController: WKInterfaceController {
                 header.lblHeader.setText(headerTitle)
             }
         }
+    }
+    
+    // MARK: - Life Cycle
+    override func willActivate() {
+
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+        self.updateTasks()
     }
 
     override func didDeactivate() {

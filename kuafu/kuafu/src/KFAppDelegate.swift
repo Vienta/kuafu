@@ -75,7 +75,7 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
-        println("~~~~application watchextension userInfo:\(userInfo)")
+        NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_UPDATE_TASK, object: nil)
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -101,8 +101,6 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         let nav = self.window?.rootViewController as! UINavigationController
         return nav.viewControllers[0] as! UIViewController
     }
-
-    
 }
 
 /*

@@ -144,6 +144,18 @@
 #define COCOAPODS_VERSION_MINOR_MKFoundationKit_Stack 3
 #define COCOAPODS_VERSION_PATCH_MKFoundationKit_Stack 0
 
+// MMWormhole
+#define COCOAPODS_POD_AVAILABLE_MMWormhole
+#define COCOAPODS_VERSION_MAJOR_MMWormhole 1
+#define COCOAPODS_VERSION_MINOR_MMWormhole 2
+#define COCOAPODS_VERSION_PATCH_MMWormhole 0
+
+// MMWormhole/Core
+#define COCOAPODS_POD_AVAILABLE_MMWormhole_Core
+#define COCOAPODS_VERSION_MAJOR_MMWormhole_Core 1
+#define COCOAPODS_VERSION_MINOR_MMWormhole_Core 2
+#define COCOAPODS_VERSION_PATCH_MMWormhole_Core 0
+
 // NJKWebViewProgress
 #define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress
 #define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress 0

@@ -16,14 +16,25 @@ class KFWatchEventDetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var btnDelete: WKInterfaceButton!
     @IBOutlet weak var btnComplete: WKInterfaceButton!
     @IBOutlet weak var lblDate: WKInterfaceLabel!
+    var currentEvent: KFEventDO!
     // MARK: - Life Cycle
     
     @IBAction func btnDeleteTask() {
-        
+        self.currentEvent.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
+        KFEventDAO.sharedManager.saveEvent(self.currentEvent)
+        WKInterfaceController.openParentApplication(["updatetask": true], reply: { (result, error) -> Void in
+            
+        })
+        self.popController()
     }
     
     @IBAction func btnCompleteTask() {
-        
+        self.currentEvent.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
+        KFEventDAO.sharedManager.saveEvent(self.currentEvent)
+        WKInterfaceController.openParentApplication(["updatetask": true], reply: { (result, error) -> Void in
+            
+        })
+        self.popController()
     }
     
     override func awakeWithContext(context: AnyObject?) {
@@ -31,6 +42,7 @@ class KFWatchEventDetailInterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         var eventDO:KFEventDO = context as! KFEventDO
+        self.currentEvent = eventDO
         self.lblTask.setText(eventDO.content)
         self.dueDate(eventDO)
     }
