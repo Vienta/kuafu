@@ -22,7 +22,7 @@ class KFWatchEventDetailInterfaceController: WKInterfaceController {
     @IBAction func btnDeleteTask() {
         self.currentEvent.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
         KFEventDAO.sharedManager.saveEvent(self.currentEvent)
-        WKInterfaceController.openParentApplication(["updatetask": true], reply: { (result, error) -> Void in
+        WKInterfaceController.openParentApplication([KF_WK_OPEN_PARENT_APPLICATION_DELETE_TASK: self.currentEvent.eventid], reply: { (result, error) -> Void in
             
         })
         self.popController()
@@ -31,7 +31,7 @@ class KFWatchEventDetailInterfaceController: WKInterfaceController {
     @IBAction func btnCompleteTask() {
         self.currentEvent.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
         KFEventDAO.sharedManager.saveEvent(self.currentEvent)
-        WKInterfaceController.openParentApplication(["updatetask": true], reply: { (result, error) -> Void in
+        WKInterfaceController.openParentApplication([KF_WK_OPEN_PARENT_APPLICATION_ARCHIVE_TASK: self.currentEvent.eventid], reply: { (result, error) -> Void in
             
         })
         self.popController()

@@ -43,3 +43,4 @@
 "KF_FEEDBACK" = "反馈";
 "KF_ABOUT" = "关于";
 "KF_UNKOWN_TITLE" = "无标题任务";
+"KF_NO_REMIND" = "不设提醒时间";

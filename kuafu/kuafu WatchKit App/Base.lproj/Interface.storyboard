@@ -5,11 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--夸父-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="kuafu_WatchKit_App" customModuleProvider="target">
+                <controller title="夸父" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="kuafu_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <label alignment="center" verticalAlignment="center" text="用力按下创建任务" textAlignment="center" numberOfLines="0" id="8oJ-yM-tBb"/>
                         <table alignment="left" id="Dv5-Lp-yRG">
                             <items>
                                 <tableRow identifier="KFWatchEventsTableRowController" id="ftg-kZ-Pro" customClass="KFWatchEventsTableRowController" customModule="kuafu_WatchKit_Extension">
@@ -42,11 +43,22 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="Gw2-BU-bOd">
+                        <items>
+                            <menuItem title="新建任务" icon="add" id="1CG-sH-Hng">
+                                <connections>
+                                    <action selector="menuTapped" destination="AgC-eL-Hgc" id="Snk-X0-4rM"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
+                        <outlet property="lblTips" destination="8oJ-yM-tBb" id="JFF-GY-vTg"/>
                         <outlet property="tbvEvent" destination="Dv5-Lp-yRG" id="NbS-WQ-wnk"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="679" y="320"/>
         </scene>
         <!--任务列表-->
         <scene sceneID="gmT-nv-XoQ">
@@ -88,7 +100,41 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="674" y="333"/>
+            <point key="canvasLocation" x="1006" y="319.5"/>
+        </scene>
+        <!--语言输入-->
+        <scene sceneID="K1v-Wb-5vF">
+            <objects>
+                <controller title="语言输入" id="j6j-7O-5e4" customClass="KFWatchDictationInterfaceController" customModule="kuafu_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="684"/>
+        </scene>
+        <!--选择提醒时间-->
+        <scene sceneID="nG2-LM-pYn">
+            <objects>
+                <controller identifier="dayInterval" title="选择提醒时间" id="Qmc-sJ-TBf" customClass="KFWatchTimeSelectorInterfaceController" customModule="kuafu_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="j1f-do-Ys2">
+                            <items>
+                                <tableRow identifier="KFWatchTimeSelectorCell" id="rhb-36-d8f" customClass="KFWatchTimeSelectorCell" customModule="kuafu_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="wSN-FR-tSM">
+                                        <items>
+                                            <label width="1" height="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="uK1-yC-S2e"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblSelectorTime" destination="uK1-yC-S2e" id="erM-Vs-MSi"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tbvDayInterval" destination="j1f-do-Ys2" id="OOs-se-tSW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="679" y="684"/>
         </scene>
     </scenes>
 </document>

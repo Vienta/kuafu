@@ -31,6 +31,11 @@ let KF_NOTIFICATION_UPDATE_TASK = "KFNotificationUpdateTask"
 let KF_NOTIFICATION_SHAKE = "KFNotificationShake"
 let KF_NOTIFICATION_SHAKE_VALUE_CHANGED = "KFNotificationShakeValueChanged"
 
+//openParentApplication_
+let KF_WK_OPEN_PARENT_APPLICATION_NEW_TASK = "newTask"
+let KF_WK_OPEN_PARENT_APPLICATION_DELETE_TASK = "deleteTask"
+let KF_WK_OPEN_PARENT_APPLICATION_ARCHIVE_TASK = "archiveTask"
+
 // MARK: - SettingsKey
 let KF_EVENTKIT_ACCEES_GRANTED = "KFEventKitAccessGrandted"
 let KF_EVENTKIT_SELECTED_CALENDAR = "KFEventKitSelectedCalendar"

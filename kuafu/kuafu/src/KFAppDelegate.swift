@@ -12,7 +12,8 @@ import UIKit
 class KFAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = KF_THEME_COLOR
@@ -29,6 +30,7 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
 
         KFMotionManager.sharedManager.startAccerometer()
         
+               
         return true
     }
 
@@ -75,6 +77,12 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+
+        let userInfoEventId = userInfo?.values.array[0] as! NSNumber
+        var targetEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(userInfoEventId)!
+        KFLocalPushManager.sharedManager.deleteLocalPushWithEvent(targetEventDO)
+        KFLocalPushManager.sharedManager.registerLocaPushWithEvent(targetEventDO)
+        
         NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_UPDATE_TASK, object: nil)
     }
 

@@ -91,6 +91,9 @@
 		B3F2C53A1B57272100E3DBB6 /* KFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */; };
 		B3F59A9D1B5C95AA00E491E6 /* KFAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F59A9C1B5C95AA00E491E6 /* KFAvailability.swift */; };
 		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
+		B3FAADB51B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAADB41B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift */; };
+		B3FAADB71B69F4C10072CA2B /* KFWatchDictationInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAADB61B69F4C10072CA2B /* KFWatchDictationInterfaceController.swift */; };
+		B3FAADB91B6A43F90072CA2B /* KFWatchTimeSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAADB81B6A43F90072CA2B /* KFWatchTimeSelectorCell.swift */; };
 		B3FE73181B541238008FB3BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3FE731A1B541238008FB3BB /* InfoPlist.strings */; };
 		EF433E223C2BCFD19BB06AF2 /* (null) in Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -219,6 +222,9 @@
 		B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSettingsViewController.swift; sourceTree = "<group>"; };
 		B3F59A9C1B5C95AA00E491E6 /* KFAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAvailability.swift; sourceTree = "<group>"; };
 		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
+		B3FAADB41B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchTimeSelectorInterfaceController.swift; sourceTree = "<group>"; };
+		B3FAADB61B69F4C10072CA2B /* KFWatchDictationInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchDictationInterfaceController.swift; sourceTree = "<group>"; };
+		B3FAADB81B6A43F90072CA2B /* KFWatchTimeSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchTimeSelectorCell.swift; sourceTree = "<group>"; };
 		B3FE73191B541238008FB3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E136FEE5C76217550A54A74A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -456,6 +462,9 @@
 				B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */,
 				B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */,
 				B31018471B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift */,
+				B3FAADB41B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift */,
+				B3FAADB81B6A43F90072CA2B /* KFWatchTimeSelectorCell.swift */,
+				B3FAADB61B69F4C10072CA2B /* KFWatchDictationInterfaceController.swift */,
 				B36FCA181B613CF30018C6DA /* Images.xcassets */,
 				B36FCA141B613CF30018C6DA /* Supporting Files */,
 			);
@@ -873,6 +882,9 @@
 				B36FCA171B613CF30018C6DA /* InterfaceController.swift in Sources */,
 				B30BAF521B62831700EC8400 /* KFWatchEvensTableHeaderController.swift in Sources */,
 				B37731551B63025A0059F4F6 /* KFBaseDAO.swift in Sources */,
+				B3FAADB91B6A43F90072CA2B /* KFWatchTimeSelectorCell.swift in Sources */,
+				B3FAADB71B69F4C10072CA2B /* KFWatchDictationInterfaceController.swift in Sources */,
+				B3FAADB51B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift in Sources */,
 				B36FCA351B61E46F0018C6DA /* KFWatchEventsTableRowController.swift in Sources */,
 				B377315A1B63028F0059F4F6 /* KFBaseModelDO.swift in Sources */,
 				B37731571B63026F0059F4F6 /* KFUtil.swift in Sources */,
