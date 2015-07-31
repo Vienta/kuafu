@@ -210,7 +210,7 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
         super.awakeWithContext(context)
         // Configure interface objects here.
         NSFileCoordinator.addFilePresenter(self)
-        updateUserActivity(KF_HANDOFF_ACTIVITY_TYPE, userInfo: [KF_HANDOFF_ACTIVITY_KEY:"test"], webpageURL: nil)
+        updateUserActivity(KF_HANDOFF_ACTIVITY_TYPE, userInfo: [KF_HANDOFF_ACTIVITY_KEY:true], webpageURL: nil)
     }
 
     override func didDeactivate() {

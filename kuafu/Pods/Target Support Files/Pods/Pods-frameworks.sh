@@ -56,7 +56,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'MGSwipeTableCell.framework'
   install_framework 'MKEventKit.framework'
   install_framework 'MKFoundationKit.framework'
-  install_framework 'MMWormhole.framework'
   install_framework 'NJKWebViewProgress.framework'
   install_framework 'SnapKit.framework'
 fi
@@ -69,7 +68,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'MGSwipeTableCell.framework'
   install_framework 'MKEventKit.framework'
   install_framework 'MKFoundationKit.framework'
-  install_framework 'MMWormhole.framework'
   install_framework 'NJKWebViewProgress.framework'
   install_framework 'SnapKit.framework'
 fi
