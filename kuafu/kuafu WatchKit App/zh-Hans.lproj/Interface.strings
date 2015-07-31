@@ -1,0 +1,39 @@
+
+/* Class = "WKInterfaceMenuItem"; title = "新建任务"; ObjectID = "1CG-sH-Hng"; */
+"1CG-sH-Hng.title" = "新建任务";
+
+/* Class = "WKInterfaceController"; title = "任务列表"; ObjectID = "2yO-WG-yqe"; */
+"2yO-WG-yqe.title" = "任务列表";
+
+/* Class = "WKInterfaceButton"; title = "标记为完成"; ObjectID = "4ux-4H-ypv"; */
+"4ux-4H-ypv.title" = "标记为完成";
+
+/* Class = "WKInterfaceLabel"; text = "用力按下创建任务"; ObjectID = "8oJ-yM-tBb"; */
+"8oJ-yM-tBb.text" = "用力按下创建任务";
+
+/* Class = "WKInterfaceController"; title = "夸父"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "夸父";
+
+/* Class = "WKInterfaceController"; title = "选择提醒时间"; ObjectID = "Qmc-sJ-TBf"; */
+"Qmc-sJ-TBf.title" = "选择提醒时间";
+
+/* Class = "WKInterfaceLabel"; text = "2015年9月23"; ObjectID = "XdE-uY-MEs"; */
+"XdE-uY-MEs.text" = "2015年9月23";
+
+/* Class = "WKInterfaceButton"; title = "删 除"; ObjectID = "Z66-GI-3ld"; */
+"Z66-GI-3ld.title" = "删 除";
+
+/* Class = "WKInterfaceLabel"; text = "日常任务"; ObjectID = "ats-3x-hOU"; */
+"ats-3x-hOU.text" = "日常任务";
+
+/* Class = "WKInterfaceLabel"; text = "这里是任务清单列表真的"; ObjectID = "auE-Sg-C5T"; */
+"auE-Sg-C5T.text" = "这里是任务清单列表真的";
+
+/* Class = "WKInterfaceController"; title = "语言输入"; ObjectID = "j6j-7O-5e4"; */
+"j6j-7O-5e4.title" = "语言输入";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "uK1-yC-S2e"; */
+"uK1-yC-S2e.text" = "Label";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "wAH-qC-6KF"; */
+"wAH-qC-6KF.text" = "Label";

@@ -5,12 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--夸父-->
+        <!--KuaFu-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="夸父" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="kuafu_WatchKit_App" customModuleProvider="target">
+                <controller title="KuaFu" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="kuafu_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="用力按下创建任务" textAlignment="center" numberOfLines="0" id="8oJ-yM-tBb"/>
+                        <label alignment="center" verticalAlignment="center" text="Force Touch New Task" textAlignment="center" numberOfLines="0" id="8oJ-yM-tBb"/>
                         <table alignment="left" id="Dv5-Lp-yRG">
                             <items>
                                 <tableRow identifier="KFWatchEventsTableRowController" id="ftg-kZ-Pro" customClass="KFWatchEventsTableRowController" customModule="kuafu_WatchKit_Extension">
@@ -29,7 +29,7 @@
                                 <tableRow identifier="KFWatchEvensTableHeaderController" id="qPD-Sg-1kw" customClass="KFWatchEvensTableHeaderController" customModule="kuafu_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="b83-pL-W4c">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="日常任务" textAlignment="left" numberOfLines="0" id="ats-3x-hOU">
+                                            <label alignment="left" verticalAlignment="center" text="Daily Task" textAlignment="left" numberOfLines="0" id="ats-3x-hOU">
                                                 <color key="textColor" red="0.0" green="0.77647058820000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                             </label>
@@ -79,13 +79,13 @@
                                 </label>
                             </items>
                         </group>
-                        <button width="1" alignment="center" title="标记为完成" id="4ux-4H-ypv">
+                        <button width="1" alignment="center" title="Archieve" id="4ux-4H-ypv">
                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="btnCompleteTask" destination="2yO-WG-yqe" id="I1J-pb-CGQ"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="center" title="删 除" id="Z66-GI-3ld">
+                        <button width="1" alignment="center" title="Delete" id="Z66-GI-3ld">
                             <color key="titleColor" red="0.95290683178191493" green="0.041740841507711381" blue="0.017670815484499079" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="btnDeleteTask" destination="2yO-WG-yqe" id="lnk-hP-FdC"/>
@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="1013" y="684"/>
         </scene>
-        <!--选择提醒时间-->
+        <!--Select Remind Time-->
         <scene sceneID="nG2-LM-pYn">
             <objects>
-                <controller identifier="dayInterval" title="选择提醒时间" id="Qmc-sJ-TBf" customClass="KFWatchTimeSelectorInterfaceController" customModule="kuafu_WatchKit_Extension">
+                <controller identifier="dayInterval" title="Select Remind Time" id="Qmc-sJ-TBf" customClass="KFWatchTimeSelectorInterfaceController" customModule="kuafu_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="j1f-do-Ys2">
                             <items>

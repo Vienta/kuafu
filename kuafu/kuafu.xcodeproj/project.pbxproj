@@ -162,6 +162,8 @@
 		B318FE9C1B59D145007609B5 /* KFLisenceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFLisenceDetailViewController.xib; sourceTree = "<group>"; };
 		B318FE9F1B59D9AC007609B5 /* KFAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAboutViewController.swift; sourceTree = "<group>"; };
 		B318FEA01B59D9AC007609B5 /* KFAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFAboutViewController.xib; sourceTree = "<group>"; };
+		B32798E51B6B051300617CE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
+		B32798E81B6B051700617CE9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		B335B07C1B5A5A40005C4CD2 /* KFWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWebViewController.swift; sourceTree = "<group>"; };
 		B335B07D1B5A5A40005C4CD2 /* KFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFWebViewController.xib; sourceTree = "<group>"; };
 		B33E66F61B207E4600F86927 /* kuafu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kuafu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -926,6 +928,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				B36FCA241B613CF30018C6DA /* Base */,
+				B32798E51B6B051300617CE9 /* en */,
+				B32798E81B6B051700617CE9 /* zh-Hans */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1129,8 +1133,8 @@
 			baseConfigurationReference = 223E9605AF28654DB569D731 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "kuafu WatchKit Extension/kuafu WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1139,7 +1143,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7s";
 			};
@@ -1150,13 +1154,13 @@
 			baseConfigurationReference = E136FEE5C76217550A54A74A /* Pods.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "kuafu WatchKit Extension/kuafu WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "kuafu WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7s";
 			};
