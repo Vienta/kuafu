@@ -1008,7 +1008,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
+				PROVISIONING_PROFILE = "d03940a3-e42c-4983-9ea1-bee1fbb2bf94";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1050,7 +1050,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
+				PROVISIONING_PROFILE = "d03940a3-e42c-4983-9ea1-bee1fbb2bf94";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1069,7 +1069,7 @@
 				INFOPLIST_FILE = kuafu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
+				PROVISIONING_PROFILE = "d03940a3-e42c-4983-9ea1-bee1fbb2bf94";
 			};
 			name = Debug;
 		};
@@ -1084,7 +1084,7 @@
 				INFOPLIST_FILE = kuafu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
+				PROVISIONING_PROFILE = "d03940a3-e42c-4983-9ea1-bee1fbb2bf94";
 			};
 			name = Release;
 		};
@@ -1105,7 +1105,7 @@
 				INFOPLIST_FILE = kuafuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
+				PROVISIONING_PROFILE = "d03940a3-e42c-4983-9ea1-bee1fbb2bf94";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kuafu.app/kuafu";
 			};
 			name = Debug;
@@ -1123,7 +1123,7 @@
 				INFOPLIST_FILE = kuafuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ff06309f-9556-4d1d-af36-70f0804933eb";
+				PROVISIONING_PROFILE = "d03940a3-e42c-4983-9ea1-bee1fbb2bf94";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kuafu.app/kuafu";
 			};
 			name = Release;
@@ -1133,8 +1133,8 @@
 			baseConfigurationReference = 223E9605AF28654DB569D731 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "kuafu WatchKit Extension/kuafu WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yongxing shu (E3Q4M27Q67)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1143,7 +1143,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4dd2993c-e2fa-4468-b218-bf4b0a75c09b";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7s";
 			};
@@ -1154,13 +1154,13 @@
 			baseConfigurationReference = E136FEE5C76217550A54A74A /* Pods.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "kuafu WatchKit Extension/kuafu WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "kuafu WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4dd2993c-e2fa-4468-b218-bf4b0a75c09b";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7s";
 			};
@@ -1178,7 +1178,7 @@
 				INFOPLIST_FILE = "kuafu WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
+				PROVISIONING_PROFILE = "4dd2993c-e2fa-4468-b218-bf4b0a75c09b";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1194,7 +1194,7 @@
 				INFOPLIST_FILE = "kuafu WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "aea21800-c79c-4407-83dc-bcff7ea90669";
+				PROVISIONING_PROFILE = "4dd2993c-e2fa-4468-b218-bf4b0a75c09b";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";

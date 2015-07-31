@@ -84,7 +84,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ifp-U4-IAY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ifp-U4-IAY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -94,6 +94,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ifp-U4-IAY" firstAttribute="leading" secondItem="hjy-JH-mB3" secondAttribute="leading" id="FiR-L8-LDQ"/>
+                            <constraint firstItem="Ifp-U4-IAY" firstAttribute="top" secondItem="hjy-JH-mB3" secondAttribute="top" id="H6L-2a-dMd"/>
+                            <constraint firstAttribute="trailing" secondItem="Ifp-U4-IAY" secondAttribute="trailing" id="cHk-Rk-Rkh"/>
+                            <constraint firstAttribute="bottom" secondItem="Ifp-U4-IAY" secondAttribute="bottom" id="jo2-gZ-tGT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tZ5-Dx-sAg"/>
                     <connections>
