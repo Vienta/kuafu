@@ -31,10 +31,14 @@ let KF_NOTIFICATION_UPDATE_TASK = "KFNotificationUpdateTask"
 let KF_NOTIFICATION_SHAKE = "KFNotificationShake"
 let KF_NOTIFICATION_SHAKE_VALUE_CHANGED = "KFNotificationShakeValueChanged"
 
-//openParentApplication_
+// MARK: - WatchKit
 let KF_WK_OPEN_PARENT_APPLICATION_NEW_TASK = "newTask"
 let KF_WK_OPEN_PARENT_APPLICATION_DELETE_TASK = "deleteTask"
 let KF_WK_OPEN_PARENT_APPLICATION_ARCHIVE_TASK = "archiveTask"
+
+// MARK: - Handoff
+let KF_HANDOFF_ACTIVITY_TYPE = "com.vienta.kuafu.handoff"
+let KF_HANDOFF_ACTIVITY_KEY = "kuafu.handoff.key"
 
 // MARK: - SettingsKey
 let KF_EVENTKIT_ACCEES_GRANTED = "KFEventKitAccessGrandted"
@@ -53,6 +57,18 @@ let KF_MY_BLOG = "http://www.vienta.me/"
 let KF_PROJECT_URL = "https://github.com/Vienta/kuafu"
 let KF_GROUP_ID = "group.com.vienta.kuafu.watch"
 
+// MARK: - Enum
+enum kTapStyle :Int {
+    case Alert
+    case DateTo
+}
+
+enum KEventStatus :Int {
+    case Normal
+    case Delete
+    case Achieve
+    case Overdue
+}
 
 // MARK: - Global Methods
 var KF_SETTINGS: Dictionary<String, String> = [
@@ -87,17 +103,7 @@ func DELAY(delay:Double, closure:()->()) {
         dispatch_get_main_queue(), closure)
 }
 
-enum kTapStyle :Int {
-    case Alert
-    case DateTo
-}
 
-enum KEventStatus :Int {
-    case Normal
-    case Delete
-    case Achieve
-    case Overdue
-}
 
 class KFConstant: NSObject {
    

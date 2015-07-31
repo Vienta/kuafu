@@ -145,7 +145,6 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
             shakeSwith.addTarget(self, action: "switchValueChanged:", forControlEvents: UIControlEvents.TouchUpInside)
             settingsCell.accessoryView = shakeSwith
         }
-        
         return settingsCell
     }
     

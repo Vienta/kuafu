@@ -75,15 +75,24 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         
         completionHandler()
     }
-    
+    // MARK: - Handle WatchKit Request
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
 
-        let userInfoEventId = userInfo?.values.array[0] as! NSNumber
-        var targetEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(userInfoEventId)!
-        KFLocalPushManager.sharedManager.deleteLocalPushWithEvent(targetEventDO)
-        KFLocalPushManager.sharedManager.registerLocaPushWithEvent(targetEventDO)
+        let userInfoKey = userInfo?.keys.array[0]
+        if (userInfoKey == KF_WK_OPEN_PARENT_APPLICATION_NEW_TASK) {
+            let userInfoEventId = userInfo?.values.array[0] as! NSNumber
+            var targetEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(userInfoEventId)!
+            KFLocalPushManager.sharedManager.deleteLocalPushWithEvent(targetEventDO)
+            KFLocalPushManager.sharedManager.registerLocaPushWithEvent(targetEventDO)
+        }
         
         NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_UPDATE_TASK, object: nil)
+    }
+    // MARK: - Handoff
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]!) -> Void) -> Bool {
+
+        println("userActivity.userInfo:\(userActivity.userInfo)")
+        return true
     }
 
     func applicationDidEnterBackground(application: UIApplication) {

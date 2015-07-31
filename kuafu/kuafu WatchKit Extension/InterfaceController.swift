@@ -79,6 +79,12 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
         })
     }
     
+//    func startUserActivity() {
+//        let activity = NSUserActivity(activityType: KF_HANDOFF_ACTIVITY_TYPE)
+//        activity.title = "watch handoff"
+//        activity.userInfo = [KF_HANDOFF_ACTIVITY_KEY:"test"]
+//    }
+    
     // MARK: - NSFilePresenter
     var presentedItemURL: NSURL? {
         var dbGroupPath =  NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(KF_GROUP_ID)
@@ -204,6 +210,7 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
         super.awakeWithContext(context)
         // Configure interface objects here.
         NSFileCoordinator.addFilePresenter(self)
+        updateUserActivity(KF_HANDOFF_ACTIVITY_TYPE, userInfo: [KF_HANDOFF_ACTIVITY_KEY:"test"], webpageURL: nil)
     }
 
     override func didDeactivate() {
