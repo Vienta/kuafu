@@ -42,19 +42,18 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func openEmailFeedback() -> Void {
-        var canSendEmail: Bool = MFMailComposeViewController.canSendMail()
-        if (canSendEmail) {
-            var mailComposeViewController: MFMailComposeViewController = MFMailComposeViewController()
-            mailComposeViewController.mailComposeDelegate = self
-        
+        var mailComposeViewController: MFMailComposeViewController? = MFMailComposeViewController()
+        if (mailComposeViewController != nil) {
+            mailComposeViewController!.mailComposeDelegate = self
+            
             var toRecipients: Array = [KF_MY_EMAIL]
-            mailComposeViewController.setToRecipients(toRecipients)
-                
+            mailComposeViewController!.setToRecipients(toRecipients)
+            
             
             var emailBody: String = "\(DeviceGuru.hardwareString())|\(APP_DISPLAY_NAME)|Version:\(APP_VERSION)"
-            mailComposeViewController.setMessageBody(emailBody, isHTML: true)
+            mailComposeViewController!.setMessageBody(emailBody, isHTML: true)
             
-            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+            self.presentViewController(mailComposeViewController!, animated: true, completion: nil)
         }
     }
     
