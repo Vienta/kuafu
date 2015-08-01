@@ -41,8 +41,12 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        print("didReceiveLocalNotification:\(notification) alertBody:\(notification.alertBody)")
-        KFLocalPushManager.sharedManager.handleNotification(notification)
+        println("didReceiveLocalNotification:\(notification) alertBody:\(notification.alertBody)")
+        println("app state:\(UIApplication.sharedApplication().applicationState)")
+        
+        if (UIApplication.sharedApplication().applicationState == UIApplicationState.Active) {
+            KFLocalPushManager.sharedManager.handleNotification(notification)
+        }
     }
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
