@@ -11,7 +11,6 @@ import ObjectiveC
 import MGSwipeTableCell
 import MKEventKit
 import DAAlertController
-import MMWormhole
 
 
 var kAssociateRowKey: UInt8 = 1
@@ -24,7 +23,6 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     var pullCalendar: KFPullCalendarView!
     var pullCalendarFlag: Bool!
     var animationController: ZoomTransition?
-    var wormhole: MMWormhole!
     
     
     var events: NSMutableArray!
@@ -72,22 +70,6 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: { (granted, error) -> Void in
                 println("granted:\(granted)")
             })
-        })
-        
-        self.wormhole = MMWormhole(applicationGroupIdentifier: KF_GROUP_ID, optionalDirectory: "wormhole")
-        self.wormhole.listenForMessageWithIdentifier("kf_watch_task_noti_identifier", listener: { (msgObjc) -> Void in
-            println("lisent msg:\(msgObjc)")
-            let userInfo: NSDictionary = msgObjc as! NSDictionary
-//            let actionString = userInfo.objectForKey("action") as! String
-            var actionEvent: KFEventDO = userInfo.objectForKey("event") as! KFEventDO
-//            if (actionString == "delete") {
-                actionEvent.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
-                KFEventDAO.sharedManager.saveEvent(actionEvent)
-//            } else if (actionEvent == "complete") {
-//                actionEvent.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
-//                KFEventDAO.sharedManager.saveEvent(actionEvent)
-//            }
-            self.tbvEvents.reloadData()
         })
     }
     

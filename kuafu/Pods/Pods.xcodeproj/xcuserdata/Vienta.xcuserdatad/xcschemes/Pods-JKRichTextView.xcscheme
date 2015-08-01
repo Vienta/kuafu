@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E08DC855BC1769D597B75123"
+               BlueprintIdentifier = "B4D3B074C3AE915116D47748"
                BuildableName = "JKRichTextView.framework"
                BlueprintName = "Pods-JKRichTextView"
                ReferencedContainer = "container:Pods.xcodeproj">
