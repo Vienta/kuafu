@@ -60,7 +60,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     func openAppStore() -> Void {
         var storeProductViewController: SKStoreProductViewController = SKStoreProductViewController()
         storeProductViewController.delegate = self
-        storeProductViewController.loadProductWithParameters([SKStoreProductParameterITunesItemIdentifier: "594467299"], completionBlock: { (result, error) -> Void in
+        storeProductViewController.loadProductWithParameters([SKStoreProductParameterITunesItemIdentifier: KF_ITUNES_ITEM_IDENTIFIER], completionBlock: { (result, error) -> Void in
             println("product error:\(error)")
             if (error == nil) {
             }

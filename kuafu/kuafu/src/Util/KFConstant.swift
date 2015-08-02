@@ -56,6 +56,7 @@ let KF_MY_EMAIL = "yongxingshu@foxmail.com"
 let KF_MY_BLOG = "http://www.vienta.me/"
 let KF_PROJECT_URL = "https://github.com/Vienta/kuafu"
 let KF_GROUP_ID = "group.com.vienta.kuafu.watch"
+let KF_ITUNES_ITEM_IDENTIFIER = "1024927740"
 
 // MARK: - Enum
 enum kTapStyle :Int {
