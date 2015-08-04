@@ -19,13 +19,10 @@
 		B31018461B67BC9B0011B242 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3164A4E1B2133F50093E6B5 /* Images.xcassets */; };
 		B31018481B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31018471B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift */; };
 		B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A411B2133490093E6B5 /* KFAppDelegate.swift */; };
-		B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A471B2133A70093E6B5 /* KFEventViewController.swift */; };
 		B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3164A4E1B2133F50093E6B5 /* Images.xcassets */; };
 		B3164A5B1B21371D0093E6B5 /* KFBaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A5A1B21371D0093E6B5 /* KFBaseDAO.swift */; };
 		B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A5D1B2138950093E6B5 /* KFDBManager.swift */; };
 		B3164A611B213BF70093E6B5 /* KFUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3164A601B213BF70093E6B5 /* KFUtil.swift */; };
-		B318FE851B59BEC3007609B5 /* KFLisenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318FE831B59BEC3007609B5 /* KFLisenceViewController.swift */; };
-		B318FE861B59BEC3007609B5 /* KFLisenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B318FE841B59BEC3007609B5 /* KFLisenceViewController.xib */; };
 		B318FE8A1B59C6AC007609B5 /* FMDB_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE891B59C6AC007609B5 /* FMDB_LICENSE.txt */; };
 		B318FE8C1B59C70E007609B5 /* SnapKit_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE8B1B59C70E007609B5 /* SnapKit_LICENSE.txt */; };
 		B318FE8E1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE8D1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt */; };
@@ -35,12 +32,6 @@
 		B318FE961B59C89B007609B5 /* DAAlertController_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE951B59C89B007609B5 /* DAAlertController_LICENSE.txt */; };
 		B318FE981B59C8F0007609B5 /* DeviceGuru_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE971B59C8F0007609B5 /* DeviceGuru_LICENSE.txt */; };
 		B318FE9A1B59C91D007609B5 /* ZoomTransition_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B318FE991B59C91D007609B5 /* ZoomTransition_LICENSE.txt */; };
-		B318FE9D1B59D145007609B5 /* KFLisenceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318FE9B1B59D145007609B5 /* KFLisenceDetailViewController.swift */; };
-		B318FE9E1B59D145007609B5 /* KFLisenceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B318FE9C1B59D145007609B5 /* KFLisenceDetailViewController.xib */; };
-		B318FEA11B59D9AC007609B5 /* KFAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318FE9F1B59D9AC007609B5 /* KFAboutViewController.swift */; };
-		B318FEA21B59D9AC007609B5 /* KFAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B318FEA01B59D9AC007609B5 /* KFAboutViewController.xib */; };
-		B335B07E1B5A5A40005C4CD2 /* KFWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335B07C1B5A5A40005C4CD2 /* KFWebViewController.swift */; };
-		B335B07F1B5A5A40005C4CD2 /* KFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B335B07D1B5A5A40005C4CD2 /* KFWebViewController.xib */; };
 		B33E67121B207E4600F86927 /* kuafuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33E67111B207E4600F86927 /* kuafuTests.swift */; };
 		B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9C1B2153C40097AD26 /* KFEventDAO.swift */; };
 		B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */; };
@@ -55,8 +46,6 @@
 		B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
 		B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
-		B36BBA0A1B5D00E60021B374 /* KFVersionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */; };
-		B36BBA0B1B5D00E60021B374 /* KFVersionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */; };
 		B36FCA171B613CF30018C6DA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FCA161B613CF30018C6DA /* InterfaceController.swift */; };
 		B36FCA191B613CF30018C6DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA181B613CF30018C6DA /* Images.xcassets */; };
 		B36FCA1D1B613CF30018C6DA /* kuafu WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA1C1B613CF30018C6DA /* kuafu WatchKit App.app */; };
@@ -71,11 +60,25 @@
 		B37731581B63027C0059F4F6 /* KFEventDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433BA11B217B120097AD26 /* KFEventDO.swift */; };
 		B37731591B6302870059F4F6 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
 		B377315A1B63028F0059F4F6 /* KFBaseModelDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3433B9F1B21722F0097AD26 /* KFBaseModelDO.swift */; };
-		B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */; };
-		B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */; };
 		B3A8F5711B5FD423005ADFD9 /* Version_1.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3A8F5701B5FD423005ADFD9 /* Version_1.0.txt */; };
-		B3A8F5741B5FD463005ADFD9 /* KFVersionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A8F5721B5FD463005ADFD9 /* KFVersionDetailViewController.swift */; };
-		B3A8F5751B5FD463005ADFD9 /* KFVersionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A8F5731B5FD463005ADFD9 /* KFVersionDetailViewController.xib */; };
+		B3BDA98D1B710F8100EF4D0D /* KFCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA9881B710F8100EF4D0D /* KFCalendarViewController.swift */; };
+		B3BDA98E1B710F8100EF4D0D /* KFCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA9891B710F8100EF4D0D /* KFCalendarViewController.xib */; };
+		B3BDA98F1B710F8100EF4D0D /* KFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA98A1B710F8100EF4D0D /* KFEventViewController.swift */; };
+		B3BDA9901B710F8100EF4D0D /* KFEventWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA98B1B710F8100EF4D0D /* KFEventWriteViewController.swift */; };
+		B3BDA9911B710F8100EF4D0D /* KFEventWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA98C1B710F8100EF4D0D /* KFEventWriteViewController.xib */; };
+		B3BDA99D1B710F8F00EF4D0D /* KFAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA9921B710F8F00EF4D0D /* KFAboutViewController.swift */; };
+		B3BDA99E1B710F8F00EF4D0D /* KFAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA9931B710F8F00EF4D0D /* KFAboutViewController.xib */; };
+		B3BDA99F1B710F8F00EF4D0D /* KFLisenceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA9941B710F8F00EF4D0D /* KFLisenceDetailViewController.swift */; };
+		B3BDA9A01B710F8F00EF4D0D /* KFLisenceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA9951B710F8F00EF4D0D /* KFLisenceDetailViewController.xib */; };
+		B3BDA9A11B710F8F00EF4D0D /* KFLisenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA9961B710F8F00EF4D0D /* KFLisenceViewController.swift */; };
+		B3BDA9A21B710F8F00EF4D0D /* KFLisenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA9971B710F8F00EF4D0D /* KFLisenceViewController.xib */; };
+		B3BDA9A31B710F8F00EF4D0D /* KFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA9981B710F8F00EF4D0D /* KFSettingsViewController.swift */; };
+		B3BDA9A41B710F8F00EF4D0D /* KFVersionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA9991B710F8F00EF4D0D /* KFVersionDetailViewController.swift */; };
+		B3BDA9A51B710F8F00EF4D0D /* KFVersionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA99A1B710F8F00EF4D0D /* KFVersionDetailViewController.xib */; };
+		B3BDA9A61B710F8F00EF4D0D /* KFVersionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA99B1B710F8F00EF4D0D /* KFVersionsViewController.swift */; };
+		B3BDA9A71B710F8F00EF4D0D /* KFVersionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA99C1B710F8F00EF4D0D /* KFVersionsViewController.xib */; };
+		B3BDA9AB1B710F9900EF4D0D /* KFWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDA9A91B710F9900EF4D0D /* KFWebViewController.swift */; };
+		B3BDA9AC1B710F9900EF4D0D /* KFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BDA9AA1B710F9900EF4D0D /* KFWebViewController.xib */; };
 		B3CA43181B58EB63000DA6FD /* DeviceGuru.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA43151B58EADC000DA6FD /* DeviceGuru.swift */; };
 		B3CA431B1B58FF89000DA6FD /* KFMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA431A1B58FF89000DA6FD /* KFMotionManager.swift */; };
 		B3CCC0B71B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3CCC0B61B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt */; };
@@ -83,12 +86,9 @@
 		B3D39B5C1B555F5600BE899D /* KFCalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */; };
 		B3DFE2201B4E5B4A00C520E0 /* KFPullCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */; };
 		B3DFE2221B4E5B5600C520E0 /* KFPullCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */; };
-		B3DFE2251B4E755000C520E0 /* KFCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */; };
-		B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */; };
 		B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */; };
 		B3F034C31B5FE64C0086C2BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F034BF1B5FE64C0086C2BA /* LaunchScreen.xib */; };
 		B3F034C41B5FE64C0086C2BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F034C11B5FE64C0086C2BA /* Main.storyboard */; };
-		B3F2C53A1B57272100E3DBB6 /* KFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */; };
 		B3F59A9D1B5C95AA00E491E6 /* KFAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F59A9C1B5C95AA00E491E6 /* KFAvailability.swift */; };
 		B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */; };
 		B3FAADB51B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAADB41B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift */; };
@@ -142,13 +142,10 @@
 		B30BAF511B62831700EC8400 /* KFWatchEvensTableHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEvensTableHeaderController.swift; sourceTree = "<group>"; };
 		B31018471B67BF370011B242 /* KFWatchEventDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEventDetailInterfaceController.swift; sourceTree = "<group>"; };
 		B3164A411B2133490093E6B5 /* KFAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAppDelegate.swift; sourceTree = "<group>"; };
-		B3164A471B2133A70093E6B5 /* KFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventViewController.swift; sourceTree = "<group>"; };
 		B3164A4E1B2133F50093E6B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = kuafu/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		B3164A5A1B21371D0093E6B5 /* KFBaseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFBaseDAO.swift; sourceTree = "<group>"; };
 		B3164A5D1B2138950093E6B5 /* KFDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFDBManager.swift; sourceTree = "<group>"; };
 		B3164A601B213BF70093E6B5 /* KFUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFUtil.swift; sourceTree = "<group>"; };
-		B318FE831B59BEC3007609B5 /* KFLisenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLisenceViewController.swift; sourceTree = "<group>"; };
-		B318FE841B59BEC3007609B5 /* KFLisenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFLisenceViewController.xib; sourceTree = "<group>"; };
 		B318FE891B59C6AC007609B5 /* FMDB_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FMDB_LICENSE.txt; sourceTree = "<group>"; };
 		B318FE8B1B59C70E007609B5 /* SnapKit_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SnapKit_LICENSE.txt; sourceTree = "<group>"; };
 		B318FE8D1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MGSwipeTableViewCell_LICENSE.txt; sourceTree = "<group>"; };
@@ -158,14 +155,8 @@
 		B318FE951B59C89B007609B5 /* DAAlertController_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DAAlertController_LICENSE.txt; sourceTree = "<group>"; };
 		B318FE971B59C8F0007609B5 /* DeviceGuru_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DeviceGuru_LICENSE.txt; sourceTree = "<group>"; };
 		B318FE991B59C91D007609B5 /* ZoomTransition_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZoomTransition_LICENSE.txt; sourceTree = "<group>"; };
-		B318FE9B1B59D145007609B5 /* KFLisenceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLisenceDetailViewController.swift; sourceTree = "<group>"; };
-		B318FE9C1B59D145007609B5 /* KFLisenceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFLisenceDetailViewController.xib; sourceTree = "<group>"; };
-		B318FE9F1B59D9AC007609B5 /* KFAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAboutViewController.swift; sourceTree = "<group>"; };
-		B318FEA01B59D9AC007609B5 /* KFAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFAboutViewController.xib; sourceTree = "<group>"; };
 		B32798E51B6B051300617CE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
 		B32798E81B6B051700617CE9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
-		B335B07C1B5A5A40005C4CD2 /* KFWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWebViewController.swift; sourceTree = "<group>"; };
-		B335B07D1B5A5A40005C4CD2 /* KFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFWebViewController.xib; sourceTree = "<group>"; };
 		B33E66F61B207E4600F86927 /* kuafu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kuafu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33E670B1B207E4600F86927 /* kuafuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kuafuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33E67101B207E4600F86927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,8 +174,6 @@
 		B35DB0991B228A580006AE48 /* KFConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFConstant.swift; sourceTree = "<group>"; };
 		B35DB0AA1B229F690006AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
-		B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFVersionsViewController.swift; sourceTree = "<group>"; };
-		B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFVersionsViewController.xib; sourceTree = "<group>"; };
 		B36FCA121B613CF30018C6DA /* kuafu WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "kuafu WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36FCA151B613CF30018C6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36FCA161B613CF30018C6DA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
@@ -196,11 +185,25 @@
 		B36FCA341B61E46F0018C6DA /* KFWatchEventsTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchEventsTableRowController.swift; sourceTree = "<group>"; };
 		B37731511B62F18D0059F4F6 /* kuafu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = kuafu.entitlements; path = kuafu/kuafu.entitlements; sourceTree = "<group>"; };
 		B37731521B62F1A20059F4F6 /* kuafu WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "kuafu WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
-		B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
 		B3A8F5701B5FD423005ADFD9 /* Version_1.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version_1.0.txt; sourceTree = "<group>"; };
-		B3A8F5721B5FD463005ADFD9 /* KFVersionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFVersionDetailViewController.swift; sourceTree = "<group>"; };
-		B3A8F5731B5FD463005ADFD9 /* KFVersionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFVersionDetailViewController.xib; sourceTree = "<group>"; };
+		B3BDA9881B710F8100EF4D0D /* KFCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFCalendarViewController.swift; sourceTree = "<group>"; };
+		B3BDA9891B710F8100EF4D0D /* KFCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarViewController.xib; sourceTree = "<group>"; };
+		B3BDA98A1B710F8100EF4D0D /* KFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventViewController.swift; sourceTree = "<group>"; };
+		B3BDA98B1B710F8100EF4D0D /* KFEventWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventWriteViewController.swift; sourceTree = "<group>"; };
+		B3BDA98C1B710F8100EF4D0D /* KFEventWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFEventWriteViewController.xib; sourceTree = "<group>"; };
+		B3BDA9921B710F8F00EF4D0D /* KFAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAboutViewController.swift; sourceTree = "<group>"; };
+		B3BDA9931B710F8F00EF4D0D /* KFAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFAboutViewController.xib; sourceTree = "<group>"; };
+		B3BDA9941B710F8F00EF4D0D /* KFLisenceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLisenceDetailViewController.swift; sourceTree = "<group>"; };
+		B3BDA9951B710F8F00EF4D0D /* KFLisenceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFLisenceDetailViewController.xib; sourceTree = "<group>"; };
+		B3BDA9961B710F8F00EF4D0D /* KFLisenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLisenceViewController.swift; sourceTree = "<group>"; };
+		B3BDA9971B710F8F00EF4D0D /* KFLisenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFLisenceViewController.xib; sourceTree = "<group>"; };
+		B3BDA9981B710F8F00EF4D0D /* KFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSettingsViewController.swift; sourceTree = "<group>"; };
+		B3BDA9991B710F8F00EF4D0D /* KFVersionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFVersionDetailViewController.swift; sourceTree = "<group>"; };
+		B3BDA99A1B710F8F00EF4D0D /* KFVersionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFVersionDetailViewController.xib; sourceTree = "<group>"; };
+		B3BDA99B1B710F8F00EF4D0D /* KFVersionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFVersionsViewController.swift; sourceTree = "<group>"; };
+		B3BDA99C1B710F8F00EF4D0D /* KFVersionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFVersionsViewController.xib; sourceTree = "<group>"; };
+		B3BDA9A91B710F9900EF4D0D /* KFWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWebViewController.swift; sourceTree = "<group>"; };
+		B3BDA9AA1B710F9900EF4D0D /* KFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFWebViewController.xib; sourceTree = "<group>"; };
 		B3CA43151B58EADC000DA6FD /* DeviceGuru.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGuru.swift; sourceTree = "<group>"; };
 		B3CA431A1B58FF89000DA6FD /* KFMotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFMotionManager.swift; sourceTree = "<group>"; };
 		B3CCC0B61B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NJKWebViewProgress_LICENSE.txt; sourceTree = "<group>"; };
@@ -208,8 +211,6 @@
 		B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarCell.xib; sourceTree = "<group>"; };
 		B3DFE21F1B4E5B4A00C520E0 /* KFPullCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFPullCalendarView.swift; sourceTree = "<group>"; };
 		B3DFE2211B4E5B5600C520E0 /* KFPullCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFPullCalendarView.xib; sourceTree = "<group>"; };
-		B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFCalendarViewController.swift; sourceTree = "<group>"; };
-		B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFCalendarViewController.xib; sourceTree = "<group>"; };
 		B3EDE9C21B48B15B00A0974C /* KFLocalPushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFLocalPushManager.swift; sourceTree = "<group>"; };
 		B3F034C01B5FE64C0086C2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B3F034C21B5FE64C0086C2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -221,7 +222,6 @@
 		B3F034CA1B5FE72B0086C2BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
 		B3F034CB1B5FE7350086C2BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B3F034CC1B5FE7380086C2BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFSettingsViewController.swift; sourceTree = "<group>"; };
 		B3F59A9C1B5C95AA00E491E6 /* KFAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAvailability.swift; sourceTree = "<group>"; };
 		B3F5A83B1B3468C600FAC764 /* KFEventAlertKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAlertKeyboard.swift; sourceTree = "<group>"; };
 		B3FAADB41B69F4320072CA2B /* KFWatchTimeSelectorInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFWatchTimeSelectorInterfaceController.swift; sourceTree = "<group>"; };
@@ -306,24 +306,9 @@
 		B3164A421B2133490093E6B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B3164A471B2133A70093E6B5 /* KFEventViewController.swift */,
-				B3F2C5391B57272100E3DBB6 /* KFSettingsViewController.swift */,
-				B37870EA1B2734AD00F01895 /* KFEventWriteViewController.swift */,
-				B37870EB1B2734AD00F01895 /* KFEventWriteViewController.xib */,
-				B3DFE2231B4E755000C520E0 /* KFCalendarViewController.swift */,
-				B3DFE2241B4E755000C520E0 /* KFCalendarViewController.xib */,
-				B318FE831B59BEC3007609B5 /* KFLisenceViewController.swift */,
-				B318FE841B59BEC3007609B5 /* KFLisenceViewController.xib */,
-				B318FE9B1B59D145007609B5 /* KFLisenceDetailViewController.swift */,
-				B318FE9C1B59D145007609B5 /* KFLisenceDetailViewController.xib */,
-				B318FE9F1B59D9AC007609B5 /* KFAboutViewController.swift */,
-				B318FEA01B59D9AC007609B5 /* KFAboutViewController.xib */,
-				B335B07C1B5A5A40005C4CD2 /* KFWebViewController.swift */,
-				B335B07D1B5A5A40005C4CD2 /* KFWebViewController.xib */,
-				B36BBA081B5D00E60021B374 /* KFVersionsViewController.swift */,
-				B36BBA091B5D00E60021B374 /* KFVersionsViewController.xib */,
-				B3A8F5721B5FD463005ADFD9 /* KFVersionDetailViewController.swift */,
-				B3A8F5731B5FD463005ADFD9 /* KFVersionDetailViewController.xib */,
+				B3BDA9A81B710F9900EF4D0D /* base */,
+				B3BDA9861B710EDB00EF4D0D /* events */,
+				B3BDA9871B710EDB00EF4D0D /* settings */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -499,6 +484,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3BDA9861B710EDB00EF4D0D /* events */ = {
+			isa = PBXGroup;
+			children = (
+				B3BDA9881B710F8100EF4D0D /* KFCalendarViewController.swift */,
+				B3BDA9891B710F8100EF4D0D /* KFCalendarViewController.xib */,
+				B3BDA98A1B710F8100EF4D0D /* KFEventViewController.swift */,
+				B3BDA98B1B710F8100EF4D0D /* KFEventWriteViewController.swift */,
+				B3BDA98C1B710F8100EF4D0D /* KFEventWriteViewController.xib */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		B3BDA9871B710EDB00EF4D0D /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				B3BDA9921B710F8F00EF4D0D /* KFAboutViewController.swift */,
+				B3BDA9931B710F8F00EF4D0D /* KFAboutViewController.xib */,
+				B3BDA9941B710F8F00EF4D0D /* KFLisenceDetailViewController.swift */,
+				B3BDA9951B710F8F00EF4D0D /* KFLisenceDetailViewController.xib */,
+				B3BDA9961B710F8F00EF4D0D /* KFLisenceViewController.swift */,
+				B3BDA9971B710F8F00EF4D0D /* KFLisenceViewController.xib */,
+				B3BDA9981B710F8F00EF4D0D /* KFSettingsViewController.swift */,
+				B3BDA9991B710F8F00EF4D0D /* KFVersionDetailViewController.swift */,
+				B3BDA99A1B710F8F00EF4D0D /* KFVersionDetailViewController.xib */,
+				B3BDA99B1B710F8F00EF4D0D /* KFVersionsViewController.swift */,
+				B3BDA99C1B710F8F00EF4D0D /* KFVersionsViewController.xib */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		B3BDA9A81B710F9900EF4D0D /* base */ = {
+			isa = PBXGroup;
+			children = (
+				B3BDA9A91B710F9900EF4D0D /* KFWebViewController.swift */,
+				B3BDA9AA1B710F9900EF4D0D /* KFWebViewController.xib */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -643,33 +667,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37870ED1B2734AD00F01895 /* KFEventWriteViewController.xib in Resources */,
+				B3BDA9A01B710F8F00EF4D0D /* KFLisenceDetailViewController.xib in Resources */,
 				B318FE901B59C7BE007609B5 /* CVCalendarKit_LICENSE.txt in Resources */,
+				B3BDA9AC1B710F9900EF4D0D /* KFWebViewController.xib in Resources */,
 				B3DFE2221B4E5B5600C520E0 /* KFPullCalendarView.xib in Resources */,
 				B318FE921B59C80B007609B5 /* JTCalendar_LICENSE.txt in Resources */,
 				B3490FED1B36BED400DCF26C /* KFEventTimePickerAlertView.xib in Resources */,
 				B3A8F5711B5FD423005ADFD9 /* Version_1.0.txt in Resources */,
 				B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */,
+				B3BDA9911B710F8100EF4D0D /* KFEventWriteViewController.xib in Resources */,
+				B3BDA99E1B710F8F00EF4D0D /* KFAboutViewController.xib in Resources */,
+				B3BDA9A71B710F8F00EF4D0D /* KFVersionsViewController.xib in Resources */,
+				B3BDA98E1B710F8100EF4D0D /* KFCalendarViewController.xib in Resources */,
 				B3F034C41B5FE64C0086C2BA /* Main.storyboard in Resources */,
-				B318FEA21B59D9AC007609B5 /* KFAboutViewController.xib in Resources */,
 				B318FE961B59C89B007609B5 /* DAAlertController_LICENSE.txt in Resources */,
 				B318FE8E1B59C74E007609B5 /* MGSwipeTableViewCell_LICENSE.txt in Resources */,
 				B318FE981B59C8F0007609B5 /* DeviceGuru_LICENSE.txt in Resources */,
 				B318FE941B59C84F007609B5 /* MKEventKit_LICENSE.txt in Resources */,
-				B318FE9E1B59D145007609B5 /* KFLisenceDetailViewController.xib in Resources */,
-				B3DFE2261B4E755000C520E0 /* KFCalendarViewController.xib in Resources */,
+				B3BDA9A21B710F8F00EF4D0D /* KFLisenceViewController.xib in Resources */,
 				B318FE8C1B59C70E007609B5 /* SnapKit_LICENSE.txt in Resources */,
-				B3A8F5751B5FD463005ADFD9 /* KFVersionDetailViewController.xib in Resources */,
 				B3F034C31B5FE64C0086C2BA /* LaunchScreen.xib in Resources */,
 				B3CCC0B71B5BF62000A1E8A0 /* NJKWebViewProgress_LICENSE.txt in Resources */,
+				B3BDA9A51B710F8F00EF4D0D /* KFVersionDetailViewController.xib in Resources */,
 				B318FE9A1B59C91D007609B5 /* ZoomTransition_LICENSE.txt in Resources */,
-				B36BBA0B1B5D00E60021B374 /* KFVersionsViewController.xib in Resources */,
-				B318FE861B59BEC3007609B5 /* KFLisenceViewController.xib in Resources */,
 				B318FE8A1B59C6AC007609B5 /* FMDB_LICENSE.txt in Resources */,
 				B3164A511B2133F50093E6B5 /* Images.xcassets in Resources */,
 				B3D39B5C1B555F5600BE899D /* KFCalendarCell.xib in Resources */,
 				B34879B51B39A5C100A3A984 /* KFEventCell.xib in Resources */,
-				B335B07F1B5A5A40005C4CD2 /* KFWebViewController.xib in Resources */,
 				B3FE73181B541238008FB3BB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,33 +856,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3CA43181B58EB63000DA6FD /* DeviceGuru.swift in Sources */,
+				B3BDA99D1B710F8F00EF4D0D /* KFAboutViewController.swift in Sources */,
 				B3433BA21B217B120097AD26 /* KFEventDO.swift in Sources */,
+				B3BDA9A41B710F8F00EF4D0D /* KFVersionDetailViewController.swift in Sources */,
 				B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */,
 				B3433B9D1B2153C40097AD26 /* KFEventDAO.swift in Sources */,
-				B3F2C53A1B57272100E3DBB6 /* KFSettingsViewController.swift in Sources */,
 				B3433BA01B21722F0097AD26 /* KFBaseModelDO.swift in Sources */,
-				B37870EC1B2734AD00F01895 /* KFEventWriteViewController.swift in Sources */,
 				B358D2C71B4EBB8200D70CB0 /* ZoomTransition.swift in Sources */,
-				B36BBA0A1B5D00E60021B374 /* KFVersionsViewController.swift in Sources */,
+				B3BDA9A61B710F8F00EF4D0D /* KFVersionsViewController.swift in Sources */,
+				B3BDA98F1B710F8100EF4D0D /* KFEventViewController.swift in Sources */,
 				B3EDE9C31B48B15B00A0974C /* KFLocalPushManager.swift in Sources */,
 				B3DFE2201B4E5B4A00C520E0 /* KFPullCalendarView.swift in Sources */,
-				B335B07E1B5A5A40005C4CD2 /* KFWebViewController.swift in Sources */,
+				B3BDA98D1B710F8100EF4D0D /* KFCalendarViewController.swift in Sources */,
+				B3BDA9901B710F8100EF4D0D /* KFEventWriteViewController.swift in Sources */,
+				B3BDA9A31B710F8F00EF4D0D /* KFSettingsViewController.swift in Sources */,
 				B3F5A83C1B3468C600FAC764 /* KFEventAlertKeyboard.swift in Sources */,
-				B3164A481B2133A70093E6B5 /* KFEventViewController.swift in Sources */,
+				B3BDA9AB1B710F9900EF4D0D /* KFWebViewController.swift in Sources */,
 				B34879B41B39A5C100A3A984 /* KFEventCell.swift in Sources */,
+				B3BDA99F1B710F8F00EF4D0D /* KFLisenceDetailViewController.swift in Sources */,
 				B3164A5B1B21371D0093E6B5 /* KFBaseDAO.swift in Sources */,
-				B318FE9D1B59D145007609B5 /* KFLisenceDetailViewController.swift in Sources */,
-				B3DFE2251B4E755000C520E0 /* KFCalendarViewController.swift in Sources */,
 				B3164A611B213BF70093E6B5 /* KFUtil.swift in Sources */,
 				B3CA431B1B58FF89000DA6FD /* KFMotionManager.swift in Sources */,
 				B3D39B5B1B555F5600BE899D /* KFCalendarCell.swift in Sources */,
-				B318FEA11B59D9AC007609B5 /* KFAboutViewController.swift in Sources */,
 				B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */,
-				B318FE851B59BEC3007609B5 /* KFLisenceViewController.swift in Sources */,
 				B3F59A9D1B5C95AA00E491E6 /* KFAvailability.swift in Sources */,
 				B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */,
 				B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */,
-				B3A8F5741B5FD463005ADFD9 /* KFVersionDetailViewController.swift in Sources */,
+				B3BDA9A11B710F8F00EF4D0D /* KFLisenceViewController.swift in Sources */,
 				B3490FEB1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift in Sources */,
 				B35B9E181B514CA200BA4E89 /* KFEventManager.swift in Sources */,
 			);
