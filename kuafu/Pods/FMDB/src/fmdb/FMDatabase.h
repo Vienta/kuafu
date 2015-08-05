@@ -71,6 +71,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 
 
 @interface FMDatabase : NSObject  {
+    
     NSString*           _databasePath;
     BOOL                _logsErrors;
     BOOL                _crashOnErrors;
@@ -191,7 +192,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 
 - (BOOL)open;
 
-/** Opening a new database connection with flags
+/** Opening a new database connection with flags and an optional virtual file system (VFS)
 
  @param flags one of the following three values, optionally combined with the `SQLITE_OPEN_NOMUTEX`, `SQLITE_OPEN_FULLMUTEX`, `SQLITE_OPEN_SHAREDCACHE`, `SQLITE_OPEN_PRIVATECACHE`, and/or `SQLITE_OPEN_URI` flags:
 
@@ -207,16 +208,19 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  The database is opened for reading and writing, and is created if it does not already exist. This is the behavior that is always used for `open` method.
  
+ If vfs is given the value is passed to the vfs parameter of sqlite3_open_v2.
+ 
  @return `YES` if successful, `NO` on error.
 
- @notes In SQLite versions prior to 3.5, this simply calls `open` method.
- 
  @see [sqlite3_open_v2()](http://sqlite.org/c3ref/open.html)
  @see open
  @see close
+ 
+ @warning Requires SQLite 3.5
  */
 
 - (BOOL)openWithFlags:(int)flags;
+- (BOOL)openWithFlags:(int)flags vfs:(NSString *)vfsName;
 
 /** Closing a database connection
  
@@ -1046,6 +1050,13 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 /** SQL statement */
 
 @property (atomic, retain) NSString *query;
+
+/** SQLite sqlite3_stmt
+ 
+ @see [`sqlite3_stmt`](http://www.sqlite.org/c3ref/stmt.html)
+ */
+
+@property (atomic, assign) void *statement;
 
 /** Indication of whether the statement is in use */
 

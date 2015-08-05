@@ -1,13 +1,13 @@
 //
-//  FMDatabasePrivate.h
-//  fmdb
+//  FMDatabase+Private.h
+//  deleteme2
 //
-//  Created by Robert Ryan on 3/28/15.
-//
+//  Created by Robert Ryan on 8/2/15.
+//  Copyright (c) 2015 Robert Ryan. All rights reserved.
 //
 
-#ifndef fmdb_FMDatabasePrivate_h
-#define fmdb_FMDatabasePrivate_h
+#ifndef deleteme2_FMDatabase_Private_h
+#define deleteme2_FMDatabase_Private_h
 
 #import <sqlite3.h>
 

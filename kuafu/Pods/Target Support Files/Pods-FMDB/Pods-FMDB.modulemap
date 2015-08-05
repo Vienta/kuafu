@@ -4,5 +4,5 @@ framework module FMDB {
   export *
   module * { export * }
 
-  private header "FMDatabasePrivate.h"
+  private header "FMDatabase+Private.h"
 }

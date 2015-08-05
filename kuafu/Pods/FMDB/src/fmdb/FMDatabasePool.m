@@ -8,7 +8,7 @@
 
 #import "FMDatabasePool.h"
 #import "FMDatabase.h"
-#import "FMDatabasePrivate.h"
+#import "FMDatabase+Private.h"
 
 @interface FMDatabasePool()
 
@@ -128,9 +128,11 @@
         }
         
         //This ensures that the db is opened before returning
-
+#if SQLITE_VERSION_NUMBER >= 3005000
         BOOL success = [db openWithFlags:self->_openFlags];
-
+#else
+        BOOL success = [db open];
+#endif
         if (success) {
             if ([self->_delegate respondsToSelector:@selector(databasePool:shouldAddDatabaseToPool:)] && ![self->_delegate databasePool:self shouldAddDatabaseToPool:db]) {
                 [db close];
@@ -237,9 +239,13 @@
 - (void)inTransaction:(void (^)(FMDatabase *db, BOOL *rollback))block {
     [self beginTransaction:NO withBlock:block];
 }
-#if SQLITE_VERSION_NUMBER >= 3007000
+
 - (NSError*)inSavePoint:(void (^)(FMDatabase *db, BOOL *rollback))block {
     
+    NSError *err = 0x00;
+
+#if SQLITE_VERSION_NUMBER >= 3007000
+
     static unsigned long savePointIdx = 0;
     
     NSString *name = [NSString stringWithFormat:@"savePoint%ld", savePointIdx++];
@@ -247,8 +253,6 @@
     BOOL shouldRollback = NO;
     
     FMDatabase *db = [self db];
-    
-    NSError *err = 0x00;
     
     if (![db startSavePointWithName:name error:&err]) {
         [self pushDatabaseBackInPool:db];
@@ -265,8 +269,9 @@
     
     [self pushDatabaseBackInPool:db];
     
+#endif
+    
     return err;
 }
-#endif
 
 @end

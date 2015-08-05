@@ -7,9 +7,9 @@
 //
 
 #import "FMDatabase.h"
-#import "FMDatabasePrivate.h"
 #import "FMDatabaseAdditions.h"
 #import "TargetConditionals.h"
+#import "FMDatabase+Private.h"
 
 @interface FMDatabase (PrivateStuff)
 - (FMResultSet *)executeQuery:(NSString *)sql withArgumentsInArray:(NSArray*)arrayArgs orDictionary:(NSDictionary *)dictionaryArgs orVAList:(va_list)args;
@@ -119,8 +119,10 @@ return ret;
     return returnBool;
 }
 
+
 - (uint32_t)applicationID {
     
+#if SQLITE_VERSION_NUMBER >= 3007017
     uint32_t r = 0;
     
     FMResultSet *rs = [self executeQuery:@"pragma application_id"];
@@ -130,16 +132,20 @@ return ret;
     }
     
     [rs close];
+#endif
     
     return r;
 }
 
 - (void)setApplicationID:(uint32_t)appID {
+#if SQLITE_VERSION_NUMBER >= 3007017
     NSString *query = [NSString stringWithFormat:@"pragma application_id=%d", appID];
     FMResultSet *rs = [self executeQuery:query];
     [rs next];
     [rs close];
+#endif
 }
+
 
 #if TARGET_OS_MAC && !TARGET_OS_IPHONE
 - (NSString*)applicationIDString {
@@ -149,7 +155,9 @@ return ret;
     
     s = [s substringWithRange:NSMakeRange(1, 4)];
     
+    
     return s;
+    
 }
 
 - (void)setApplicationIDString:(NSString*)s {
@@ -162,6 +170,7 @@ return ret;
 }
 
 #endif
+
 
 - (uint32_t)userVersion {
     uint32_t r = 0;

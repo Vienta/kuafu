@@ -50,7 +50,8 @@ PODS:
 DEPENDENCIES:
   - CVCalendarKit (~> 0.1.1)
   - DAAlertController (~> 0.1.4)
-  - FMDB (from `https://github.com/robertmryan/fmdb.git`)
+  - FMDB (from `https://github.com/ccgus/fmdb.git`, commit `66e492a6de51b9077dfcbd6f4646130151714f9c`,
+    branch `master`)
   - JKRichTextView
   - JTCalendar (~> 1.2.3)
   - MGSwipeTableCell (~> 1.4.3)
@@ -60,12 +61,15 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   FMDB:
-    :git: https://github.com/robertmryan/fmdb.git
+    :branch: master
+    :commit: 66e492a6de51b9077dfcbd6f4646130151714f9c
+    :git: https://github.com/ccgus/fmdb.git
 
 CHECKOUT OPTIONS:
   FMDB:
-    :commit: b45874924a0b8240abf3f7715af57fc5158616c0
-    :git: https://github.com/robertmryan/fmdb.git
+    :branch: master
+    :commit: 66e492a6de51b9077dfcbd6f4646130151714f9c
+    :git: https://github.com/ccgus/fmdb.git
 
 SPEC CHECKSUMS:
   CVCalendarKit: 5ae1b2def4fd558029a71ec86179fa7cacff8769
