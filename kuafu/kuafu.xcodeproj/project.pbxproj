@@ -46,6 +46,7 @@
 		B35DB09A1B228A580006AE48 /* KFConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0991B228A580006AE48 /* KFConstant.swift */; };
 		B35DB0A71B229F4C0006AE48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35DB0A91B229F4C0006AE48 /* Localizable.strings */; };
 		B35DB0AE1B22A18D0006AE48 /* KFEventAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */; };
+		B35F8FC81B822FAD00EE1853 /* KFExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F8FC71B822FAD00EE1853 /* KFExploreViewController.swift */; };
 		B36FCA171B613CF30018C6DA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FCA161B613CF30018C6DA /* InterfaceController.swift */; };
 		B36FCA191B613CF30018C6DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA181B613CF30018C6DA /* Images.xcassets */; };
 		B36FCA1D1B613CF30018C6DA /* kuafu WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B36FCA1C1B613CF30018C6DA /* kuafu WatchKit App.app */; };
@@ -174,6 +175,7 @@
 		B35DB0991B228A580006AE48 /* KFConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFConstant.swift; sourceTree = "<group>"; };
 		B35DB0AA1B229F690006AE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B35DB0AD1B22A18D0006AE48 /* KFEventAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFEventAddButton.swift; sourceTree = "<group>"; };
+		B35F8FC71B822FAD00EE1853 /* KFExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFExploreViewController.swift; sourceTree = "<group>"; };
 		B36FCA121B613CF30018C6DA /* kuafu WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "kuafu WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36FCA151B613CF30018C6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36FCA161B613CF30018C6DA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			children = (
 				B3BDA9A81B710F9900EF4D0D /* base */,
 				B3BDA9861B710EDB00EF4D0D /* events */,
+				B35F8FC61B822F9100EE1853 /* explore */,
 				B3BDA9871B710EDB00EF4D0D /* settings */,
 			);
 			path = Controller;
@@ -439,6 +442,14 @@
 				B3D39B5A1B555F5600BE899D /* KFCalendarCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B35F8FC61B822F9100EE1853 /* explore */ = {
+			isa = PBXGroup;
+			children = (
+				B35F8FC71B822FAD00EE1853 /* KFExploreViewController.swift */,
+			);
+			path = explore;
 			sourceTree = "<group>";
 		};
 		B36FCA131B613CF30018C6DA /* kuafu WatchKit Extension */ = {
@@ -882,6 +893,7 @@
 				B3F59A9D1B5C95AA00E491E6 /* KFAvailability.swift in Sources */,
 				B3164A5E1B2138950093E6B5 /* KFDBManager.swift in Sources */,
 				B3164A451B2133490093E6B5 /* KFAppDelegate.swift in Sources */,
+				B35F8FC81B822FAD00EE1853 /* KFExploreViewController.swift in Sources */,
 				B3BDA9A11B710F8F00EF4D0D /* KFLisenceViewController.swift in Sources */,
 				B3490FEB1B36BEB700DCF26C /* KFEventTimePickerAlertView.swift in Sources */,
 				B35B9E181B514CA200BA4E89 /* KFEventManager.swift in Sources */,

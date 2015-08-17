@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="1273" y="451"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore View Controller-->
         <scene sceneID="eII-16-m3S">
             <objects>
-                <viewController id="qJ1-5C-YNf" sceneMemberID="viewController">
+                <viewController id="qJ1-5C-YNf" customClass="KFExploreViewController" customModule="kuafu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pds-T1-wm4"/>
                         <viewControllerLayoutGuide type="bottom" id="0Qv-vw-6Sf"/>
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vl-or-Ufc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="-271"/>
+            <point key="canvasLocation" x="1768" y="-326"/>
         </scene>
         <!--清单-->
         <scene sceneID="nFJ-r6-xJB">

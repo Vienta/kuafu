@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="2429" y="451"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore View Controller-->
         <scene sceneID="MZd-5h-N7v">
             <objects>
-                <viewController id="7Re-0C-rrh" sceneMemberID="viewController">
+                <viewController id="7Re-0C-rrh" customClass="KFExploreViewController" customModule="kuafu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N9G-W1-8ld"/>
                         <viewControllerLayoutGuide type="bottom" id="h2k-Qc-v6u"/>
