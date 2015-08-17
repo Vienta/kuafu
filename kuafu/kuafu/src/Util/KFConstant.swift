@@ -57,6 +57,7 @@ let KF_MY_BLOG = "http://www.vienta.me/"
 let KF_PROJECT_URL = "https://github.com/Vienta/kuafu"
 let KF_GROUP_ID = "group.com.vienta.kuafu.watch"
 let KF_ITUNES_ITEM_IDENTIFIER = "1024927740"
+let KF_UMENG_APP_KEY = "55d12e0c67e58ee051001642"
 
 // MARK: - Enum
 enum kTapStyle :Int {

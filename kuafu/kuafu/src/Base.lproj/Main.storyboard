@@ -49,7 +49,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="451"/>
+            <point key="canvasLocation" x="1273" y="451"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eII-16-m3S">
+            <objects>
+                <viewController id="qJ1-5C-YNf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pds-T1-wm4"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Qv-vw-6Sf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GLB-N0-Few">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="g6w-r6-6gg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Vl-or-Ufc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561" y="-271"/>
         </scene>
         <!--清单-->
         <scene sceneID="nFJ-r6-xJB">
@@ -70,7 +89,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvY-ag-H9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="451"/>
+            <point key="canvasLocation" x="789" y="451"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="irt-f0-uhc">
@@ -123,6 +142,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="TAt-F7-rze" kind="relationship" relationship="viewControllers" id="yNZ-9i-Odt"/>
+                        <segue destination="q3o-SH-I5r" kind="relationship" relationship="viewControllers" id="XbS-sb-3pE"/>
                         <segue destination="JLc-qA-sFo" kind="relationship" relationship="viewControllers" id="894-OT-eUF"/>
                     </connections>
                 </tabBarController>
@@ -149,11 +169,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wag-Q2-AMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="1333"/>
+            <point key="canvasLocation" x="1342" y="1304"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="3Wv-vc-gIx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q3o-SH-I5r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" image="item_explore" id="qgZ-WF-KDV">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CIS-aV-sih">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qJ1-5C-YNf" kind="relationship" relationship="rootViewController" id="N19-dY-Hpe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvK-JU-Y2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="-271"/>
         </scene>
     </scenes>
     <resources>
         <image name="item_event" width="25" height="25"/>
+        <image name="item_explore" width="25" height="25"/>
         <image name="item_settings" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

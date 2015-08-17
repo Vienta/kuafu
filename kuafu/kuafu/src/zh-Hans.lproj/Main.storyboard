@@ -49,7 +49,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="451"/>
+            <point key="canvasLocation" x="2429" y="451"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MZd-5h-N7v">
+            <objects>
+                <viewController id="7Re-0C-rrh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N9G-W1-8ld"/>
+                        <viewControllerLayoutGuide type="bottom" id="h2k-Qc-v6u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bxh-uM-TXv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FMI-ey-bq6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcg-4J-LiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="-147"/>
         </scene>
         <!--清单-->
         <scene sceneID="nFJ-r6-xJB">
@@ -70,7 +89,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvY-ag-H9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="451"/>
+            <point key="canvasLocation" x="1365" y="451"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="irt-f0-uhc">
@@ -123,6 +142,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="TAt-F7-rze" kind="relationship" relationship="viewControllers" id="yNZ-9i-Odt"/>
+                        <segue destination="5hI-Ep-OpJ" kind="relationship" relationship="viewControllers" id="uhS-MF-Etn"/>
                         <segue destination="JLc-qA-sFo" kind="relationship" relationship="viewControllers" id="894-OT-eUF"/>
                     </connections>
                 </tabBarController>
@@ -151,9 +171,31 @@
             </objects>
             <point key="canvasLocation" x="833" y="1333"/>
         </scene>
+        <!--探索-->
+        <scene sceneID="3Th-ca-AvO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5hI-Ep-OpJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="探索" image="item_explore" id="NUw-FW-EGV">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hf2-iu-O6u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Re-0C-rrh" kind="relationship" relationship="rootViewController" id="o3d-qj-Hnb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MqH-Kl-A6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="-147"/>
+        </scene>
     </scenes>
     <resources>
         <image name="item_event" width="25" height="25"/>
+        <image name="item_explore" width="25" height="25"/>
         <image name="item_settings" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
