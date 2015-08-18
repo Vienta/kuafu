@@ -83,9 +83,28 @@
                     <view key="view" contentMode="scaleToFill" id="e0M-hV-xVA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="rLp-wL-5lS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="com-fc-QXU" id="I9P-uW-VSI"/>
+                                    <outlet property="delegate" destination="com-fc-QXU" id="T9A-xx-hKZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rLp-wL-5lS" firstAttribute="top" secondItem="e0M-hV-xVA" secondAttribute="top" id="8Ly-N8-aM8"/>
+                            <constraint firstAttribute="bottom" secondItem="rLp-wL-5lS" secondAttribute="bottom" id="BJr-K3-z3a"/>
+                            <constraint firstItem="rLp-wL-5lS" firstAttribute="leading" secondItem="e0M-hV-xVA" secondAttribute="leading" id="eHD-la-2RU"/>
+                            <constraint firstAttribute="trailing" secondItem="rLp-wL-5lS" secondAttribute="trailing" id="wBr-07-PUr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gpe-VO-4wD"/>
+                    <connections>
+                        <outlet property="tbvExplore" destination="rLp-wL-5lS" id="EsJ-mE-n9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wce-Fj-1EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

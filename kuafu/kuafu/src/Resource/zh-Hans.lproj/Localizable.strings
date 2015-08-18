@@ -44,3 +44,6 @@
 "KF_ABOUT" = "关于";
 "KF_UNKOWN_TITLE" = "无标题任务";
 "KF_NO_REMIND" = "不设提醒时间";
+"KF_ONE_KEY_RELEASE" = "一键发布";
+"KF_EXPLORE_TITLE" = "探索";
+

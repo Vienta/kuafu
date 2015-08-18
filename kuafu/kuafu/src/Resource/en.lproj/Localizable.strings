@@ -38,9 +38,11 @@
 "KF_ALERT_CLOSE_SHAKE" = "Off Shake";
 "KF_SLOGAN" = "Being An Efficient Tool";
 "KF_UPDATE_DESC" = "update";
-"KF_EVENT_ACCESSIBILITY_TIPS" ="Kuafu doesn't currently have access to your local calendars.Please change your phone settings to allow KuaFu calendar access in 'Settings' -> 'Privacy' ->'Calendars'";
+"KF_EVENT_ACCESSIBILITY_TIPS" = "Kuafu doesn't currently have access to your local calendars.Please change your phone settings to allow KuaFu calendar access in 'Settings' -> 'Privacy' ->'Calendars'";
 "KF_GENERAL" = "General";
 "KF_FEEDBACK" = "Feedback";
 "KF_ABOUT" = "About";
 "KF_UNKOWN_TITLE" = "Unkown title";
 "KF_NO_REMIND" = "No remind time";
+"KF_ONE_KEY_RELEASE" = "One Key Release";
+"KF_EXPLORE_TITLE" = "Explore";
