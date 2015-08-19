@@ -4,57 +4,52 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-CVCalendarKit.xcscheme</key>
+		<key>CVCalendarKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-DAAlertController-DAAlertController.xcscheme</key>
+		<key>DAAlertController-DAAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-DAAlertController.xcscheme</key>
+		<key>DAAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FMDB.xcscheme</key>
+		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-JKRichTextView.xcscheme</key>
+		<key>JKRichTextView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-JTCalendar.xcscheme</key>
+		<key>JTCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MGSwipeTableCell.xcscheme</key>
+		<key>MGSwipeTableCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MKEventKit.xcscheme</key>
+		<key>MKEventKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MKFoundationKit.xcscheme</key>
+		<key>MKFoundationKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-NJKWebViewProgress.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SnapKit.xcscheme</key>
+		<key>NJKWebViewProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,65 +59,70 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00ECB7605FA6CBD9893B6EA1</key>
+		<key>0BB669EAB153C7D1E7B0D84D9DC77DDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>01D441D7335EB348816BF66F</key>
+		<key>1CE4A67AE22828A744C5DA028F31BB65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>15E91E894508449278C3394C</key>
+		<key>27EDFEB48EF2B70901BE838895AF8E7F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>456FBA05BE5607BFBFF68812</key>
+		<key>2A585ED35D20B9B8975E6CA8708BB533</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BECF767BC91076B985BB767</key>
+		<key>2F5D62AFC2396E4842F013239E7FF0F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D8F40A9F2893874607BF6B1</key>
+		<key>3BA29D8DC5F1B476CD726268B517ED49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93DA3B814F555789C11300D5</key>
+		<key>4CCABBC5D0F44DC609520FB34CC96830</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A1532D13836F9B3DE4BC53A</key>
+		<key>4EDA452517A913B556C7860F490D5FD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DDE6C3F8C170C8F6C272FA2</key>
+		<key>52DC3F49A128A7C0F6C60B796B95E432</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9EEFC0A2D3694BFE1653D27</key>
+		<key>84A3D6025F912228E3552B01EAC82C8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4E843DC3910E13A214BB314</key>
+		<key>9FCA945C898564B97B12266426594172</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E904D688A9FCAD5B6DE3762A</key>
+		<key>A8B41A7FF11D58B9030DE4AE41295087</key>
 		<dict>
 			<key>primary</key>
 			<true/>

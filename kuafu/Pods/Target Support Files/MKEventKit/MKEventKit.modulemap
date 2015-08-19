@@ -1,0 +1,6 @@
+framework module MKEventKit {
+  umbrella header "MKEventKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

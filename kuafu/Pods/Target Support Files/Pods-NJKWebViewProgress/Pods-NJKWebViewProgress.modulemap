@@ -1,6 +1,0 @@
-framework module NJKWebViewProgress {
-  umbrella header "Pods-NJKWebViewProgress-umbrella.h"
-
-  export *
-  module * { export * }
-}

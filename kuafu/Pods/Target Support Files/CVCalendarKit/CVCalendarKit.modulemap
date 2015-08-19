@@ -1,0 +1,6 @@
+framework module CVCalendarKit {
+  umbrella header "CVCalendarKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

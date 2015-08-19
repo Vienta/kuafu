@@ -1,0 +1,6 @@
+framework module JKRichTextView {
+  umbrella header "JKRichTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}

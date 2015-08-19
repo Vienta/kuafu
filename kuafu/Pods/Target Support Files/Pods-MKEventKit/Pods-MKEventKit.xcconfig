@@ -1,1 +1,0 @@
-PODS_MKEVENTKIT_OTHER_LDFLAGS = -framework "EventKit"

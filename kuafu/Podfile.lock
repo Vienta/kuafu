@@ -46,6 +46,7 @@ PODS:
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
   - SnapKit (0.12.0)
+  - UMengSocial (4.2.3)
 
 DEPENDENCIES:
   - CVCalendarKit (~> 0.1.1)
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - MKEventKit (~> 0.2.0)
   - NJKWebViewProgress
   - SnapKit (~> 0.12.0)
+  - UMengSocial (~> 4.2.3)
 
 EXTERNAL SOURCES:
   FMDB:
@@ -82,5 +84,6 @@ SPEC CHECKSUMS:
   MKFoundationKit: 26afe1cf63d4982a937d555537ca1a3fb50a9c77
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   SnapKit: 00c388aa3bf1944c1b55472f31e841f75bd83882
+  UMengSocial: 85882abe5b20aa38ad558ece71360e16b5d50909
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.38.2

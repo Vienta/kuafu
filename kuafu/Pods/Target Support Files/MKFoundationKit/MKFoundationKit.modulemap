@@ -1,0 +1,6 @@
+framework module MKFoundationKit {
+  umbrella header "MKFoundationKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

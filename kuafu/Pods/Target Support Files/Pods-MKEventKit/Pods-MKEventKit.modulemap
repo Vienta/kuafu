@@ -1,6 +1,0 @@
-framework module MKEventKit {
-  umbrella header "Pods-MKEventKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
