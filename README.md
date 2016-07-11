@@ -1,6 +1,6 @@
 # Kua Fu(夸父)
 
-`夸父`是基于swift 1.x版本写的事件管理类app，上架在[AppStore](https://itunes.apple.com/cn/app/kua-fu/id1024927740?mt=8)，其后很长时间没有更新，目前和将来的一段时间打算基于swift 3.x重写项目。
+`夸父`是基于swift 1.x版本写的事件管理类app，上架在[AppStore](https://itunes.apple.com/cn/app/kua-fu/id1024927740?mt=8)，这是它的源代码。其后很长时间没有更新，目前和将来的一段时间打算基于swift 3.x重写项目。
 
 ## Intro
 
