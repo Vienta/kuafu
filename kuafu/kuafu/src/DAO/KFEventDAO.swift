@@ -45,7 +45,7 @@ class KFEventDAO: KFBaseDAO {
     }
     
     func eventFromResultSet(result: FMResultSet) -> KFEventDO {
-        var eventDO: KFEventDO = KFEventDO()
+        let eventDO: KFEventDO = KFEventDO()
         eventDO.eventid = NSNumber(int: result.intForColumn("eventid"))
         eventDO.title = result.stringForColumn("title")
         eventDO.content = result.stringForColumn("content")
@@ -61,17 +61,17 @@ class KFEventDAO: KFBaseDAO {
     }
     
     func insertEvent(event: KFEventDO,db: FMDatabase) -> Bool {
-        var sql: String =   "INSERT INTO " + self.tableName()
+        let sql: String =   "INSERT INTO " + self.tableName()
                             + "(eventid,title,content,status,starttime,endtime,updatetime,creattime,longitude,latitude) "
                             + "VALUES(?,?,?,?,?,?,?,?,?,?)"
         
-        var creattime: Double = KFUtil.getCurrentTime()
-        var updatetime: Double = KFUtil.getCurrentTime()
+        let creattime: Double = KFUtil.getCurrentTime()
+        let updatetime: Double = KFUtil.getCurrentTime()
         event.creattime = NSNumber(double: creattime)
         event.updatetime = NSNumber(double: updatetime)
         
         var result: Bool!
-        var sqlArr: Array = [SAFE_OBJC(event.eventid), SAFE_OBJC(event.title),
+        let sqlArr: Array = [SAFE_OBJC(event.eventid), SAFE_OBJC(event.title),
                             SAFE_OBJC(event.content), SAFE_OBJC(event.status),
                             SAFE_OBJC(event.starttime), SAFE_OBJC(event.endtime),
                             SAFE_OBJC(event.updatetime), SAFE_OBJC(event.creattime),
@@ -91,9 +91,9 @@ class KFEventDAO: KFBaseDAO {
         var result: Bool!
         
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-            var query: String = "UPDATE " + self.tableName() + " SET"
-            var keyValues: NSMutableString = NSMutableString()
-            var arguments: NSMutableArray = NSMutableArray()
+            let query: String = "UPDATE " + self.tableName() + " SET"
+            let keyValues: NSMutableString = NSMutableString()
+            let arguments: NSMutableArray = NSMutableArray()
             
             keyValues.appendString(" updatetime=?,")
             arguments.addObject(KFUtil.getCurrentTime())
@@ -128,9 +128,9 @@ class KFEventDAO: KFBaseDAO {
             }
             
             
-            var keyString: String = keyValues.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: ","))
+            let keyString: String = keyValues.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: ","))
             
-            var lastQuery: String = query + keyString + "WHERE eventid=?"
+            let lastQuery: String = query + keyString + "WHERE eventid=?"
             arguments.addObject(event.eventid)
             
             result = db.executeUpdate(lastQuery, withArgumentsInArray: arguments as [AnyObject])
@@ -147,18 +147,18 @@ class KFEventDAO: KFBaseDAO {
     
     func getEventById(eventid: NSNumber?) -> KFEventDO? {
 
-        println(eventid)
+        print(eventid)
         if (eventid == nil) {
             return nil
         }
         
-        var sqlEventId: NSNumber = eventid!
+        let sqlEventId: NSNumber = eventid!
         
-        var sql: String = "SELECT * FROM " + self.tableName() + " WHERE eventId = ?"
+        let sql: String = "SELECT * FROM " + self.tableName() + " WHERE eventId = ?"
         
         var eventDO: KFEventDO!
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-            var result:FMResultSet = db.executeQuery(sql, withArgumentsInArray: [sqlEventId])
+            let result:FMResultSet = db.executeQuery(sql, withArgumentsInArray: [sqlEventId])
             if result.next() {
                 eventDO = self.eventFromResultSet(result)
             }
@@ -170,13 +170,13 @@ class KFEventDAO: KFBaseDAO {
     
     
     func saveEvent(event: KFEventDO) -> NSNumber {
-        var isExistEvent: KFEventDO? = self.getEventById(event.eventid)
+        let isExistEvent: KFEventDO? = self.getEventById(event.eventid)
         
         var successEventid: NSNumber!
         
         if ((isExistEvent) == nil) {
             dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-                var insertResult: Bool = self.insertEvent(event, db: db)
+                let insertResult: Bool = self.insertEvent(event, db: db)
                 if insertResult == true {
                     successEventid = NSNumber(longLong: db.lastInsertRowId())
                 } else {
@@ -192,12 +192,12 @@ class KFEventDAO: KFBaseDAO {
     }
     
     func getAllEvents() -> NSArray {
-        var sql: String = "SELECT * FROM " + self.tableName()
-        var result: NSMutableArray = NSMutableArray()
+        let sql: String = "SELECT * FROM " + self.tableName()
+        let result: NSMutableArray = NSMutableArray()
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-            var resultSet: FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
+            let resultSet: FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
             while(resultSet.next()) {
-                var event: KFEventDO = self.eventFromResultSet(resultSet)
+                let event: KFEventDO = self.eventFromResultSet(resultSet)
                 result.addObject(event)
             }
         })
@@ -205,12 +205,12 @@ class KFEventDAO: KFBaseDAO {
     }
     
     func getAllNoArchiveAndNoDeleteEvents() -> NSArray {
-        var sql: String = "SELECT * FROM " + self.tableName() + " WHERE status != \(KEventStatus.Achieve.rawValue) AND status != \(KEventStatus.Delete.rawValue) ORDER BY updatetime DESC"
-        var result: NSMutableArray = NSMutableArray()
+        let sql: String = "SELECT * FROM " + self.tableName() + " WHERE status != \(KEventStatus.Achieve.rawValue) AND status != \(KEventStatus.Delete.rawValue) ORDER BY updatetime DESC"
+        let result: NSMutableArray = NSMutableArray()
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-            var resultSet: FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
+            let resultSet: FMResultSet = db.executeQuery(sql, withArgumentsInArray: nil)
             while(resultSet.next()) {
-                var event: KFEventDO = self.eventFromResultSet(resultSet)
+                let event: KFEventDO = self.eventFromResultSet(resultSet)
                 result.addObject(event)
             }
         })

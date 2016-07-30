@@ -41,7 +41,7 @@ class KFWatchEventDetailInterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-        var eventDO:KFEventDO = context as! KFEventDO
+        let eventDO:KFEventDO = context as! KFEventDO
         self.currentEvent = eventDO
         self.lblTask.setText(eventDO.content)
         self.dueDate(eventDO)
@@ -60,13 +60,13 @@ class KFWatchEventDetailInterfaceController: WKInterfaceController {
     // MARK: - Private Method
     func dueDate(event: KFEventDO) {
         if (event.endtime != 0) {
-            var tmpDate: NSDate = KFUtil.dateFromTimeStamp(event.endtime.doubleValue) as NSDate
+            let tmpDate: NSDate = KFUtil.dateFromTimeStamp(event.endtime.doubleValue) as NSDate
             let tmpDateString = "KF_TIME_DUETO".localized + ":" + KFUtil.getDate(tmpDate)
             self.lblDate.setText(tmpDateString)
             return;
         }
         if (event.starttime != 0) {
-            var tmpDate: NSDate = KFUtil.dateFromTimeStamp(event.starttime.doubleValue) as NSDate
+            let tmpDate: NSDate = KFUtil.dateFromTimeStamp(event.starttime.doubleValue) as NSDate
             let tmpDateString = "KF_TIME_ALERT".localized + ":" + KFUtil.getDate(tmpDate)
             self.lblDate.setText(tmpDateString)
             return;

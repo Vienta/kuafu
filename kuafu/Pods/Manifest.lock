@@ -1,5 +1,5 @@
 PODS:
-  - CVCalendarKit (0.1.1)
+  - CVCalendarKit (0.1.5)
   - DAAlertController (0.1.4)
   - FMDB (2.5):
     - FMDB/standard (= 2.5)
@@ -7,8 +7,8 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - JKRichTextView (0.0.1)
-  - JTCalendar (1.2.3)
-  - MGSwipeTableCell (1.4.3)
+  - JTCalendar (2.1.7)
+  - MGSwipeTableCell (1.5.5)
   - MKEventKit (0.2.0):
     - MKFoundationKit (>= 1.2.0)
   - MKFoundationKit (1.3.0):
@@ -45,21 +45,21 @@ PODS:
     - NJKWebViewProgress/ProgressView (= 0.2.3)
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
-  - SnapKit (0.12.0)
-  - UMengSocial (4.2.3)
+  - SnapKit (0.21.1)
+  - UMengSocial (5.0)
 
 DEPENDENCIES:
-  - CVCalendarKit (~> 0.1.1)
-  - DAAlertController (~> 0.1.4)
+  - CVCalendarKit
+  - DAAlertController
   - FMDB (from `https://github.com/ccgus/fmdb.git`, commit `66e492a6de51b9077dfcbd6f4646130151714f9c`,
     branch `master`)
   - JKRichTextView
-  - JTCalendar (~> 1.2.3)
-  - MGSwipeTableCell (~> 1.4.3)
-  - MKEventKit (~> 0.2.0)
+  - JTCalendar
+  - MGSwipeTableCell
+  - MKEventKit
   - NJKWebViewProgress
-  - SnapKit (~> 0.12.0)
-  - UMengSocial (~> 4.2.3)
+  - SnapKit
+  - UMengSocial
 
 EXTERNAL SOURCES:
   FMDB:
@@ -74,16 +74,16 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ccgus/fmdb.git
 
 SPEC CHECKSUMS:
-  CVCalendarKit: 5ae1b2def4fd558029a71ec86179fa7cacff8769
+  CVCalendarKit: 32de9f29fe1b6e0fbd2a8bfb2ef97cbcba666b55
   DAAlertController: 4735313ec65d3d69f81fdd34d01308809680350f
   FMDB: 8e59e93d20d76d0b135db26ecc83ae88d016076d
   JKRichTextView: 20b33567bfe7f740f284a468824fed39e162e934
-  JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
-  MGSwipeTableCell: cb9805df3cc5cad75ad43a5c1eb424be0316f0bf
+  JTCalendar: bc7f3086a4df02aa2e02ac4d505ef888cc2283a0
+  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
   MKEventKit: f6d1425f908d329eb4adbd5517931f6331a02e53
   MKFoundationKit: 26afe1cf63d4982a937d555537ca1a3fb50a9c77
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  SnapKit: 00c388aa3bf1944c1b55472f31e841f75bd83882
-  UMengSocial: 85882abe5b20aa38ad558ece71360e16b5d50909
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

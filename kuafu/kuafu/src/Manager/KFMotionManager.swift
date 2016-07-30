@@ -28,16 +28,16 @@ class KFMotionManager: NSObject {
     func startAccerometer() -> Void {
         self.stopAccerometer()
         self.motion?.startAccelerometerUpdatesToQueue(NSOperationQueue(), withHandler: { (accelerometerData, error) -> Void in
-            let acc = accelerometerData as CMAccelerometerData
+            let acc = accelerometerData! as CMAccelerometerData
             self.outputAccelertionData(acc.acceleration)
             if (error != nil) {
-                println("motion error:\(error)")
+                print("motion error:\(error)")
             }
         })
     }
     
     func outputAccelertionData(acceleration: CMAcceleration) ->Void {
-        var accelerameter: Double = sqrt( pow(acceleration.x, 2) + pow(acceleration.y, 2) + pow(acceleration.z, 2))
+        let accelerameter: Double = sqrt( pow(acceleration.x, 2) + pow(acceleration.y, 2) + pow(acceleration.z, 2))
         if (accelerameter > 2.1) {
             if (NSUserDefaults.standardUserDefaults().boolForKey(KF_SHAKE_CREATE_TASK) == true) {
                 NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_SHAKE, object: nil)

@@ -38,7 +38,7 @@ class KFCalendarCell: UITableViewCell {
         } else {
             self.lblAllDay.hidden = true
             
-            var startTimeIsInToday: Bool = NSCalendar.currentCalendar().isDate(event.startDate, inSameDayAsDate: targetDate)
+            let startTimeIsInToday: Bool = NSCalendar.currentCalendar().isDate(event.startDate, inSameDayAsDate: targetDate)
             if startTimeIsInToday == true {
                 self.lblMorning.hidden = false
                 self.lblMorning.text = KFUtil.getTodayShortDate(event.startDate)
@@ -46,7 +46,7 @@ class KFCalendarCell: UITableViewCell {
                 self.lblMorning.hidden = true
             }
             
-            var endTimeIsInToday: Bool = NSCalendar.currentCalendar().isDate(event.endDate, inSameDayAsDate: targetDate)
+            let endTimeIsInToday: Bool = NSCalendar.currentCalendar().isDate(event.endDate, inSameDayAsDate: targetDate)
             if endTimeIsInToday == true {
                 if self.lblMorning.hidden == true {
                     self.lblMorning.hidden = false

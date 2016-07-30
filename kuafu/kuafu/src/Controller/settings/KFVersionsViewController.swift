@@ -39,7 +39,7 @@ class KFVersionsViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "versionsCellIdentifier"
-        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? UITableViewCell
+        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
@@ -54,8 +54,8 @@ class KFVersionsViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         var rowVersionInfo: Dictionary = self.versions[indexPath.row]
-        var version: String? = rowVersionInfo["version"]
-        var versionTitle: String? = rowVersionInfo["versionTitle"]
+        let version: String? = rowVersionInfo["version"]
+        let versionTitle: String? = rowVersionInfo["versionTitle"]
         
         let versionDetailViewController: KFVersionDetailViewController = KFVersionDetailViewController(nibName: "KFVersionDetailViewController", bundle: nil)
         versionDetailViewController.version = version

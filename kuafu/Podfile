@@ -8,14 +8,14 @@ use_frameworks!
 
 #pod 'FMDB', :git => 'https://github.com/robertmryan/fmdb.git', :commit => 'c4d0ae7bd6df5e234cfe3faedc661252cb048a58'
 pod 'FMDB', :git => 'https://github.com/ccgus/fmdb.git', :commit => '66e492a6de51b9077dfcbd6f4646130151714f9c', :branch => 'master'
-pod 'SnapKit', '~> 0.12.0'
-pod 'MGSwipeTableCell', '~> 1.4.3'
-pod 'CVCalendarKit', '~> 0.1.1'
-pod 'JTCalendar', '~> 1.2.3'
-pod 'MKEventKit', '~> 0.2.0'
+pod 'SnapKit'
+pod 'MGSwipeTableCell'
+pod 'CVCalendarKit'
+pod 'JTCalendar'
+pod 'MKEventKit'
 pod 'JKRichTextView'
-pod 'DAAlertController', '~> 0.1.4'
+pod 'DAAlertController'
 pod 'NJKWebViewProgress'
-pod 'UMengSocial', '~> 4.2.3'
+pod 'UMengSocial'
 
 

@@ -23,7 +23,7 @@ class KFAboutViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "KF_SETTINGS_ABOUT_KUAFU".localized
         
-        var copyright: NSString = "Design and code by Vienta in Hangzhou"
+        let copyright: NSString = "Design and code by Vienta in Hangzhou"
         self.lblCopyright.text = copyright as String
         self.lblCopyright.font = UIFont.systemFontOfSize(14)
         self.lblCopyright.textAlignment = .Center
@@ -31,20 +31,20 @@ class KFAboutViewController: UIViewController {
         
         self.lblSlogan.text = "KF_SLOGAN".localized
         
-        var copyrightRange: NSRange! = copyright.rangeOfString("Vienta")
+        let copyrightRange: NSRange! = copyright.rangeOfString("Vienta")
         
         self.lblCopyright.setCustomLinkWithLinkDidTappedCallback({ url -> Bool in
             UIApplication.sharedApplication().openURL(NSURL(string: KF_MY_BLOG)!)
             return true
         }, forTextAtRange: copyrightRange)
         
-        var openSource: NSString = "Open source at GitHub"
+        let openSource: NSString = "Open source at GitHub"
         self.lblOpenSource.text = openSource as String
         self.lblOpenSource.font = UIFont.systemFontOfSize(14)
         self.lblOpenSource.textAlignment = .Center
         self.lblOpenSource.backgroundColor = UIColor.clearColor()
         
-        var openSourceRange: NSRange! = openSource.rangeOfString("GitHub")
+        let openSourceRange: NSRange! = openSource.rangeOfString("GitHub")
         self.lblOpenSource.setCustomLinkWithLinkDidTappedCallback({ url -> Bool in
             self.pushToWebView(KF_PROJECT_URL)
             return true
@@ -69,7 +69,7 @@ class KFAboutViewController: UIViewController {
     // MARK: - Private Methods
     
     func pushToWebView(url:String) -> Void {
-        var webViewController: KFWebViewController = KFWebViewController.loadWebViewWithURL(url)
+        let webViewController: KFWebViewController = KFWebViewController.loadWebViewWithURL(url)
         self.navigationController?.pushViewController(webViewController, animated: true)
     }
     

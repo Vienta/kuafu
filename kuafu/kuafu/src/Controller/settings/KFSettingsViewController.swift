@@ -20,13 +20,13 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         self.view.backgroundColor = KF_BG_COLOR
         self.title = "KF_SETTINGS_CONTROLLER_TITLE".localized
         
-        var settings =  [["section":"KF_GENERAL".localized,"values":[KF_SHAKE_CREATE_TASK]],
+        let settings =  [["section":"KF_GENERAL".localized,"values":[KF_SHAKE_CREATE_TASK]],
                         ["section":"KF_FEEDBACK".localized,"values":[KF_FEEDBACK,KF_EVALUATION]],
                         ["section":"KF_ABOUT".localized,"values":[KF_ABOUT_KUAFU,KF_HISTORY_VERSION,KF_LISENCE]]]
         
         self.settingsList = NSMutableArray(array: settings)
         self.tbvSettings.reloadData()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTableView", name: KF_NOTIFICATION_SHAKE_VALUE_CHANGED, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(KFSettingsViewController.updateTableView), name: KF_NOTIFICATION_SHAKE_VALUE_CHANGED, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,15 +42,15 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func openEmailFeedback() -> Void {
-        var mailComposeViewController: MFMailComposeViewController? = MFMailComposeViewController()
+        let mailComposeViewController: MFMailComposeViewController? = MFMailComposeViewController()
         if (mailComposeViewController != nil) {
             mailComposeViewController!.mailComposeDelegate = self
             
-            var toRecipients: Array = [KF_MY_EMAIL]
+            let toRecipients: Array = [KF_MY_EMAIL]
             mailComposeViewController!.setToRecipients(toRecipients)
             
             
-            var emailBody: String = "\(DeviceGuru.hardwareString())|\(APP_DISPLAY_NAME)|Version:\(APP_VERSION)"
+            let emailBody: String = "\(DeviceGuru.hardwareString())|\(APP_DISPLAY_NAME)|Version:\(APP_VERSION)"
             mailComposeViewController!.setMessageBody(emailBody, isHTML: true)
             
             self.presentViewController(mailComposeViewController!, animated: true, completion: nil)
@@ -58,10 +58,10 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func openAppStore() -> Void {
-        var storeProductViewController: SKStoreProductViewController = SKStoreProductViewController()
+        let storeProductViewController: SKStoreProductViewController = SKStoreProductViewController()
         storeProductViewController.delegate = self
         storeProductViewController.loadProductWithParameters([SKStoreProductParameterITunesItemIdentifier: KF_ITUNES_ITEM_IDENTIFIER], completionBlock: { (result, error) -> Void in
-            println("product error:\(error)")
+            print("product error:\(error)")
             if (error == nil) {
             }
         })
@@ -69,18 +69,18 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func pushToLisence() -> Void {
-        var lisenceViewController: KFLisenceViewController = KFLisenceViewController(nibName: "KFLisenceViewController", bundle: nil)
+        let lisenceViewController: KFLisenceViewController = KFLisenceViewController(nibName: "KFLisenceViewController", bundle: nil)
 
         self.navigationController?.pushViewController(lisenceViewController, animated: true)
     }
     
     func pushToAbout() -> Void {
-        var aboutViewController: KFAboutViewController = KFAboutViewController(nibName:"KFAboutViewController", bundle: nil)
+        let aboutViewController: KFAboutViewController = KFAboutViewController(nibName:"KFAboutViewController", bundle: nil)
         self.navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
     func pushToHistoryVersion() -> Void {
-        var versionsViewController: KFVersionsViewController = KFVersionsViewController(nibName:"KFVersionsViewController", bundle: nil)
+        let versionsViewController: KFVersionsViewController = KFVersionsViewController(nibName:"KFVersionsViewController", bundle: nil)
         self.navigationController?.pushViewController(versionsViewController, animated: true)
     }
     
@@ -98,7 +98,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         case (KF_LISENCE):
             self.pushToLisence()
         default:
-            println("afd")
+            print("afd")
         }
     }
     
@@ -124,7 +124,7 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellIdentifier = "settingsIdentifier"
-        var settingsCell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? UITableViewCell
+        var settingsCell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)! as UITableViewCell
         if (settingsCell == nil) {
             settingsCell = UITableViewCell(style: .Value1, reuseIdentifier: cellIdentifier)
             settingsCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
@@ -138,10 +138,10 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
         settingsCell.textLabel?.text = KF_SETTINGS[elementValueKey]
         
         if (elementValueKey == KF_SHAKE_CREATE_TASK) {
-            var on:Bool = NSUserDefaults.standardUserDefaults().boolForKey(KF_SHAKE_CREATE_TASK)
-            var shakeSwith: UISwitch = UISwitch()
+            let on:Bool = NSUserDefaults.standardUserDefaults().boolForKey(KF_SHAKE_CREATE_TASK)
+            let shakeSwith: UISwitch = UISwitch()
             shakeSwith.on = on
-            shakeSwith.addTarget(self, action: "switchValueChanged:", forControlEvents: UIControlEvents.TouchUpInside)
+            shakeSwith.addTarget(self, action: #selector(KFSettingsViewController.switchValueChanged(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             settingsCell.accessoryView = shakeSwith
         }
         return settingsCell
@@ -162,12 +162,12 @@ class KFSettingsViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     // MARK: - SKStoreProductViewControllerDelegate
-    func productViewControllerDidFinish(viewController: SKStoreProductViewController!) {
+    func productViewControllerDidFinish(viewController: SKStoreProductViewController) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - MFMailComposeViewControllerDelegate
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

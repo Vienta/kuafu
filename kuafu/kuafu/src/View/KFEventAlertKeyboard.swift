@@ -18,7 +18,7 @@ class KFEventAlertKeyboard: UIView {
     class func keyboard()->KFEventAlertKeyboard{
         
         var keyboard: KFEventAlertKeyboard = KFEventAlertKeyboard(frame: CGRectMake(0, 0, DEVICE_WIDTH, 40))
-        keyboard.btnAlert = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        keyboard.btnAlert = UIButton(type: UIButtonType.Custom)
         var alertImg = UIImage(named: "btn_datealert")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         keyboard.btnAlert.setImage(alertImg, forState: UIControlState.Normal)
         keyboard.btnAlert.addTarget(keyboard, action: "btnTapped:", forControlEvents: .TouchUpInside)
@@ -30,7 +30,7 @@ class KFEventAlertKeyboard: UIView {
         }
         keyboard.btnAlert.tintColor = KF_ICON_BG_COLOR
         
-        keyboard.btnDateto = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        keyboard.btnDateto = UIButton(type: UIButtonType.Custom)
         keyboard.addSubview(keyboard.btnDateto)
         var datetoImg = UIImage(named: "btn_dateto")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         keyboard.btnDateto.setImage(datetoImg, forState: UIControlState.Normal)

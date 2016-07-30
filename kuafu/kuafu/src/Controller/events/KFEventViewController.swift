@@ -40,7 +40,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         self.tbvEvents.rowHeight = UITableViewAutomaticDimension
         self.tbvEvents.estimatedRowHeight = 78.0
         self.tbvEvents.registerNib(UINib(nibName: "KFEventCell", bundle: nil), forCellReuseIdentifier: "KFEventCell")
-        var addButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "btnTapped:")
+        let addButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(KFEventViewController.btnTapped(_:)))
         self.navigationItem.rightBarButtonItem = addButtonItem
         self.view.backgroundColor = KF_BG_COLOR
         
@@ -55,20 +55,20 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             self.animationController = ZoomTransition(navigationController: navigationController)
         }
         self.navigationController?.delegate = animationController
-        self.navigationController?.interactivePopGestureRecognizer.enabled = true
-        self.navigationController?.interactivePopGestureRecognizer.delegate = nil
+        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: KF_NOTIFICATION_UPDATE_TASK, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTask", name: UIApplicationWillEnterForegroundNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handShaked", name: KF_NOTIFICATION_SHAKE, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(KFEventViewController.updateTask), name: KF_NOTIFICATION_UPDATE_TASK, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(KFEventViewController.updateTask), name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(KFEventViewController.handShaked), name: KF_NOTIFICATION_SHAKE, object: nil)
         self.events = NSMutableArray(capacity: 0)
 
         self.showTaskData()
         
-        DELAY(3, { () -> () in
+        DELAY(3, closure: { () -> () in
             let eventStore = EKEventStore()
-            eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: { (granted, error) -> Void in
-                println("granted:\(granted)")
+            eventStore.requestAccessToEntityType(EKEntityType.Event, completion: { (granted, error) -> Void in
+                print("granted:\(granted)")
             })
         })
     }
@@ -80,20 +80,20 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     
     // MARK: - Private Methods
     func popWriteEventViewControllerWithEvent(eventDO: KFEventDO!) -> Void {
-        var eventWriteViewController: KFEventWriteViewController = KFEventWriteViewController(nibName: "KFEventWriteViewController", bundle: nil)
+        let eventWriteViewController: KFEventWriteViewController = KFEventWriteViewController(nibName: "KFEventWriteViewController", bundle: nil)
         eventWriteViewController.eventDO = eventDO
-        var eventWriteNavigationController: UINavigationController = UINavigationController(rootViewController: eventWriteViewController)
+        let eventWriteNavigationController: UINavigationController = UINavigationController(rootViewController: eventWriteViewController)
         self.navigationController?.presentViewController(eventWriteNavigationController, animated: true, completion: nil)
     }
     
     func deleteEventCellWithAnimation(sectionDict: NSDictionary, eventsInSection: NSArray, indexPath: NSIndexPath, eventDO: KFEventDO) -> Void {
         
-        var sectionDict: NSDictionary = sectionDict
-        var eventsMArrInSection: NSMutableArray = NSMutableArray(array: eventsInSection) as NSMutableArray
+        let sectionDict: NSDictionary = sectionDict
+        let eventsMArrInSection: NSMutableArray = NSMutableArray(array: eventsInSection) as NSMutableArray
         
         var targetEvent: KFEventDO!
-        for (index, event : AnyObject) in enumerate(eventsMArrInSection) {
-            var subEvent: KFEventDO = event as! KFEventDO
+        for (_, event) in eventsMArrInSection.enumerate() {
+            let subEvent: KFEventDO = event as! KFEventDO
             if subEvent.eventid.integerValue == eventDO.eventid.integerValue {
                 targetEvent = subEvent
             }
@@ -109,7 +109,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             self.tbvEvents.reloadData()
             
         } else {
-            var updateEventDict: NSDictionary = ["title": sectionDict.objectForKey("title") as! String,"events": eventsMArrInSection]
+            let updateEventDict: NSDictionary = ["title": sectionDict.objectForKey("title") as! String,"events": eventsMArrInSection]
             let section: Int = indexPath.section
             
             self.events.replaceObjectAtIndex(section, withObject: updateEventDict)
@@ -118,7 +118,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             self.tbvEvents.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Bottom)
             self.tbvEvents.endUpdates()
             
-            DELAY(0.4, { () -> () in
+            DELAY(0.4, closure: { () -> () in
                 self.tbvEvents.reloadSections(NSIndexSet(index: section), withRowAnimation: UITableViewRowAnimation.None)
             })
         }
@@ -129,14 +129,14 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
     func handShaked() -> Void {
-            var createTaskAction: DAAlertAction = DAAlertAction(title: "KF_NEW_TODO_TITLE".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
+            let createTaskAction: DAAlertAction = DAAlertAction(title: "KF_NEW_TODO_TITLE".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
                 self.popWriteEventViewControllerWithEvent(nil)
             })
-            var fobiddenShakeAction: DAAlertAction = DAAlertAction(title: "KF_ALERT_CLOSE_SHAKE".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
+            let fobiddenShakeAction: DAAlertAction = DAAlertAction(title: "KF_ALERT_CLOSE_SHAKE".localized, style: DAAlertActionStyle.Default, handler: { () -> Void in
                 NSUserDefaults.standardUserDefaults().setBool(false, forKey: KF_SHAKE_CREATE_TASK)
                 NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_SHAKE_VALUE_CHANGED, object: nil)
             })
-            var cancelAction: DAAlertAction = DAAlertAction(title: "KF_CANCEL".localized, style: DAAlertActionStyle.Destructive, handler: nil)
+            let cancelAction: DAAlertAction = DAAlertAction(title: "KF_CANCEL".localized, style: DAAlertActionStyle.Destructive, handler: nil)
 
             DAAlertController.showAlertViewInViewController(self, withTitle: "KF_NEW_TODO_TITLE".localized + "?", message: nil, actions: [createTaskAction,fobiddenShakeAction,cancelAction])
     }
@@ -144,7 +144,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     func updateTask() -> Void {
         
         self.events.removeAllObjects()
-        var allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllNoArchiveAndNoDeleteEvents())
+        let allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllNoArchiveAndNoDeleteEvents())
         
         if allEvents.count == 0 {
             self.lblEmpty.hidden = false
@@ -156,15 +156,15 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         }
 
         //逾期任务
-        var overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        let overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
         //普通任务 既无提醒时间，也无逾期时间
         var normalEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
         //今日任务 提醒时间或者逾期时间是今天
-        var todayEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        let todayEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
-        var currentDateStamp: NSTimeInterval = NSDate().timeIntervalSince1970
+        let currentDateStamp: NSTimeInterval = NSDate().timeIntervalSince1970
         
         allEvents.enumerateObjectsUsingBlock { (element, index, stop) -> Void in
             
@@ -176,10 +176,10 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             }
             
             if subEvent.starttime.doubleValue > 0 || subEvent.endtime.doubleValue > 0 {
-                var isStartTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.starttime.doubleValue))
-                var isEndTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.endtime.doubleValue))
+                let isStartTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.starttime.doubleValue))
+                let isEndTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.endtime.doubleValue))
                 
-                var isToday: Bool = (isStartTimeToday || isEndTimeToday)
+                let isToday: Bool = (isStartTimeToday || isEndTimeToday)
                 
                 if isToday == true && (currentDateStamp < subEvent.endtime.doubleValue) {
                     todayEvents.addObject(subEvent)
@@ -191,17 +191,17 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         allEvents.removeObjectsInArray(todayEvents as [AnyObject])
         
         if overDueEvents.count > 0 {
-            var overDueEventDict: NSDictionary = ["title": "KF_OVERDUE_TASK".localized,"events": overDueEvents]
+            let overDueEventDict: NSDictionary = ["title": "KF_OVERDUE_TASK".localized,"events": overDueEvents]
             self.events.addObject(overDueEventDict)
         }
         
         if todayEvents.count > 0 {
-            var todayEventDict: NSDictionary = ["title": "KF_TODAY_TASK".localized,"events": todayEvents]
+            let todayEventDict: NSDictionary = ["title": "KF_TODAY_TASK".localized,"events": todayEvents]
             self.events.addObject(todayEventDict)
         }
         normalEvents = allEvents
         if normalEvents.count > 0 {
-            var normalEventDict: NSDictionary = ["title": "KF_NORMAL_TASK".localized,"events": normalEvents]
+            let normalEventDict: NSDictionary = ["title": "KF_NORMAL_TASK".localized,"events": normalEvents]
             self.events.addObject(normalEventDict)
         }
         
@@ -211,14 +211,14 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     
     func swipeTableCell(cell: MGSwipeTableCell!, tappedButtonAtIndex index: Int, direction: MGSwipeDirection, fromExpansion: Bool) -> Bool {
         
-        var eventDO = objc_getAssociatedObject(cell, &kAssociateKey) as! KFEventDO
-        var indexPath = objc_getAssociatedObject(cell, &kAssociateRowKey) as! NSIndexPath
+        let eventDO = objc_getAssociatedObject(cell, &kAssociateKey) as! KFEventDO
+        let indexPath = objc_getAssociatedObject(cell, &kAssociateRowKey) as! NSIndexPath
         
         if direction == MGSwipeDirection.LeftToRight {
             if index == 0 {
                 eventDO.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
                 KFEventDAO.sharedManager.saveEvent(eventDO)
-                var sectionDict: NSDictionary = self.events.objectAtIndex(indexPath.section) as! NSDictionary
+                let sectionDict: NSDictionary = self.events.objectAtIndex(indexPath.section) as! NSDictionary
                 self.deleteEventCellWithAnimation(sectionDict as NSDictionary, eventsInSection: sectionDict.objectForKey("events") as! NSArray, indexPath: indexPath, eventDO: eventDO)
                 
             }
@@ -227,7 +227,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
             if index == 0 {
                 eventDO.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
                 KFEventDAO.sharedManager.saveEvent(eventDO)
-                var sectionDict: NSDictionary = self.events.objectAtIndex(indexPath.section) as! NSDictionary
+                let sectionDict: NSDictionary = self.events.objectAtIndex(indexPath.section) as! NSDictionary
                 self.deleteEventCellWithAnimation(sectionDict as NSDictionary, eventsInSection: sectionDict.objectForKey("events") as! NSArray, indexPath: indexPath, eventDO: eventDO)
             }
             if index == 1 {
@@ -250,20 +250,20 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        var currentEventDict: NSDictionary = self.events.objectAtIndex(section) as! NSDictionary
-        var currentEvents: NSArray = currentEventDict.objectForKey("events") as! NSArray
+        let currentEventDict: NSDictionary = self.events.objectAtIndex(section) as! NSDictionary
+        let currentEvents: NSArray = currentEventDict.objectForKey("events") as! NSArray
         return currentEvents.count
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var currentEventSectionTitle: String = self.events.objectAtIndex(section).objectForKey("title") as! String
+        let currentEventSectionTitle: String = self.events.objectAtIndex(section).objectForKey("title") as! String
         return currentEventSectionTitle
     }
     
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
-        header.textLabel.textColor = UIColor.grayColor()
-        header.textLabel.font = UIFont.systemFontOfSize(14)
+        header.textLabel!.textColor = UIColor.grayColor()
+        header.textLabel!.font = UIFont.systemFontOfSize(14)
         header.contentView.backgroundColor = KF_BG_COLOR
     }
     
@@ -272,7 +272,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var eventCell: KFEventCell = tableView.dequeueReusableCellWithIdentifier("KFEventCell") as! KFEventCell
+        let eventCell: KFEventCell = tableView.dequeueReusableCellWithIdentifier("KFEventCell") as! KFEventCell
         eventCell.leftButtons = [MGSwipeButton(title: "KF_ARCHIEVE".localized, backgroundColor: UIColor(red: 0.13, green: 0.41, blue: 1, alpha: 1)) { (cell: MGSwipeTableCell!) -> Bool in
             return true
         }]
@@ -291,14 +291,14 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         eventCell.rightExpansion.buttonIndex = 0
         eventCell.delegate = self
         
-        var eventDict: NSDictionary = self.events[indexPath.section] as! NSDictionary
-        var eventInSection: NSArray = eventDict.objectForKey("events") as! NSArray
-        var eventDO: KFEventDO = eventInSection[indexPath.row] as! KFEventDO
+        let eventDict: NSDictionary = self.events[indexPath.section] as! NSDictionary
+        let eventInSection: NSArray = eventDict.objectForKey("events") as! NSArray
+        let eventDO: KFEventDO = eventInSection[indexPath.row] as! KFEventDO
         
         eventCell.configData(eventDO)
         
-        objc_setAssociatedObject(eventCell, &kAssociateKey, eventDO, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
-        objc_setAssociatedObject(eventCell, &kAssociateRowKey, indexPath, objc_AssociationPolicy(OBJC_ASSOCIATION_COPY_NONATOMIC))
+        objc_setAssociatedObject(eventCell, &kAssociateKey, eventDO, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        objc_setAssociatedObject(eventCell, &kAssociateRowKey, indexPath, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
         
         return eventCell
     }
@@ -317,7 +317,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
                 pullCalendarFlag = true
                 let calendarViewController: KFCalendarViewController = KFCalendarViewController(nibName: "KFCalendarViewController", bundle: nil)
                 self.navigationController?.pushViewController(calendarViewController, animated: true)
-                DELAY(0.3, { () -> () in
+                DELAY(0.3, closure: { () -> () in
                     self.pullCalendarFlag = false
                 })
             }
@@ -327,7 +327,7 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
     // MARK: - UIScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
 
-        var offsetY: CGFloat = scrollView.contentOffset.y
+        let offsetY: CGFloat = scrollView.contentOffset.y
         
         if offsetY < -130 {
             self.pullCalendar.center = CGPointMake(DEVICE_WIDTH/2, (fabs(offsetY) - 64)/2 + 64)

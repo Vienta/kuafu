@@ -18,9 +18,9 @@ class KFLisenceDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = self.lisenceName
-        var lisenceFileName: String = self.lisenceName + "_LICENSE"
+        let lisenceFileName: String = self.lisenceName + "_LICENSE"
         let path = NSBundle.mainBundle().pathForResource(lisenceFileName, ofType: "txt")
-        var lisenceContent: String! = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
+        let lisenceContent: String! = try? String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
         self.txvLisence.text = lisenceContent
     }
 

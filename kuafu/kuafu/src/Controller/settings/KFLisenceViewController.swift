@@ -40,7 +40,7 @@ class KFLisenceViewController: UIViewController,UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellIdentifier: String = "KFLisenceCellIdentifier"
-        var lisenceCell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? UITableViewCell
+        var lisenceCell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)! as UITableViewCell
         
         if (lisenceCell == nil) {
             lisenceCell = UITableViewCell(style: .Value1, reuseIdentifier: cellIdentifier)
@@ -58,7 +58,7 @@ class KFLisenceViewController: UIViewController,UITableViewDelegate, UITableView
         
         let cellContent: String = self.lisences[indexPath.row]
         
-        var lisenceDetailViewController: KFLisenceDetailViewController = KFLisenceDetailViewController(nibName: "KFLisenceDetailViewController", bundle: nil)
+        let lisenceDetailViewController: KFLisenceDetailViewController = KFLisenceDetailViewController(nibName: "KFLisenceDetailViewController", bundle: nil)
         lisenceDetailViewController.lisenceName = cellContent
         self.navigationController?.pushViewController(lisenceDetailViewController, animated: true)
     }

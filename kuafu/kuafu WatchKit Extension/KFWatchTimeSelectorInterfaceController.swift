@@ -25,11 +25,11 @@ class KFWatchTimeSelectorInterfaceController: WKInterfaceController {
         let timeInterval = context as! Array<String>
 
         self.dayInterval = notime + timeInterval
-        println("self.dayInterval:\(self.dayInterval)")
+        print("self.dayInterval:\(self.dayInterval)")
         
         self.tbvDayInterval.setNumberOfRows(self.dayInterval.count, withRowType: "KFWatchTimeSelectorCell")
         
-        for (idx, title) in enumerate(self.dayInterval) {
+        for (idx, title) in self.dayInterval.enumerate() {
             let cell = self.tbvDayInterval.rowControllerAtIndex(idx) as! KFWatchTimeSelectorCell
             if (title == notimeAlert) {
                 cell.lblSelectorTime.setText("KF_NO_REMIND".localized)
@@ -41,14 +41,14 @@ class KFWatchTimeSelectorInterfaceController: WKInterfaceController {
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         let selectDayInterval = self.dayInterval[rowIndex]
-        println("selectDayInterval:\(selectDayInterval)")
+        print("selectDayInterval:\(selectDayInterval)")
         self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: WKTextInputMode.Plain) { (input) -> Void in
-            println("INPUT:\(input)")
+            print("INPUT:\(input)")
             if (input == nil) {
                 self.popToRootController()
             } else {
-                if (input.isEmpty == false) {
-                    let inputText = input[0] as! String
+                if (input!.isEmpty == false) {
+                    let inputText = input![0] as! String
                     self.createEventWithContent(inputText, and: selectDayInterval)
                 } else {
                     self.popToRootController()
@@ -70,7 +70,7 @@ class KFWatchTimeSelectorInterfaceController: WKInterfaceController {
 
     // MARK: - Private Methods
     func createEventWithContent(content:String, and alertTime:String) ->Void {
-        var eventDO: KFEventDO = KFEventDO()
+        let eventDO: KFEventDO = KFEventDO()
         eventDO.content = content
         if (alertTime != notimeAlert) {
             let alertTimeString = KFUtil.getShortDate(NSDate()) + " " + alertTime

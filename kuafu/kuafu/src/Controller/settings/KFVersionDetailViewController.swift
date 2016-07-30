@@ -18,9 +18,9 @@ class KFVersionDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var versionFileName: String = "Version_" + self.version
+        let versionFileName: String = "Version_" + self.version
         let path = NSBundle.mainBundle().pathForResource(versionFileName, ofType: "txt")
-        var versionConent: String! = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
+        let versionConent: String! = try? String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
         self.txvVersion.text = versionConent
     }
 

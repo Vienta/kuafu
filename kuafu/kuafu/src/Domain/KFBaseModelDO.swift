@@ -17,14 +17,14 @@ class KFBaseModelDO: NSObject {
     init(initWithDict dict:NSDictionary) {
         super.init()
         dict.enumerateKeysAndObjectsUsingBlock { (key, obj, stop) -> Void in
-            var SEL: Selector = NSSelectorFromString(key as! String);
+            let SEL: Selector = NSSelectorFromString(key as! String);
             
             if (self.respondsToSelector(SEL)) {
-                if ((obj) == nil) {
-                    self.setNilValueForKey(key as! String)
-                } else {
+//                if (obj == nil) {
+//                    self.setNilValueForKey(key as! String)
+//                } else {
                     self.setValue(obj, forKey: key as! String)
-                }
+//                }
             }
         }
         

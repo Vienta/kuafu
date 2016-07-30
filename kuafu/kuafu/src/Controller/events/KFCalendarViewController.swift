@@ -75,7 +75,7 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
         let eventStore = EKEventStore()
 
         if EKEventStore.mk_isAccessAuthorized() == false {
-            println("Access Denied")
+            print("Access Denied")
             self.alertEventAccessibility()
         } else {
             EKEventStore.mk_registerEventStore(eventStore)
@@ -85,18 +85,18 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     }
     
     func eventsFromLastYearAndFutureYear() -> NSArray! {
-        var yearSeconds: NSTimeInterval = 365 * (60 * 60 * 24)
-        var startDate: NSDate = NSDate(timeIntervalSinceNow: -yearSeconds)
-        var endDate: NSDate = NSDate(timeIntervalSinceNow: yearSeconds)
+        let yearSeconds: NSTimeInterval = 365 * (60 * 60 * 24)
+        let startDate: NSDate = NSDate(timeIntervalSinceNow: -yearSeconds)
+        let endDate: NSDate = NSDate(timeIntervalSinceNow: yearSeconds)
         
-        var eventsInThoseTwoYears = EKEvent.mk_eventsFrom(startDate, to: endDate)
+        let eventsInThoseTwoYears = EKEvent.mk_eventsFrom(startDate, to: endDate)
         
         if eventsInThoseTwoYears != nil {
             let events = eventsInThoseTwoYears as NSArray
             
-            for (idx, evt) in enumerate(events) {
+            for (idx, evt) in events.enumerate() {
                 let subEvent = evt as! EKEvent
-                var key: String = KFUtil.getShortDate(subEvent.startDate) as String
+                let key: String = KFUtil.getShortDate(subEvent.startDate) as String
                 
                 if (self.eventsByDate[key] == nil) {
                     self.eventsByDate[key] = NSMutableArray()
@@ -112,7 +112,7 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     func alertEventAccessibility() -> Void {
         let randomNum = Int(arc4random_uniform(3));
         if (randomNum % 3 == 0) {//减少弹出频率
-            var cancelAction: DAAlertAction = DAAlertAction(title: "KF_LOCALNOTIFICATION_GET_IT".localized, style: DAAlertActionStyle.Destructive, handler: nil)
+            let cancelAction: DAAlertAction = DAAlertAction(title: "KF_LOCALNOTIFICATION_GET_IT".localized, style: DAAlertActionStyle.Destructive, handler: nil)
             DAAlertController.showAlertViewInViewController(self, withTitle: "KF_ALERT_TIPS".localized, message: "KF_EVENT_ACCESSIBILITY_TIPS".localized, actions: [cancelAction])
         }
     }
@@ -122,15 +122,15 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     
     // MARK: - ZoomTransitionProtocol
     func viewForTransition() -> UIView {
-        println("\(__FUNCTION__)")
+        print("\(#function)")
         return self.igvCalendar
     }
     
     // MARK: - JTCalendarDataSource
     func calendarHaveEvent(calendar: JTCalendar!, date: NSDate!) -> Bool {
         
-        var key: String = KFUtil.getShortDate(date) as String
-        var events: NSArray! = self.eventsByDate[key] as? NSArray
+        let key: String = KFUtil.getShortDate(date) as String
+        let events: NSArray! = self.eventsByDate[key] as? NSArray
         if (events != nil && events.count > 0) {
             return true
         }
@@ -139,8 +139,8 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     }
     
     func calendarDidDateSelected(calendar: JTCalendar!, date: NSDate!) {
-        var key: String = KFUtil.getShortDate(date)
-        var selectDateEvents: NSArray! = self.eventsByDate[key] as? NSArray
+        let key: String = KFUtil.getShortDate(date)
+        let selectDateEvents: NSArray! = self.eventsByDate[key] as? NSArray
         self.selectDate = date
         self.currentDayEvents.removeAllObjects()
         if (selectDateEvents != nil && selectDateEvents.count > 0) {
@@ -158,9 +158,9 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     }
     
     func calendarCurrentDate() -> Void {
-        var newCalendar: NSCalendar = self.calendar.calendarAppearance.calendar()
+        let newCalendar: NSCalendar = self.calendar.calendarAppearance.calendar()
         
-        var comps: NSDateComponents = newCalendar.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth, fromDate: self.calendar.currentDate)
+        let comps: NSDateComponents = newCalendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month], fromDate: self.calendar.currentDate)
         var currentMonthIdx = comps.month
         
         var dateFormatter: NSDateFormatter!
@@ -173,8 +173,8 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
             currentMonthIdx += 12
         }
         
-        var monthSymbols: NSArray = dateFormatter.standaloneMonthSymbols as NSArray
-        var monthText: String = monthSymbols.objectAtIndex(currentMonthIdx - 1).capitalizedString
+        let monthSymbols: NSArray = dateFormatter.standaloneMonthSymbols as NSArray
+        let monthText: String = monthSymbols.objectAtIndex(currentMonthIdx - 1).capitalizedString
 
         self.title = "\(comps.year)\(monthText)"
     }
@@ -185,7 +185,7 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var calendarCell: KFCalendarCell = tableView.dequeueReusableCellWithIdentifier("KFCalendarCell") as! KFCalendarCell
+        let calendarCell: KFCalendarCell = tableView.dequeueReusableCellWithIdentifier("KFCalendarCell") as! KFCalendarCell
         let calendarEvent: EKEvent = self.currentDayEvents.objectAtIndex(indexPath.row) as! EKEvent
         calendarCell.configureWithEvent(calendarEvent, targetDate: self.selectDate)
         return calendarCell
@@ -199,7 +199,7 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var headerView: UIView = UIView(frame: CGRectMake(0, 0, tableView.bounds.size.width, 1))
+        let headerView: UIView = UIView(frame: CGRectMake(0, 0, tableView.bounds.size.width, 1))
         headerView.backgroundColor = KF_LINE_COLOR
         return headerView
     }

@@ -32,10 +32,13 @@ class KFDBManager: NSObject {
         let fileExist:Bool = NSFileManager.defaultManager().fileExistsAtPath(docPath)
         
         if(!fileExist) {
-            NSFileManager.defaultManager().createDirectoryAtPath(docPath, withIntermediateDirectories: true, attributes: nil, error: nil)
+            do {
+                try NSFileManager.defaultManager().createDirectoryAtPath(docPath, withIntermediateDirectories: true, attributes: nil)
+            } catch _ {
+            }
         }
         
-        KFUtil.skipBackupAttributeToItemAtPath(NSURL.fileURLWithPath(docPath)!)
+        KFUtil.skipBackupAttributeToItemAtPath(NSURL.fileURLWithPath(docPath))
         
         return docPath
     }

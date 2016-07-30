@@ -54,13 +54,15 @@ class KFEventManager: NSObject {
     
     // MARK: - Public Method
     func getLocalEventCalendars() -> NSArray {
-        var allCalendars: NSArray! = self.eventStore?.calendarsForEntityType(EKEntityTypeEvent)
-        var localCalendars: NSMutableArray = NSMutableArray()
+        let allCalendars: NSArray! = self.eventStore?.calendarsForEntityType(EKEntityType.Event)
+        let localCalendars: NSMutableArray = NSMutableArray()
         
         allCalendars.enumerateObjectsUsingBlock { (cal, idx, stop) -> Void in
             let calendar: EKCalendar = cal as! EKCalendar
             
-            if (calendar.type.value == EKCalendarTypeLocal.value) {
+            EKCalendarType.Local;
+            
+            if (calendar.type == EKCalendarType.Local) {
                 localCalendars.addObject(calendar)
             }
         }
@@ -75,8 +77,8 @@ class KFEventManager: NSObject {
     
     func checkIfCalendarIsCustomWithIdentifier(identifier: String) -> Bool {
         var isCustomCalendar: Bool = false
-        var customCal: NSArray = self.customCalendarIdentifiers!
-        for (idx, value) in enumerate(customCal) {
+        let customCal: NSArray = self.customCalendarIdentifiers!
+        for (_, value) in customCal.enumerate() {
             if (value as! String == identifier) {
                 isCustomCalendar = true
                 break
@@ -94,27 +96,22 @@ class KFEventManager: NSObject {
         var calendar: EKCalendar!
     
         if (self.selectedCalendarIdentifier?.isEmpty == false) {
-            calendar = self.eventStore?.calendarWithIdentifier(self.selectedCalendarIdentifier)
+            calendar = self.eventStore?.calendarWithIdentifier(self.selectedCalendarIdentifier!)
         }
         
-        var calendarArray: NSArray!
-        if (calendar != nil) {
-            calendarArray = [calendar]
-        }
-        
-        var yearSeconds: NSTimeInterval = 365 * (60 * 60 * 24)
-        var startDate: NSDate = NSDate(timeIntervalSinceNow: -yearSeconds)
-        var endDate: NSDate = NSDate(timeIntervalSinceNow: yearSeconds)
+        let yearSeconds: NSTimeInterval = 365 * (60 * 60 * 24)
+        let startDate: NSDate = NSDate(timeIntervalSinceNow: -yearSeconds)
+        let endDate: NSDate = NSDate(timeIntervalSinceNow: yearSeconds)
         
         //TODO:这里需要修改
         let predicate = self.eventStore?.predicateForEventsWithStartDate(startDate, endDate: endDate, calendars: nil)
 
         
-        let eventsArray = self.eventStore?.eventsMatchingPredicate(predicate) as NSArray!
+        let eventsArray = self.eventStore?.eventsMatchingPredicate(predicate!) as NSArray!
 //        var uniqueEventsArray: NSMutableArray = NSMutableArray()
 //        for (idx, event) in enumerate(eventsArray) {
 //            let currentEvent: EKEvent = event as! EKEvent
-//            
+//
 //            var eventExists: Bool = false
 //
 //            if (currentEvent.recurrenceRules.isEmpty == false) {
@@ -141,17 +138,20 @@ class KFEventManager: NSObject {
     }
     
     func deleteEventWithIdentifier(identifier: String) -> Void {
-        var event: EKEvent = (self.eventStore?.eventWithIdentifier(identifier))!
-        self.eventStore?.removeEvent(event, span: EKSpanFutureEvents, error: nil)
+        let event: EKEvent = (self.eventStore?.eventWithIdentifier(identifier))!
+        do {
+            try self.eventStore?.removeEvent(event, span: EKSpan.FutureEvents)
+        } catch _ {
+        }
     }
     
     func requestAccessToEvents() -> Void {
-        self.eventStore?.requestAccessToEntityType(EKEntityTypeEvent, completion: { (granted, error) -> Void in
+        self.eventStore?.requestAccessToEntityType(EKEntityType.Event, completion: { (granted, error) -> Void in
             if (error == nil) {
                 let accessGranted = granted as Bool
                 self.eventsAccessGranted = accessGranted
             } else {
-                println("\(error.localizedDescription)")
+                print("\(error!.localizedDescription)")
             }
         })
     }

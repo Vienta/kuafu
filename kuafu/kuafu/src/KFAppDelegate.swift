@@ -20,7 +20,8 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = KF_THEME_COLOR
         
         let notificationCategories = KFLocalPushManager.sharedManager.localNotificationSettingsCategories()
-        let settings = UIUserNotificationSettings(forTypes: .Alert | .Badge | .Sound, categories: notificationCategories as Set<NSObject>)
+        let settings = UIUserNotificationSettings(forTypes: [.Alert,.Badge,.Sound], categories: notificationCategories as? Set<UIUserNotificationCategory>)
+        
         application.registerUserNotificationSettings(settings)
         
         //init userdefault values
@@ -41,8 +42,8 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        println("didReceiveLocalNotification:\(notification) alertBody:\(notification.alertBody)")
-        println("app state:\(UIApplication.sharedApplication().applicationState)")
+        print("didReceiveLocalNotification:\(notification) alertBody:\(notification.alertBody)")
+        print("app state:\(UIApplication.sharedApplication().applicationState)")
         
         if (UIApplication.sharedApplication().applicationState == UIApplicationState.Active) {
             KFLocalPushManager.sharedManager.handleNotification(notification)
@@ -54,38 +55,39 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         case "GET_IT_TODO":
             break
         case "COMPLETE_TODO":
-            println("COMPLETE_IT")
-            var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+            print("COMPLETE_IT")
+            let event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
             event.status = NSNumber(integerLiteral: KEventStatus.Achieve.rawValue)
             KFEventDAO.sharedManager.saveEvent(event)
             break
         case "DELETE_TODO":
-            println("DELETE_TODO")
-            var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+            print("DELETE_TODO")
+            let event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
             event.status = NSNumber(integerLiteral: KEventStatus.Delete.rawValue)
             KFEventDAO.sharedManager.saveEvent(event)
             break
         case "DELAY_TODO":
-            println("DELAY_TODO")
-            var event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
+            print("DELAY_TODO")
+            let event: KFEventDO = KFLocalPushManager.sharedManager.getEventByNotification(notification)
             let alertBody: String = "KF_ALREADY_DUE".localized + ": " + event.content
             event.endtime = NSDate().dateByAddingTimeInterval(5 * 60).timeIntervalSince1970
             KFEventDAO.sharedManager.saveEvent(event)
             KFLocalPushManager.sharedManager.registerLocalPushWithFireDate(NSDate().dateByAddingTimeInterval(5 * 60), alertBody: alertBody, and: event.eventid, with: KF_LOCAL_NOTIFICATION_CATEGORY_COMPLETE)
             break
         default:
-            println("Error: unexpected notification action identifier!")
+            print("Error: unexpected notification action identifier!")
         }
         
         completionHandler()
     }
     // MARK: - Handle WatchKit Request
-    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]?) -> Void)) {
 
-        let userInfoKey = userInfo?.keys.array[0]
+        
+        let userInfoKey = userInfo?.keys.first
         if (userInfoKey == KF_WK_OPEN_PARENT_APPLICATION_NEW_TASK) {
-            let userInfoEventId = userInfo?.values.array[0] as! NSNumber
-            var targetEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(userInfoEventId)!
+            let userInfoEventId = userInfo?.values.first as! NSNumber
+            let targetEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(userInfoEventId)!
             KFLocalPushManager.sharedManager.deleteLocalPushWithEvent(targetEventDO)
             KFLocalPushManager.sharedManager.registerLocaPushWithEvent(targetEventDO)
         }
@@ -93,9 +95,9 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
         NSNotificationCenter.defaultCenter().postNotificationName(KF_NOTIFICATION_UPDATE_TASK, object: nil)
     }
     // MARK: - Handoff
-    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]!) -> Void) -> Bool {
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
 
-        println("userActivity.userInfo:\(userActivity.userInfo)")
+        print("userActivity.userInfo:\(userActivity.userInfo)")
         return true
     }
 
@@ -120,7 +122,7 @@ class KFAppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationRootViewController() -> UIViewController {
         let nav = self.window?.rootViewController as! UINavigationController
-        return nav.viewControllers[0] as! UIViewController
+        return nav.viewControllers[0] 
     }
 }
 

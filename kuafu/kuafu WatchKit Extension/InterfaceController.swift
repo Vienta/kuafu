@@ -32,11 +32,11 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
         let MM = KFUtil.getTodayShortDate(NSDate()).componentsSeparatedByString(":")[1]
         
         var targetIdx: Int!
-        for (idx, timeInterval) in enumerate(self.dayInterval) {
+        for (idx, timeInterval) in self.dayInterval.enumerate() {
             var targetHH: String = timeInterval.componentsSeparatedByString(":")[0]
             if (targetHH == HH) {
                 var targetMM: String = timeInterval.componentsSeparatedByString(":")[1]
-                if (MM.toInt() > targetMM.toInt()) {
+                if (Int(MM) > Int(targetMM)) {
                     targetIdx = idx + 1
                 }
             }
@@ -44,12 +44,12 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
         if (targetIdx >= self.dayInterval.count) {
             //日常任务输入
             self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: WKTextInputMode.Plain) { (input) -> Void in
-                println("INPUT:\(input)")
+                print("INPUT:\(input)")
                 if (input == nil) {
                     self.popToRootController()
                 } else {
-                    if (input.isEmpty == false) {
-                        let inputText = input[0] as! String
+                    if (input!.isEmpty == false) {
+                        let inputText = input![0] as! String
                         self.createEventWithContent(inputText)
                     } else {
                         self.popToRootController()
@@ -65,7 +65,7 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
     
     // MARK: - Private Methods
     func createEventWithContent(content:String) ->Void {
-        var eventDO: KFEventDO = KFEventDO()
+        let eventDO: KFEventDO = KFEventDO()
         eventDO.content = content
         if (eventDO.status == nil) {
             eventDO.status = NSNumber(integerLiteral: KEventStatus.Normal.rawValue)
@@ -106,17 +106,17 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
         self.watchEvents = NSMutableArray(capacity: 0)
         self.watchData = NSMutableArray(capacity: 0)
         //逾期任务  以下为冗余代码
-        var overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        let overDueEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
         //普通任务 既无提醒时间，也无逾期时间
         var normalEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
         //今日任务 提醒时间或者逾期时间是今天
-        var todayEvents: NSMutableArray = NSMutableArray(capacity: 0)
+        let todayEvents: NSMutableArray = NSMutableArray(capacity: 0)
         
-        var currentDateStamp: NSTimeInterval = NSDate().timeIntervalSince1970
+        let currentDateStamp: NSTimeInterval = NSDate().timeIntervalSince1970
         
-        var allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllNoArchiveAndNoDeleteEvents())
+        let allEvents: NSMutableArray = NSMutableArray(array: KFEventDAO.sharedManager.getAllNoArchiveAndNoDeleteEvents())
         
         if (allEvents.count == 0) {
             self.lblTips.setHidden(false)
@@ -136,10 +136,10 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
             }
             
             if subEvent.starttime.doubleValue > 0 || subEvent.endtime.doubleValue > 0 {
-                var isStartTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.starttime.doubleValue))
-                var isEndTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.endtime.doubleValue))
+                let isStartTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.starttime.doubleValue))
+                let isEndTimeToday: Bool = NSCalendar.currentCalendar().isDateInToday(KFUtil.dateFromTimeStamp(subEvent.endtime.doubleValue))
                 
-                var isToday: Bool = (isStartTimeToday || isEndTimeToday)
+                let isToday: Bool = (isStartTimeToday || isEndTimeToday)
                 
                 if isToday == true && (currentDateStamp < subEvent.endtime.doubleValue) {
                     todayEvents.addObject(subEvent)
@@ -151,41 +151,43 @@ class InterfaceController: WKInterfaceController,NSFilePresenter {
         allEvents.removeObjectsInArray(todayEvents as [AnyObject])
         
         if overDueEvents.count > 0 {
-            var overDueEventDict: NSDictionary = ["title": "KF_OVERDUE_TASK".localized,"events": overDueEvents]
+//            let overDueEventDict: NSDictionary = ["title": "KF_OVERDUE_TASK".localized,"events": overDueEvents]
             self.watchEvents.addObject("KF_OVERDUE_TASK".localized)
             self.watchData.addObject("KFWatchEvensTableHeaderController")
-            for (idx, event) in enumerate(overDueEvents) {
-                self.watchEvents.addObject(event)
+            for event in overDueEvents.enumerate() {
+                self.watchEvents.addObject(event as! AnyObject)
                 self.watchData.addObject("KFWatchEventsTableRowController")
             }
+            
+            
             
         }
         
         if todayEvents.count > 0 {
-            var todayEventDict: NSDictionary = ["title": "KF_TODAY_TASK".localized,"events": todayEvents]
+//            var todayEventDict: NSDictionary = ["title": "KF_TODAY_TASK".localized,"events": todayEvents]
             self.watchEvents.addObject("KF_TODAY_TASK".localized)
             self.watchData.addObject("KFWatchEvensTableHeaderController")
             
-            for (idx, event) in enumerate(todayEvents) {
-                self.watchEvents.addObject(event)
+            for event in todayEvents.enumerate() {
+                self.watchEvents.addObject(event as! AnyObject)
                 self.watchData.addObject("KFWatchEventsTableRowController")
             }
         }
         normalEvents = allEvents
         if normalEvents.count > 0 {
-            var normalEventDict: NSDictionary = ["title": "KF_NORMAL_TASK".localized,"events": normalEvents]
+//            var normalEventDict: NSDictionary = ["title": "KF_NORMAL_TASK".localized,"events": normalEvents]
             self.watchEvents.addObject("KF_NORMAL_TASK".localized)
             self.watchData.addObject("KFWatchEvensTableHeaderController")
             
-            for (idx, event) in enumerate(normalEvents) {
-                self.watchEvents.addObject(event)
+            for event in normalEvents.enumerate() {
+                self.watchEvents.addObject(event as! AnyObject)
                 self.watchData.addObject("KFWatchEventsTableRowController")
             }
         }
         
-        self.tbvEvent.setRowTypes(self.watchData as Array)
+        self.tbvEvent.setRowTypes(self.watchData as AnyObject as! [String])
         
-        for (idx, name) in enumerate(self.watchData) {
+        for (idx, name) in self.watchData.enumerate() {
             if (name as! String == "KFWatchEventsTableRowController" ) {
                 let row = self.tbvEvent.rowControllerAtIndex(idx) as! KFWatchEventsTableRowController
                 let event = self.watchEvents.objectAtIndex(idx) as! KFEventDO

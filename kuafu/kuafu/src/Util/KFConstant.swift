@@ -89,7 +89,7 @@ func SAFE_OBJC(objc: AnyObject!) -> AnyObject {
 }
 
 func LOAD_NIB(nibName: String) -> AnyObject {
-    return LOAD_NIB(nibName, 0)
+    return LOAD_NIB(nibName, index: 0)
 }
 
 func LOAD_NIB(nibName: String, index: Int) -> AnyObject {

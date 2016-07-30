@@ -21,7 +21,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
 import UIKit
 #else
 import AppKit
@@ -37,7 +37,7 @@ public extension View {
             return objc_getAssociatedObject(self, &labelKey) as? String
         }
         set {
-            objc_setAssociatedObject(self, &labelKey, newValue, objc_AssociationPolicy(OBJC_ASSOCIATION_COPY_NONATOMIC))
+            objc_setAssociatedObject(self, &labelKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
     
@@ -53,7 +53,7 @@ public extension LayoutConstraint {
             return objc_getAssociatedObject(self, &labelKey) as? String
         }
         set {
-            objc_setAssociatedObject(self, &labelKey, newValue, objc_AssociationPolicy(OBJC_ASSOCIATION_COPY_NONATOMIC))
+            objc_setAssociatedObject(self, &labelKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
 
@@ -62,7 +62,10 @@ public extension LayoutConstraint {
         
         description += descriptionForObject(self)
         
-        description += " \(descriptionForObject(self.firstItem))"
+        if let firstItem: AnyObject = self.firstItem {
+            description += " \(descriptionForObject(firstItem))"
+        }
+        
         if self.firstAttribute != .NotAnAttribute {
             description += ".\(self.firstAttribute.snp_description)"
         }
@@ -100,18 +103,38 @@ public extension LayoutConstraint {
         return description
     }
     
+    internal var snp_makerFile: String? {
+        return self.snp_constraint?.makerFile
+    }
+    
+    internal var snp_makerLine: UInt? {
+        return self.snp_constraint?.makerLine
+    }
+    
 }
 
 private var labelKey = ""
 
 private func descriptionForObject(object: AnyObject) -> String {
-    let pointerDescription = NSString(format: "%p", [object])
+    let pointerDescription = NSString(format: "%p", ObjectIdentifier(object).uintValue)
+    var desc = ""
+    
+    desc += object.dynamicType.description()
+    
     if let object = object as? View {
-        return "<\(object.dynamicType):\(object.snp_label ?? pointerDescription)>"
+        desc += ":\(object.snp_label ?? pointerDescription)"
     } else if let object = object as? LayoutConstraint {
-        return "<\(object.dynamicType):\(object.snp_label ?? pointerDescription)>"
+        desc += ":\(object.snp_label ?? pointerDescription)"
+    } else {
+        desc += ":\(pointerDescription)"
     }
-    return "<\(object.dynamicType):\(pointerDescription)>"
+    
+    if let object = object as? LayoutConstraint, let file = object.snp_makerFile, let line = object.snp_makerLine {
+        desc += "@\(file)#\(line)"
+    }
+    
+    desc += ""
+    return desc
 }
 
 private extension NSLayoutRelation {
@@ -129,7 +152,7 @@ private extension NSLayoutRelation {
 private extension NSLayoutAttribute {
     
     private var snp_description: String {
-        #if os(iOS)
+        #if os(iOS) || os(tvOS)
         switch self {
         case .NotAnAttribute:       return "notAnAttribute"
         case .Top:                  return "top"
@@ -142,7 +165,7 @@ private extension NSLayoutAttribute {
         case .Height:               return "height"
         case .CenterX:              return "centerX"
         case .CenterY:              return "centerY"
-        case .Baseline:             return "baseline"
+        case .LastBaseline:             return "baseline"
         case .FirstBaseline:        return "firstBaseline"
         case .TopMargin:            return "topMargin"
         case .LeftMargin:           return "leftMargin"
@@ -166,7 +189,8 @@ private extension NSLayoutAttribute {
         case .Height:               return "height"
         case .CenterX:              return "centerX"
         case .CenterY:              return "centerY"
-        case .Baseline:             return "baseline"
+        case .LastBaseline:             return "baseline"
+        default:                    return "default"
         }
         #endif
         

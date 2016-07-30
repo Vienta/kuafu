@@ -27,10 +27,10 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
         // Do any additional setup after loading the view.
         self.title = "KF_NEW_TODO_TITLE".localized
         self.txfEventTitle.placeholder = "KF_UNKOWN_TITLE".localized
-        var cancelItem = UIBarButtonItem(title: "KF_CANCEL".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "cancel")
+        let cancelItem = UIBarButtonItem(title: "KF_CANCEL".localized, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(KFEventWriteViewController.cancel))
         self.navigationItem.leftBarButtonItem = cancelItem
         
-        var saveItem = UIBarButtonItem(title: "KF_SAVE".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "save")
+        let saveItem = UIBarButtonItem(title: "KF_SAVE".localized, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(KFEventWriteViewController.save))
         self.navigationItem.rightBarButtonItem = saveItem
         saveItem.enabled = false
         
@@ -68,7 +68,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
     // MARK: - IB ACTION
     @IBAction func textFieldTextChanged(sender: UITextField){
         self.eventDO.title = sender.text
-        println(self.eventDO.title)
+        print(self.eventDO.title)
     }
     // MARK: - UITextView Delegate
     func textViewDidChange(textView: UITextView) {
@@ -110,16 +110,16 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
     }
     
     func save() {
-        println(self.eventDO)
+        print(self.eventDO)
         if self.eventDO.content.isEmpty == true {
-            var tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_NULL_CONTENT".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
+            let tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_NULL_CONTENT".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
             tipsAlert.show()
             return
         }
         
         if (self.eventDO.starttime != nil && self.eventDO.endtime != nil) {
             if self.eventDO.endtime.doubleValue > 0 && self.eventDO.endtime.doubleValue < self.eventDO.starttime.doubleValue {
-                var tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_TIMESTAMP_ERROR".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
+                let tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_TIMESTAMP_ERROR".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
                 tipsAlert.show()
                 return
             }
@@ -127,7 +127,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
         
         if (self.eventDO.starttime != nil) {
             if self.eventDO.starttime.doubleValue > 0 && self.eventDO.starttime.doubleValue < NSDate().timeIntervalSince1970 {
-                var tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_TIMMSTAMP_STARTTIME_ERROR".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
+                let tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_TIMMSTAMP_STARTTIME_ERROR".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
                 tipsAlert.show()
                 return
             }
@@ -135,7 +135,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
         
         if (self.eventDO.endtime != nil) {
             if self.eventDO.endtime.doubleValue > 0 && self.eventDO.endtime.doubleValue < NSDate().timeIntervalSince1970 {
-                var tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_TIMMSTAMP_STARTTIME_ERROR".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
+                let tipsAlert: UIAlertView = UIAlertView(title: "KF_ALERT_TIPS".localized, message: "KF_ALERT_TIMMSTAMP_STARTTIME_ERROR".localized, delegate: nil, cancelButtonTitle: "KF_OK".localized)
                 tipsAlert.show()
                 return
             }
@@ -147,7 +147,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
         let saveEventid = KFEventDAO.sharedManager.saveEvent(self.eventDO) as NSNumber
         if saveEventid.longLongValue > 0 && self.eventDO.eventid == nil {
 
-            var confirmEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(saveEventid)!
+            let confirmEventDO: KFEventDO = KFEventDAO.sharedManager.getEventById(saveEventid)!
             if confirmEventDO.content == self.eventDO.content {//防御
                 self.eventDO.eventid = saveEventid
             }
@@ -168,7 +168,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
     func popTimePickerView(title: String) {
         self.view.endEditing(true)
         
-        var btnTimePickerBg: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        var btnTimePickerBg: UIButton = UIButton(type: UIButtonType.Custom)
         btnTimePickerBg.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
         btnTimePickerBg.addTarget(self, action: "dismissTimePickerView", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(btnTimePickerBg)
@@ -177,7 +177,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
             make.edges.equalTo(self.view)
         }
         
-        objc_setAssociatedObject(self, &kAssociateKey, btnTimePickerBg, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+        objc_setAssociatedObject(self, &kAssociateKey, btnTimePickerBg, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         
         var timePickerView: KFEventTimePickerAlertView = NSBundle.mainBundle().loadNibNamed("KFEventTimePickerAlertView", owner: nil, options: nil)[0] as! KFEventTimePickerAlertView
         btnTimePickerBg.addSubview(timePickerView)
@@ -216,7 +216,7 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
     }
     
     func dismissTimePickerView() {
-        var timePickerView: UIButton = objc_getAssociatedObject(self, &kAssociateKey) as! UIButton
+        let timePickerView: UIButton = objc_getAssociatedObject(self, &kAssociateKey) as! UIButton
         UIView.animateWithDuration(0.18, animations: { () -> Void in
             timePickerView.alpha = 0.0
         }) { (Bool) -> Void in
@@ -226,18 +226,18 @@ class KFEventWriteViewController: UIViewController, UITextViewDelegate, UITextFi
     }
     
     func dataPickerChanged(datePicker: UIDatePicker) {
-        var settingDate: NSDate = datePicker.date
+        let settingDate: NSDate = datePicker.date
         let dateFormatter = NSDateFormatter() as NSDateFormatter
         dateFormatter.dateFormat = "ss"
-        var second: String = dateFormatter.stringFromDate(settingDate) as String
+        let second: String = dateFormatter.stringFromDate(settingDate) as String
         
-        var timestamp: NSTimeInterval = datePicker.date.timeIntervalSince1970 - NSString(string: second).doubleValue
+        let timestamp: NSTimeInterval = datePicker.date.timeIntervalSince1970 - NSString(string: second).doubleValue
 
         settingTimestamp = timestamp
     }
     
     func saveRemindTime(sender: UIButton) {
-        var timePickerView: KFEventTimePickerAlertView = sender.superview as! KFEventTimePickerAlertView
+        let timePickerView: KFEventTimePickerAlertView = sender.superview as! KFEventTimePickerAlertView
         timePickerView.datePickerAlert.removeTarget(self, action: "dataPickerChanged", forControlEvents: UIControlEvents.ValueChanged)
 
         if isWritingRemind == true {

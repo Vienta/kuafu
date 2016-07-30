@@ -30,11 +30,11 @@ class KFBaseDAO: NSObject {
         var res: Bool!
         
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in
-            var result: Bool = db.executeUpdate(self.createSqlString(), withArgumentsInArray: nil)
+            let result: Bool = db.executeUpdate(self.createSqlString(), withArgumentsInArray: nil)
             if ((result)) {
-                println("creat or open table \(self.tableName()) success")
+                print("creat or open table \(self.tableName()) success")
             } else {
-                println("create or open table \(self.tableName()) failure, error:\(db.lastErrorMessage())")
+                print("create or open table \(self.tableName()) failure, error:\(db.lastErrorMessage())")
             }
             res = result
         })
@@ -51,7 +51,7 @@ class KFBaseDAO: NSObject {
     }
     
     func dropTableWithName(tableName: String) -> Bool {
-        var sql: String = "drop table if exists" + tableName + ";"
+        let sql: String = "drop table if exists" + tableName + ";"
         var res: Bool!
         
         dbQueue?.inDatabase({ (db:FMDatabase!) -> Void in

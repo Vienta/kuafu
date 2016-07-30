@@ -29,7 +29,7 @@ class KFWebViewController: UIViewController, UIWebViewDelegate, NJKWebViewProgre
         let navigationBarHeight = self.navigationController?.navigationBar.bounds.size.height
         let navigationBarWidth = self.navigationController?.navigationBar.bounds.size.width
         
-        var barFrame: CGRect = CGRectMake(0, navigationBarHeight! - progressBarHeight, navigationBarWidth!, progressBarHeight)
+        let barFrame: CGRect = CGRectMake(0, navigationBarHeight! - progressBarHeight, navigationBarWidth!, progressBarHeight)
         
         self.progressView = NJKWebViewProgressView(frame: barFrame)
         self.progressView.progressBarView.backgroundColor = KF_THEME_COLOR
@@ -70,12 +70,12 @@ class KFWebViewController: UIViewController, UIWebViewDelegate, NJKWebViewProgre
 
     func webViewDidFinishLoad(webView: UIWebView) {
         self.progressView.setProgress(1.0, animated: true)
-        var title: String! = webView.stringByEvaluatingJavaScriptFromString("document.title")
+        let title: String! = webView.stringByEvaluatingJavaScriptFromString("document.title")
         self.title = title
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
-        println("load failure error:\(error)")
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        print("load failure error:\(error)")
     }
     
     // MARK: - NJKWebViewProgressDelegate

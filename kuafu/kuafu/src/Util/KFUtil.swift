@@ -11,22 +11,25 @@ import UIKit
 class KFUtil: NSObject {
    
     class func documentFilePath(fileName: String) -> String {
-        var filePath =  NSHomeDirectory().stringByAppendingPathComponent("Documents").stringByAppendingPathComponent(fileName)
+        let filePath =  ((NSHomeDirectory() as NSString).stringByAppendingPathComponent("Documents") as NSString).stringByAppendingPathComponent(fileName)
         return filePath
     }
     
     class func skipBackupAttributeToItemAtPath(URL: NSURL) -> Bool {
-        URL.setResourceValue(NSNumber(bool: true), forKey: NSURLIsExcludedFromBackupKey, error: nil)
+        do {
+            try URL.setResourceValue(NSNumber(bool: true), forKey: NSURLIsExcludedFromBackupKey)
+        } catch _ {
+        }
         return true
     }
     
     class func getCurrentTime() -> Double {
-        var dateFormatter: NSDateFormatter = NSDateFormatter()
-        var locale: NSLocale = NSLocale(localeIdentifier: "en_GB")
+        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        let locale: NSLocale = NSLocale(localeIdentifier: "en_GB")
         dateFormatter.locale = locale
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss" //hh:12小时 HH:24小时
         
-        var currentDate: NSDate = NSDate()
+        let currentDate: NSDate = NSDate()
         
         return currentDate.timeIntervalSince1970
     }

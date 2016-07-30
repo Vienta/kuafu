@@ -1,1 +1,1 @@
-../../../JTCalendar/JTCalendar/JTCalendarWeekView.h
+../../../JTCalendar/JTCalendar/Views/JTCalendarWeekView.h

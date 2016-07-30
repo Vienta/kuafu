@@ -37,7 +37,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
     
     // MARK: - UIViewControllerAnimatedTransition Protocol
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         if interactive {
             return 0.7
         }
@@ -63,21 +63,21 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
 
         assert(fromView != nil && toView != nil, "fromView and toView need to be set")
         
-        var container = self.transitionContext!.containerView();
+        let container = self.transitionContext!.containerView();
         
         // add toViewController to Transition Container
         if let view = toViewController?.view {
             if (isPresenting){
-                container.addSubview(view)
+                container?.addSubview(view)
             } else {
-                container.insertSubview(view, belowSubview: fromViewController!.view)
+                container?.insertSubview(view, belowSubview: fromViewController!.view)
             }
         }
         toViewController?.view.layoutIfNeeded()
         
         // Calculate animation frames within container view
-        fromFrame = container.convertRect(fromView!.bounds, fromView: fromView)
-        toFrame = container.convertRect(toView!.bounds, fromView: toView)
+        fromFrame = container?.convertRect(fromView!.bounds, fromView: fromView)
+        toFrame = container?.convertRect(toView!.bounds, fromView: toView)
         
         // Create a copy of the fromView and add it to the Transition Container
         if let imageView = fromView as? UIImageView {
@@ -90,7 +90,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
             view.clipsToBounds = true
             view.frame = fromFrame!
             view.contentMode = fromView!.contentMode
-            container.addSubview(view)
+            container!.addSubview(view)
         }
         
         if (isPresenting){
@@ -105,17 +105,17 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
     func animateZoomInTransition(){
         if allowsInteractiveGesture {
             // add pinch gesture to new viewcontroller
-            let pinchGesture = UIPinchGestureRecognizer(target: self, action: Selector("handlePinchGesture:"))
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(ZoomTransition.handlePinchGesture(_:)))
             pinchGesture.delegate = self
             toViewController?.view.addGestureRecognizer(pinchGesture)
             
             // add rotation gesture to new viewcontroller
-            let rotationGesture = UIRotationGestureRecognizer(target: self, action: Selector("handleRotationGesture:"))
+            let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(ZoomTransition.handleRotationGesture(_:)))
             rotationGesture.delegate = self
             toViewController?.view.addGestureRecognizer(rotationGesture)
             
             // add pan gesture to new viewcontroller
-            let panGesture = UIPanGestureRecognizer(target: self, action: Selector("handlePanGesture:"))
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ZoomTransition.handlePanGesture(_:)))
             panGesture.delegate = self
             toViewController?.view.addGestureRecognizer(panGesture)
         }
@@ -124,7 +124,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
         toView?.hidden = true
         fromView?.alpha = 0;
         
-        var duration = transitionDuration(transitionContext!)
+        let duration = transitionDuration(transitionContext!)
         UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
 
             self.toViewController?.view.alpha = 1
@@ -132,7 +132,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
                 self.transitionView?.frame = self.toFrame!
             }
     
-        }) { (Bool finished) -> Void in
+        }) { (finished) -> Void in
             self.transitionView?.removeFromSuperview()
             self.fromViewController?.view.alpha = 1
             self.toView?.hidden = false
@@ -158,12 +158,12 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
         fromView?.alpha = 0;
         let duration = transitionDuration(transitionContext!)
         
-        UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
+        UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
             self.fromViewController?.view.alpha = 0
             if (self.interactive == false){
                 self.transitionView?.frame = self.toFrame!
             }
-        }) { (Bool finished) -> Void in
+        }) { (finished) -> Void in
             if self.interactive == false {
                 self.zoomOutTransitionComplete()
             }
@@ -192,7 +192,6 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
     // MARK: - Gesture Recognizer Handlers
     
     func handlePinchGesture(gesture: UIPinchGestureRecognizer){
-        var view = gesture.view!
         
         switch (gesture.state) {
         case .Began:
@@ -231,7 +230,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
             // calculate current scale of transitionView
             let finalScale = animationFrame!.width / self.fromFrame!.size.width
             let currentScale = (transitionView!.frame.size.width / self.fromFrame!.size.width)
-            var delta = finalScale - currentScale
+            let delta = finalScale - currentScale
             var normalizedVelocity = gesture.velocity / delta
 
             // add upper and lower bound on normalized velocity
@@ -249,7 +248,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
             
             let duration = transitionDuration(transitionContext!)
             
-            UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: normalizedVelocity, options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+            UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: normalizedVelocity, options: UIViewAnimationOptions(), animations: { () -> Void in
                 
                 // set a new transform to reset the rotation to 0 but maintain the current scale
                 self.transitionView?.transform = CGAffineTransformMakeScale(currentScale, currentScale)
@@ -259,7 +258,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
                 }
                 self.transitionView?.contentMode = self.toView!.contentMode
                 
-            }, completion: { (Bool finished) -> Void in
+            }, completion: { (finished) -> Void in
                 self.zoomOutTransitionComplete()
                 self.interactive = false
             })
@@ -271,7 +270,6 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
     }
     
     func handleRotationGesture(gesture: UIRotationGestureRecognizer){
-        var view = gesture.view!
         
         if interactive {
             if gesture.state == UIGestureRecognizerState.Changed {
@@ -282,7 +280,7 @@ public class ZoomTransition: UIPercentDrivenInteractiveTransition, UIViewControl
     }
     
     func handlePanGesture(gesture: UIPanGestureRecognizer){
-        var view = gesture.view!
+        let view = gesture.view!
         
         if interactive {
             if gesture.state == UIGestureRecognizerState.Changed {
