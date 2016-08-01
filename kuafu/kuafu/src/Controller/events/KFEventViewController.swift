@@ -315,8 +315,8 @@ class KFEventViewController: UIViewController,UITableViewDataSource, UITableView
         if (scrollView.contentOffset.y <= -160.0) {
             if pullCalendarFlag == false {
                 pullCalendarFlag = true
-                let calendarViewController: KFCalendarViewController = KFCalendarViewController(nibName: "KFCalendarViewController", bundle: nil)
-                self.navigationController?.pushViewController(calendarViewController, animated: true)
+//                let calendarViewController: KFCalendarViewController = KFCalendarViewController(nibName: "KFCalendarViewController", bundle: nil)
+//                self.navigationController?.pushViewController(calendarViewController, animated: true)
                 DELAY(0.3, closure: { () -> () in
                     self.pullCalendarFlag = false
                 })

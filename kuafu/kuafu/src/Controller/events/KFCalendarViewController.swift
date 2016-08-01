@@ -11,13 +11,13 @@ import JTCalendar
 import MKEventKit
 import DAAlertController
 
-class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
+class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCalendarDelegate, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Property
     @IBOutlet weak var igvCalendar: UIImageView!
-    @IBOutlet weak var calendarContentVIew: JTCalendarContentView!
+    @IBOutlet weak var calendarContentVIew: JTVerticalCalendarView!
     @IBOutlet weak var tbvCalendar: UITableView!
 
-    var calendar: JTCalendar!
+    var calendarManager: JTCalendarManager!
     var eventsByDate: NSMutableDictionary!
     var currentDayEvents: NSMutableArray!
     var selectDate: NSDate!
@@ -28,7 +28,7 @@ class KFCalendarViewController: UIViewController, ZoomTransitionProtocol, JTCale
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.calendar = JTCalendar()
+        self.calendarManager = JTCalendarManager()
         self.eventsByDate = NSMutableDictionary()
         self.currentDayEvents = NSMutableArray()
         self.selectDate = NSDate()
